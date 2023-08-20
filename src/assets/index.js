@@ -1,5 +1,5 @@
-import headerTitle from "./headerTitle.png"
-import defaultProfile from "./defaultProfile.png"
+import headerTitle from "./header_title.png"
+import defaultProfile from "./default_profile.png"
 
 export {
     headerTitle,
