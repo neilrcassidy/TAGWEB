@@ -1,10 +1,15 @@
-import { Header } from "."
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom"
+/* eslint-disable react/prop-types */
+import { Header, MobileMenu } from "."
+import { Outlet } from "react-router-dom"
+import { useState } from "react"
 
-const Page = () => {
+const Page = ({ isUserLogged, logUser }) => {
+  const [isMobileMenuToggled, toggleMenu] = useState(false);
+
   return (
-    <div>
-        <Header />
+    <div id="Page">
+        <Header isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged}/>
+        <MobileMenu isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu}/>
         <Outlet />
     </div>
   )

@@ -11,12 +11,16 @@
 
 body{
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #181818;
 }
 
 .bg-header {
   background-color: #7EC46D;
+}
+
+.bg-usuarioMobileMenu {
+  background-color: rgb(92, 168, 72);
 }
 
 .font-poppins {
