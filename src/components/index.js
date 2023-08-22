@@ -5,6 +5,8 @@ import Logros from "./Logros.jsx"
 import Noticias from "./Noticias.jsx"
 import Clasificacion from "./Clasificacion.jsx"
 import MobileMenu from "./MobileMenu.jsx"
+import RecoverPassword from "./RecoverPassword.jsx"
+import NewAccount from "./NewAccount.jsx"
 
 export {
     Header,
@@ -13,5 +15,7 @@ export {
     Logros,
     Noticias,
     Clasificacion,
-    MobileMenu
+    MobileMenu,
+    RecoverPassword,
+    NewAccount
 }

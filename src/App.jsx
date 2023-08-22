@@ -1,17 +1,19 @@
-import { useState } from "react"
-import { Page, Home, Logros, Noticias, Clasificacion } from "./components"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+import { Page, Home, Logros, Noticias, Clasificacion, RecoverPassword, NewAccount } from "./components"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+import { auth } from "./config/firebase-config"
 
 const App = () => {
-  const [isUserLogged, logUser] = useState(false);
-
   return (
     <div id="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Page isUserLogged={isUserLogged} logUser={logUser}/>}>
-            <Route index element={<Home logUser={logUser}/>} />
-            <Route path="logros" element={<Logros />} />
+          <Route path="inicio" element={<Home />} />
+          <Route path="reestablecer_contrasenya" element={<RecoverPassword />} />
+          <Route path="completar_registro" element={<NewAccount />} />
+          <Route path="/" element={<Page />}>
+            <Route index path="/" element={<Logros />} />
+            <Route index path="logros" element={<Logros />} />
             <Route path="noticias" element={<Noticias />} />
             <Route path="clasificacion" element={<Clasificacion />} />
           </Route>
