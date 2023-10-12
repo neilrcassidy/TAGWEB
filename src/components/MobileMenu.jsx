@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom"
 import { defaultProfile } from "../assets"
+
+// React imports
+import { Link } from "react-router-dom"
 
 const MobileMenu = ({ isMobileMenuToggled, toggleMenu}) => {
   return (
@@ -17,17 +19,17 @@ const MobileMenu = ({ isMobileMenuToggled, toggleMenu}) => {
           <ul className="pt-6 text-right font-semibold text-white xxxs:text-[28px] text-[24px]">
             <li className="hover:underline mb-4"
                 onClick={() => toggleMenu((prev) => !prev)}>
-                  <Link to="/logros">Logros</Link>
+                  <Link to="/badges">Logros</Link>
             </li>
 
             <li className="hover:underline mb-4"
                 onClick={() => toggleMenu((prev) => !prev)}>
-                  <Link to="/noticias">Noticias</Link>
+                  <Link to="/news">Noticias</Link>
             </li>
 
             <li className="hover:underline"
                 onClick={() => toggleMenu((prev) => !prev)}>
-                <Link to="/clasificacion">Clasificación</Link>
+                <Link to="/leaderboard">Clasificación</Link>
             </li>
           </ul>
         </nav>

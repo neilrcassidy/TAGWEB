@@ -1,15 +1,22 @@
 /* eslint-disable react/prop-types */
 import { tagHome } from "../assets"
 import styles from "../style"
-import { auth } from "../config/firebase-config"
+
+//Firebase imports
+import { auth, firestore } from "../config/firebase-config"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth"
-import { useState } from "react"
+import { getDoc, getDocs, collection } from "firebase/firestore";
+
+// React Imports
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+
 
 const Home = () => {
   const navigate = useNavigate();
-  const navReestablecerContrasenya = () => navigate("/reestablecer_contrasenya")
-  const navCuentaNueva = () => navigate("/completar_registro")
+  const navReestablecerContrasenya = () => navigate("/reset_password")
+  const navCuentaNueva = () => navigate("/complete_registration")
+  const navBadges = () => navigate("/badges")
 
   const [registerLogin, setRegisterLogin] = useState(false);
   const [email, setEmail] = useState("");
@@ -20,15 +27,32 @@ const Home = () => {
   const [correctEmailPassword, setCorrectEmailPassword] = useState(true)
   const [emailNotInUse, setEmailNotInUse] = useState(true)
 
-  const registerUser = async () => {
+  useEffect(() => {
+    if(auth.currentUser){
+      console.log(auth.currentUser.email + " ha iniciado sesion!")
+    } else {
+      console.log("No user.")
+    }
+
+    let authToken = localStorage.getItem('Auth Token')
+    if (authToken) {
+      navBadges
+    }
+
+  }, [])
+
+  const firebaseRegisterUser = async () => {
     await createUserWithEmailAndPassword(auth, email, password)
+            .then((response) => {
+              localStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
+            })
   }
 
-  const registrar = () => {
+  const register = () => {
     if (password === repeatPassword) {
       if (password.length >= 8) {
-        registerUser()
-          //.then(() => navCuentaNueva)
+        firebaseRegisterUser()
+          .then(navCuentaNueva)
           .then(() => console.log("New User Registered!"))
           .catch(() => setEmailNotInUse(false))
       } else {
@@ -42,23 +66,28 @@ const Home = () => {
     }
   }
 
-  const login = async () => {
+  const firebaseSignIn = async () => {
     await signInWithEmailAndPassword(auth, email, password)
+            .then((response) => {
+              localStorage.setItem('Auth Token', response._tokenResponse.refreshToken)
+            })
   }
 
-  const iniciarSesion = () => {
-    login()
-      .then()
+  const login = () => {
+    firebaseSignIn()
+      .then(() => console.log("Usuario ha iniciado sesión!"))
+      .then(navBadges)
       .catch(() => setCorrectEmailPassword(false))
   }
 
-  const logout = async () => {
+  const firebaseSingOut = async () => {
     await signOut(auth)
+      .then(localStorage.removeItem('Auth Token'))
   }
 
   const cerrarSesion = async () => {
-    logout()
-      .then()
+    firebaseSingOut()
+      .then(() => console.log("Usuario ha cerrado sesion"))
   }
 
   return (
@@ -105,7 +134,7 @@ const Home = () => {
                 </div>
                 <div className={`flex ${styles.flexCenter} p-3`}>
                   <button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
-                    onClick={(iniciarSesion)}>
+                    onClick={(login)}>
                     Iniciar Sesión
                   </button>
                 </div>
@@ -189,7 +218,7 @@ const Home = () => {
                 </div>
                 <div className={`flex ${styles.flexCenter} p-3`}>
                   <button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
-                    onClick={(registrar)}>
+                    onClick={(register)}>
                     Registrar
                   </button>
                 </div>

@@ -1,21 +1,20 @@
 
-import { Page, Home, Logros, Noticias, Clasificacion, RecoverPassword, NewAccount } from "./components"
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import { auth } from "./config/firebase-config"
+import { Page, Home, Badges, News, Leaderboard, RecoverPassword, NewAccount } from "./components"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 const App = () => {
   return (
     <div id="App">
       <BrowserRouter>
         <Routes>
-          <Route path="inicio" element={<Home />} />
-          <Route path="reestablecer_contrasenya" element={<RecoverPassword />} />
-          <Route path="completar_registro" element={<NewAccount />} />
+          <Route path="home" element={<Home />} />
+          <Route path="reset_password" element={<RecoverPassword />} />
+          <Route path="complete_registration" element={<NewAccount />} />
           <Route path="/" element={<Page />}>
-            <Route index path="/" element={<Logros />} />
-            <Route index path="logros" element={<Logros />} />
-            <Route path="noticias" element={<Noticias />} />
-            <Route path="clasificacion" element={<Clasificacion />} />
+            <Route index path="/" element={<Badges />} />
+            <Route index path="badges" element={<Badges />} />
+            <Route path="news" element={<News />} />
+            <Route path="leaderboard" element={<Leaderboard />} />
           </Route>
         </Routes>
       </BrowserRouter>
