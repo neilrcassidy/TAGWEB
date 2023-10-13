@@ -4,7 +4,7 @@ import { defaultProfile } from "../assets"
 // React imports
 import { Link } from "react-router-dom"
 
-const MobileMenu = ({ isMobileMenuToggled, toggleMenu}) => {
+const MobileMenu = ({ isMobileMenuToggled, toggleMenu }) => {
   return (
     <div className={`flex flex-row font-poppins fixed h-[100%] w-[100%] z-50 ${isMobileMenuToggled ? "flex" : "hidden"}`}>
       <div className="bg-primary bg-opacity-80 ss:w-[60%] xs:w-[50%] xxs:w-[40%] xxxs:w-[35%] w-[20%] h-[100%]" onClick={() => toggleMenu((prev) => !prev)}></div>

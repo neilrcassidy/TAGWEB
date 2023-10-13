@@ -7,27 +7,22 @@ import { Outlet } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-//TESTING PURPOSES
+//TESTING PURPOSES---------------------------
 import { auth } from "../config/firebase-config"
 import { signOut } from "firebase/auth"
-//TESTING PURPOSES
+//TESTING PURPOSES-----------------------------
 
-const Page = () => {
-  let navigate = useNavigate();
-
+const Page = ({ isUserLogged, logUser }) => {
+  const navigate = useNavigate();
+  const navHome = () => navigate("/home")
+  
   useEffect(() => {
-    if(auth.currentUser){
-      console.log(auth.currentUser.email)
+    if(!isUserLogged){
+      navHome()
     }
+  }, [isUserLogged])
 
-    let authToken = localStorage.getItem('Auth Token')
-
-    if (!authToken) {
-      navigate('/home')
-    }
-  }, [])
-
-  //TESTING PURPOSES
+  //TESTING PURPOSES--------------------------
   const logout = async () => {
     await signOut(auth)
       .then(localStorage.removeItem('Auth Token'))
@@ -35,15 +30,15 @@ const Page = () => {
 
   const cerrarSesion = async () => {
     logout()
-      .then(() => console.log("Usuario ha cerrado sesion"))
+      .then(() => logUser(false))
   }
-  //TESTING PURPOSES
+  //TESTING PURPOSES--------------------------
 
   const [isMobileMenuToggled, toggleMenu] = useState(false);
 
   return (
     <div id="Page">
-      <Header isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} />
+      <Header isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged} logUser={logUser} />
       <MobileMenu isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} />
       <Outlet />
       <button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"

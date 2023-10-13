@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import styles from "../style"
 
 // Firebase Imports
@@ -22,8 +23,8 @@ const RecoverPassword = () => {
 
     const send = () => {
         sendEmail()
-            .then()
-            .catch(setEmailExists(false))
+            .then(console.log("Email sent")) // Change later to be a popup
+            .catch(error => setEmailExists(false))
     }
 
     return (

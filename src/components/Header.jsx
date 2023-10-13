@@ -1,11 +1,15 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { headerTitle, menu, close } from "../assets"
+
+// React imports
 import { Link } from "react-router-dom"
+import { useState } from "react"
 
 // Firebase Imports
 import { auth } from "../config/firebase-config"
 
-const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
+const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) => {
 
   return (
     <div className={`flex w-[100%] h-[100px] bg-header`}>
@@ -26,11 +30,11 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
               <Link to="/leaderboard">Clasificación</Link>
             </li>
             <li className="cursor-pointer hover:underline hover:text-black">
-              {auth?.currentUser !== null ? (
+              {isUserLogged ? (
                 <div>
                   <p>{auth?.currentUser?.email}</p>
                 </div>
-              ) : (<p>Error</p>)}
+              ) : (<p>Loading</p>)}
             </li>
           </ul>
         </nav>

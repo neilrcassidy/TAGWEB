@@ -1,19 +1,18 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { tagHome } from "../assets"
 import styles from "../style"
 
 //Firebase imports
-import { auth, firestore } from "../config/firebase-config"
+import { auth } from "../config/firebase-config"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth"
-import { getDoc, getDocs, collection } from "firebase/firestore";
 
 // React Imports
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-
-const Home = () => {
+const Home = ({ isUserLogged, logUser }) => {
   const navigate = useNavigate();
   const navReestablecerContrasenya = () => navigate("/reset_password")
   const navCuentaNueva = () => navigate("/complete_registration")
@@ -29,18 +28,10 @@ const Home = () => {
   const [emailNotInUse, setEmailNotInUse] = useState(true)
 
   useEffect(() => {
-    if(auth.currentUser){
-      console.log(auth.currentUser.email + " ha iniciado sesion!")
-    } else {
-      console.log("No user.")
+    if(isUserLogged){
+      navBadges();
     }
-
-    let authToken = localStorage.getItem('Auth Token')
-    if (authToken) {
-      navBadges
-    }
-
-  }, [])
+  }, [isUserLogged])
 
   const firebaseRegisterUser = async () => {
     await createUserWithEmailAndPassword(auth, email, password)
@@ -76,8 +67,8 @@ const Home = () => {
 
   const login = () => {
     firebaseSignIn()
-      .then(() => console.log("Usuario ha iniciado sesión!"))
-      .then(navBadges)
+      .then(() => logUser(true))
+      .then(() => navBadges())
       .catch(() => setCorrectEmailPassword(false))
   }
 
@@ -88,7 +79,7 @@ const Home = () => {
 
   const cerrarSesion = async () => {
     firebaseSingOut()
-      .then(() => console.log("Usuario ha cerrado sesion"))
+      .then(() => logUser(false))
   }
 
   return (
