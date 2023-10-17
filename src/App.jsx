@@ -1,11 +1,11 @@
-import { Page, Home, Badges, News, Leaderboard, RecoverPassword, NewAccount } from "./components"
+import { Page, Home, Badges, News, Leaderboard, RecoverPassword, NewAccount, Profile } from "./components"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { auth } from "./config/firebase-config"
 
 const App = () => {
 
-  const [isUserLogged, logUser] = useState()
+  const [isUserLogged, logUser] = useState(false)
 
   useEffect(() => {
     auth.onAuthStateChanged(function(user){
@@ -29,6 +29,7 @@ const App = () => {
             <Route index path="badges" element={<Badges />} />
             <Route path="news" element={<News />} />
             <Route path="leaderboard" element={<Leaderboard />} />
+            <Route path="profile" element={<Profile />} />
           </Route>
         </Routes>
       </BrowserRouter>

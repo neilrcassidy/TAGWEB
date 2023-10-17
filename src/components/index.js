@@ -7,6 +7,7 @@ import Leaderboard from "./Leaderboard.jsx"
 import MobileMenu from "./MobileMenu.jsx"
 import RecoverPassword from "./RecoverPassword.jsx"
 import NewAccount from "./NewAccount.jsx"
+import Profile from "./Profile.jsx"
 
 export {
     Header,
@@ -17,5 +18,6 @@ export {
     Leaderboard,
     MobileMenu,
     RecoverPassword,
-    NewAccount
+    NewAccount,
+    Profile
 }

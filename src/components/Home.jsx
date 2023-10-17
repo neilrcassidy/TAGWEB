@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { tagHome } from "../assets"
+import { tagHome } from "../assets/img"
 import styles from "../style"
 
 //Firebase imports
@@ -28,10 +28,12 @@ const Home = ({ isUserLogged, logUser }) => {
   const [emailNotInUse, setEmailNotInUse] = useState(true)
 
   useEffect(() => {
-    if(isUserLogged){
-      navBadges();
-    }
-  }, [isUserLogged])
+    auth.onAuthStateChanged(function(user){
+      if(user){
+        navBadges();
+      }
+    })
+  }, [])
 
   const firebaseRegisterUser = async () => {
     await createUserWithEmailAndPassword(auth, email, password)

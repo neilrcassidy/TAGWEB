@@ -7,6 +7,7 @@ export default {
       colors: {
         primary: "#181818",
         secondary: "#7EC46D",
+        altSecondary: "#5ca848",
         dimWhite: "rgba(255, 255, 255, 0.7)",
         dimBlue: "rgba(9, 151, 124, 0.1)",
       },

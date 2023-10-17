@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 import { Header, MobileMenu } from "."
@@ -17,10 +18,12 @@ const Page = ({ isUserLogged, logUser }) => {
   const navHome = () => navigate("/home")
   
   useEffect(() => {
-    if(!isUserLogged){
-      navHome()
-    }
-  }, [isUserLogged])
+    auth.onAuthStateChanged(function(user){
+      if(!user){
+        navHome()
+      }
+    })
+  }, [])
 
   //TESTING PURPOSES--------------------------
   const logout = async () => {
@@ -39,7 +42,7 @@ const Page = ({ isUserLogged, logUser }) => {
   return (
     <div id="Page">
       <Header isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged} logUser={logUser} />
-      <MobileMenu isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} />
+      <MobileMenu isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged} logUser={logUser} />
       <Outlet />
       <button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
         onClick={(cerrarSesion)}>
