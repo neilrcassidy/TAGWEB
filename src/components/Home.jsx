@@ -86,8 +86,8 @@ const Home = ({ isUserLogged, logUser }) => {
 
   return (
     <div id="Home">
-      <div className={`flex sm:flex-row flex-col overflow-hidden lg:p-36 lg:pt-24 md:p-24 p-12 gap-16`}>
-        <div className={`flex w-[100%] m-auto mx-0`}>
+      <div className={`flex sm:flex-row flex-col overflow-hidden lg:p-36 lg:pt-24 md:p-24 p-12 gap-16 mt-10`}>
+        <div className={`flex w-[100%] m-auto mx-0 imageLoadinMobile`}>
           <img src={tagHome} className="w-[100%]" />
         </div>
 

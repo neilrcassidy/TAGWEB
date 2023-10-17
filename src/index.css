@@ -31,3 +31,65 @@ body{
   text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
                1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
 }
+
+.imageLoadinDesktop{
+  -webkit-animation: fadeSlide 1s;
+  animation: fadeSlide 1s;
+}
+
+.imageLoadinMobile{
+  -webkit-animation: fadeSlide2 1s;
+  animation: fadeSlide2 1s;
+}
+
+@-webkit-keyframes fadeSlide{
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeSlide{
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes fadeSlide2{
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeSlide2{
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+  100%{
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
