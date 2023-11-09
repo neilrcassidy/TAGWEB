@@ -20,22 +20,20 @@ const NewAccount = ({ isUserLogged, logUser }) => {
   const [profilePicFile, setProfilePicFile] = useState();
   const [nicknameAndPicEntered, setNicknameAndPicEntered] = useState(true)
 
-  /*const uploadProfilePic = async () => {
-    const storageRef = ref(storage, "profilePics/" + profilePicFile.name);
+  const imgInput = document.getElementById("imageInput")
+  const imgElement = document.getElementById("imagePreview")
 
-    await uploadBytes(storageRef, profilePicFile)
-      .then((snapshot) => {
-        console.log("Uploaded profile pic successfully")
-        getDownloadURL().then((url) => {
-          setProfilePic(url)
-        })
-      })
-      .catch((error) => {
-        console.log("Upload failed")
-      })
-  }*/
+  imgInput?.addEventListener('change', () => {
+    if (imgInput.files && imgInput.files[0]) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        imgElement.src = e.target.result;
+      }
+      reader.readAsDataURL(imgInput.files[0]);
+    }
+  })
 
-  const firestoreCreateUser = async(profilePicUrl) => {
+  const firestoreCreateUser = async (profilePicUrl) => {
     await setDoc(doc(firestore, "users", auth.currentUser.uid), {
       badges: [],
       email: email,
@@ -45,20 +43,8 @@ const NewAccount = ({ isUserLogged, logUser }) => {
     })
   }
 
-  /*const createUser = () => {
-    if(nickname !== "" && nickname !== null && profilePicFile !== null){
-      uploadProfilePic().then(
-        firestoreCreateUser()
-        .then(() => navBadges())
-        .catch(() => console.log("Error: Could not create new user in firestore"))
-      )
-    } else {
-      setNicknameAndPicEntered(false)
-    }
-  }*/
-
   const createUser = () => {
-    if(nickname !== "" && nickname !== null && profilePicFile !== null){
+    if (nickname !== "" && nickname !== null && profilePicFile !== null) {
       const storageRef = ref(storage, "profilePics/" + profilePicFile.name);
 
       uploadBytes(storageRef, profilePicFile).then((snapshot) => {
@@ -77,7 +63,7 @@ const NewAccount = ({ isUserLogged, logUser }) => {
       setNicknameAndPicEntered(false)
     }
   }
-  
+
 
   return (
     <div id="newAccount">
@@ -89,10 +75,10 @@ const NewAccount = ({ isUserLogged, logUser }) => {
 
           <div className="smmd:p-6 p-4">
             <div className={`${styles.flexCenter} flex font-poppins text-[#e03f3f] text-[14px] text-center`}>
-                <p className={`${nicknameAndPicEntered ? "hidden" : "flex"}`}>
-                  Te falta el apodo o la foto de perfil. Subnormal.
-                </p>
-              </div>
+              <p className={`${nicknameAndPicEntered ? "hidden" : "flex"}`}>
+                Te falta el apodo o la foto de perfil. Subnormal.
+              </p>
+            </div>
             <form className="flex flex-col gap-4">
               <div className="flex flex-col">
                 <label className="text-white text-sm font-bold mb-2">
@@ -114,20 +100,21 @@ const NewAccount = ({ isUserLogged, logUser }) => {
                 <label className="text-white text-sm font-bold mb-2">
                   Foto Perfil (opcional):
                 </label>
-                <input className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="profilePic" type="file" accept="image/*"
+                <input id="imageInput" className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="file" accept="image/*"
                   onChange={(e) => {
-                    if(e.target.files[0]){
+                    if (e.target.files[0]) {
                       setProfilePicFile(e.target.files[0])
                       setNicknameAndPicEntered(true)
                     }
-                  }}/>
+                  }} />
+                <img id="imagePreview" src="" className={`max-w-[512px] mt-2`}/>
               </div>
               <div className={`flex ${styles.flexCenter} p-3`}>
-                  <button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
-                    onClick={(createUser)}>
-                    Enviar
-                  </button>
-                </div>
+                <button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
+                  onClick={(createUser)}>
+                  Enviar
+                </button>
+              </div>
             </form>
           </div>
         </div>
