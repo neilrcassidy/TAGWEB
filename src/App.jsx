@@ -29,7 +29,7 @@ const App = () => {
             <Route index path="badges" element={<Badges />} />
             <Route path="news" element={<News />} />
             <Route path="leaderboard" element={<Leaderboard />} />
-            <Route path="profile" element={<Profile />} />
+            <Route path="profile" element={<Profile isUserLogged={isUserLogged} logUser={logUser}/>} />
           </Route>
         </Routes>
       </BrowserRouter>

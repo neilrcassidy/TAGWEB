@@ -25,16 +25,16 @@ const Badges = () => {
           <FontAwesomeIcon icon={faList} className={`m-auto`} />
         </button>
       </div>
-      <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold ${styles.flexCenter} w-[80%]`}>
+      <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold ${styles.flexCenter} w-[90%]`}>
         <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border`}>
           <div id="badgesGeneralTitle" className={`flex bg-secondary rounded-t-md`}>
             <h3 className={`m-2`}>General</h3>
           </div>
           {list ? (
             <div id="badgesGeneralList" className={`m-4`}>
-              <div className={`flex flex-col`}>
+              <div className={`flex flex-col gap-4`}>
                 {badges.map((badge, index) => (
-                  <div id={index} className={`flex flex-row gap-4`}>
+                  <div id={index} className={`flex flex-row gap-6`}>
                     <div className={`w-[96px]`}>
                       <img src={badge.icon}></img>
                     </div>

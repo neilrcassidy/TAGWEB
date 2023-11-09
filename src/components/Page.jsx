@@ -8,10 +8,8 @@ import { Outlet } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-//TESTING PURPOSES---------------------------
+// Firebase imports
 import { auth } from "../config/firebase-config"
-import { signOut } from "firebase/auth"
-//TESTING PURPOSES-----------------------------
 
 const Page = ({ isUserLogged, logUser }) => {
   const navigate = useNavigate();
@@ -25,18 +23,6 @@ const Page = ({ isUserLogged, logUser }) => {
     })
   }, [])
 
-  //TESTING PURPOSES--------------------------
-  const logout = async () => {
-    await signOut(auth)
-      .then(localStorage.removeItem('Auth Token'))
-  }
-
-  const cerrarSesion = async () => {
-    logout()
-      .then(() => logUser(false))
-  }
-  //TESTING PURPOSES--------------------------
-
   const [isMobileMenuToggled, toggleMenu] = useState(false);
 
   return (
@@ -44,10 +30,6 @@ const Page = ({ isUserLogged, logUser }) => {
       <Header isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged} logUser={logUser} />
       <MobileMenu isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged} logUser={logUser} />
       <Outlet />
-      <button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
-        onClick={(cerrarSesion)}>
-        Cerrar Sesion
-      </button>
     </div>
   )
 }

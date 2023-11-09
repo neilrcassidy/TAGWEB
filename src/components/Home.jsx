@@ -232,10 +232,10 @@ const Home = ({ isUserLogged, logUser }) => {
         </div>
       </div>
 
-      <button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
+      {/*<button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
         onClick={(cerrarSesion)}>
         Cerrar Sesion
-      </button>
+      </button>*/}
     </div>
 
 

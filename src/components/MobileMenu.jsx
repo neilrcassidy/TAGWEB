@@ -72,7 +72,7 @@ const MobileMenu = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) 
         )}
 
         <nav className="mr-4">
-          <ul className="pt-6 text-right font-semibold text-white xxxs:text-[28px] text-[24px]">
+          <ul className="pt-6 text-right font-semibold text-white xxs:text-[28px] text-[24px]">
             <li className="hover:underline mb-4"
               onClick={() => toggleMenu((prev) => !prev)}>
               <Link to="/badges">Logros</Link>
