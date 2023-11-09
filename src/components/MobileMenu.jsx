@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { defaultProfile } from "../assets/img"
+import { defaultProfile, antxpoint } from "../assets/img"
 
 // React imports
 import { Link } from "react-router-dom"
@@ -46,13 +46,16 @@ const MobileMenu = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) 
           <Link to="/profile">
             <div className={`flex h-[100px] bg-altSecondary`} onClick={() => toggleMenu((prev) => !prev)}>
               <div className={`flex flex-row m-auto mx-4`}>
-                <div className={`m-auto mr-4`}>
-                  <img src={defaultProfile} className="h-[70px]" />
+                <div className={`m-auto mr-4 w-[70px]`}>
+                  <img src={defaultProfile} />
                 </div>
                 <div className={`m-auto mr-4`}>
                   <div>
                     <p>{currentUserNickname}</p>
-                    <p>Puntos: {currentUserPoints}</p>
+                    <div className={`flex my-auto`}>
+                      <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`}/>
+                      <p className={`my-auto`}>{currentUserPoints}</p>
+                    </div>
                   </div>
                 </div>
               </div>

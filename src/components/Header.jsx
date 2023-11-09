@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { headerTitle, menu, close, defaultProfile } from "../assets/img"
+import { headerTitle, menu, close, defaultProfile, antxpoint } from "../assets/img"
 
 // React imports
 import { Link } from "react-router-dom"
@@ -47,13 +47,13 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) => {
       <div className={`sm:flex hidden m-auto mr-2 gap-10 text-white font-poppins`}>
         <nav className={`m-auto flex font-bold text-[16px]`}>
           <ul className={`flex flex-row gap-10`}>
-            <li className="cursor-pointer hover:underline hover:text-black">
+            <li className="cursor-pointer hover:underline hover:font-extrabold">
               <Link to="/badges">Logros</Link>
             </li>
-            <li className="cursor-pointer hover:underline hover:text-black">
+            <li className="cursor-pointer hover:underline hover:font-extrabold">
               <Link to="/news">Noticias</Link>
             </li>
-            <li className="cursor-pointer hover:underline hover:text-black">
+            <li className="cursor-pointer hover:underline hover:font-extrabold">
               <Link to="/leaderboard">Clasificación</Link>
             </li>
           </ul>
@@ -69,7 +69,10 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) => {
                 <div className={`m-auto mr-4`}>
                   <div>
                     <p>{currentUserNickname}</p>
-                    <p>Puntos: {currentUserPoints}</p>
+                    <div className={`flex`}>
+                      <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`}/>
+                      <p>{currentUserPoints}</p>
+                    </div>
                   </div>
                 </div>
               </div>
