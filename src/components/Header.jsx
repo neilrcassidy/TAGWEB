@@ -64,7 +64,7 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) => {
             <div className={`flex h-[80px] bg-altSecondary m-auto rounded-2xl`}>
               <div className={`flex flex-row m-auto mx-4`}>
                 <div className={`m-auto mr-4`}>
-                  <img src={defaultProfile} className="h-[60px]" />
+                  <img src={currentUserProfilePic} className="h-[60px]" />
                 </div>
                 <div className={`m-auto mr-4`}>
                   <div>
