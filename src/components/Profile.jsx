@@ -12,7 +12,7 @@ import { auth, firestore } from "../config/firebase-config"
 import { doc, getDoc } from "firebase/firestore"
 import { signOut } from "firebase/auth"
 
-const Profile = ({ isUserLogged, logUser }) => {
+const Profile = ({ logUser }) => {
   const navigate = useNavigate();
 
   const navAdmin = () => {

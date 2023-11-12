@@ -12,7 +12,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } f
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-const Home = ({ isUserLogged, logUser }) => {
+const Home = ({ logUser }) => {
   const navigate = useNavigate();
   const navReestablecerContrasenya = () => navigate("/reset_password")
   const navCuentaNueva = () => navigate("/complete_registration")

@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import styles from "../style"
-import { badges_general } from "../constants/index.js"
+import { badges } from "../constants/index.js"
 import { antxpoint } from "../assets/img/index.js"
 
 // React imports
@@ -60,8 +60,10 @@ const Badges = () => {
                 </div>
                 <div id="badgesGeneralList" className={`min-w-[90%]`}>
                   <div className={`flex flex-col`}>
-                    {badges_general.map((badge, index) => (
-                      <div className={`flex w-full ${index === badges_general.length - 1 ? "" : "border border-transparent border-b-secondary"}`}>
+                    {badges
+                    .filter((badge) => badge.group === "general")
+                    .map((badge, index) => (
+                      <div className={`flex w-full ${index === badges.length - 1 ? "" : "border border-transparent border-b-secondary"}`}>
                         <div id="leadearboardEntry" className={`flex w-full my-4 ml-2`}>
                           <div id="iconLeaderboardEntry" className={`flex ss:min-w-[64px] ss:w-[64px] min-w-[48px] w-[48px] m-auto mr-2 ss:ml-2 ml-0 `}>
                             <img src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked} className={``} />
@@ -91,7 +93,9 @@ const Badges = () => {
                 </div>
                 <div id="badgesGeneralGrid" className={`m-4`}>
                   <div className={`flex flex-wrap ${styles.flexCenter} gap-10`}>
-                    {badges_general.map((badge, index) => (
+                    {badges
+                    .filter((badge) => badge.group === "general")
+                    .map((badge, index) => (
                       <div id={index} className={``}>
                         <div className={`w-[64px] mb-2`}>
                           <img src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked}></img>

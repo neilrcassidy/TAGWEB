@@ -11,7 +11,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { auth, firestore, storage } from "../config/firebase-config";
 
-const NewAccount = ({ isUserLogged, logUser }) => {
+const NewAccount = ({ isUserLogged }) => {
   const navigate = useNavigate();
   const navBadges = () => navigate("/badges")
 
