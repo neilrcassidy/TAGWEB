@@ -10,7 +10,7 @@ import rare_badge_unlocked from "./rare_badge_unlocked.png"
 import podium1 from "./podium1.png"
 import podium2 from "./podium2.png"
 import podium3 from "./podium3.png"
-import antxpoint from "./antxpoint.png"
+import antxpoint from "./antx_point.png"
 
 export {
     headerTitle,
