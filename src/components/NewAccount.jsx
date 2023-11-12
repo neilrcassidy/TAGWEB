@@ -18,23 +18,56 @@ const NewAccount = ({ isUserLogged, logUser }) => {
   const [email, setEmail] = useState(auth.currentUser.email);
   const [nickname, setNickname] = useState("");
   const [profilePicFile, setProfilePicFile] = useState();
+  const [profilePicFileCropped, setProfilePicFileCropped] = useState("");
   const [nicknameAndPicEntered, setNicknameAndPicEntered] = useState(true)
 
-  const imgInput = document.getElementById("imageInput")
-  const imgElement = document.getElementById("imagePreview")
-
-  imgInput?.addEventListener('change', () => {
-    if (imgInput.files && imgInput.files[0]) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        imgElement.src = e.target.result;
+  const handleImageChange = (e) => {
+    setProfilePicFile(e.target.files[0])
+    const file = e.target.files[0]
+    const imgname = e.target.files[0].name
+    const reader = new FileReader();
+    reader.readAsDataURL(file)
+    reader.onloadend = () => {
+      const img = new Image()
+      img.src = reader.result
+      img.onload = () => {
+        const canvas = document.createElement("canvas")
+        const ctx = canvas.getContext("2d")
+        
+        // square photo
+        if(img.width === img.height){
+          canvas.width = img.width
+          canvas.height = img.height
+          ctx.drawImage(img, 0, 0)
+        // vertical photo
+        } else if(img.width < img.height){
+          canvas.width = img.width
+          canvas.height = img.width
+          ctx.drawImage(img, 0, -(img.height-img.width)/2)
+        // horizontal photo
+        } else if(img.width > img.height){
+          canvas.width = img.height
+          canvas.height = img.height
+          ctx.drawImage(img, -(img.width-img.height)/2, 0)
+        }
+        canvas.toBlob(
+          (blob) => {
+            const file = new File([blob], imgname, {
+              type: "image/png",
+              lastModified: Date.now()
+            })
+            setProfilePicFileCropped(file)
+          },
+          "image/jpeg",
+          0.8
+        )
       }
-      reader.readAsDataURL(imgInput.files[0]);
     }
-  })
+  }
 
   const firestoreCreateUser = async (profilePicUrl) => {
     await setDoc(doc(firestore, "users", auth.currentUser.uid), {
+      admin: false,
       badges: [],
       email: email,
       nickname: nickname,
@@ -47,7 +80,7 @@ const NewAccount = ({ isUserLogged, logUser }) => {
     if (nickname !== "" && nickname !== null && profilePicFile !== null) {
       const storageRef = ref(storage, "profilePics/" + profilePicFile.name);
 
-      uploadBytes(storageRef, profilePicFile).then((snapshot) => {
+      uploadBytes(storageRef, profilePicFileCropped).then((snapshot) => {
         getDownloadURL(storageRef).then((url) => {
           firestoreCreateUser(url)
             .then(() => {
@@ -88,7 +121,7 @@ const NewAccount = ({ isUserLogged, logUser }) => {
               </div>
               <div className="flex flex-col">
                 <label className="text-white text-sm font-bold mb-2">
-                  Apodo:
+                  Apodo*:
                 </label>
                 <input className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nickname" type="text" placeholder="Apodo"
                   onChange={(e) => {
@@ -98,16 +131,18 @@ const NewAccount = ({ isUserLogged, logUser }) => {
               </div>
               <div className="flex flex-col">
                 <label className="text-white text-sm font-bold mb-2">
-                  Foto Perfil (opcional):
+                  Foto Perfil*:
                 </label>
                 <input id="imageInput" className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="file" accept="image/*"
                   onChange={(e) => {
-                    if (e.target.files[0]) {
-                      setProfilePicFile(e.target.files[0])
-                      setNicknameAndPicEntered(true)
-                    }
+                    handleImageChange(e)
+                    setNicknameAndPicEntered(true)
                   }} />
-                <img id="imagePreview" src="" className={`max-w-[512px] mt-2`}/>
+                {profilePicFileCropped ? (
+                  <img id="imagePreview" src={URL.createObjectURL(profilePicFileCropped)} className={`max-w-[512px] mt-4 border-0 rounded-full`} />
+                ) : (
+                  <div></div>
+                )}
               </div>
               <div className={`flex ${styles.flexCenter} p-3`}>
                 <button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"

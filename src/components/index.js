@@ -8,6 +8,7 @@ import MobileMenu from "./MobileMenu.jsx"
 import RecoverPassword from "./RecoverPassword.jsx"
 import NewAccount from "./NewAccount.jsx"
 import Profile from "./Profile.jsx"
+import Admin from "./Admin.jsx"
 
 export {
     Header,
@@ -19,5 +20,6 @@ export {
     MobileMenu,
     RecoverPassword,
     NewAccount,
-    Profile
+    Profile,
+    Admin
 }

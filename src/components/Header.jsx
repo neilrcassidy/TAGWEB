@@ -12,27 +12,20 @@ import { doc, getDoc } from "firebase/firestore"
 
 const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) => {
 
-  const [currentUserEmail, setCurrentUserEmail] = useState("");
   const [currentUserNickname, setCurrentUserNickname] = useState("");
   const [currentUserProfilePic, setCurrentUserProfilePic] = useState("");
-  const [currentUserBadges, setCurrentUserBadges] = useState([]);
   const [currentUserPoints, setCurrentUserPoints] = useState(0);
 
   useEffect(() => {
     auth.onAuthStateChanged(async function (user) {
       if (user) {
         const currentUserInfo = await getDoc(doc(firestore, "users", user.uid))
-        setCurrentUserEmail(currentUserInfo.data().email)
         setCurrentUserNickname(currentUserInfo.data().nickname)
         setCurrentUserProfilePic(currentUserInfo.data().profilePic)
-        setCurrentUserBadges(currentUserInfo.data().badges)
         setCurrentUserPoints(currentUserInfo.data().points)
       } else {
-        console.log("userloggedout")
-        setCurrentUserEmail("")
         setCurrentUserNickname("")
         setCurrentUserProfilePic("")
-        setCurrentUserBadges([])
         setCurrentUserPoints(0)
       }
     })
@@ -64,7 +57,11 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) => {
             <div className={`flex h-[80px] bg-altSecondary m-auto rounded-2xl`}>
               <div className={`flex flex-row m-auto mx-4`}>
                 <div className={`m-auto mr-4`}>
-                  <img src={currentUserProfilePic} className="h-[60px]" />
+                  {currentUserProfilePic !== "" ? (
+                    <img src={currentUserProfilePic} className="h-[60px] border-0 rounded-full" />
+                  ) : (
+                    <img src={defaultProfile} className="h-[60px] border-0 rounded-full" />
+                  )}
                 </div>
                 <div className={`m-auto mr-4`}>
                   <div>

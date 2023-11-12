@@ -47,7 +47,7 @@ const MobileMenu = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) 
             <div className={`flex h-[100px] bg-altSecondary`} onClick={() => toggleMenu((prev) => !prev)}>
               <div className={`flex flex-row m-auto mx-4`}>
                 <div className={`m-auto mr-4 w-[70px]`}>
-                  <img src={defaultProfile} />
+                  <img src={currentUserProfilePic} className={`border-0 rounded-full`}/>
                 </div>
                 <div className={`m-auto mr-4`}>
                   <div>

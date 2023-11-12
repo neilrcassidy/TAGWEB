@@ -1,4 +1,4 @@
-import { Page, Home, Badges, News, Leaderboard, RecoverPassword, NewAccount, Profile } from "./components"
+import { Page, Home, Badges, News, Leaderboard, RecoverPassword, NewAccount, Profile, Admin } from "./components"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { auth } from "./config/firebase-config"
@@ -30,6 +30,7 @@ const App = () => {
             <Route path="news" element={<News />} />
             <Route path="leaderboard" element={<Leaderboard />} />
             <Route path="profile" element={<Profile isUserLogged={isUserLogged} logUser={logUser}/>} />
+            <Route path="administrame_esta" element={<Admin isUserLogged={isUserLogged} logUser={logUser}/>} />
           </Route>
         </Routes>
       </BrowserRouter>
