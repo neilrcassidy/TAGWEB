@@ -9,7 +9,7 @@ import { useEffect, useState } from "react"
 
 // Firebase Imports
 import { firestore } from "../config/firebase-config"
-import { collection, query, getDocs, getDoc, doc, updateDoc, arrayUnion, addDoc, Timestamp } from "firebase/firestore"
+import { collection, query, getDocs, getDoc, doc, updateDoc, arrayUnion, addDoc, Timestamp, increment } from "firebase/firestore"
 
 const Admin = () => {
   const [users, setUsers] = useState([])
@@ -19,24 +19,23 @@ const Admin = () => {
   const addBadgeToUser = async () => {
     const userDoc = doc(firestore, "users", selectedUserId)
     const user = await getDoc(userDoc)
-    console.log(selectedBadgeId)
     const badge = badges.find((badge) => {
       return badge.id === Number(selectedBadgeId)
     })
-    console.log(badge)
     
     if(user.exists()){
       const userBadges = user.data().badges
       if(!userBadges.includes(selectedBadgeId)){
-        updateUserDoc(userDoc)
+        updateUserDoc(userDoc, badge)
           .then(() => createNewsEntry(user, badge))
       }
     } 
   }
 
-  const updateUserDoc = async (userDoc) => {
+  const updateUserDoc = async (userDoc, badge) => {
     await updateDoc(userDoc, {
-      badges: arrayUnion(Number(selectedBadgeId))
+      badges: arrayUnion(Number(selectedBadgeId)),
+      points: increment(badge.points)
     })
   }
 
@@ -80,6 +79,7 @@ const Admin = () => {
             <div className={`flex flex-col mx-4 mt-4 mb-2`}>
               <p>Select User:</p>
               <select name="selectUser" className={`text-black`} onChange={(e) => setSelectedUserId(e.target.value)}>
+                <option value="No user selected">Select a user...</option>
                 {users.map((user, index) => {
                   const text = user.data().nickname + " (" + user.data().email + ")";
                   return (<option value={user.id}>{text}</option>)
@@ -89,6 +89,7 @@ const Admin = () => {
             <div className={`flex flex-col mx-4 mt-2 mb-4`}>
               <p>Select Badge:</p>
               <select name="selectBadge" className={`text-black`} onChange={(e) => setSelectedBadgeId(e.target.value)}>
+                <option value="No badge selected">Select a badge...</option>
                 {badges.map((badge, index) => {
                   const text = badge.id + ". " + badge.title + " (" + badge.points + " points)";
                   return (<option value={badge.id}>{text}</option>)

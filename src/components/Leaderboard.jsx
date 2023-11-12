@@ -61,8 +61,8 @@ const Leaderboard = () => {
             </div>
             <div id="podium3" className={`w-[25%]`}>
               <div>
-                <img src={defaultProfile} className={`mx-auto max-w-[80%] border-0 rounded-full`} />
-                <p className={`my-1 ss:text-[14px] xs:text-[12px] xxs:text-[10px] text-[8px] ${styles.flexCenter} max-w-[100%] break-all text-center my-2`}>Username</p>
+                <img src={users[2].profilePic} className={`mx-auto max-w-[80%] border-0 rounded-full`} />
+                <p className={`my-1 ss:text-[14px] xs:text-[12px] xxs:text-[10px] text-[8px] ${styles.flexCenter} max-w-[100%] break-all text-center my-2`}>{users[2].nickname}</p>
               </div>
               <img src={podium3} />
             </div>

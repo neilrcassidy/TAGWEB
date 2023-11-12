@@ -168,7 +168,7 @@ const Home = ({ logUser }) => {
 
               <div className={`flex font-poppins text-[#e03f3f] text-[14px] text-center`}>
                 <p className={`${passwordLongEnough ? "hidden" : "flex"}`}>
-                  Las contraseña debe tener mínimo 8 caracteres.
+                  La contraseña debe tener mínimo 8 caracteres.
                 </p>
               </div>
 
