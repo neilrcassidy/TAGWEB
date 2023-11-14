@@ -9,7 +9,7 @@ import { useEffect, useState } from "react"
 
 // Firebase Imports
 import { firestore } from "../config/firebase-config"
-import { collection, query, getDocs, orderBy } from "firebase/firestore"
+import { collection, query, getDocs, orderBy, Timestamp } from "firebase/firestore"
 
 const News = () => {
   const [news, setNews] = useState([])
@@ -28,7 +28,8 @@ const News = () => {
     fetchAll()
       .then((docs) => setNews(docs))
       .then(() => setNewsSet(true))
-  })
+    console.log("No infinite loop in News")
+  }, [])
 
   return (
     <>
@@ -42,8 +43,9 @@ const News = () => {
                     <img src={newsEntry.image} className={`border-0 rounded-full`}></img>
                   </div>
                   <div id="textNewsEntry" className={`my-auto`}>
-                    <p className={`smmd:text-[24px] sm:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px]`}>{newsEntry.title}</p>
-                    <p className={`text-gray-200 xs:text-[12px] text-[10px] text-justify font-normal`}>{newsEntry.body}</p>
+                    <p className={`smmd:text-[24px] sm:text-[22px] xs:text-[20px] xxs:text-[18px] text-[14px]`}>{newsEntry.title}</p>
+                    <p className={`text-gray-400 ss:text-[16px] xs:text-[14px] text-[12px] text-justify font-normal`}>{((newsEntry.date).toDate()).toLocaleDateString('en-GB')}</p>
+                    <p className={`text-gray-200 smmd:text-[20px] sm:text-[18px] ss:text-[16px] xs:text-[14px] text-[12px] text-justify font-normal`}>{newsEntry.body}</p>
                   </div>
                 </div>
               </div>

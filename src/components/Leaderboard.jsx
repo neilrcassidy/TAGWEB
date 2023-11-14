@@ -16,16 +16,6 @@ const Leaderboard = () => {
   const [usersSet, setUsersSet] = useState(false)
 
   const fetchAll = async () => {
-    /*
-      const querySnapshot = await getDocs(collection(firestore, "users"))
-      let docs = [];
-      querySnapshot.docs.map((doc) => {
-        docs.push(doc.data())
-      })
-      docs.sort((a, b) => b.points - a.points)
-      return docs
-    */
-
     const querySnapshot = await getDocs(query(collection(firestore, "users"), orderBy('points', 'desc')))
     let docs = [];
     querySnapshot.docs.map((doc) => {
@@ -38,6 +28,7 @@ const Leaderboard = () => {
     fetchAll()
       .then((docs) => setUsers(docs))
       .then(() => setUsersSet(true))
+    console.log("No infinite loop in Leaderboard")
   }, [])
 
   return (

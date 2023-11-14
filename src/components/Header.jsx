@@ -29,6 +29,7 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) => {
         setCurrentUserPoints(0)
       }
     })
+    console.log("No infinite loop in Header")
   }, [])
 
   return (

@@ -33,6 +33,7 @@ const Badges = () => {
         .then((badges) => setUserBadges(badges))
         .then(() => setBadgesSet(true))
     })
+    console.log("No infinite loop in Badges")
   },[])
 
   return (
