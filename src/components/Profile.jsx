@@ -444,7 +444,7 @@ const Profile = ({ logUser }) => {
                     </div>
                   </div>
 
-                  {currentUserFavoriteBadges?.length !== 0 ? (
+                  {currentUserFavoriteBadges.length !== 0 ? (
                     <div className={`${styles.flexCenter} m-auto`}>
                       <div className={`${styles.flexCenter} m-4`}>
                         <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border`}>
