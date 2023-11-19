@@ -42,7 +42,7 @@ const News = () => {
             {news.map((newsEntry, index) => (
               <div id={newsEntry.id} className={`flex w-full gap-4 ${index === news.length - 1 ? "" : "border border-transparent border-b-secondary"}`}>
                 <div id="newsEntry" className={`flex mx-2 my-3 gap-4`}>
-                  <div id="iconNewsEntry" className={`ss:min-w-[96px] ss:w-[96px] xs:min-w-[80px] xs:w-[80px] min-w-[64px] w-[64px] my-auto`}>
+                  <div id="iconNewsEntry" className={`ss:min-w-[96px] ss:w-[96px] xs:min-w-[80px] xs:w-[80px] min-w-[64px] w-[64px] my-auto cursor-pointer`}>
                     <img src={newsEntry.data().image} className={`border-0 rounded-full`} onClick={() => navVisitUser(newsEntry.data().userAssociated)}></img>
                   </div>
                   <div id="textNewsEntry" className={`my-auto`}>
