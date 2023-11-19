@@ -63,7 +63,7 @@ const Admin = () => {
 
   const createNewsEntryForBadges = async (user, badge) => {
     await addDoc(collection(firestore, "news"), {
-      title: "Enhorabuena " + user.data().nickname + "!",
+      title: "¡Enhorabuena " + user.data().nickname + "!",
       body: user.data().nickname + " ha conseguido el logro \"" + badge.title + "\" que vale " + badge.points + " ANTX Coins.",
       image: user.data().profilePic,
       date: Timestamp.now(),
@@ -83,7 +83,6 @@ const Admin = () => {
   useEffect(() => {
     fetchAll()
       .then((users) => setUsers(users))
-      .then(() => console.log("No infinite loop in Admin"))
   }, [])
 
   return (

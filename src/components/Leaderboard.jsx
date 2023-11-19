@@ -32,7 +32,6 @@ const Leaderboard = () => {
     fetchAll()
       .then((docs) => setUsers(docs))
       .then(() => setUsersSet(true))
-      .then(() => console.log("No infinite loop in Leaderboard"))
   }, [])
 
   return (

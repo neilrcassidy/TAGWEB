@@ -10,8 +10,9 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 // Firebase imports
-import { auth, firestore } from "../config/firebase-config"
-import { doc, getDoc } from "firebase/firestore"
+import { auth, firestore, storage } from "../config/firebase-config";
+import { doc, getDoc, updateDoc, collection, addDoc, Timestamp } from "firebase/firestore"
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { signOut } from "firebase/auth"
 
 const Profile = ({ logUser }) => {
@@ -35,9 +36,19 @@ const Profile = ({ logUser }) => {
   const [currentUserAdmin, setCurrentUserAdmin] = useState(false);
 
   const [editMode, setEditMode] = useState(false)
-  const [currentUserNewNickname, setCurrentUserNewNickname] = useState("")
+  const [newNickname, setNewNickname] = useState("")
   const [newProfilePicFile, setNewProfilePicFile] = useState();
   const [newProfilePicFileCropped, setNewProfilePicFileCropped] = useState("");
+
+  const [nicknameUpdated, setNicknameUpdated] = useState(false)
+  const [profilePicUpdated, setProfilePicUpdated] = useState(false)
+  const [favoriteBadgesUpdated, setFavoriteBadgesUpdated] = useState(false)
+
+  const [badge1, setBadge1] = useState()
+  const [badge2, setBadge2] = useState()
+  const [badge3, setBadge3] = useState()
+  const [badge4, setBadge4] = useState()
+  const [badge5, setBadge5] = useState()
 
   const checkAuthState = async () => {
     auth.onAuthStateChanged(async function (user) {
@@ -64,16 +75,70 @@ const Profile = ({ logUser }) => {
     })
   }
 
-  const updateNickname = () => {
-
+  const updateNickname = async () => {
+    if (newNickname !== "" && newNickname !== null) {
+      const userDoc = doc(firestore, "users", currentUserId)
+      await updateDoc(userDoc, {
+        nickname: newNickname
+      }).then(() => createNewsEntryForUpdatedNickname())
+    }
   }
 
-  const updateProfilePic = () => {
-
+  const createNewsEntryForUpdatedNickname = async () => {
+    await addDoc(collection(firestore, "news"), {
+      title: "¡Cambio de apodo!",
+      body: currentUserNickname + " ha cambiado su apodo a " + newNickname + ".",
+      image: currentUserProfilePic,
+      date: Timestamp.now(),
+      userAssociated: currentUserId
+    })
   }
 
-  const updateFavoriteBadges = () => {
+  const updateProfilePic = async () => {
+    if (newProfilePicFile !== null) {
+      const storageRef = ref(storage, "profilePics/" + newProfilePicFile.name);
 
+      uploadBytes(storageRef, newProfilePicFileCropped).then((snapshot) => {
+        getDownloadURL(storageRef).then(async (url) => {
+          const userDoc = doc(firestore, "users", currentUserId)
+          await updateDoc(userDoc, {
+            profilePic: url
+          })
+        })
+      }).catch((error) => {
+        console.log("Upload failed")
+      })
+    }
+  }
+
+  const updateFavoriteBadges = async () => {
+    let selectedFavoriteBadges = []
+    if(badge1 !== undefined && badge1 !== 0){
+      selectedFavoriteBadges.push(badge1)
+    }
+
+    if(badge2 !== undefined && badge2 !== 0){
+      selectedFavoriteBadges.push(badge2)
+    }
+
+    if(badge3 !== undefined && badge3 !== 0){
+      selectedFavoriteBadges.push(badge3)
+    }
+
+    if(badge4 !== undefined && badge4 !== 0){
+      selectedFavoriteBadges.push(badge4)
+    }
+
+    if(badge5 !== undefined && badge5 !== 0){
+      selectedFavoriteBadges.push(badge5)
+    }
+
+    selectedFavoriteBadges = selectedFavoriteBadges.filter((value, index) => selectedFavoriteBadges.indexOf(value) === index)
+
+    const userDoc = doc(firestore, "users", currentUserId)
+      await updateDoc(userDoc, {
+        favoriteBadges: selectedFavoriteBadges
+      })
   }
 
   const handleImageChange = (e) => {
@@ -123,7 +188,6 @@ const Profile = ({ logUser }) => {
   useEffect(() => {
     checkAuthState()
       .then(setDataSet(true))
-      .then(() => console.log("No infinite loop in Profile"))
   }, [])
 
   const logout = async () => {
@@ -192,23 +256,38 @@ const Profile = ({ logUser }) => {
                     <div className={`flex text-[18px]`}>
                       <h2>Actualizar Apodo:</h2>
                     </div>
+                    {nicknameUpdated ? (
+                      <div className={`flex text-[12px] text-secondary`}>
+                        <h2>Apodo actualizado! Recarga la página.</h2>
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
                     <div className={`flex text-[18px]`}>
                       <input className="text-black text-[16px] p-2" id="nickname" type="text" placeholder={currentUserNickname}
                         onChange={(e) => {
-                          setCurrentUserNewNickname(e.target.value)
+                          setNewNickname(e.target.value)
                         }} />
                     </div>
                     <div className={`flex`}>
                       <button className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`} type="button"
-                        onClick={() => updateNickname}>
+                        onClick={() => updateNickname()
+                          .then(() => setNicknameUpdated(true))}>
                         Actualizar
                       </button>
                     </div>
                   </div>
                   <div className={`flex flex-col ml-4 gap-2`}>
                     <div className={`flex text-[18px]`}>
-                      <h2>Actualizar Foto Perfil:</h2>
+                      <h2>Actualizar Foto de Perfil:</h2>
                     </div>
+                    {profilePicUpdated ? (
+                      <div className={`flex text-[12px] text-secondary`}>
+                        <h2>Foto de perfil actualizado! Recarga la página.</h2>
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
                     <div className={`flex flex-col`}>
                       <input id="imageInput" className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline max-w-[256px]" type="file" accept="image/*"
                         onChange={(e) => {
@@ -222,21 +301,32 @@ const Profile = ({ logUser }) => {
                     </div>
                     <div className={`flex`}>
                       <button className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`} type="button"
-                        onClick={() => updateProfilePic}>
+                        onClick={() => updateProfilePic()
+                          .then(() => setProfilePicUpdated(true))}>
                         Actualizar
                       </button>
                     </div>
                   </div>
                   <div className={`flex flex-col ml-4 gap-2`}>
                     <div className={`flex text-[18px]`}>
-                      <h2>Actualizar Logros Favoritos:</h2>
+                      <h2>Actualizar Logros Destacados:</h2>
                     </div>
+                    {favoriteBadgesUpdated ? (
+                      <div className={`flex text-[12px] text-secondary`}>
+                        <h2>Logros Destacados actualizado! Recarga la página.</h2>
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
                     <div className={`flex flex-wrap gap-4`}>
                       <div className={`flex flex-col`}>
                         <div className={`flex text-[14px]`}>
                           <h2>Logro 1:</h2>
                         </div>
-                        <select className={`text-black font-normal`}>
+                        <select className={`text-black font-normal`}
+                        onChange={(e) => {
+                          setBadge1(Number(e.target.value))
+                        }}>
                           <option value="0">...</option>
                           {badges
                             .filter((badge) => currentUserBadges.includes(badge.id))
@@ -250,7 +340,10 @@ const Profile = ({ logUser }) => {
                         <div className={`flex text-[14px]`}>
                           <h2>Logro 2:</h2>
                         </div>
-                        <select className={`text-black font-normal`}>
+                        <select className={`text-black font-normal`}
+                        onChange={(e) => {
+                          setBadge2(Number(e.target.value))
+                        }}>
                           <option value="0">...</option>
                           {badges
                             .filter((badge) => currentUserBadges.includes(badge.id))
@@ -264,7 +357,10 @@ const Profile = ({ logUser }) => {
                         <div className={`flex text-[14px]`}>
                           <h2>Logro 3:</h2>
                         </div>
-                        <select className={`text-black font-normal`}>
+                        <select className={`text-black font-normal`}
+                        onChange={(e) => {
+                          setBadge3(Number(e.target.value))
+                        }}>
                           <option value="0">...</option>
                           {badges
                             .filter((badge) => currentUserBadges.includes(badge.id))
@@ -278,7 +374,10 @@ const Profile = ({ logUser }) => {
                         <div className={`flex text-[14px]`}>
                           <h2>Logro 4:</h2>
                         </div>
-                        <select className={`text-black font-normal`}>
+                        <select className={`text-black font-normal`}
+                        onChange={(e) => {
+                          setBadge4(Number(e.target.value))
+                        }}>
                           <option value="0">...</option>
                           {badges
                             .filter((badge) => currentUserBadges.includes(badge.id))
@@ -292,7 +391,10 @@ const Profile = ({ logUser }) => {
                         <div className={`flex text-[14px]`}>
                           <h2>Logro 5:</h2>
                         </div>
-                        <select className={`text-black font-normal`}>
+                        <select className={`text-black font-normal`}
+                        onChange={(e) => {
+                          setBadge5(Number(e.target.value))
+                        }}>
                           <option value="0">...</option>
                           {badges
                             .filter((badge) => currentUserBadges.includes(badge.id))
@@ -305,14 +407,15 @@ const Profile = ({ logUser }) => {
                     </div>
                     <div className={`flex`}>
                       <button className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`} type="button"
-                        onClick={() => updateProfilePic}>
+                        onClick={() => updateFavoriteBadges()
+                          .then(() => setFavoriteBadgesUpdated(true))}>
                         Actualizar
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
             ) : (
 
               <div id="profileContent" className={`flex flex-col my-2`}>

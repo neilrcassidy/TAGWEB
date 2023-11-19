@@ -32,7 +32,6 @@ const Badges = () => {
       getUserBadges()
         .then((badges) => setUserBadges(badges))
         .then(() => setBadgesSet(true))
-        .then(() => console.log("No infinite loop in Badges"))
     })
     
   },[])
@@ -53,7 +52,7 @@ const Badges = () => {
           </div>
 
           {list ? (
-            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center w-[100%] gap-6`}>
+            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center w-[95%] gap-6`}>
               <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border w-[90%]`}>
                 <div id="badgesGeneralTitle" className={`flex bg-secondary rounded-t-md min-w-[90%]`}>
                   <div className={`m-auto my-2 ml-3 text-[20px]`}>
@@ -125,8 +124,8 @@ const Badges = () => {
 
           ) : (
 
-            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center w-[100%] gap-6`}>
-              <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border xxs:max-w-[350px] w-[90%]`}>
+            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center w-[95%] gap-4`}>
+              <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border max-w-[350px] w-[90%]`}>
                 <div id="badgesGeneralTitle" className={`flex bg-secondary rounded-t-md`}>
                   <div className={`m-auto my-2 ml-3 text-[20px]`}>
                     <h3>General</h3>

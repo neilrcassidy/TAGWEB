@@ -32,7 +32,6 @@ const News = () => {
     fetchAll()
       .then((docs) => setNews(docs))
       .then(() => setNewsSet(true))
-      .then(() => console.log("No infinite loop in News"))
   }, [])
 
   return (
