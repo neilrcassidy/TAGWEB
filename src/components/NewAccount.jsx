@@ -81,13 +81,14 @@ const NewAccount = ({ isUserLogged }) => {
     })
   }
 
-  const createNewsEntry = async (nickname, profilePicUrl) => {
+  const createNewsEntry = async (nickname, id, profilePicUrl) => {
     const d = new Date()
     await addDoc(collection(firestore, "news"), {
       title: "¡Bienvenido/a " + nickname + "!",
       body: nickname + " ha empezado a jugar!",
       image: profilePicUrl,
-      date: Timestamp.now()
+      date: Timestamp.now(),
+      userAssociated: id
     })
   }
 
@@ -98,7 +99,7 @@ const NewAccount = ({ isUserLogged }) => {
       uploadBytes(storageRef, profilePicFileCropped).then((snapshot) => {
         getDownloadURL(storageRef).then((url) => {
           firestoreCreateUser(url).then(() => {
-              createNewsEntry(nickname, url)
+              createNewsEntry(nickname, id, url)
               navBadges()
             }).catch(() => console.log("Error: Could not create new user in firestore"))
         })
