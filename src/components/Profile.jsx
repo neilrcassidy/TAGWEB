@@ -203,7 +203,7 @@ const Profile = ({ logUser }) => {
   return (
     <>
       {dataSet ? (
-        <div id="profilePage" className={`flex flex-col text-white font-poppins ${styles.flexCenter}`}>
+        <div id="profilePage" className={`flex flex-col text-white font-poppins ${styles.flexCenter} pb-4`}>
           <div id="profileCard" className={`flex flex-col rounded-lg border-secondary border w-[90%] mt-4 font-bold`}>
             <div id="profileTitle" className={`flex bg-secondary rounded-t-md`}>
               <div className={`flex w-[100%] my-4`}>
@@ -444,7 +444,7 @@ const Profile = ({ logUser }) => {
                     </div>
                   </div>
 
-                  {currentUserFavoriteBadges.length !== 0 ? (
+                  {currentUserFavoriteBadges?.length !== 0 ? (
                     <div className={`${styles.flexCenter} m-auto`}>
                       <div className={`${styles.flexCenter} m-4`}>
                         <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border`}>

@@ -73,6 +73,7 @@ const NewAccount = ({ isUserLogged }) => {
       admin: false,
       badges: [],
       email: email,
+      favoriteBadges: [],
       id: id,
       nickname: nickname,
       points: 0,
