@@ -23,13 +23,13 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) => {
         setCurrentUserNickname(currentUserInfo.data().nickname)
         setCurrentUserProfilePic(currentUserInfo.data().profilePic)
         setCurrentUserPoints(currentUserInfo.data().points)
+        console.log("No infinite loop in Header")
       } else {
         setCurrentUserNickname("")
         setCurrentUserProfilePic("")
         setCurrentUserPoints(0)
       }
     })
-    console.log("No infinite loop in Header")
   }, [])
 
   return (

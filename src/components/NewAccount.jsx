@@ -99,7 +99,6 @@ const NewAccount = ({ isUserLogged }) => {
           firestoreCreateUser(url)
             .then(() => {
               createNewsEntry(nickname, url)
-              console.log("made it")
               navBadges()
             })
             .catch(() => console.log("Error: Could not create new user in firestore"))

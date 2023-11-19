@@ -15,6 +15,11 @@ const Admin = () => {
   const [users, setUsers] = useState([])
   const [selectedUserId, setSelectedUserId] = useState()
   const [selectedBadgeId, setSelectedBadgeId] = useState()
+  const [userHasBadge, setUserHasBadge] = useState(false)
+  const [badgeAdded, setBadgeAdded] = useState(false)
+  const [newsPosted, setNewsPosted] = useState(false)
+  const [invalidUser, setInvalidUser] = useState(false)
+  const [invalidBadge, setInvalidBadge] = useState(false)
 
   const [newsTitle, setNewsTitle] = useState("")
   const [newsBody, setNewsBody] = useState("")
@@ -25,14 +30,18 @@ const Admin = () => {
     const badge = badges.find((badge) => {
       return badge.id === Number(selectedBadgeId)
     })
-    
-    if(user.exists()){
+
+    if (user.exists()) {
       const userBadges = user.data().badges
-      if(!userBadges.includes(selectedBadgeId)){
+      const userHasBadge = userBadges.includes(Number(selectedBadgeId))
+      if (userHasBadge) {
+        setUserHasBadge(true)
+      } else {
         updateUserDoc(userDoc, badge)
-          .then(() => createNewsEntryForBadges(user, badge))
+          .then(() => createNewsEntryForBadges(user, badge)
+            .then(() => setBadgeAdded(true)))
       }
-    } 
+    }
   }
 
   const updateUserDoc = async (userDoc, badge) => {
@@ -42,21 +51,23 @@ const Admin = () => {
     })
   }
 
-  const createNewsEntry = async() => {
-    await addDoc(collection(firestore,"news"), {
+  const createNewsEntry = async () => {
+    await addDoc(collection(firestore, "news"), {
       title: newsTitle,
       body: newsBody,
       image: "",
-      date: Timestamp.now()
-    })
+      date: Timestamp.now(),
+      userAssociated: ""
+    }).then(() => setNewsPosted(true))
   }
 
   const createNewsEntryForBadges = async (user, badge) => {
     await addDoc(collection(firestore, "news"), {
       title: "Enhorabuena " + user.data().nickname + "!",
-      body: user.data().nickname + " ha conseguido el logro " + badge.title + " que vale " + badge.points + " puntos.",
+      body: user.data().nickname + " ha conseguido el logro \"" + badge.title + "\" que vale " + badge.points + " ANTX Coins.",
       image: user.data().profilePic,
-      date: Timestamp.now()
+      date: Timestamp.now(),
+      userAssociated: user.data().id
     })
   }
 
@@ -72,7 +83,7 @@ const Admin = () => {
   useEffect(() => {
     fetchAll()
       .then((users) => setUsers(users))
-    console.log("No infinite loop in Admin")
+      .then(() => console.log("No infinite loop in Admin"))
   }, [])
 
   return (
@@ -83,15 +94,37 @@ const Admin = () => {
             <h3>Admin</h3>
           </div>
         </div>
-        <div className={`flex flex-col my-2`}>
+        <div className={`flex flex-col my-6`}>
           <div className={`flex flex-col`}>
             <div className={`flex ml-4 text-[32px]`}>
               <h2>Add badges to user</h2>
             </div>
-            <div className={`flex flex-col mx-4 mt-4 mb-2`}>
+            {userHasBadge ? (
+              <div className={`flex ml-4 text-[24px] ${styles.flexCenter} my-4 text-[#e03f3f]`}>
+                <p>This user already has this badge.</p>
+              </div>
+            ) : (
+              <div></div>
+            )}
+
+            {badgeAdded ? (
+              <div className={`flex ml-4 text-[24px] ${styles.flexCenter} my-4 text-secondary`}>
+                <p>Badge added tu user.</p>
+              </div>
+            ) : (
+              <div></div>
+            )}
+            <div className={`flex flex-col mx-4 mb-2`}>
               <p>Select User:</p>
-              <select name="selectUser" className={`text-black`} onChange={(e) => setSelectedUserId(e.target.value)}>
-                <option value="No user selected">Select a user...</option>
+              <select name="selectUser" className={`text-black`}
+                onChange={(e) => {
+                  setUserHasBadge(false)
+                  setBadgeAdded(false)
+                  if (e.target.value !== "noUser") {
+                    setSelectedUserId(e.target.value)
+                  }
+                }}>
+                <option value="noUser">Select a user...</option>
                 {users.map((user, index) => {
                   const text = user.data().nickname + " (" + user.data().email + ")";
                   return (<option value={user.data().id}>{text}</option>)
@@ -100,8 +133,15 @@ const Admin = () => {
             </div>
             <div className={`flex flex-col mx-4 mt-2 mb-4`}>
               <p>Select Badge:</p>
-              <select name="selectBadge" className={`text-black`} onChange={(e) => setSelectedBadgeId(e.target.value)}>
-                <option value="No badge selected">Select a badge...</option>
+              <select name="selectBadge" className={`text-black`}
+                onChange={(e) => {
+                  setUserHasBadge(false)
+                  setBadgeAdded(false)
+                  if (e.target.value !== "noBadge") {
+                    setSelectedBadgeId(e.target.value)
+                  }
+                }}>
+                <option value="noBadge">Select a badge...</option>
                 {badges.map((badge, index) => {
                   const text = badge.id + ". " + badge.title + " (" + badge.points + " points)";
                   return (<option value={badge.id}>{text}</option>)
@@ -129,18 +169,27 @@ const Admin = () => {
             <div className={`ml-4 text-[32px]`}>
               <h2>Add news</h2>
             </div>
+            {newsPosted ? (
+              <div className={`flex ml-4 text-[24px] ${styles.flexCenter} my-4 text-secondary`}>
+                <p>News posted.</p>
+              </div>
+            ) : (
+              <div></div>
+            )}
             <div className={`flex flex-col mx-4 mt-4 mb-2`}>
               <p>Title:</p>
-              <input className="text-black text-[16px]" id="nickname" type="text" placeholder="Title"
+              <input className="text-black text-[16px] p-2" id="nickname" type="text" placeholder="Title"
                 onChange={(e) => {
                   setNewsTitle(e.target.value)
+                  setNewsPosted(false)
                 }} />
             </div>
             <div className={`flex flex-col mx-4 mt-2 mb-4`}>
               <p>Body:</p>
-              <textarea className="text-black text-[16px]" id="nickname" type="text" placeholder="Body"
+              <textarea className="text-black text-[16px] p-2" id="nickname" type="text" placeholder="Body"
                 onChange={(e) => {
                   setNewsBody(e.target.value)
+                  setNewsPosted(false)
                 }} />
             </div>
             <div className={`flex flex-row ${styles.flexCenter}`}>

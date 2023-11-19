@@ -33,7 +33,6 @@ const Home = ({ logUser }) => {
         navBadges();
       }
     })
-    console.log("No infinite loop in Home")
   }, [])
 
   const firebaseRegisterUser = async () => {

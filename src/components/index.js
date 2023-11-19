@@ -9,6 +9,7 @@ import RecoverPassword from "./RecoverPassword.jsx"
 import NewAccount from "./NewAccount.jsx"
 import Profile from "./Profile.jsx"
 import Admin from "./Admin.jsx"
+import Visit from "./Visit.jsx"
 
 export {
     Header,
@@ -21,5 +22,6 @@ export {
     RecoverPassword,
     NewAccount,
     Profile,
-    Admin
+    Admin,
+    Visit
 }

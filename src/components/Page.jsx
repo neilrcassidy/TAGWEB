@@ -21,7 +21,6 @@ const Page = ({ isUserLogged, logUser }) => {
         navHome()
       }
     })
-    console.log("No infinite loop in Page")
   }, [])
 
   const [isMobileMenuToggled, toggleMenu] = useState(false);

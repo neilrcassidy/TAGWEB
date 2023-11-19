@@ -6,12 +6,16 @@ import styles from "../style"
 
 // React imports
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 // Firebase Imports
 import { firestore } from "../config/firebase-config"
 import { collection, query, getDocs, orderBy } from "firebase/firestore"
 
 const Leaderboard = () => {
+  const navigate = useNavigate();
+  const navVisitUser = (id) => navigate("/visit/" + id)
+
   const [users, setUsers] = useState([])
   const [usersSet, setUsersSet] = useState(false)
 
@@ -28,7 +32,7 @@ const Leaderboard = () => {
     fetchAll()
       .then((docs) => setUsers(docs))
       .then(() => setUsersSet(true))
-    console.log("No infinite loop in Leaderboard")
+      .then(() => console.log("No infinite loop in Leaderboard"))
   }, [])
 
   return (
@@ -37,21 +41,21 @@ const Leaderboard = () => {
         <div id="leaderboardPage" className={`flex flex-col ${styles.flexCenter}`}>
           <div id="podium" className={`flex justify-center items-end xs:gap-4 gap-2 md:max-w-[25%] smmd:max-w-[30%] sm:max-w-[40%] ss:max-w-[50%] xs:max-w-[60%] max-w-[70%] my-8 text-white font-poppins font-bold`}>
             <div id="podium2" className={`w-[25%]`}>
-              <div>
+              <div className={`cursor-pointer`} onClick={() => navVisitUser(users[1].id)}>
                 <img src={users[1].profilePic} className={`mx-auto max-w-[80%] border-0 rounded-full`} />
                 <p className={`my-1 ss:text-[14px] xs:text-[12px] xxs:text-[10px] text-[8px] ${styles.flexCenter} max-w-[100%] break-all text-center my-2`}>{users[1].nickname}</p>
               </div>
               <img src={podium2} />
             </div>
             <div id="podium1" className={`w-[40%]`}>
-              <div>
+              <div className={`cursor-pointer`} onClick={() => navVisitUser(users[0].id)}>
                 <img src={users[0].profilePic} className={`mx-auto max-w-[80%] border-0 rounded-full`} />
                 <p className={`my-1 ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px] ${styles.flexCenter} max-w-[100%] break-all text-center my-2`}>{users[0].nickname}</p>
               </div>
               <img src={podium1} />
             </div>
-            <div id="podium3" className={`w-[25%]`}>
-              <div>
+            <div id="podium3" className={`w-[25%]`} >
+              <div className={`cursor-pointer`} onClick={() => navVisitUser(users[2].id)}>
                 <img src={users[2].profilePic} className={`mx-auto max-w-[80%] border-0 rounded-full`} />
                 <p className={`my-1 ss:text-[14px] xs:text-[12px] xxs:text-[10px] text-[8px] ${styles.flexCenter} max-w-[100%] break-all text-center my-2`}>{users[2].nickname}</p>
               </div>
@@ -66,10 +70,10 @@ const Leaderboard = () => {
                     <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px] ss:min-w-[40px] min-w-[30px]`}>{index + 1}.</p>
                   </div>
                   <div id="iconLeaderboardEntry" className={`ss:min-w-[64px] ss:w-[64px] min-w-[48px] w-[48px] m-auto mr-2 ss:ml-2 ml-0 `}>
-                    <img src={user.profilePic} className={`border-0 rounded-full`} />
+                    <img src={user.profilePic} className={`border-0 rounded-full cursor-pointer`} onClick={() => navVisitUser(user.id)} />
                   </div>
                   <div id="textLeaderboardEntry" className={`m-auto mx-1`}>
-                    <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px]`}>{user.nickname}</p>
+                    <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px] cursor-pointer`} onClick={() => navVisitUser(user.id)}>{user.nickname}</p>
                   </div>
                   <div id="textLeaderboardEntry" className={`flex flex-row m-auto mr-3 gap-2`}>
                     <img src={antxpoint} className={`w-[20px] m-auto`} />
