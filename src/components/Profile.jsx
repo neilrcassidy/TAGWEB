@@ -113,23 +113,23 @@ const Profile = ({ logUser }) => {
 
   const updateFavoriteBadges = async () => {
     let selectedFavoriteBadges = []
-    if(badge1 !== undefined && badge1 !== 0){
+    if(badge1 !== undefined && badge1 !== "0"){
       selectedFavoriteBadges.push(badge1)
     }
 
-    if(badge2 !== undefined && badge2 !== 0){
+    if(badge2 !== undefined && badge2 !== "0"){
       selectedFavoriteBadges.push(badge2)
     }
 
-    if(badge3 !== undefined && badge3 !== 0){
+    if(badge3 !== undefined && badge3 !== "0"){
       selectedFavoriteBadges.push(badge3)
     }
 
-    if(badge4 !== undefined && badge4 !== 0){
+    if(badge4 !== undefined && badge4 !== "0"){
       selectedFavoriteBadges.push(badge4)
     }
 
-    if(badge5 !== undefined && badge5 !== 0){
+    if(badge5 !== undefined && badge5 !== "0"){
       selectedFavoriteBadges.push(badge5)
     }
 
@@ -325,7 +325,7 @@ const Profile = ({ logUser }) => {
                         </div>
                         <select className={`text-black font-normal`}
                         onChange={(e) => {
-                          setBadge1(Number(e.target.value))
+                          setBadge1(e.target.value)
                         }}>
                           <option value="0">...</option>
                           {badges
@@ -342,7 +342,7 @@ const Profile = ({ logUser }) => {
                         </div>
                         <select className={`text-black font-normal`}
                         onChange={(e) => {
-                          setBadge2(Number(e.target.value))
+                          setBadge2(e.target.value)
                         }}>
                           <option value="0">...</option>
                           {badges
@@ -359,7 +359,7 @@ const Profile = ({ logUser }) => {
                         </div>
                         <select className={`text-black font-normal`}
                         onChange={(e) => {
-                          setBadge3(Number(e.target.value))
+                          setBadge3(e.target.value)
                         }}>
                           <option value="0">...</option>
                           {badges
@@ -376,7 +376,7 @@ const Profile = ({ logUser }) => {
                         </div>
                         <select className={`text-black font-normal`}
                         onChange={(e) => {
-                          setBadge4(Number(e.target.value))
+                          setBadge4(e.target.value)
                         }}>
                           <option value="0">...</option>
                           {badges
@@ -393,7 +393,7 @@ const Profile = ({ logUser }) => {
                         </div>
                         <select className={`text-black font-normal`}
                         onChange={(e) => {
-                          setBadge5(Number(e.target.value))
+                          setBadge5(e.target.value)
                         }}>
                           <option value="0">...</option>
                           {badges

@@ -28,12 +28,12 @@ const Admin = () => {
     const userDoc = doc(firestore, "users", selectedUserId)
     const user = await getDoc(userDoc)
     const badge = badges.find((badge) => {
-      return badge.id === Number(selectedBadgeId)
+      return badge.id === selectedBadgeId
     })
 
     if (user.exists()) {
       const userBadges = user.data().badges
-      const userHasBadge = userBadges.includes(Number(selectedBadgeId))
+      const userHasBadge = userBadges.includes(selectedBadgeId)
       if (userHasBadge) {
         setUserHasBadge(true)
       } else {
@@ -46,8 +46,8 @@ const Admin = () => {
 
   const updateUserDoc = async (userDoc, badge) => {
     await updateDoc(userDoc, {
-      badges: arrayUnion(Number(selectedBadgeId)),
-      points: increment(badge.points)
+      badges: arrayUnion(selectedBadgeId),
+      points: increment(Number(badge.points))
     })
   }
 
