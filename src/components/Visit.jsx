@@ -89,9 +89,6 @@ const Visit = ({ logUser }) => {
                       <div className={`text-[24px] font-semibold sPoints:text-left text-center`}>
                         <h2>{userNickname}</h2>
                       </div>
-                      <div className={`text-gray-400 ss:text-[16px] text-[12px] text-justify font-normal`}>
-                        <p>{"(" + userEmail + ")"}</p>
-                      </div>
                       <div className={`flex font-normal sPoints:justify-start justify-center mt-1`}>
                         <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
                         <p>{userPoints}</p>

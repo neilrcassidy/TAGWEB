@@ -14,6 +14,7 @@ import { auth, firestore, storage } from "../config/firebase-config";
 import { doc, getDoc, updateDoc, collection, addDoc, Timestamp } from "firebase/firestore"
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { signOut } from "firebase/auth"
+import Tippy from "@tippyjs/react"
 
 const Profile = ({ logUser }) => {
   const navigate = useNavigate();
@@ -113,32 +114,32 @@ const Profile = ({ logUser }) => {
 
   const updateFavoriteBadges = async () => {
     let selectedFavoriteBadges = []
-    if(badge1 !== undefined && badge1 !== "0"){
+    if (badge1 !== undefined && badge1 !== "0") {
       selectedFavoriteBadges.push(badge1)
     }
 
-    if(badge2 !== undefined && badge2 !== "0"){
+    if (badge2 !== undefined && badge2 !== "0") {
       selectedFavoriteBadges.push(badge2)
     }
 
-    if(badge3 !== undefined && badge3 !== "0"){
+    if (badge3 !== undefined && badge3 !== "0") {
       selectedFavoriteBadges.push(badge3)
     }
 
-    if(badge4 !== undefined && badge4 !== "0"){
+    if (badge4 !== undefined && badge4 !== "0") {
       selectedFavoriteBadges.push(badge4)
     }
 
-    if(badge5 !== undefined && badge5 !== "0"){
+    if (badge5 !== undefined && badge5 !== "0") {
       selectedFavoriteBadges.push(badge5)
     }
 
     selectedFavoriteBadges = selectedFavoriteBadges.filter((value, index) => selectedFavoriteBadges.indexOf(value) === index)
 
     const userDoc = doc(firestore, "users", currentUserId)
-      await updateDoc(userDoc, {
-        favoriteBadges: selectedFavoriteBadges
-      })
+    await updateDoc(userDoc, {
+      favoriteBadges: selectedFavoriteBadges
+    })
   }
 
   const handleImageChange = (e) => {
@@ -324,9 +325,9 @@ const Profile = ({ logUser }) => {
                           <h2>Logro 1:</h2>
                         </div>
                         <select className={`text-black font-normal`}
-                        onChange={(e) => {
-                          setBadge1(e.target.value)
-                        }}>
+                          onChange={(e) => {
+                            setBadge1(e.target.value)
+                          }}>
                           <option value="0">...</option>
                           {badges
                             .filter((badge) => currentUserBadges.includes(badge.id))
@@ -341,9 +342,9 @@ const Profile = ({ logUser }) => {
                           <h2>Logro 2:</h2>
                         </div>
                         <select className={`text-black font-normal`}
-                        onChange={(e) => {
-                          setBadge2(e.target.value)
-                        }}>
+                          onChange={(e) => {
+                            setBadge2(e.target.value)
+                          }}>
                           <option value="0">...</option>
                           {badges
                             .filter((badge) => currentUserBadges.includes(badge.id))
@@ -358,9 +359,9 @@ const Profile = ({ logUser }) => {
                           <h2>Logro 3:</h2>
                         </div>
                         <select className={`text-black font-normal`}
-                        onChange={(e) => {
-                          setBadge3(e.target.value)
-                        }}>
+                          onChange={(e) => {
+                            setBadge3(e.target.value)
+                          }}>
                           <option value="0">...</option>
                           {badges
                             .filter((badge) => currentUserBadges.includes(badge.id))
@@ -375,9 +376,9 @@ const Profile = ({ logUser }) => {
                           <h2>Logro 4:</h2>
                         </div>
                         <select className={`text-black font-normal`}
-                        onChange={(e) => {
-                          setBadge4(e.target.value)
-                        }}>
+                          onChange={(e) => {
+                            setBadge4(e.target.value)
+                          }}>
                           <option value="0">...</option>
                           {badges
                             .filter((badge) => currentUserBadges.includes(badge.id))
@@ -392,9 +393,9 @@ const Profile = ({ logUser }) => {
                           <h2>Logro 5:</h2>
                         </div>
                         <select className={`text-black font-normal`}
-                        onChange={(e) => {
-                          setBadge5(e.target.value)
-                        }}>
+                          onChange={(e) => {
+                            setBadge5(e.target.value)
+                          }}>
                           <option value="0">...</option>
                           {badges
                             .filter((badge) => currentUserBadges.includes(badge.id))
@@ -458,18 +459,25 @@ const Profile = ({ logUser }) => {
                               {badges
                                 .filter((badge) => currentUserFavoriteBadges.includes(badge.id))
                                 .map((badge, index) => (
-                                  <div id={index} className={``}>
-                                    <div className={`w-[64px] mb-2`}>
-                                      <img src={badge.icon_unlocked}></img>
+                                  <Tippy content={<div className={`font-poppins text-center`}>
+                                    <div className={`font-bold text-[18px]`}>
+                                      {badge.title}
                                     </div>
-                                    <div className={`${styles.flexCenter} mb-1`}>
-                                      <p>{badge.title}</p>
+                                    <div className={`text-[16px]`}>
+                                      {badge.description}
                                     </div>
-                                    <div className={`${styles.flexCenter} font-normal`}>
-                                      <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                                      <p>{badge.points}</p>
+                                  </div>}>
+                                    <div id={index} className={``}>
+                                      <div className={`w-[64px] mb-2`}>
+                                        <img src={badge.icon_unlocked}></img>
+                                      </div>
+                                      <div className={`${styles.flexCenter} font-normal`}>
+                                        <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
+                                        <p>{badge.points}</p>
+                                      </div>
                                     </div>
-                                  </div>
+                                  </Tippy>
+
                                 ))}
                             </div>
                           </div >

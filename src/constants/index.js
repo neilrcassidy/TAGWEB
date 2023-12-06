@@ -350,5 +350,115 @@ export const badges = [
         icon_locked: rare_badge_locked,
         icon_unlocked: "",
         type: "rare"
+      },
+      {
+        id: "FIE1",
+        group: "fiesta",
+        title: "Anfitrión",
+        description: "Poner casa para cena y lo que surja.",
+        points: 15,
+        icon_locked: normal_badge_locked,
+        icon_unlocked: "",
+        type: "normal"
+      },
+      {
+        id: "FIE2",
+        group: "fiesta",
+        title: "Anfitrión Máximo",
+        description: "Organiza una bacanal.",
+        points: 25,
+        icon_locked: rare_badge_locked,
+        icon_unlocked: "",
+        type: "rare"
+      },
+      {
+        id: "FIE3",
+        group: "fiesta",
+        title: "Cuenta con mi espada",
+        description: "Asiste a una bacanal.",
+        points: 10,
+        icon_locked: normal_badge_locked,
+        icon_unlocked: "",
+        type: "normal"
+      },
+      {
+        id: "FIE4",
+        group: "fiesta",
+        title: "Cumplidor",
+        description: "Acaba una fiesta no antes de las 6 de la mañana.",
+        points: 15,
+        icon_locked: normal_badge_locked,
+        icon_unlocked: "",
+        type: "normal"
+      },
+      {
+        id: "FIE5",
+        group: "fiesta",
+        title: "Y nos dieron las 10 y las 11",
+        description: "Acaba una fiesta despues de las 10 de la mañana.",
+        points: 20,
+        icon_locked: rare_badge_locked,
+        icon_unlocked: "",
+        type: "rare"
+      },
+      {
+        id: "FIE6",
+        group: "fiesta",
+        title: "Defensor de la tradición",
+        description: "Volver de fiesta andando desde Benaguasil, Marines o más lejos.",
+        points: 15,
+        icon_locked: normal_badge_locked,
+        icon_unlocked: "",
+        type: "normal"
+      },
+      {
+        id: "FIE7",
+        group: "fiesta",
+        title: "Juego de espejos",
+        description: "Jugar al espejo de fiesta.",
+        points: 10,
+        icon_locked: normal_badge_locked,
+        icon_unlocked: "",
+        type: "normal"
+      },
+      {
+        id: "FIE8",
+        group: "fiesta",
+        title: "Sing Star",
+        description: "Ir a un karaoke de verdad.",
+        points: 15,
+        icon_locked: normal_badge_locked,
+        icon_unlocked: "",
+        type: "normal"
+      },
+      {
+        id: "FIE9",
+        group: "fiesta",
+        title: "¿Conoces a Neil?",
+        description: "Jugar a ¿Conoces a Neil? de fiesta.",
+        points: 10,
+        icon_locked: normal_badge_locked,
+        icon_unlocked: "",
+        type: "normal"
+      },
+      {
+        id: "FIE10",
+        group: "fiesta",
+        title: "Quiero la hoja de reclamaciones",
+        description: "Que te tiren de una fiesta o que no te dejen entrar.",
+        points: 15,
+        icon_locked: rare_badge_locked,
+        icon_unlocked: "",
+        type: "rare"
+      },
+      {
+        id: "FIE11",
+        group: "fiesta",
+        title: "Dick pic",
+        description: "Hacer fotopolla de fiesta con gente de ANTX.",
+        points: 5,
+        icon_locked: normal_badge_locked,
+        icon_unlocked: "",
+        type: "normal"
       }
 ]
