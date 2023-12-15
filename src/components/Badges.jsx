@@ -20,6 +20,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { auth, firestore } from "../config/firebase-config"
 import { doc, getDoc } from "firebase/firestore"
 
+// Component Imports
+import { MensualGrid, MensualList } from "./Badges/Mensual"
+import { GeneralGrid, GeneralList } from "./Badges/General"
+import { FiestaGrid, FiestaList } from "./Badges/Fiesta"
+import { DiscipuloGrid, DiscipuloList} from "./Badges/Discipulo"
+
 const Badges = () => {
   // This useState determines wether to display the badges as a grid (false) or a list (true)
   const [list, setList] = useState(false)
@@ -56,297 +62,30 @@ const Badges = () => {
           </div>
 
           {list ? (
-            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center w-[95%] gap-6`}>
+            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center xs:w-[95%] w-[99%] gap-6`}>
 
-              <div id="badgesMensual" className={`flex flex-col rounded-lg border-[#0078AC] border w-[90%]`}>
-                <div id="badgesMensualTitle" className={`flex bg-[#0078AC] rounded-t-md min-w-[90%]`}>
-                  <div className={`m-auto my-2 ml-3 text-[20px]`}>
-                    <h3>La Mensual</h3>
-                  </div>
-                  <div className={`m-auto my-2 mr-3 text-[20px]`}>
-                    <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "mensual").length}/{badges.filter((badge) => badge.group === "mensual").length}</h3>
-                  </div>
-                </div>
-                <div id="badgesMensualList" className={`min-w-[90%]`}>
-                  <div className={`flex flex-col`}>
-                    {badges
-                      .filter((badge) => badge.group === "mensual")
-                      .map((badge, index) => (
-                        <div className={`flex w-full ${index === badges.length - 1 ? "" : "border border-transparent border-b-[#0078AC]"}`}>
-                          <div className={`flex w-full my-4 ml-2`}>
-                            <div className={`flex ss:min-w-[64px] ss:w-[64px] min-w-[48px] w-[48px] m-auto mr-2 ss:ml-2 ml-0 `}>
-                              <img src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked} className={``} />
-                            </div>
-                            <div className={`flex flex-col m-auto mx-1 smmd:max-w-[75%] sm:max-w-[70%] ss:max-w-[65%] xs:max-w-[60%] xxs:max-w-[55%] xxxs:max-w-[50%] max-w-[45%]`}>
-                              <p className={`ss:text-[24px] xs:text-[22px] xxs:text-[20px] text-[18px]`}>{badge.title}</p>
-                              <p className={`ss:text-[18px] xs:text-[16px] xxs:text-[14px] text-[12px] break-words text-justify font-normal`}>{badge.description}</p>
-                            </div>
-                            <div className={`flex flex-row m-auto mr-3 gap-2`}>
-                              <img src={antxpoint} className={`w-[20px] m-auto`} />
-                              <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px]`}>{badge.points}</p>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                  </div>
-                </div>
-              </div>
+              <MensualList userBadges={userBadges} />
 
-              <div id="badgesDiscipulo" className={`flex flex-col rounded-lg border-[#D11B1B] border w-[90%]`}>
-                <div id="badgesDiscipuloTitle" className={`flex bg-[#D11B1B] rounded-t-md min-w-[90%]`}>
-                  <div className={`m-auto my-2 ml-3 text-[20px]`}>
-                    <h3>Maestro de ANTX</h3>
-                  </div>
-                  <div className={`m-auto my-2 mr-3 text-[20px]`}>
-                    <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "discipulo").length}/{badges.filter((badge) => badge.group === "discipulo").length}</h3>
-                  </div>
-                </div>
-                <div id="badgesDiscipuloList" className={`min-w-[90%]`}>
-                  <div className={`flex flex-col`}>
-                    {badges
-                      .filter((badge) => badge.group === "discipulo")
-                      .map((badge, index) => (
-                        <div className={`flex w-full ${index === badges.length - 1 ? "" : "border border-transparent border-b-[#D11B1B]"}`}>
-                          <div className={`flex w-full my-4 ml-2`}>
-                            <div className={`flex ss:min-w-[64px] ss:w-[64px] min-w-[48px] w-[48px] m-auto mr-2 ss:ml-2 ml-0 `}>
-                              <img src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked} className={``} />
-                            </div>
-                            <div className={`flex flex-col m-auto mx-1 smmd:max-w-[75%] sm:max-w-[70%] ss:max-w-[65%] xs:max-w-[60%] xxs:max-w-[55%] xxxs:max-w-[50%] max-w-[45%]`}>
-                              <p className={`ss:text-[24px] xs:text-[22px] xxs:text-[20px] text-[18px]`}>{badge.title}</p>
-                              <p className={`ss:text-[18px] xs:text-[16px] xxs:text-[14px] text-[12px] break-words text-justify font-normal`}>{badge.description}</p>
-                            </div>
-                            <div className={`flex flex-row m-auto mr-3 gap-2`}>
-                              <img src={antxpoint} className={`w-[20px] m-auto`} />
-                              <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px]`}>{badge.points}</p>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                  </div>
-                </div>
-              </div>
+              <DiscipuloList userBadges={userBadges} />
 
-              <div id="badgesFiesta" className={`flex flex-col rounded-lg border-[#410CF4] border w-[90%]`}>
-                <div id="badgesFiestaTitle" className={`flex bg-[#410CF4] rounded-t-md min-w-[90%]`}>
-                  <div className={`m-auto my-2 ml-3 text-[20px]`}>
-                    <h3>Fiestas</h3>
-                  </div>
-                  <div className={`m-auto my-2 mr-3 text-[20px]`}>
-                    <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "fiesta").length}/{badges.filter((badge) => badge.group === "fiesta").length}</h3>
-                  </div>
-                </div>
-                <div id="badgesFiestaList" className={`min-w-[90%]`}>
-                  <div className={`flex flex-col`}>
-                    {badges
-                      .filter((badge) => badge.group === "fiesta")
-                      .map((badge, index) => (
-                        <div className={`flex w-full ${index === badges.length - 1 ? "" : "border border-transparent border-b-[#410CF4]"}`}>
-                          <div className={`flex w-full my-4 ml-2`}>
-                            <div className={`flex ss:min-w-[64px] ss:w-[64px] min-w-[48px] w-[48px] m-auto mr-2 ss:ml-2 ml-0 `}>
-                              <img src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked} className={``} />
-                            </div>
-                            <div className={`flex flex-col m-auto mx-1 smmd:max-w-[75%] sm:max-w-[70%] ss:max-w-[65%] xs:max-w-[60%] xxs:max-w-[55%] xxxs:max-w-[50%] max-w-[45%]`}>
-                              <p className={`ss:text-[24px] xs:text-[22px] xxs:text-[20px] text-[18px]`}>{badge.title}</p>
-                              <p className={`ss:text-[18px] xs:text-[16px] xxs:text-[14px] text-[12px] break-words text-justify font-normal`}>{badge.description}</p>
-                            </div>
-                            <div className={`flex flex-row m-auto mr-3 gap-2`}>
-                              <img src={antxpoint} className={`w-[20px] m-auto`} />
-                              <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px]`}>{badge.points}</p>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                  </div>
-                </div>
-              </div>
+              <FiestaList userBadges={userBadges} />
 
-              <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border w-[90%]`}>
-                <div id="badgesGeneralTitle" className={`flex bg-secondary rounded-t-md min-w-[90%]`}>
-                  <div className={`m-auto my-2 ml-3 text-[20px]`}>
-                    <h3>General</h3>
-                  </div>
-                  <div className={`m-auto my-2 mr-3 text-[20px]`}>
-                    <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "general").length}/{badges.filter((badge) => badge.group === "general").length}</h3>
-                  </div>
-                </div>
-                <div id="badgesGeneralList" className={`min-w-[90%]`}>
-                  <div className={`flex flex-col`}>
-                    {badges
-                      .filter((badge) => badge.group === "general")
-                      .map((badge, index) => (
-                        <div className={`flex w-full ${index === badges.length - 1 ? "" : "border border-transparent border-b-secondary"}`}>
-                          <div className={`flex w-full my-4 ml-2`}>
-                            <div className={`flex ss:min-w-[64px] ss:w-[64px] min-w-[48px] w-[48px] m-auto mr-2 ss:ml-2 ml-0 `}>
-                              <img src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked} className={``} />
-                            </div>
-                            <div className={`flex flex-col m-auto mx-1 smmd:max-w-[75%] sm:max-w-[70%] ss:max-w-[65%] xs:max-w-[60%] xxs:max-w-[55%] xxxs:max-w-[50%] max-w-[45%]`}>
-                              <p className={`ss:text-[24px] xs:text-[22px] xxs:text-[20px] text-[18px]`}>{badge.title}</p>
-                              <p className={`ss:text-[18px] xs:text-[16px] xxs:text-[14px] text-[12px] break-words text-justify font-normal`}>{badge.description}</p>
-                            </div>
-                            <div className={`flex flex-row m-auto mr-3 gap-2`}>
-                              <img src={antxpoint} className={`w-[20px] m-auto`} />
-                              <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px]`}>{badge.points}</p>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                  </div>
-                </div>
-              </div>
+              <GeneralList userBadges={userBadges} />
 
             </div>
 
           ) : (
 
-            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center w-[95%] gap-4`}>
+            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center xs:w-[95%] w-[99%] gap-4`}>
 
-              <div id="badgesMensual" className={`flex flex-col rounded-lg border-[#0078AC] border xxs:max-w-[350px] w-[90%]`}>
-                <div id="badgesMensualTitle" className={`flex bg-[#0078AC] rounded-t-md`}>
-                  <div className={`m-auto my-2 ml-3 text-[20px]`}>
-                    <h3>La Mensual</h3>
-                  </div>
-                  <div className={`m-auto my-2 mr-3 text-[20px]`}>
-                    <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "mensual").length}/{badges.filter((badge) => badge.group === "mensual").length}</h3>
-                  </div>
-                </div>
-                <div id="badgesMensualGrid" className={`m-4`}>
-                  <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
-                    {badges
-                      .filter((badge) => badge.group === "mensual")
-                      .map((badge, index) => (
-                        <Tippy content={<div className={`font-poppins text-center`}>
-                            <div className={`font-bold text-[18px]`}>
-                              {badge.title}
-                            </div>
-                            <div className={`text-[16px]`}>
-                              {badge.description}
-                            </div>
-                          </div>}>
-                          <div id={badge.id} className={`flex flex-col w-[96px]`}>
-                            <div className={`${styles.flexCenter} mb-2`}>
-                              <img className={`${styles.flexCenter} w-[64px]`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked}></img>
-                            </div>
-                            <div className={`${styles.flexCenter} font-normal`}>
-                              <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                              <p>{badge.points}</p>
-                            </div>
-                          </div>
-                        </Tippy>
-                      ))}
-                  </div>
-                </div >
-              </div>
+              <MensualGrid userBadges={userBadges} />
 
-              <div id="badgesDiscipulo" className={`flex flex-col rounded-lg border-[#D11B1B] border max-w-[350px] w-[90%]`}>
-                <div id="badgesDiscipuloTitle" className={`flex bg-[#D11B1B] rounded-t-md`}>
-                  <div className={`m-auto my-2 ml-3 text-[20px]`}>
-                    <h3>Maestro de ANTX</h3>
-                  </div>
-                  <div className={`m-auto my-2 mr-3 text-[20px]`}>
-                    <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "discipulo").length}/{badges.filter((badge) => badge.group === "discipulo").length}</h3>
-                  </div>
-                </div>
-                <div id="badgesDiscipuloGrid" className={`m-4`}>
-                  <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
-                    {badges
-                      .filter((badge) => badge.group === "discipulo")
-                      .map((badge, index) => (
-                        <Tippy content={<div className={`font-poppins text-center`}>
-                            <div className={`font-bold text-[18px]`}>
-                              {badge.title}
-                            </div>
-                            <div className={`text-[16px]`}>
-                              {badge.description}
-                            </div>
-                          </div>}>
-                          <div id={badge.id} className={`flex flex-col w-[96px]`}>
-                            <div className={`${styles.flexCenter} mb-2`}>
-                              <img className={`${styles.flexCenter} w-[64px]`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked}></img>
-                            </div>
-                            <div className={`${styles.flexCenter} font-normal`}>
-                              <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                              <p>{badge.points}</p>
-                            </div>
-                          </div>
-                        </Tippy>
-                      ))}
-                  </div>
-                </div >
-              </div>
+              <DiscipuloGrid userBadges={userBadges} />
 
-              <div id="badgesFiesta" className={`flex flex-col rounded-lg border-[#410CF4] border max-w-[350px] w-[90%]`}>
-                <div id="badgesFiestaTitle" className={`flex bg-[#410CF4] rounded-t-md`}>
-                  <div className={`m-auto my-2 ml-3 text-[20px]`}>
-                    <h3>Fiestas</h3>
-                  </div>
-                  <div className={`m-auto my-2 mr-3 text-[20px]`}>
-                    <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "fiesta").length}/{badges.filter((badge) => badge.group === "fiesta").length}</h3>
-                  </div>
-                </div>
-                <div id="badgesFiestaGrid" className={`m-4`}>
-                  <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
-                    {badges
-                      .filter((badge) => badge.group === "fiesta")
-                      .map((badge, index) => (
-                        <Tippy content={<div className={`font-poppins text-center`}>
-                            <div className={`font-bold text-[18px]`}>
-                              {badge.title}
-                            </div>
-                            <div className={`text-[16px]`}>
-                              {badge.description}
-                            </div>
-                          </div>}>
-                          <div id={badge.id} className={`flex flex-col w-[96px]`}>
-                            <div className={`${styles.flexCenter} mb-2`}>
-                              <img className={`${styles.flexCenter} w-[64px]`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked}></img>
-                            </div>
-                            <div className={`${styles.flexCenter} font-normal`}>
-                              <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                              <p>{badge.points}</p>
-                            </div>
-                          </div>
-                        </Tippy>
-                      ))}
-                  </div>
-                </div >
-              </div>
+              <FiestaGrid userBadges={userBadges} />
 
-              <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border max-w-[350px] w-[90%]`}>
-                <div id="badgesGeneralTitle" className={`flex bg-secondary rounded-t-md`}>
-                  <div className={`m-auto my-2 ml-3 text-[20px]`}>
-                    <h3>General</h3>
-                  </div>
-                  <div className={`m-auto my-2 mr-3 text-[20px]`}>
-                    <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "general").length}/{badges.filter((badge) => badge.group === "general").length}</h3>
-                  </div>
-                </div>
-                <div id="badgesGeneralGrid" className={`m-4`}>
-                  <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
-                    {badges
-                      .filter((badge) => badge.group === "general")
-                      .map((badge, index) => (
-                        <Tippy content={<div className={`font-poppins text-center`}>
-                            <div className={`font-bold text-[18px]`}>
-                              {badge.title}
-                            </div>
-                            <div className={`text-[16px]`}>
-                              {badge.description}
-                            </div>
-                          </div>}>
-                          <div id={badge.id} className={`flex flex-col w-[96px]`}>
-                            <div className={`${styles.flexCenter} mb-2`}>
-                              <img className={`${styles.flexCenter} w-[64px]`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked}></img>
-                            </div>
-                            <div className={`${styles.flexCenter} font-normal`}>
-                              <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                              <p>{badge.points}</p>
-                            </div>
-                          </div>
-                        </Tippy>
-                      ))}
-                  </div>
-                </div>
-              </div>
+              <GeneralGrid userBadges={userBadges} />
+              
             </div>
           )
           }

@@ -42,7 +42,7 @@ const Leaderboard = () => {
             <div id="podium2" className={`w-[25%]`}>
               <div className={`cursor-pointer`} onClick={() => navVisitUser(users[1].id)}>
                 <img src={users[1].profilePic} className={`mx-auto max-w-[80%] border-0 rounded-full`} />
-                <p className={`my-1 ss:text-[14px] xs:text-[12px] xxs:text-[10px] text-[8px] ${styles.flexCenter} max-w-[100%] break-all text-center my-2`}>{users[1].nickname}</p>
+                <p className={`my-1 ss:text-[16px] xs:text-[14px] xxs:text-[12px] text-[10px] ${styles.flexCenter} max-w-[100%] break-all text-center my-2`}>{users[1].nickname}</p>
               </div>
               <img src={podium2} />
             </div>
@@ -56,7 +56,7 @@ const Leaderboard = () => {
             <div id="podium3" className={`w-[25%]`} >
               <div className={`cursor-pointer`} onClick={() => navVisitUser(users[2].id)}>
                 <img src={users[2].profilePic} className={`mx-auto max-w-[80%] border-0 rounded-full`} />
-                <p className={`my-1 ss:text-[14px] xs:text-[12px] xxs:text-[10px] text-[8px] ${styles.flexCenter} max-w-[100%] break-all text-center my-2`}>{users[2].nickname}</p>
+                <p className={`my-1 ss:text-[16px] xs:text-[14px] xxs:text-[12px] text-[10px] ${styles.flexCenter} max-w-[100%] break-all text-center my-2`}>{users[2].nickname}</p>
               </div>
               <img src={podium3} />
             </div>

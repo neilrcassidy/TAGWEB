@@ -10,7 +10,11 @@ import { useEffect, useState } from "react"
 import { auth, firestore } from "../config/firebase-config"
 import { doc, getDoc } from "firebase/firestore"
 
+import { useNavigate } from "react-router-dom"
+
 const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) => {
+  const navigate = useNavigate();
+  const navBadges = () => navigate("/badges")
 
   const [currentUserNickname, setCurrentUserNickname] = useState("");
   const [currentUserProfilePic, setCurrentUserProfilePic] = useState("");
@@ -35,7 +39,7 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) => {
   return (
     <div className={`flex w-[100%] h-[100px] bg-header`}>
       <div className={`flex m-auto xs:ml-12 ml-6`}>
-        <img src={headerTitle} className="h-auto xs:w-[110px] w-[80px]" />
+        <img src={headerTitle} className="h-auto xs:w-[110px] w-[80px]" onClick={() => navBadges()}/>
       </div>
 
       <div className={`sm:flex hidden m-auto mr-2 gap-10 text-white font-poppins`}>
