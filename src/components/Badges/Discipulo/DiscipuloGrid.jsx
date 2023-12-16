@@ -11,7 +11,7 @@ import 'tippy.js/dist/tippy.css';
 
 const DiscipuloGrid = ({ userBadges }) => {
   return (
-    <div id="badgesDiscipulo" className={`flex flex-col rounded-lg border-secondary border max-w-[350px] w-[90%]`}>
+    <div id="badgesDiscipulo" className={`flex flex-col rounded-lg border-secondary border max-w-[350px] w-[95%]`}>
       <div id="badgesDiscipuloTitle" className={`flex bg-secondary rounded-t-md`}>
         <div className={`m-auto my-2 ml-3 text-[20px]`}>
           <h3>Maestro de ANTX</h3>
@@ -20,7 +20,7 @@ const DiscipuloGrid = ({ userBadges }) => {
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "discipulo").length}/{badges.filter((badge) => badge.group === "discipulo").length}</h3>
         </div>
       </div>
-      <div id="badgesDiscipuloGrid" className={`m-4`}>
+      <div id="badgesDiscipuloGrid" className={`m-3`}>
         <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
           {badges
             .filter((badge) => badge.group === "discipulo")
