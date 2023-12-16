@@ -63,32 +63,19 @@ const Badges = () => {
 
           {list ? (
             <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center xs:w-[95%] w-[99%] gap-6`}>
-
               <MensualList userBadges={userBadges} />
-
               <DiscipuloList userBadges={userBadges} />
-
               <FiestaList userBadges={userBadges} />
-
               <GeneralList userBadges={userBadges} />
-
             </div>
-
           ) : (
-
             <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center xs:w-[95%] w-[99%] gap-4`}>
-
               <MensualGrid userBadges={userBadges} />
-
               <DiscipuloGrid userBadges={userBadges} />
-
               <FiestaGrid userBadges={userBadges} />
-
-              <GeneralGrid userBadges={userBadges} />
-              
+              <GeneralGrid userBadges={userBadges} />   
             </div>
-          )
-          }
+          )}
         </div>
       ) : (
         <div></div>
