@@ -454,7 +454,7 @@ const Profile = ({ logUser }) => {
                               <h3>Destacados</h3>
                             </div>
                           </div>
-                          <div id="badgesGeneralGrid" className={`m-3`}>
+                          <div id="badgesGeneralGrid" className={`mx-1 my-4`}>
                             <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
                               {badges
                                 .filter((badge) => currentUserFavoriteBadges.includes(badge.id))

@@ -20,7 +20,7 @@ const DiscipuloGrid = ({ userBadges }) => {
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "discipulo").length}/{badges.filter((badge) => badge.group === "discipulo").length}</h3>
         </div>
       </div>
-      <div id="badgesDiscipuloGrid" className={`m-3`}>
+      <div id="badgesDiscipuloGrid" className={`mx-1 my-4`}>
         <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
           {badges
             .filter((badge) => badge.group === "discipulo")

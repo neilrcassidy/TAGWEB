@@ -20,7 +20,7 @@ const GeneralGrid = ({ userBadges }) => {
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "general").length}/{badges.filter((badge) => badge.group === "general").length}</h3>
         </div>
       </div>
-      <div id="badgesGeneralGrid" className={`m-3`}>
+      <div id="badgesGeneralGrid" className={`mx-1 my-4`}>
         <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
           {badges
             .filter((badge) => badge.group === "general")

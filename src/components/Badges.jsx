@@ -62,14 +62,14 @@ const Badges = () => {
           </div>
 
           {list ? (
-            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-6`}>
+            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-6 w-[97%]`}>
               <MensualList userBadges={userBadges} />
               <DiscipuloList userBadges={userBadges} />
               <FiestaList userBadges={userBadges} />
               <GeneralList userBadges={userBadges} />
             </div>
           ) : (
-            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-6`}>
+            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-6 w-[97%]`}>
               <MensualGrid userBadges={userBadges} />
               <DiscipuloGrid userBadges={userBadges} />
               <FiestaGrid userBadges={userBadges} />
