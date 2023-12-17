@@ -25,6 +25,13 @@ import { MensualGrid, MensualList } from "./Badges/Mensual"
 import { GeneralGrid, GeneralList } from "./Badges/General"
 import { FiestaGrid, FiestaList } from "./Badges/Fiesta"
 import { DiscipuloGrid, DiscipuloList} from "./Badges/Discipulo"
+import { AlcoholList, AlcoholGrid } from "./Badges/Alcohol"
+import { JuegosDeMesaList, JuegosDeMesaGrid } from "./Badges/JuegosDeMesa"
+import { CochinasList, CochinasGrid } from "./Badges/Cochinas"
+import { ViajesList, ViajesGrid } from "./Badges/Viajes"
+import { RutasList, RutasGrid } from "./Badges/Rutas"
+import { MarinesDeLokiarList, MarinesDeLokiarGrid } from "./Badges/MarinesDeLokiar"
+import { CulturaList, CulturaGrid } from "./Badges/Cultura"
 
 const Badges = () => {
   // This useState determines wether to display the badges as a grid (false) or a list (true)
@@ -66,6 +73,13 @@ const Badges = () => {
               <MensualList userBadges={userBadges} />
               <DiscipuloList userBadges={userBadges} />
               <FiestaList userBadges={userBadges} />
+              <AlcoholList userBadges={userBadges} />
+              <JuegosDeMesaList userBadges={userBadges} />
+              <CochinasList userBadges={userBadges} />
+              <ViajesList userBadges={userBadges} />
+              <RutasList userBadges={userBadges} />
+              <MarinesDeLokiarList userBadges={userBadges} />
+              <CulturaList userBadges={userBadges} />
               <GeneralList userBadges={userBadges} />
             </div>
           ) : (
@@ -73,6 +87,13 @@ const Badges = () => {
               <MensualGrid userBadges={userBadges} />
               <DiscipuloGrid userBadges={userBadges} />
               <FiestaGrid userBadges={userBadges} />
+              <AlcoholGrid userBadges={userBadges} />
+              <JuegosDeMesaGrid userBadges={userBadges} />
+              <CochinasGrid userBadges={userBadges} />
+              <ViajesGrid userBadges={userBadges} />
+              <RutasGrid userBadges={userBadges} />
+              <MarinesDeLokiarGrid userBadges={userBadges} />
+              <CulturaGrid userBadges={userBadges} />
               <GeneralGrid userBadges={userBadges} />   
             </div>
           )}
