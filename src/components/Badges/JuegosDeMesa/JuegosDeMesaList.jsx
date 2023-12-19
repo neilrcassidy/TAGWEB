@@ -3,15 +3,16 @@
 /* eslint-disable react/prop-types */
 import { badges } from "../../../constants/index.js"
 import { antxpoint } from "../../../assets/img/index.js"
+import { Emoji } from "@crispengari/react-emojify"
 
 const JuegosDeMesaList = ({ userBadges }) => {
   return (
-    <div id="badgesJuegosDeMesa" className={`flex flex-col rounded-lg border-secondary border xs:w-[90%] w-[95%]`}>
-      <div id="badgesJuegosDeMesaTitle" className={`flex bg-secondary rounded-t-md min-w-[90%]`}>
-        <div className={`m-auto my-2 ml-3 text-[20px]`}>
-          <h3>Juegos de Mesa</h3>
+    <div id="badgesJuegosDeMesa" className={`flex flex-col rounded-lg border-white border xs:w-[90%] w-[95%]`}>
+      <div id="badgesJuegosDeMesaTitle" className={`flex bg-white rounded-t-md min-w-[90%] text-[24px] text-black`}>
+        <div className={`m-auto my-2 ml-3`}>
+          <h3>Juegos de Mesa <Emoji emojiId="react@emojify-1101"/></h3>
         </div>
-        <div className={`m-auto my-2 mr-3 text-[20px]`}>
+        <div className={`m-auto my-2 mr-3`}>
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "juegos_de_mesa").length}/{badges.filter((badge) => badge.group === "juegos_de_mesa").length}</h3>
         </div>
       </div>
@@ -20,7 +21,7 @@ const JuegosDeMesaList = ({ userBadges }) => {
           {badges
             .filter((badge) => badge.group === "juegos_de_mesa")
             .map((badge, index) => (
-              <div className={`flex w-full ${index === badges.length - 1 ? "" : "border border-transparent border-b-secondary"}`}>
+              <div className={`flex w-full ${index === badges.length - 1 ? "" : "border border-transparent border-b-white"}`}>
                 <div className={`flex w-full my-4 ml-2`}>
                   <div className={`flex ss:min-w-[96px] ss:w-[96px] min-w-[64px] w-[64px] m-auto mr-2 ss:ml-2 ml-0 `}>
                     <img src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked} className={``} />

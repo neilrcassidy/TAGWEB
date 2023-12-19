@@ -3,15 +3,16 @@
 /* eslint-disable react/prop-types */
 import { badges } from "../../../constants/index.js"
 import { antxpoint } from "../../../assets/img/index.js"
+import { Emoji } from "@crispengari/react-emojify"
 
 const GeneralList = ({ userBadges }) => {
   return (
     <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border xs:w-[90%] w-[95%]`}>
-      <div id="badgesGeneralTitle" className={`flex bg-secondary rounded-t-md min-w-[90%]`}>
-        <div className={`m-auto my-2 ml-3 text-[20px]`}>
-          <h3>General</h3>
+      <div id="badgesGeneralTitle" className={`flex bg-secondary rounded-t-md min-w-[90%] text-[24px]`}>
+        <div className={`m-auto my-2 ml-3`}>
+          <h3>General <Emoji emojiId="react@emojify-1293"/></h3>
         </div>
-        <div className={`m-auto my-2 mr-3 text-[20px]`}>
+        <div className={`m-auto my-2 mr-3`}>
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "general").length}/{badges.filter((badge) => badge.group === "general").length}</h3>
         </div>
       </div>

@@ -85,7 +85,7 @@ const NewAccount = ({ isUserLogged }) => {
     const d = new Date()
     await addDoc(collection(firestore, "news"), {
       title: "¡Bienvenido/a " + nickname + "!",
-      body: nickname + " ha empezado a jugar!",
+      body: "¡" + nickname + " ha empezado a jugar!",
       image: profilePicUrl,
       date: Timestamp.now(),
       userAssociated: id

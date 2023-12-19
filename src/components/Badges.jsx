@@ -70,31 +70,31 @@ const Badges = () => {
 
           {list ? (
             <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-6 w-[97%]`}>
+              <GeneralList userBadges={userBadges} />
               <MensualList userBadges={userBadges} />
               <DiscipuloList userBadges={userBadges} />
               <FiestaList userBadges={userBadges} />
               <AlcoholList userBadges={userBadges} />
               <JuegosDeMesaList userBadges={userBadges} />
-              <CochinasList userBadges={userBadges} />
               <ViajesList userBadges={userBadges} />
+              <CochinasList userBadges={userBadges} />
               <RutasList userBadges={userBadges} />
               <MarinesDeLokiarList userBadges={userBadges} />
               <CulturaList userBadges={userBadges} />
-              <GeneralList userBadges={userBadges} />
             </div>
           ) : (
             <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-6 w-[97%]`}>
+              <GeneralGrid userBadges={userBadges} /> 
               <MensualGrid userBadges={userBadges} />
               <DiscipuloGrid userBadges={userBadges} />
               <FiestaGrid userBadges={userBadges} />
               <AlcoholGrid userBadges={userBadges} />
               <JuegosDeMesaGrid userBadges={userBadges} />
-              <CochinasGrid userBadges={userBadges} />
               <ViajesGrid userBadges={userBadges} />
+              <CochinasGrid userBadges={userBadges} />
               <RutasGrid userBadges={userBadges} />
               <MarinesDeLokiarGrid userBadges={userBadges} />
               <CulturaGrid userBadges={userBadges} />
-              <GeneralGrid userBadges={userBadges} />   
             </div>
           )}
         </div>

@@ -4,6 +4,7 @@
 import styles from "../../../style.js"
 import { badges } from "../../../constants/index.js"
 import { antxpoint } from "../../../assets/img/index.js"
+import { Emoji } from "@crispengari/react-emojify"
 
 // Tippy imports
 import Tippy from "@tippyjs/react"
@@ -11,10 +12,10 @@ import 'tippy.js/dist/tippy.css';
 
 const JuegosDeMesaGrid = ({ userBadges }) => {
   return (
-    <div id="badgesJuegosDeMesa" className={`flex flex-col rounded-lg border-secondary border max-w-[350px] w-[95%]`}>
-      <div id="badgesJuegosDeMesaTitle" className={`flex bg-secondary rounded-t-md`}>
+    <div id="badgesJuegosDeMesa" className={`flex flex-col rounded-lg border-white border max-w-[350px] w-[95%]`}>
+      <div id="badgesJuegosDeMesaTitle" className={`flex bg-white rounded-t-md text-black`}>
         <div className={`m-auto my-2 ml-3 text-[20px]`}>
-          <h3>Juegos de Mesa</h3>
+          <h3>Juegos de Mesa <Emoji emojiId="react@emojify-1101"/></h3>
         </div>
         <div className={`m-auto my-2 mr-3 text-[20px]`}>
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "juegos_de_mesa").length}/{badges.filter((badge) => badge.group === "juegos_de_mesa").length}</h3>

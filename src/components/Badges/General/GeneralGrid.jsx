@@ -5,6 +5,8 @@ import styles from "../../../style.js"
 import { badges } from "../../../constants/index.js"
 import { antxpoint } from "../../../assets/img/index.js"
 
+import { Emoji } from "@crispengari/react-emojify"
+
 // Tippy imports
 import Tippy from "@tippyjs/react"
 import 'tippy.js/dist/tippy.css';
@@ -14,7 +16,7 @@ const GeneralGrid = ({ userBadges }) => {
     <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border max-w-[350px] w-[95%]`}>
       <div id="badgesGeneralTitle" className={`flex bg-secondary rounded-t-md`}>
         <div className={`m-auto my-2 ml-3 text-[20px]`}>
-          <h3>General</h3>
+          <h3>General <Emoji emojiId="react@emojify-1293"/></h3>
         </div>
         <div className={`m-auto my-2 mr-3 text-[20px]`}>
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "general").length}/{badges.filter((badge) => badge.group === "general").length}</h3>

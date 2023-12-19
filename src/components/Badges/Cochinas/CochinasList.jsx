@@ -3,15 +3,16 @@
 /* eslint-disable react/prop-types */
 import { badges } from "../../../constants/index.js"
 import { antxpoint } from "../../../assets/img/index.js"
+import { Emoji } from "@crispengari/react-emojify"
 
 const CochinasList = ({ userBadges }) => {
   return (
-    <div id="badgesCochinas" className={`flex flex-col rounded-lg border-secondary border xs:w-[90%] w-[95%]`}>
-      <div id="badgesCochinasTitle" className={`flex bg-secondary rounded-t-md min-w-[90%]`}>
-        <div className={`m-auto my-2 ml-3 text-[20px]`}>
-          <h3>Cochinadas</h3>
+    <div id="badgesCochinas" className={`flex flex-col rounded-lg border-[#e03f3f] border xs:w-[90%] w-[95%]`}>
+      <div id="badgesCochinasTitle" className={`flex bg-[#e03f3f] rounded-t-md min-w-[90%] text-[24px]`}>
+        <div className={`m-auto my-2 ml-3`}>
+          <h3>Cochinadas <Emoji emojiId="react@emojify-62" /></h3>
         </div>
-        <div className={`m-auto my-2 mr-3 text-[20px]`}>
+        <div className={`m-auto my-2 mr-3`}>
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "cochinas").length}/{badges.filter((badge) => badge.group === "cochinas").length}</h3>
         </div>
       </div>
@@ -20,7 +21,7 @@ const CochinasList = ({ userBadges }) => {
           {badges
             .filter((badge) => badge.group === "cochinas")
             .map((badge, index) => (
-              <div className={`flex w-full ${index === badges.length - 1 ? "" : "border border-transparent border-b-secondary"}`}>
+              <div className={`flex w-full ${index === badges.length - 1 ? "" : "border border-transparent border-b-[#e03f3f]"}`}>
                 <div className={`flex w-full my-4 ml-2`}>
                   <div className={`flex ss:min-w-[96px] ss:w-[96px] min-w-[64px] w-[64px] m-auto mr-2 ss:ml-2 ml-0 `}>
                     <img src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked} className={``} />

@@ -5,6 +5,8 @@ import styles from "../../../style.js"
 import { badges } from "../../../constants/index.js"
 import { antxpoint } from "../../../assets/img/index.js"
 
+import { Emoji } from "@crispengari/react-emojify"
+
 // Tippy imports
 import Tippy from "@tippyjs/react"
 import 'tippy.js/dist/tippy.css';
@@ -14,7 +16,7 @@ const MensualGrid = ({ userBadges }) => {
     <div id="badgesMensual" className={`flex flex-col rounded-lg border-[#0078AC] border xxs:max-w-[350px] w-[95%]`}>
       <div id="badgesMensualTitle" className={`flex bg-[#0078AC] rounded-t-md`}>
         <div className={`m-auto my-2 ml-3 text-[20px]`}>
-          <h3>La Mensual</h3>
+          <h3>La Mensual <Emoji emojiId="react@emojify-737"/></h3>
         </div>
         <div className={`m-auto my-2 mr-3 text-[20px]`}>
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "mensual").length}/{badges.filter((badge) => badge.group === "mensual").length}</h3>

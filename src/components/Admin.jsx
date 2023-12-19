@@ -55,7 +55,7 @@ const Admin = () => {
     await addDoc(collection(firestore, "news"), {
       title: newsTitle,
       body: newsBody,
-      image: "",
+      image: "https://firebasestorage.googleapis.com/v0/b/tag1-1056a.appspot.com/o/news_alert.png?alt=media&token=e8d57906-3284-4778-b551-5f255bdf1d3a",
       date: Timestamp.now(),
       userAssociated: ""
     }).then(() => setNewsPosted(true))

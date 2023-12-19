@@ -5,16 +5,18 @@ import styles from "../../../style.js"
 import { badges } from "../../../constants/index.js"
 import { antxpoint } from "../../../assets/img/index.js"
 
+import { Emoji } from "@crispengari/react-emojify"
+
 // Tippy imports
 import Tippy from "@tippyjs/react"
 import 'tippy.js/dist/tippy.css';
 
 const MarinesDeLokiarGrid = ({ userBadges }) => {
   return (
-    <div id="badgesMarinesDeLokiar" className={`flex flex-col rounded-lg border-secondary border max-w-[350px] w-[95%]`}>
-      <div id="badgesMarinesDeLokiarTitle" className={`flex bg-secondary rounded-t-md`}>
+    <div id="badgesMarinesDeLokiar" className={`flex flex-col rounded-lg border-[#FF7F50] border max-w-[350px] w-[95%]`}>
+      <div id="badgesMarinesDeLokiarTitle" className={`flex bg-[#FF7F50] rounded-t-md`}>
         <div className={`m-auto my-2 ml-3 text-[20px]`}>
-          <h3>Marines de Lokiar</h3>
+          <h3>Marines de Lokiar <Emoji emojiId="react@emojify-161"/></h3>
         </div>
         <div className={`m-auto my-2 mr-3 text-[20px]`}>
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "marines_de_lokiar").length}/{badges.filter((badge) => badge.group === "marines_de_lokiar").length}</h3>
