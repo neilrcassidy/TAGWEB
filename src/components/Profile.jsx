@@ -191,13 +191,13 @@ const Profile = ({ logUser }) => {
       .then(setDataSet(true))
   }, [])
 
-  const logout = async () => {
+  const logoutFirebase = async () => {
     await signOut(auth)
       .then(localStorage.removeItem('Auth Token'))
   }
 
-  const cerrarSesion = async () => {
-    logout()
+  const logout = async () => {
+    logoutFirebase()
       .then(() => logUser(false))
   }
 
@@ -498,7 +498,7 @@ const Profile = ({ logUser }) => {
                 </div>
                 <div className={`${styles.flexCenter} mb-4`}>
                   <button className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`} type="button"
-                    onClick={(cerrarSesion)}>
+                    onClick={(logout)}>
                     Cerrar Sesion
                   </button>
                 </div>

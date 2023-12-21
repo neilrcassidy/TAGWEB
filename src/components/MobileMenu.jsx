@@ -10,7 +10,7 @@ import { useEffect, useState } from "react"
 import { auth, firestore } from "../config/firebase-config"
 import { doc, getDoc } from "firebase/firestore"
 
-const MobileMenu = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) => {
+const MobileMenu = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
 
   const [currentUserEmail, setCurrentUserEmail] = useState("");
   const [currentUserNickname, setCurrentUserNickname] = useState("");

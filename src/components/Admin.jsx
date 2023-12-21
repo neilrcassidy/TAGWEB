@@ -18,8 +18,6 @@ const Admin = () => {
   const [userHasBadge, setUserHasBadge] = useState(false)
   const [badgeAdded, setBadgeAdded] = useState(false)
   const [newsPosted, setNewsPosted] = useState(false)
-  const [invalidUser, setInvalidUser] = useState(false)
-  const [invalidBadge, setInvalidBadge] = useState(false)
 
   const [newsTitle, setNewsTitle] = useState("")
   const [newsBody, setNewsBody] = useState("")
@@ -38,8 +36,7 @@ const Admin = () => {
         setUserHasBadge(true)
       } else {
         updateUserDoc(userDoc, badge)
-          .then(() => createNewsEntryForBadges(user, badge)
-            .then(() => setBadgeAdded(true)))
+          .then(() => createNewsEntryForBadges(user, badge).then(() => setBadgeAdded(true)))
       }
     }
   }
@@ -71,7 +68,7 @@ const Admin = () => {
     })
   }
 
-  const fetchAll = async () => {
+  const fetchUsers = async () => {
     const querySnapshot = await getDocs(query(collection(firestore, "users")))
     let docs = [];
     querySnapshot.docs.map((doc) => {
@@ -81,7 +78,7 @@ const Admin = () => {
   }
 
   useEffect(() => {
-    fetchAll()
+    fetchUsers()
       .then((users) => setUsers(users))
   }, [])
 

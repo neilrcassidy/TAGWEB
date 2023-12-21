@@ -26,7 +26,7 @@ const App = () => {
           <Route path="home" element={<Home logUser={logUser} />} />
           <Route path="reset_password" element={<RecoverPassword />} />
           <Route path="complete_registration" element={<NewAccount isUserLogged={isUserLogged} />} />
-          <Route path="/" element={<Page isUserLogged={isUserLogged} logUser={logUser} />}>
+          <Route path="/" element={<Page isUserLogged={isUserLogged} />}>
             <Route index path="/" element={<Badges />} />
             <Route index path="badges" element={<Badges />} />
             <Route path="news" element={<News />} />
@@ -34,9 +34,6 @@ const App = () => {
             <Route path="profile" element={<Profile logUser={logUser} />} />
             <Route path="administrame_esta" element={<Admin />} />
             <Route path="/visit/:id" element={<Visit />} />
-            {/*<Switch>
-              <Route path="/visit/:id" element={<Visit />} />
-            </Switch>*/}
           </Route>
         </Routes>
       </BrowserRouter>

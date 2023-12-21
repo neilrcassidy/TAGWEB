@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
-import { defaultProfile, podium1, podium2, podium3, antxpoint } from "../assets/img"
+import { podium1, podium2, podium3, antxpoint } from "../assets/img"
 import styles from "../style"
 
 // React imports
@@ -19,7 +19,7 @@ const Leaderboard = () => {
   const [users, setUsers] = useState([])
   const [usersSet, setUsersSet] = useState(false)
 
-  const fetchAll = async () => {
+  const fetchUsers = async () => {
     const querySnapshot = await getDocs(query(collection(firestore, "users"), orderBy('points', 'desc')))
     let docs = [];
     querySnapshot.docs.map((doc) => {
@@ -29,7 +29,7 @@ const Leaderboard = () => {
   }
 
   useEffect(() => {
-    fetchAll()
+    fetchUsers()
       .then((docs) => setUsers(docs))
       .then(() => setUsersSet(true))
   }, [])

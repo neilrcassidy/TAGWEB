@@ -13,27 +13,21 @@ import { useNavigate, useParams } from "react-router-dom"
 // Firebase imports
 import { auth, firestore } from "../config/firebase-config"
 import { doc, getDoc } from "firebase/firestore"
-import { signOut } from "firebase/auth"
 
-const Visit = ({ logUser }) => {
+const Visit = () => {
   const navigate = useNavigate();
   const navProfile = () => navigate("/profile")
 
   let {id} = useParams();
   const [dataSet, setDataSet] = useState(false)
-  const [userEmail, setUserEmail] = useState("");
   const [userNickname, setUserNickname] = useState("");
   const [userProfilePic, setUserProfilePic] = useState("");
   const [userBadges, setUserBadges] = useState([]);
   const [userFavoriteBadges, setUserFavoriteBadges] = useState([]);
   const [userPoints, setUserPoints] = useState(0);
-  const [userAdmin, setUserAdmin] = useState(false);
-  const [editMode, setEditMode] = useState(false)
 
   const getAndSetUser = async () => {
     const userInfo = await getDoc(doc(firestore, "users", id))
-    setUserEmail(userInfo.data().email)
-    setUserAdmin(userInfo.data().admin)
     setUserNickname(userInfo.data().nickname)
     setUserProfilePic(userInfo.data().profilePic)
     setUserBadges(userInfo.data().badges)
@@ -51,16 +45,6 @@ const Visit = ({ logUser }) => {
       getAndSetUser()
     }
   }, [dataSet])
-
-  const logout = async () => {
-    await signOut(auth)
-      .then(localStorage.removeItem('Auth Token'))
-  }
-
-  const cerrarSesion = async () => {
-    logout()
-      .then(() => logUser(false))
-  }
 
   return (
     <>

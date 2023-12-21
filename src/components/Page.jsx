@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom"
 // Firebase imports
 import { auth } from "../config/firebase-config"
 
-const Page = ({ isUserLogged, logUser }) => {
+const Page = ({ isUserLogged }) => {
   const navigate = useNavigate();
   const navHome = () => navigate("/home")
   
@@ -27,8 +27,8 @@ const Page = ({ isUserLogged, logUser }) => {
 
   return (
     <div id="Page">
-      <Header isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged} logUser={logUser} />
-      <MobileMenu isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged} logUser={logUser} />
+      <Header isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged} />
+      <MobileMenu isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged} />
       <Outlet />
     </div>
   )

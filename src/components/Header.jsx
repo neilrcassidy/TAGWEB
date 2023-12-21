@@ -12,7 +12,7 @@ import { doc, getDoc } from "firebase/firestore"
 
 import { useNavigate } from "react-router-dom"
 
-const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged, logUser }) => {
+const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
   const navigate = useNavigate();
   const navBadges = () => navigate("/badges")
 

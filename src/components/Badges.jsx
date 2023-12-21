@@ -2,15 +2,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import styles from "../style"
-import { badges } from "../constants/index.js"
-import { antxpoint } from "../assets/img/index.js"
 
 // React imports
 import { useEffect, useState } from "react"
-
-// Tippy imports
-import Tippy from "@tippyjs/react"
-import 'tippy.js/dist/tippy.css';
 
 // FontAwesome imports
 import { faBorderAll, faList } from "@fortawesome/free-solid-svg-icons"
@@ -36,18 +30,22 @@ import { CulturaList, CulturaGrid } from "./Badges/Cultura"
 const Badges = () => {
   // This useState determines wether to display the badges as a grid (false) or a list (true)
   const [list, setList] = useState(false)
+  const [userData, setUserData] = useState()
   const [userBadges, setUserBadges] = useState([])
   const [badgesSet, setBadgesSet] = useState(false)
 
-  const getUserBadges = async () => {
-    const currentUserInfo = await getDoc(doc(firestore, "users", auth.currentUser.uid))
-    return currentUserInfo.data().badges
+  const getUserData = async () => {
+    const currentUser = await getDoc(doc(firestore, "users", auth.currentUser.uid))
+    return currentUser.data()
   }
 
   useEffect(() => {
     auth.onAuthStateChanged(function () {
-      getUserBadges()
-        .then((badges) => setUserBadges(badges))
+      getUserData()
+        .then((userData) => {
+          setUserData(userData)
+          setUserBadges(userData.badges)
+        })
         .then(() => setBadgesSet(true))
     })
 
