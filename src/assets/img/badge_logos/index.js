@@ -37,6 +37,9 @@ import FIE8_unlocked from "./FIE8_unlocked.png";
 import FIE9_unlocked from "./FIE9_unlocked.png";
 import FIE11_unlocked from "./FIE11_unlocked.png";
 
+import ALC2_unlocked from "./ALC2_unlocked.png"
+import ALC3_unlocked from "./ALC3_unlocked.png"
+import ALC4_unlocked from "./ALC4_unlocked.png"
 import ALC7_unlocked from "./ALC7_unlocked.png"
 import ALC8_unlocked from "./ALC8_unlocked.png"
 import ALC9_unlocked from "./ALC9_unlocked.png"
@@ -124,6 +127,9 @@ export {
     FIE8_unlocked,
     FIE9_unlocked,
     FIE11_unlocked,
+    ALC2_unlocked,
+    ALC3_unlocked,
+    ALC4_unlocked,
     ALC7_unlocked,
     ALC8_unlocked,
     ALC9_unlocked,

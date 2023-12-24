@@ -30,7 +30,7 @@ const AlcoholGrid = ({ userBadges }) => {
               <Tippy content=
                 {<div className={`flex flex-row gap-4 m-2`}>
                   <div className={`flex m-auto max-w-[128px] min-w-[128px]`}>
-                    <img src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_unlocked}></img>
+                    <img className={`${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_unlocked}></img>
                   </div>
                   <div className={`flex flex-col font-poppins text-left m-auto`}>
                     <div className={`font-bold text-[18px]`}>
@@ -41,9 +41,9 @@ const AlcoholGrid = ({ userBadges }) => {
                     </div>
                   </div>
                 </div>}>
-                <div id={badge.id} className={`flex flex-col w-[96px]`}>
-                  <div className={`${styles.flexCenter} mb-2`}>
-                    <img className={`${styles.flexCenter} w-[72px]`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_unlocked}></img>
+                <div id={badge.id} className={`flex flex-col`}>
+                  <div className={`${styles.flexCenter} w-[96px] h-[86px]`}>
+                    <img className={`${styles.flexCenter} w-[72px] ${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_unlocked}></img>
                   </div>
                   <div className={`${styles.flexCenter} font-normal`}>
                     <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />

@@ -27,6 +27,10 @@ import { RutasList, RutasGrid } from "./Badges/Rutas"
 import { MarinesDeLokiarList, MarinesDeLokiarGrid } from "./Badges/MarinesDeLokiar"
 import { CulturaList, CulturaGrid } from "./Badges/Cultura"
 
+import { rare_badge_unlocked, normal_badge_unlocked } from "../assets/img/badge_logos"
+
+import { badges } from "../constants"
+
 const Badges = () => {
   // This useState determines wether to display the badges as a grid (false) or a list (true)
   const [list, setList] = useState(false)
@@ -54,8 +58,31 @@ const Badges = () => {
   return (
     <>
       {badgesSet ? (
-        <div id="badgesPage" className={`flex flex-col ${styles.flexCenter} min-w-[90%] pb-8`}>
-          <div className="inline-flex text-white font-poppins font-bold my-4 border border-secondary rounded-lg">
+        <div id="badgesPage" className={`flex flex-col ${styles.flexCenter} min-w-[90%] pb-8 text-white font-poppins font-bold`}>
+          <div id="stats" className={`flex xs:flex-row flex-col ss:text-[48px] text-[32px] font-normal xs:gap-12 gap-2 my-4`}>
+            <div id="total" className={`${styles.flexCenter} flex-col`}>
+              <div className={`mb-0`}>Total</div>
+              <div className={`mt-0`}>{userBadges.length}</div>
+            </div>
+
+            <div id="byType" className={`flex gap-8`}>
+              <div className={`flex flex-row gap-2`}>
+                <div className={`ss:w-[64px] w-[48px] my-auto`}>
+                  <img src={rare_badge_unlocked} className={`glow-rare-badges`}/>
+                </div>
+                <div className={`my-auto`}>{badges.filter((badge) => userBadges.includes(badge.id) && badge.type === "rare").length}</div>
+              </div>
+
+              <div className={`flex flex-row gap-2`}>
+                <div className={`ss:w-[64px] w-[48px] my-auto`}>
+                  <img src={normal_badge_unlocked}/>
+                </div>
+                <div className={`my-auto`}>{badges.filter((badge) => userBadges.includes(badge.id) && badge.type === "normal").length}</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="inline-flex my-4 border border-secondary rounded-lg">
             <button onClick={() => setList(false)} className={`flex flex-row ${list ? "" : "bg-secondary"} hover:bg-altSecondary py-2 px-4 rounded-l gap-2`}>
               <p>Grid</p>
               <FontAwesomeIcon icon={faBorderAll} className={`m-auto`} />
@@ -67,7 +94,7 @@ const Badges = () => {
           </div>
 
           {list ? (
-            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-6 w-[97%]`}>
+            <div id="badgesCards" className={`flex flex-wrap justify-center gap-6 w-[97%]`}>
               <GeneralList userBadges={userBadges} />
               <MensualList userBadges={userBadges} />
               <DiscipuloList userBadges={userBadges} />
