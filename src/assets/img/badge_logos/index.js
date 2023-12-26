@@ -19,12 +19,9 @@ import MEN2_unlocked from "./MEN2_unlocked.png";
 import MEN3_unlocked from "./MEN3_unlocked.png";
 
 import DIS1_unlocked from "./DIS1_unlocked.png";
-import DIS2_unlocked from "./DIS2_unlocked.png";
 import DIS4_unlocked from "./DIS4_unlocked.png";
 import DIS5_unlocked from "./DIS5_unlocked.png";
 import DIS9_unlocked from "./DIS9_unlocked.png";
-import DIS10_unlocked from "./DIS10_unlocked.png";
-import DIS11_unlocked from "./DIS11_unlocked.png";
 
 import FIE1_unlocked from "./FIE1_unlocked.png";
 import FIE2_unlocked from "./FIE2_unlocked.png";
@@ -122,12 +119,9 @@ export {
     MEN2_unlocked,
     MEN3_unlocked,
     DIS1_unlocked,
-    DIS2_unlocked,
     DIS4_unlocked,
     DIS5_unlocked,
     DIS9_unlocked,
-    DIS10_unlocked,
-    DIS11_unlocked,
     FIE1_unlocked,
     FIE2_unlocked,
     FIE3_unlocked,
