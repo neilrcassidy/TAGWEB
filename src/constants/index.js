@@ -722,7 +722,7 @@ export const badges = [{
   {
     id: "ALC10",
     group: "alcohol",
-    title: "Como supiste que soy de los guays?",
+    title: "¿Como supiste que soy de los guays?",
     description: "Bebe 100 cervezas.",
     points: 15,
     icon_locked: rare_badge_locked,
