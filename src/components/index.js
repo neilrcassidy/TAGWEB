@@ -10,6 +10,7 @@ import NewAccount from "./NewAccount.jsx"
 import Profile from "./Profile.jsx"
 import Admin from "./Admin.jsx"
 import Visit from "./Visit.jsx"
+import Stats from "./Stats.jsx"
 
 export {
     Header,
@@ -23,5 +24,6 @@ export {
     NewAccount,
     Profile,
     Admin,
-    Visit
+    Visit,
+    Stats
 }

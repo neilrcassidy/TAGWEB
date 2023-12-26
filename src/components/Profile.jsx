@@ -16,6 +16,8 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { signOut } from "firebase/auth"
 import Tippy from "@tippyjs/react"
 
+import Stats from "./Stats.jsx"
+
 const Profile = ({ logUser }) => {
   const navigate = useNavigate();
 
@@ -233,8 +235,6 @@ const Profile = ({ logUser }) => {
                       )}
                     </div>
                   )}
-
-
                 </div>
               </div>
             </div>
@@ -445,16 +445,20 @@ const Profile = ({ logUser }) => {
                     </div>
                   </div>
 
+                  <div className={`${styles.flexCenter} m-auto`}>
+                    <Stats userBadges={currentUserBadges} />
+                  </div>
+
                   {currentUserFavoriteBadges.length !== 0 ? (
                     <div className={`${styles.flexCenter} m-auto`}>
                       <div className={`${styles.flexCenter} m-4`}>
-                        <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border`}>
-                          <div id="badgesGeneralTitle" className={`flex bg-secondary rounded-t-md`}>
+                        <div id="favBadges" className={`flex flex-col rounded-lg border-secondary border`}>
+                          <div id="favBadgesTitle" className={`flex bg-secondary rounded-t-md`}>
                             <div className={`flex my-2 ml-2 pr-2`}>
                               <h3>Destacados</h3>
                             </div>
                           </div>
-                          <div id="badgesGeneralGrid" className={`mx-1 my-4`}>
+                          <div id="favBadgesGrid" className={`mx-1 my-4`}>
                             <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
                               {badges
                                 .filter((badge) => currentUserFavoriteBadges.includes(badge.id))
@@ -483,8 +487,6 @@ const Profile = ({ logUser }) => {
                                       </div>
                                     </div>
                                   </Tippy>
-
-
                                 ))}
                             </div>
                           </div >

@@ -14,11 +14,14 @@ import { useNavigate, useParams } from "react-router-dom"
 import { auth, firestore } from "../config/firebase-config"
 import { doc, getDoc } from "firebase/firestore"
 
+import Stats from "./Stats.jsx"
+import Tippy from "@tippyjs/react"
+
 const Visit = () => {
   const navigate = useNavigate();
   const navProfile = () => navigate("/profile")
 
-  let {id} = useParams();
+  let { id } = useParams();
   const [dataSet, setDataSet] = useState(false)
   const [userNickname, setUserNickname] = useState("");
   const [userProfilePic, setUserProfilePic] = useState("");
@@ -33,15 +36,15 @@ const Visit = () => {
     setUserBadges(userInfo.data().badges)
     setUserFavoriteBadges(userInfo.data().favoriteBadges)
     setUserPoints(userInfo.data().points)
-    setDataSet(true)   
+    setDataSet(true)
   }
 
   useEffect(() => {
-    if(auth.currentUser.uid === id){
+    if (auth.currentUser.uid === id) {
       navProfile()
     }
 
-    if(!dataSet){
+    if (!dataSet) {
       getAndSetUser()
     }
   }, [dataSet])
@@ -81,6 +84,10 @@ const Visit = () => {
                   </div>
                 </div>
 
+                <div className={`${styles.flexCenter} m-auto`}>
+                  <Stats userBadges={userBadges} />
+                </div>
+
                 {userFavoriteBadges.length !== 0 ? (
                   <div className={`${styles.flexCenter} m-auto`}>
                     <div className={`${styles.flexCenter} m-4`}>
@@ -90,23 +97,35 @@ const Visit = () => {
                             <h3>Destacados</h3>
                           </div>
                         </div>
-                        <div id="badgesGeneralGrid" className={`m-4`}>
-                          <div className={`flex flex-wrap ${styles.flexCenter} gap-10`}>
+                        <div id="favBadgesGrid" className={`mx-1 my-4`}>
+                          <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
                             {badges
                               .filter((badge) => userFavoriteBadges.includes(badge.id))
                               .map((badge, index) => (
-                                <div id={index} className={``}>
-                                  <div className={`w-[64px] mb-2`}>
-                                    <img src={badge.icon_unlocked}></img>
+                                <Tippy content=
+                                  {<div className={`flex flex-row gap-4 m-2`}>
+                                    <div className={`flex m-auto max-w-[128px] min-w-[128px]`}>
+                                      <img className={`${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={badge.icon_unlocked}></img>
+                                    </div>
+                                    <div className={`flex flex-col font-poppins text-left m-auto`}>
+                                      <div className={`font-bold text-[18px]`}>
+                                        {badge.title}
+                                      </div>
+                                      <div className={`text-[16px] text-left`}>
+                                        {badge.description}
+                                      </div>
+                                    </div>
+                                  </div>}>
+                                  <div id={badge.id} className={`flex flex-col w-[96px]`}>
+                                    <div className={`${styles.flexCenter} mb-2`}>
+                                      <img className={`${styles.flexCenter} w-[72px] ${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={badge.icon_unlocked}></img>
+                                    </div>
+                                    <div className={`${styles.flexCenter} font-normal`}>
+                                      <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
+                                      <p>{badge.points}</p>
+                                    </div>
                                   </div>
-                                  <div className={`${styles.flexCenter} mb-1`}>
-                                    <p>{badge.title}</p>
-                                  </div>
-                                  <div className={`${styles.flexCenter} font-normal`}>
-                                    <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                                    <p>{badge.points}</p>
-                                  </div>
-                                </div>
+                                </Tippy>
                               ))}
                           </div>
                         </div >
