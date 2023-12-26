@@ -24,7 +24,7 @@ const CulturaList = ({ userBadges }) => {
               <div className={`flex w-full ${index === badges.length - 1 ? "" : "border border-transparent border-b-blue-300"}`}>
                 <div className={`flex w-full my-4 ml-2`}>
                   <div className={`flex ss:min-w-[96px] ss:w-[96px] min-w-[64px] w-[64px] m-auto mr-2 ss:ml-2 ml-0 `}>
-                    <img src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_unlocked} className={``} />
+                    <img className={`${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked}></img>
                   </div>
                   <div className={`flex flex-col m-auto mx-1 smmd:max-w-[75%] sm:max-w-[70%] ss:max-w-[65%] xs:max-w-[60%] xxs:max-w-[55%] xxxs:max-w-[50%] max-w-[45%]`}>
                     <p className={`ss:text-[24px] xs:text-[22px] xxs:text-[20px] text-[18px]`}>{badge.title}</p>

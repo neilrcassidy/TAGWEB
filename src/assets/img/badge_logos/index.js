@@ -35,15 +35,20 @@ import FIE6_unlocked from "./FIE6_unlocked.png";
 import FIE7_unlocked from "./FIE7_unlocked.png";
 import FIE8_unlocked from "./FIE8_unlocked.png";
 import FIE9_unlocked from "./FIE9_unlocked.png";
+import FIE10_unlocked from "./FIE10_unlocked.png";
 import FIE11_unlocked from "./FIE11_unlocked.png";
 
+import ALC1_unlocked from "./ALC1_unlocked.png"
 import ALC2_unlocked from "./ALC2_unlocked.png"
 import ALC3_unlocked from "./ALC3_unlocked.png"
 import ALC4_unlocked from "./ALC4_unlocked.png"
+import ALC5_unlocked from "./ALC5_unlocked.png"
+import ALC6_unlocked from "./ALC6_unlocked.png"
 import ALC7_unlocked from "./ALC7_unlocked.png"
 import ALC8_unlocked from "./ALC8_unlocked.png"
 import ALC9_unlocked from "./ALC9_unlocked.png"
 import ALC10_unlocked from "./ALC10_unlocked.png"
+import ALC11_unlocked from "./ALC11_unlocked.png"
 
 import JDM1_unlocked from "./JDM1_unlocked.png"
 import JDM2_unlocked from "./JDM2_unlocked.png"
@@ -60,8 +65,14 @@ import JDM12_unlocked from "./JDM12_unlocked.png"
 import JDM13_unlocked from "./JDM13_unlocked.png"
 
 import COC1_unlocked from "./COC1_unlocked.png"
+import COC2_unlocked from "./COC2_unlocked.png"
 import COC3_unlocked from "./COC3_unlocked.png"
+import COC4_unlocked from "./COC4_unlocked.png"
+import COC5_unlocked from "./COC5_unlocked.png"
+import COC6_unlocked from "./COC6_unlocked.png"
 import COC7_unlocked from "./COC7_unlocked.png"
+import COC8_unlocked from "./COC8_unlocked.png"
+import COC9_unlocked from "./COC9_unlocked.png"
 
 import VIA1_unlocked from "./VIA1_unlocked.png"
 import VIA2_unlocked from "./VIA2_unlocked.png"
@@ -126,14 +137,19 @@ export {
     FIE7_unlocked,
     FIE8_unlocked,
     FIE9_unlocked,
+    FIE10_unlocked,
     FIE11_unlocked,
+    ALC1_unlocked,
     ALC2_unlocked,
     ALC3_unlocked,
     ALC4_unlocked,
+    ALC5_unlocked,
+    ALC6_unlocked,
     ALC7_unlocked,
     ALC8_unlocked,
     ALC9_unlocked,
     ALC10_unlocked,
+    ALC11_unlocked,
     JDM1_unlocked,
     JDM2_unlocked,
     JDM3_unlocked,
@@ -148,8 +164,14 @@ export {
     JDM12_unlocked,
     JDM13_unlocked,
     COC1_unlocked,
+    COC2_unlocked,
     COC3_unlocked,
+    COC4_unlocked,
+    COC5_unlocked,
+    COC6_unlocked,
     COC7_unlocked,
+    COC8_unlocked,
+    COC9_unlocked,
     VIA1_unlocked,
     VIA2_unlocked,
     VIA3_unlocked,

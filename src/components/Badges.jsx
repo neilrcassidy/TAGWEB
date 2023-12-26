@@ -61,8 +61,8 @@ const Badges = () => {
         <div id="badgesPage" className={`flex flex-col ${styles.flexCenter} min-w-[90%] pb-8 text-white font-poppins font-bold`}>
           <div id="stats" className={`flex xs:flex-row flex-col ss:text-[48px] text-[32px] font-normal xs:gap-12 gap-2 my-4`}>
             <div id="total" className={`${styles.flexCenter} flex-col`}>
-              <div className={`mb-0`}>Total</div>
-              <div className={`mt-0`}>{userBadges.length}</div>
+              <div className={`ss:text-[36px] text-[24px]`}>Total</div>
+              <div>{userBadges.length}</div>
             </div>
 
             <div id="byType" className={`flex gap-8`}>

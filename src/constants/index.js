@@ -30,14 +30,19 @@ import {
   FIE7_unlocked,
   FIE8_unlocked,
   FIE9_unlocked,
+  FIE10_unlocked,
   FIE11_unlocked,
+  ALC1_unlocked,
   ALC2_unlocked,
   ALC3_unlocked,
   ALC4_unlocked,
+  ALC5_unlocked,
+  ALC6_unlocked,
   ALC7_unlocked,
   ALC8_unlocked,
   ALC9_unlocked,
   ALC10_unlocked,
+  ALC11_unlocked,
   JDM1_unlocked,
   JDM2_unlocked,
   JDM3_unlocked,
@@ -52,8 +57,14 @@ import {
   JDM12_unlocked,
   JDM13_unlocked,
   COC1_unlocked,
+  COC2_unlocked,
   COC3_unlocked,
+  COC4_unlocked,
+  COC5_unlocked,
+  COC6_unlocked,
   COC7_unlocked,
+  COC8_unlocked,
+  COC9_unlocked,
   VIA1_unlocked,
   VIA2_unlocked,
   VIA3_unlocked,
@@ -528,7 +539,7 @@ export const badges = [{
     description: "Que te tiren de una fiesta o que no te dejen entrar.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "FIE10_unlocked",
+    icon_unlocked: FIE10_unlocked,
     type: "rare"
   },
   {
@@ -548,7 +559,7 @@ export const badges = [{
     description: "Beber 5 chupitos en una fiesta.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "ALC1_unlocked",
+    icon_unlocked: ALC1_unlocked,
     type: "normal"
   },
   {
@@ -588,7 +599,7 @@ export const badges = [{
     description: "Vomita por culpa del alcohol.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "ALC5_unlocked",
+    icon_unlocked: ALC5_unlocked,
     type: "normal"
   },
   {
@@ -598,7 +609,7 @@ export const badges = [{
     description: "Vomita por culpa del alcohol dos veces.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "ALC6_unlocked",
+    icon_unlocked: ALC6_unlocked,
     type: "normal"
   },
   {
@@ -648,7 +659,7 @@ export const badges = [{
     description: "Haz el tiktok de 'esto es mi x cubata'.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "ALC11_unlocked",
+    icon_unlocked: ALC11_unlocked,
     type: "normal"
   },
   {
@@ -798,7 +809,7 @@ export const badges = [{
     description: "Liate con una persona.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "COC2_unlocked",
+    icon_unlocked: COC2_unlocked,
     type: "normal"
   },
   {
@@ -818,7 +829,7 @@ export const badges = [{
     description: "Liate con tres personas.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "COC4_unlocked",
+    icon_unlocked: COC4_unlocked,
     type: "rare"
   },
   {
@@ -828,7 +839,7 @@ export const badges = [{
     description: "Liate con alguien imposible (se presenta al grupo y se vota).",
     points: 20,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "COC5_unlocked",
+    icon_unlocked: COC5_unlocked,
     type: "rare"
   },
   {
@@ -838,7 +849,7 @@ export const badges = [{
     description: "Liate con algun amigo o amiga de alguien de ANTX.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "COC6_unlocked",
+    icon_unlocked: COC6_unlocked,
     type: "normal"
   },
   {
@@ -858,7 +869,7 @@ export const badges = [{
     description: "No hace falta decir más...",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "COC8_unlocked",
+    icon_unlocked: COC8_unlocked,
     type: "normal"
   },
   {
@@ -868,7 +879,7 @@ export const badges = [{
     description: "Acabar la temporada con novio/a (Si empiezas la temporada con novio/a, tiene que ser otra persona al final).",
     points: 25,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "COC9_unlocked",
+    icon_unlocked: COC9_unlocked,
     type: "rare"
   },
   {
