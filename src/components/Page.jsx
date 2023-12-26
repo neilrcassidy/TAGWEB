@@ -27,7 +27,7 @@ const Page = ({ isUserLogged }) => {
 
   return (
     <div id="Page">
-      <Header isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged} />
+      <Header isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged}/>
       <MobileMenu isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged} />
       <Outlet />
     </div>
