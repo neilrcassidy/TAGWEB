@@ -38,7 +38,7 @@ const Leaderboard = () => {
     <>
       {usersSet ? (
         <div id="leaderboardPage" className={`flex flex-col ${styles.flexCenter}`}>
-          <div id="podium" className={`flex justify-center items-end xs:gap-4 gap-2 md:max-w-[25%] smmd:max-w-[30%] sm:max-w-[40%] ss:max-w-[50%] xs:max-w-[60%] max-w-[70%] my-8 text-white font-poppins font-bold`}>
+          <div id="podium" className={`flex justify-center items-end xs:gap-4 gap-2 md:max-w-[40%] smmd:max-w-[45%] sm:max-w-[50%] ss:max-w-[60%] xs:max-w-[70%] max-w-[80%] my-8 text-white font-poppins font-bold`}>
             <div id="podium2" className={`w-[25%]`}>
               <div className={`cursor-pointer`} onClick={() => navVisitUser(users[1].id)}>
                 <img src={users[1].profilePic} className={`mx-auto max-w-[80%] border-0 rounded-full`} />
