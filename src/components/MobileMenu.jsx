@@ -79,7 +79,7 @@ const MobileMenu = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
           <ul className="pt-6 text-right font-semibold text-white xxs:text-[28px] text-[24px]">
             <li className="hover:underline mb-4"
               onClick={() => toggleMenu((prev) => !prev)}>
-              <Link to="/badges">Logros</Link>
+              <Link to="/badges">Chapas</Link>
             </li>
             <li className="hover:underline mb-4"
               onClick={() => toggleMenu((prev) => !prev)}>

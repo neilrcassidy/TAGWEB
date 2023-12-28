@@ -94,7 +94,7 @@ const Visit = () => {
                       <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border`}>
                         <div id="badgesGeneralTitle" className={`flex bg-secondary rounded-t-md`}>
                           <div className={`flex my-2 ml-2 pr-2`}>
-                            <h3>Destacados</h3>
+                            <h3>Favoritas</h3>
                           </div>
                         </div>
                         <div id="favBadgesGrid" className={`mx-1 my-4`}>

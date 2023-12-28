@@ -310,11 +310,11 @@ const Profile = ({ logUser }) => {
                   </div>
                   <div className={`flex flex-col ml-4 gap-2`}>
                     <div className={`flex text-[18px]`}>
-                      <h2>Actualizar Logros Destacados:</h2>
+                      <h2>Actualizar Chapas Destacadas:</h2>
                     </div>
                     {favoriteBadgesUpdated ? (
                       <div className={`flex text-[12px] text-secondary`}>
-                        <h2>Logros Destacados actualizado! Recarga la página.</h2>
+                        <h2>Chapas Destacadas actualizado! Recarga la página.</h2>
                       </div>
                     ) : (
                       <div></div>

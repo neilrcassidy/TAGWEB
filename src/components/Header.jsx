@@ -50,7 +50,7 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
         <nav className={`m-auto flex font-bold text-[16px]`}>
           <ul className={`flex flex-row gap-10`}>
             <li className="cursor-pointer hover:underline hover:font-extrabold">
-              <Link to="/badges">Logros</Link>
+              <Link to="/badges">Chapas</Link>
             </li>
             <li className="cursor-pointer hover:underline hover:font-extrabold">
               <Link to="/news">Noticias</Link>
