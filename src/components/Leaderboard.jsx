@@ -66,7 +66,7 @@ const Leaderboard = () => {
               <div className={`flex w-full ${index === users.length - 1 ? "" : "border border-transparent border-b-secondary"}`}>
                 <div id="leadearboardEntry" className={`flex my-3 w-full`}>
                   <div id="posLeaderboardEntry" className={`m-auto ml-4 mr-0`}>
-                    <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px] ss:min-w-[40px] min-w-[30px]`}>{index+1}.</p>
+                    <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px] ss:min-w-[40px] min-w-[30px] font-normal`}>{index+1}.</p>
                   </div>
                   <div id="iconLeaderboardEntry" className={`ss:min-w-[64px] ss:w-[64px] min-w-[48px] w-[48px] m-auto mr-2 ss:ml-2 ml-0 `}>
                     <img src={user.profilePic} className={`border-0 rounded-full cursor-pointer`} onClick={() => navVisitUser(user.id)} />
@@ -76,7 +76,7 @@ const Leaderboard = () => {
                   </div>
                   <div id="textLeaderboardEntry" className={`flex flex-row m-auto mr-3 gap-2`}>
                     <img src={antxpoint} className={`w-[20px] m-auto`} />
-                    <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px]`}>{user.points}</p>
+                    <p className={`text-[20px] font-normal`}>{user.points}</p>
                   </div>
                 </div>
               </div>
