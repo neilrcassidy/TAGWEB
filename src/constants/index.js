@@ -432,7 +432,7 @@ export const badges = [{
   {
     id: "DIS11",
     group: "discipulo",
-    title: "Discipulo de Estela",
+    title: "Discipulo de Inshallah",
     description: "???",
     points: 15,
     icon_locked: rare_badge_locked,
@@ -502,7 +502,7 @@ export const badges = [{
   {
     id: "DIS18",
     group: "discipulo",
-    title: "Discipulo de Alberto",
+    title: "Discipulo de Bertinho Gaucho",
     description: "???",
     points: 15,
     icon_locked: rare_badge_locked,
@@ -512,7 +512,7 @@ export const badges = [{
   {
     id: "DIS19",
     group: "discipulo",
-    title: "Discipulo de Isma",
+    title: "Discipulo de Ismatthew",
     description: "???",
     points: 15,
     icon_locked: rare_badge_locked,
