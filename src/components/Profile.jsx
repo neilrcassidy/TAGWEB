@@ -310,11 +310,11 @@ const Profile = ({ logUser }) => {
                   </div>
                   <div className={`flex flex-col ml-4 gap-2`}>
                     <div className={`flex text-[18px]`}>
-                      <h2>Actualizar Chapas Destacadas:</h2>
+                      <h2>Actualizar Chapas Favoritas:</h2>
                     </div>
                     {favoriteBadgesUpdated ? (
                       <div className={`flex text-[12px] text-secondary`}>
-                        <h2>Chapas Destacadas actualizado! Recarga la página.</h2>
+                        <h2>Chapas favoritas actualizada! Recarga la página.</h2>
                       </div>
                     ) : (
                       <div></div>
@@ -438,8 +438,8 @@ const Profile = ({ logUser }) => {
                           <p>{"(" + currentUserEmail + ")"}</p>
                         </div>
                         <div className={`flex font-normal sPoints:justify-start justify-center mt-1`}>
-                          <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                          <p>{currentUserPoints}</p>
+                          <img src={antxpoint} className={`w-[24px] mr-1 m-auto ml-0`} />
+                          <p className={`text-[24px]`}>{currentUserPoints}</p>
                         </div>
                       </div>
                     </div>
@@ -455,7 +455,7 @@ const Profile = ({ logUser }) => {
                         <div id="favBadges" className={`flex flex-col rounded-lg border-secondary border`}>
                           <div id="favBadgesTitle" className={`flex bg-secondary rounded-t-md`}>
                             <div className={`flex my-2 ml-2 pr-2`}>
-                              <h3>Destacados</h3>
+                              <h3>Favoritas</h3>
                             </div>
                           </div>
                           <div id="favBadgesGrid" className={`mx-1 my-4`}>
