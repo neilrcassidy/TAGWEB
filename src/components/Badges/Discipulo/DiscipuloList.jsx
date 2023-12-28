@@ -26,13 +26,13 @@ const DiscipuloList = ({ userBadges }) => {
                   <div className={`flex ss:min-w-[96px] ss:w-[96px] min-w-[64px] w-[64px] m-auto mr-2 ss:ml-2 ml-0 `}>
                     <img className={`${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked}></img>
                   </div>
-                  <div className={`flex flex-col m-auto mx-1 smmd:max-w-[75%] sm:max-w-[70%] ss:max-w-[65%] xs:max-w-[60%] xxs:max-w-[55%] xxxs:max-w-[50%] max-w-[45%]`}>
+                  <div className={`flex flex-col m-auto mx-1 smmd:max-w-[70%] sm:max-w-[65%] ss:max-w-[60%] xs:max-w-[55%] xxs:max-w-[50%] xxxs:max-w-[45%] max-w-[40%]`}>
                     <p className={`ss:text-[24px] xs:text-[22px] xxs:text-[20px] text-[18px]`}>{badge.title}</p>
                     <p className={`ss:text-[18px] xs:text-[16px] xxs:text-[14px] text-[12px] break-words text-justify font-normal`}>{badge.description}</p>
                   </div>
                   <div className={`flex flex-row m-auto mr-3 gap-2`}>
-                    <img src={antxpoint} className={`w-[20px] m-auto`} />
-                    <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px]`}>{badge.points}</p>
+                    <img src={antxpoint} className={`sm:text-[24px] w-[20px] m-auto`} />
+                    <p className={`sm:text-[24px] ss:text-[20px] xs:text-[18px] text-[16px] font-normal`}>{badge.points}</p>
                   </div>
                 </div>
               </div>
