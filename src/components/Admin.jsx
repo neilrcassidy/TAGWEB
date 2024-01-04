@@ -61,7 +61,7 @@ const Admin = () => {
   const createNewsEntryForBadges = async (user, badge) => {
     await addDoc(collection(firestore, "news"), {
       title: "¡Enhorabuena " + user.data().nickname + "!",
-      body: user.data().nickname + " ha conseguido el logro \"" + badge.title + "\" que vale " + badge.points + " ANTX Coins.",
+      body: user.data().nickname + " ha conseguido la chapa \"" + badge.title + "\" que vale " + badge.points + " ANTX Coins.",
       image: user.data().profilePic,
       date: Timestamp.now(),
       userAssociated: user.data().id
@@ -105,7 +105,7 @@ const Admin = () => {
 
             {badgeAdded ? (
               <div className={`flex ml-4 text-[24px] ${styles.flexCenter} my-4 text-secondary`}>
-                <p>Badge added tu user.</p>
+                <p>Badge added to user.</p>
               </div>
             ) : (
               <div></div>
