@@ -22,6 +22,7 @@ import DIS1_unlocked from "./DIS1_unlocked.png";
 import DIS4_unlocked from "./DIS4_unlocked.png";
 import DIS5_unlocked from "./DIS5_unlocked.png";
 import DIS9_unlocked from "./DIS9_unlocked.png";
+import DIS15_unlocked from "./DIS15_unlocked.png";
 
 import FIE1_unlocked from "./FIE1_unlocked.png";
 import FIE2_unlocked from "./FIE2_unlocked.png";
@@ -122,6 +123,7 @@ export {
     DIS4_unlocked,
     DIS5_unlocked,
     DIS9_unlocked,
+    DIS15_unlocked,
     FIE1_unlocked,
     FIE2_unlocked,
     FIE3_unlocked,

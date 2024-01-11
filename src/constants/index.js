@@ -18,6 +18,7 @@ import {
   DIS4_unlocked,
   DIS5_unlocked,
   DIS9_unlocked,
+  DIS15_unlocked,
   FIE1_unlocked,
   FIE2_unlocked,
   FIE3_unlocked,
@@ -476,7 +477,7 @@ export const badges = [{
     description: "Llorar de fiesta.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "DIS15_unlocked",
+    icon_unlocked: DIS15_unlocked,
     type: "rare"
   },
   {
