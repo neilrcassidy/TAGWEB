@@ -964,7 +964,7 @@ export const badges = [{
     id: "VIA1",
     group: "viajes",
     title: "Renovación de ADN",
-    description: "Liate con alguien en un viaje.",
+    description: "Liate con alguien que hayas conocido en un viaje.",
     points: 15,
     icon_locked: normal_badge_locked,
     icon_unlocked: VIA1_unlocked,
