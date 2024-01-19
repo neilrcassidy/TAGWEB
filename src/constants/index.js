@@ -15,8 +15,10 @@ import {
   MEN2_unlocked,
   MEN3_unlocked,
   DIS1_unlocked,
+  DIS3_unlocked,
   DIS4_unlocked,
   DIS5_unlocked,
+  DIS6_unlocked,
   DIS9_unlocked,
   DIS15_unlocked,
   FIE1_unlocked,
@@ -357,7 +359,7 @@ export const badges = [{
     description: "Viaja a dos paises.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "DIS3_unlocked",
+    icon_unlocked: DIS3_unlocked,
     type: "rare"
   },
   {
@@ -387,7 +389,7 @@ export const badges = [{
     description: "Bebe 3 chupitos de Jägermeister en una noche.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "DIS6_unlocked",
+    icon_unlocked: DIS6_unlocked,
     type: "rare"
   },
   {

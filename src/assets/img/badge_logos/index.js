@@ -14,15 +14,17 @@ import GEN8_unlocked from "./GEN8_unlocked.png"
 import GEN9_unlocked from "./GEN9_unlocked.png"
 import GEN10_unlocked from "./GEN10_unlocked.png"
 
-import MEN1_unlocked from "./MEN1_unlocked.png";
-import MEN2_unlocked from "./MEN2_unlocked.png";
-import MEN3_unlocked from "./MEN3_unlocked.png";
+import MEN1_unlocked from "./MEN1_unlocked.png"
+import MEN2_unlocked from "./MEN2_unlocked.png"
+import MEN3_unlocked from "./MEN3_unlocked.png"
 
-import DIS1_unlocked from "./DIS1_unlocked.png";
-import DIS4_unlocked from "./DIS4_unlocked.png";
-import DIS5_unlocked from "./DIS5_unlocked.png";
-import DIS9_unlocked from "./DIS9_unlocked.png";
-import DIS15_unlocked from "./DIS15_unlocked.png";
+import DIS1_unlocked from "./DIS1_unlocked.png"
+import DIS3_unlocked from "./DIS3_unlocked.png"
+import DIS4_unlocked from "./DIS4_unlocked.png"
+import DIS5_unlocked from "./DIS5_unlocked.png"
+import DIS6_unlocked from "./DIS6_unlocked.png"
+import DIS9_unlocked from "./DIS9_unlocked.png"
+import DIS15_unlocked from "./DIS15_unlocked.png"
 
 import FIE1_unlocked from "./FIE1_unlocked.png";
 import FIE2_unlocked from "./FIE2_unlocked.png";
@@ -120,8 +122,10 @@ export {
     MEN2_unlocked,
     MEN3_unlocked,
     DIS1_unlocked,
+    DIS3_unlocked,
     DIS4_unlocked,
     DIS5_unlocked,
+    DIS6_unlocked,
     DIS9_unlocked,
     DIS15_unlocked,
     FIE1_unlocked,
