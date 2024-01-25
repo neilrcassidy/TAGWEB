@@ -5,24 +5,24 @@ import { badges } from "../../../constants/index.js"
 import { antxpoint } from "../../../assets/img/index.js"
 import { Emoji } from "@crispengari/react-emojify"
 
-const RutasList = ({ userBadges }) => {
+const DeporteList = ({ userBadges }) => {
   return (
-    <div id="badgesRutas" className={`flex flex-col rounded-lg border-[#023020] border xs:w-[90%] w-[95%]`}>
-      <div id="badgesRutasTitle" className={`flex bg-[#023020] rounded-t-md min-w-[90%] text-[24px]`}>
+    <div id="badgesDeporte" className={`flex flex-col rounded-lg border-secondary border xs:w-[90%] w-[95%]`}>
+      <div id="badgesDeporteTitle" className={`flex bg-secondary rounded-t-md min-w-[90%] text-[24px]`}>
         <div className={`m-auto my-2 ml-3`}>
-          <h3>Rutas <Emoji emojiId="react@emojify-873"/></h3>
+          <h3>Deporte <Emoji emojiId="react@emojify-1064"/>(NUEVA)</h3>
         </div>
         <div className={`m-auto my-2 mr-3`}>
-          <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "rutas").length}/{badges.filter((badge) => badge.group === "rutas").length}</h3>
+          <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "deporte").length}/{badges.filter((badge) => badge.group === "deporte").length}</h3>
         </div>
       </div>
-      <div id="badgesRutasList" className={`min-w-[90%]`}>
+      <div id="badgesDeporteList" className={`min-w-[90%]`}>
         <div className={`flex flex-col`}>
           {badges
-            .filter((badge) => badge.group === "rutas")
+            .filter((badge) => badge.group === "deporte")
             .sort((badge1, badge2) => badge2.update - badge1.update)
             .map((badge, index) => (
-              <div className={`flex w-full ${index === badges.filter((badge) => badge.group === "rutas").length - 1 ? "" : "border border-transparent border-b-[#023020]"}`}>
+              <div className={`flex w-full ${index === badges.filter((badge) => badge.group === "deporte").length - 1 ? "" : "border border-transparent border-b-secondary"}`}>
                 <div className={`flex w-full my-4 ml-2`}>
                   <div className={`flex ss:min-w-[96px] ss:w-[96px] min-w-[64px] w-[64px] m-auto mr-2 ss:ml-2 ml-0 `}>
                     <img className={`${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked}></img>
@@ -44,4 +44,4 @@ const RutasList = ({ userBadges }) => {
   )
 }
 
-export default RutasList
+export default DeporteList

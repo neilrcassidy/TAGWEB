@@ -422,7 +422,7 @@ const Profile = ({ logUser }) => {
               <div id="profileContent" className={`flex flex-col my-2`}>
                 <div className={`flex flex-wrap`}>
                   <div className={`flex m-auto gap-4`}>
-                    <div className={`flex flex-wrap m-4 gap-4`}>
+                    <div className={`flex flex-wrap my-4 mx-16 gap-4`}>
                       <div className={`m-auto`}>
                         {currentUserProfilePic !== "" ? (
                           <img id="profilePic" className={`w-[192px] border-0 rounded-full`} src={currentUserProfilePic} />
@@ -448,8 +448,8 @@ const Profile = ({ logUser }) => {
                   <div className={`${styles.flexCenter} m-auto`}>
                     <Stats userBadges={currentUserBadges} />
                   </div>
-
-                  {currentUserFavoriteBadges.length !== 0 ? (
+                </div>
+                {currentUserFavoriteBadges.length !== 0 ? (
                     <div className={`${styles.flexCenter} m-auto`}>
                       <div className={`${styles.flexCenter} m-4`}>
                         <div id="favBadges" className={`flex flex-col rounded-lg border-secondary border`}>
@@ -462,6 +462,7 @@ const Profile = ({ logUser }) => {
                             <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
                               {badges
                                 .filter((badge) => currentUserFavoriteBadges.includes(badge.id))
+                                .sort((a, b) => currentUserFavoriteBadges.indexOf(a.id) - currentUserFavoriteBadges.indexOf(b.id))
                                 .map((badge, index) => (
                                   <Tippy content=
                                     {<div className={`flex flex-row gap-4 m-2`}>
@@ -496,8 +497,6 @@ const Profile = ({ logUser }) => {
                   ) : (
                     <div></div>
                   )}
-
-                </div>
                 <div className={`${styles.flexCenter} mb-4`}>
                   <button className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`} type="button"
                     onClick={(logout)}>

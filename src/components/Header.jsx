@@ -41,7 +41,7 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
       <div className={`flex m-auto xs:ml-12 ml-6 font-poppins gap-1`}>
         <img src={headerTitle} className="h-auto xs:w-[110px] w-[80px]" onClick={() => navBadges()}/>
         <div className={`flex`}>
-          <p className={`flex items-end`}>v1.0</p>
+          <p className={`flex items-end`}>v1.1</p>
         </div>
         
       </div>

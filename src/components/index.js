@@ -11,6 +11,10 @@ import Profile from "./Profile.jsx"
 import Admin from "./Admin.jsx"
 import Visit from "./Visit.jsx"
 import Stats from "./Stats.jsx"
+import BadgeCardGrid from "./BadgeCardGrid.jsx"
+import BadgeCardList from "./BadgeCardList.jsx"
+import EventActiveCardGrid from "./EventActiveCardGrid.jsx"
+import EventInactiveCardGrid from "./EventInactiveCardGrid.jsx"
 
 export {
     Header,
@@ -25,5 +29,9 @@ export {
     Profile,
     Admin,
     Visit,
-    Stats
+    Stats,
+    BadgeCardGrid,
+    BadgeCardList,
+    EventActiveCardGrid,
+    EventInactiveCardGrid
 }

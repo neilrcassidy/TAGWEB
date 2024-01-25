@@ -15,18 +15,13 @@ import { auth, firestore } from "../config/firebase-config"
 import { doc, getDoc } from "firebase/firestore"
 
 // Component Imports
-import { MensualGrid, MensualList } from "./Badges/Mensual"
-import { GeneralGrid, GeneralList } from "./Badges/General"
-import { FiestaGrid, FiestaList } from "./Badges/Fiesta"
-import { DiscipuloGrid, DiscipuloList} from "./Badges/Discipulo"
-import { AlcoholList, AlcoholGrid } from "./Badges/Alcohol"
-import { JuegosDeMesaList, JuegosDeMesaGrid } from "./Badges/JuegosDeMesa"
-import { CochinasList, CochinasGrid } from "./Badges/Cochinas"
-import { ViajesList, ViajesGrid } from "./Badges/Viajes"
-import { RutasList, RutasGrid } from "./Badges/Rutas"
-import { MarinesDeLokiarList, MarinesDeLokiarGrid } from "./Badges/MarinesDeLokiar"
-import { CulturaList, CulturaGrid } from "./Badges/Cultura"
-import Stats from "./Stats"
+import { Stats, BadgeCardGrid, BadgeCardList, EventActiveCardGrid, EventInactiveCardGrid } from "./"
+
+// Emoji imports
+import { Emoji } from "@crispengari/react-emojify"
+
+// Constant imports
+import { categories, events } from "../constants"
 
 const Badges = () => {
   // This useState determines wether to display the badges as a grid (false) or a list (true)
@@ -72,31 +67,35 @@ const Badges = () => {
 
           {list ? (
             <div id="badgesCards" className={`flex flex-wrap justify-center gap-6 w-[97%]`}>
-              <GeneralList userBadges={userBadges} />
-              <MensualList userBadges={userBadges} />
-              <DiscipuloList userBadges={userBadges} />
-              <FiestaList userBadges={userBadges} />
-              <AlcoholList userBadges={userBadges} />
-              <JuegosDeMesaList userBadges={userBadges} />
-              <ViajesList userBadges={userBadges} />
-              <CochinasList userBadges={userBadges} />
-              <RutasList userBadges={userBadges} />
-              <MarinesDeLokiarList userBadges={userBadges} />
-              <CulturaList userBadges={userBadges} />
+              {categories
+                .map((category, index) => (
+                  <BadgeCardList userBadges={userBadges} title={category.title} category={category.category} emoji={<Emoji emojiId={category.emoji}/>} color={category.color} newCategory={category.newCategory} />
+                ))
+              }
             </div>
           ) : (
             <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-6 w-[97%]`}>
-              <GeneralGrid userBadges={userBadges} /> 
-              <MensualGrid userBadges={userBadges} />
-              <DiscipuloGrid userBadges={userBadges} />
-              <FiestaGrid userBadges={userBadges} />
-              <AlcoholGrid userBadges={userBadges} />
-              <JuegosDeMesaGrid userBadges={userBadges} />
-              <ViajesGrid userBadges={userBadges} />
-              <CochinasGrid userBadges={userBadges} />
-              <RutasGrid userBadges={userBadges} />
-              <MarinesDeLokiarGrid userBadges={userBadges} />
-              <CulturaGrid userBadges={userBadges} />
+              {events
+                .filter((e) => e.active)
+                .map((e, index) => (
+                  <EventActiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>} color={e.color} newCategory={e.newCategory} />
+                ))
+              }
+              <div className={`flex flex-wrap justify-center gap-6`}>
+                {categories
+                  .map((category, index) => (
+                    <BadgeCardGrid userBadges={userBadges} title={category.title} category={category.category} emoji={<Emoji emojiId={category.emoji}/>} color={category.color} newCategory={category.newCategory} />
+                  ))
+                }
+
+                {events
+                  .filter((e) => !e.active)
+                  .map((e, index) => (
+                    <EventInactiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>}/>
+                  ))
+
+                }
+              </div>
             </div>
           )}
         </div>

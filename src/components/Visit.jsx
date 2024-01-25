@@ -64,7 +64,7 @@ const Visit = () => {
             <div id="profileContent" className={`flex flex-col my-2`}>
               <div className={`flex flex-wrap`}>
                 <div className={`flex m-auto gap-4`}>
-                  <div className={`flex flex-wrap m-4 gap-4`}>
+                  <div className={`flex flex-wrap my-4 mx-16 gap-4`}>
                     <div className={`m-auto`}>
                       {userProfilePic !== "" ? (
                         <img id="profilePic" className={`w-[192px] border-0 rounded-full`} src={userProfilePic} />
@@ -88,7 +88,9 @@ const Visit = () => {
                   <Stats userBadges={userBadges} />
                 </div>
 
-                {userFavoriteBadges.length !== 0 ? (
+                
+              </div>
+              {userFavoriteBadges.length !== 0 ? (
                   <div className={`${styles.flexCenter} m-auto`}>
                     <div className={`${styles.flexCenter} m-4`}>
                       <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border`}>
@@ -135,7 +137,6 @@ const Visit = () => {
                 ) : (
                   <div></div>
                 )}
-              </div>
             </div>
 
           </div>

@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom"
 
 // Firebase Imports
 import { firestore } from "../config/firebase-config"
-import { collection, query, getDocs, orderBy, Timestamp } from "firebase/firestore"
+import { collection, query, getDocs, orderBy } from "firebase/firestore"
 
 const News = () => {
   const navigate = useNavigate();

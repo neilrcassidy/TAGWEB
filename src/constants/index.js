@@ -203,6 +203,17 @@ export const badges = [{
     update: 0
   },
   {
+    id: "GEN11",
+    group: "general",
+    title: "Test",
+    description: "test",
+    points: "0",
+    icon_locked: rare_badge_locked,
+    icon_unlocked: GEN1_unlocked,
+    type: "rare",
+    update: 1
+  },
+  {
     id: "MEN1",
     group: "mensual",
     title: "Uno/a de los de 100pre",
@@ -1323,5 +1334,102 @@ export const badges = [{
     icon_unlocked: CUL7_unlocked,
     type: "rare",
     update: 0
+  }
+]
+
+export const categories = [
+  {
+    title: "Deporte",
+    category: "deporte",
+    emoji: "react@emojify-1064",
+    color: "secondary",
+    newCategory: true
+  },
+  {
+    title: "General",
+    category: "general",
+    emoji: "react@emojify-1293",
+    color: "secondary",
+    newCategory: false
+  },
+  {
+    title: "Mensual",
+    category: "mensual",
+    emoji: "react@emojify-737",
+    color: "[#0078AC]",
+    newCategory: false
+  },
+  {
+    title: "Discipulo",
+    category: "discipulo",
+    emoji: "react@emojify-1161",
+    color: "[#c7bc28]",
+    newCategory: false
+  },
+  {
+    title: "Fiesta",
+    category: "fiesta",
+    emoji: "react@emojify-1044",
+    color: "purple-500",
+    newCategory: false
+  },
+  {
+    title: "Alcohol",
+    category: "alcohol",
+    emoji: "react@emojify-802",
+    color: "[#7f1734]",
+    newCategory: false
+  },
+  {
+    title: "Juegos",
+    category: "juegos_de_mesa",
+    emoji: "react@emojify-1101",
+    color: "white",
+    newCategory: false
+  },
+  {
+    title: "Viajes",
+    category: "viajes",
+    emoji: "react@emojify-946",
+    color: "[#073590]",
+    newCategory: false
+  },
+  {
+    title: "Cochinadas",
+    category: "cochinas",
+    emoji: "react@emojify-62",
+    color: "[#e03f3f]",
+    newCategory: false
+  },
+  {
+    title: "Rutas",
+    category: "rutas",
+    emoji: "react@emojify-873",
+    color: "[#023020]",
+    newCategory: false
+  },
+  {
+    title: "Marines de Lokiar",
+    category: "marines_de_lokiar",
+    emoji: "react@emojify-161",
+    color: "[#FF7F50]",
+    newCategory: false
+  },
+  {
+    title: "Cultura",
+    category: "cultura",
+    emoji: "react@emojify-1218",
+    color: "blue-300",
+    newCategory: false
+  }
+]
+
+export const events = [
+  {
+    title: "Carnavales",
+    category: "carnavales",
+    emoji: "react@emojify-881",
+    color: "[#FF7F50]",
+    active: true
   }
 ]

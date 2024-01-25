@@ -20,8 +20,9 @@ const CochinasList = ({ userBadges }) => {
         <div className={`flex flex-col`}>
           {badges
             .filter((badge) => badge.group === "cochinas")
+            .sort((badge1, badge2) => badge2.update - badge1.update)
             .map((badge, index) => (
-              <div className={`flex w-full ${index === badges.length - 1 ? "" : "border border-transparent border-b-[#e03f3f]"}`}>
+              <div className={`flex w-full ${index === badges.filter((badge) => badge.group === "cochinas").length - 1 ? "" : "border border-transparent border-b-[#e03f3f]"}`}>
                 <div className={`flex w-full my-4 ml-2`}>
                   <div className={`flex ss:min-w-[96px] ss:w-[96px] min-w-[64px] w-[64px] m-auto mr-2 ss:ml-2 ml-0 `}>
                     <img className={`${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked}></img>

@@ -25,6 +25,7 @@ const CochinasGrid = ({ userBadges }) => {
         <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
           {badges
             .filter((badge) => badge.group === "cochinas")
+            .sort((badge1, badge2) => badge2.update - badge1.update)
             .map((badge, index) => (
               <Tippy content=
                 {<div className={`flex flex-row gap-4 m-2`}>

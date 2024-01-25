@@ -1,31 +1,30 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import styles from "../../../style.js"
-import { badges } from "../../../constants/index.js"
-import { antxpoint } from "../../../assets/img/index.js"
-
-import { Emoji } from "@crispengari/react-emojify"
+import "../index.css"
+import styles from "../style.js"
+import { badges } from "../constants/index.js"
+import { antxpoint } from "../assets/img/index.js"
 
 // Tippy imports
 import Tippy from "@tippyjs/react"
 import 'tippy.js/dist/tippy.css';
 
-const AlcoholGrid = ({ userBadges }) => {
+const EventActiveCardGrid = ({ userBadges, title, category, emoji, color, active }) => {
   return (
-    <div id="badgesAlcohol" className={`flex flex-col rounded-lg border-[#7f1734] border max-w-[350px] w-[95%]`}>
-      <div id="badgesAlcoholTitle" className={`flex bg-[#7f1734] rounded-t-md`}>
+    <div id={"badges"+title} className={`flex flex-col rounded-lg border ${"border-"+color} max-w-[1470px] w-[95%]`}>
+      <div id={"badges"+title+"Title"} className={`flex ${"bg-"+color} rounded-t-md ${color === "white" ? "text-black" : ""}`}>
         <div className={`m-auto my-2 ml-3 text-[20px]`}>
-          <h3>Alcoholicos de mierda <Emoji emojiId="react@emojify-802"/></h3>
+          <h3>Evento: {title} {emoji} (ACTIVO)</h3>
         </div>
         <div className={`m-auto my-2 mr-3 text-[20px]`}>
-          <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === "alcohol").length}/{badges.filter((badge) => badge.group === "alcohol").length}</h3>
+          <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === category).length}/{badges.filter((badge) => badge.group === category).length}</h3>
         </div>
       </div>
-      <div id="badgesAlcoholGrid" className={`mx-1 my-4`}>
+      <div id={"badges"+category+"Grid"} className={`mx-1 my-4`}>
         <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
           {badges
-            .filter((badge) => badge.group === "alcohol")
+            .filter((badge) => badge.group === category)
             .sort((badge1, badge2) => badge2.update - badge1.update)
             .map((badge, index) => (
               <Tippy content=
@@ -54,9 +53,9 @@ const AlcoholGrid = ({ userBadges }) => {
               </Tippy>
             ))}
         </div>
-      </div >
+      </div>
     </div>
   )
 }
 
-export default AlcoholGrid
+export default EventActiveCardGrid
