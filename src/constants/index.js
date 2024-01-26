@@ -92,6 +92,11 @@ import {
   CUL7_unlocked
 } from "../assets/img/badge_logos"
 
+import {
+  update1,
+  carnavales
+} from "../assets/img/update_symbols"
+
 export const badges = [{
     id: "GEN1",
     group: "general",
@@ -101,7 +106,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: GEN1_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "GEN2",
@@ -112,7 +118,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: GEN2_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "GEN3",
@@ -123,7 +130,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: GEN3_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "GEN4",
@@ -134,7 +142,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: GEN4_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "GEN5",
@@ -145,7 +154,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: GEN5_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "GEN6",
@@ -156,7 +166,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: GEN6_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "GEN7",
@@ -167,7 +178,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: GEN7_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "GEN8",
@@ -178,7 +190,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: GEN8_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "GEN9",
@@ -189,7 +202,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: GEN9_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "GEN10",
@@ -200,7 +214,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: GEN10_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "GEN11",
@@ -211,7 +226,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: GEN1_unlocked,
     type: "rare",
-    update: 1
+    update: 1,
+    updateIcon: update1
   },
   {
     id: "MEN1",
@@ -222,7 +238,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: MEN1_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MEN2",
@@ -233,7 +250,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: MEN2_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MEN3",
@@ -244,7 +262,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: MEN3_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MEN4",
@@ -255,7 +274,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: "MEN4_unlocked",
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MEN5",
@@ -266,7 +286,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: "MEN5_unlocked",
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MEN6",
@@ -277,7 +298,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: "MEN6_unlocked",
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MEN7",
@@ -288,7 +310,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: "MEN7_unlocked",
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MEN8",
@@ -299,7 +322,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: "MEN8_unlocked",
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MEN9",
@@ -310,7 +334,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: "MEN9_unlocked",
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MEN10",
@@ -321,7 +346,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: "MEN10_unlocked",
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MEN11",
@@ -332,7 +358,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: "MEN11_unlocked",
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MEN12",
@@ -343,7 +370,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: "MEN12_unlocked",
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MEN13",
@@ -354,7 +382,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: "MEN13_unlocked",
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MEN14",
@@ -365,7 +394,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: "MEN14_unlocked",
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS1",
@@ -376,7 +406,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: DIS1_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS2",
@@ -387,7 +418,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: "DIS2_unlocked",
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS3",
@@ -398,7 +430,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: DIS3_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS4",
@@ -409,7 +442,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: DIS4_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS5",
@@ -420,7 +454,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: DIS5_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS6",
@@ -431,7 +466,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: DIS6_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS7",
@@ -442,7 +478,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: "DIS7_unlocked",
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS8",
@@ -453,7 +490,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: "DIS8_unlocked",
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS9",
@@ -464,7 +502,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: DIS9_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS10",
@@ -475,7 +514,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: "DIS10_unlocked",
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS11",
@@ -486,7 +526,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: "DIS11_unlocked",
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS12",
@@ -497,7 +538,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: "DIS12_unlocked",
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS13",
@@ -508,7 +550,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: "DIS13_unlocked",
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS14",
@@ -519,7 +562,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: "DIS14_unlocked",
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS15",
@@ -530,7 +574,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: DIS15_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS16",
@@ -541,7 +586,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: "DIS16_unlocked",
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS17",
@@ -552,7 +598,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: "DIS17_unlocked",
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS18",
@@ -563,7 +610,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: "DIS18_unlocked",
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "DIS19",
@@ -574,7 +622,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: "DIS19_unlocked",
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "FIE1",
@@ -585,7 +634,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: FIE1_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "FIE2",
@@ -596,7 +646,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: FIE2_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "FIE3",
@@ -607,7 +658,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: FIE3_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "FIE4",
@@ -618,7 +670,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: FIE4_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "FIE5",
@@ -629,7 +682,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: FIE5_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "FIE6",
@@ -640,7 +694,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: FIE6_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "FIE7",
@@ -651,7 +706,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: FIE7_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "FIE8",
@@ -662,7 +718,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: FIE8_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "FIE9",
@@ -673,7 +730,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: FIE9_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "FIE10",
@@ -684,7 +742,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: FIE10_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "FIE11",
@@ -695,7 +754,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: FIE11_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "ALC1",
@@ -706,7 +766,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: ALC1_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "ALC2",
@@ -717,7 +778,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: ALC2_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "ALC3",
@@ -728,7 +790,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: ALC3_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "ALC4",
@@ -739,7 +802,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: ALC4_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "ALC5",
@@ -750,7 +814,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: ALC5_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "ALC6",
@@ -761,7 +826,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: ALC6_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "ALC7",
@@ -772,7 +838,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: ALC7_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "ALC8",
@@ -783,7 +850,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: ALC8_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "ALC9",
@@ -794,7 +862,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: ALC9_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "ALC10",
@@ -805,7 +874,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: ALC10_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "ALC11",
@@ -816,150 +886,164 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: ALC11_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "JDM1",
-    group: "juegos_de_mesa",
+    group: "juegos",
     title: "El señor de los Jueguillos",
     description: "Gana una partida de cada juego de ANTX.",
     points: 25,
     icon_locked: rare_badge_locked,
     icon_unlocked: JDM1_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "JDM2",
-    group: "juegos_de_mesa",
+    group: "juegos",
     title: "Empresario/a",
     description: "Gana una partida de Anatxopoly.",
     points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: JDM2_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "JDM3",
-    group: "juegos_de_mesa",
+    group: "juegos",
     title: "Tiburón",
     description: "Gana 2 partidas de Anatxopoly.",
     points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: JDM3_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "JDM4",
-    group: "juegos_de_mesa",
+    group: "juegos",
     title: "Tu propio jefe",
     description: "Gana 3 partidas de Anatxopoly.",
     points: 15,
     icon_locked: rare_badge_locked,
     icon_unlocked: JDM4_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "JDM5",
-    group: "juegos_de_mesa",
+    group: "juegos",
     title: "Amigo/a",
     description: "Gana 3 partidas del Quien es Quien.",
     points: 5,
     icon_locked: normal_badge_locked,
     icon_unlocked: JDM5_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "JDM6",
-    group: "juegos_de_mesa",
+    group: "juegos",
     title: "Detective",
     description: "Gana 5 partidas del Quien es Quien.",
     points: 5,
     icon_locked: normal_badge_locked,
     icon_unlocked: JDM6_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "JDM7",
-    group: "juegos_de_mesa",
+    group: "juegos",
     title: "Oficial de aduanas",
     description: "Gana 10 partidas del Quien es Quien.",
     points: 15,
     icon_locked: rare_badge_locked,
     icon_unlocked: JDM7_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "JDM8",
-    group: "juegos_de_mesa",
+    group: "juegos",
     title: "Contacartas",
     description: "Gana 3 partidas en un juego de la Anatxobaraja.",
     points: 5,
     icon_locked: normal_badge_locked,
     icon_unlocked: JDM8_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "JDM9",
-    group: "juegos_de_mesa",
+    group: "juegos",
     title: "Dinamó",
     description: "Gana 5 partidas en un juego de la Anatxobaraja.",
     points: 5,
     icon_locked: normal_badge_locked,
     icon_unlocked: JDM9_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "JDM10",
-    group: "juegos_de_mesa",
+    group: "juegos",
     title: "Joker",
     description: "Gana 10 partidas en un juego de la Anatxobaraja.",
     points: 10,
     icon_locked: rare_badge_locked,
     icon_unlocked: JDM10_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "JDM11",
-    group: "juegos_de_mesa",
+    group: "juegos",
     title: "Mimo",
     description: "Gana una partida del juego de los papelitos.",
     points: 5,
     icon_locked: normal_badge_locked,
     icon_unlocked: JDM11_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "JDM12",
-    group: "juegos_de_mesa",
+    group: "juegos",
     title: "Intérprete",
     description: "Gana 2 partidas del juego de los papelitos.",
     points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: JDM12_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "JDM13",
-    group: "juegos_de_mesa",
+    group: "juegos",
     title: "Nominado/a a un oscar",
     description: "Gana 3 partidas del juego de los papelitos.",
     points: 15,
     icon_locked: rare_badge_locked,
     icon_unlocked: JDM13_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "COC1",
@@ -970,7 +1054,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: COC1_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "COC2",
@@ -981,7 +1066,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: COC2_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "COC3",
@@ -992,7 +1078,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: COC3_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "COC4",
@@ -1003,7 +1090,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: COC4_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "COC5",
@@ -1014,7 +1102,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: COC5_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "COC6",
@@ -1025,7 +1114,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: COC6_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "COC7",
@@ -1036,18 +1126,20 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: COC7_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "COC8",
     group: "cochinas",
     title: "Asaltacunas",
     description: "No hace falta decir más...",
-    points: 5,
+    points: 15,
     icon_locked: normal_badge_locked,
     icon_unlocked: COC8_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "COC9",
@@ -1058,7 +1150,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: COC9_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "VIA1",
@@ -1069,7 +1162,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: VIA1_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "VIA2",
@@ -1080,7 +1174,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: VIA2_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "VIA3",
@@ -1091,7 +1186,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: VIA3_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "RUT1",
@@ -1102,7 +1198,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: RUT1_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "RUT2",
@@ -1113,7 +1210,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: RUT2_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "RUT3",
@@ -1124,7 +1222,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: RUT3_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "RUT4",
@@ -1135,7 +1234,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: RUT4_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "RUT5",
@@ -1146,7 +1246,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: RUT5_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "RUT6",
@@ -1157,7 +1258,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: RUT6_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "RUT7",
@@ -1168,7 +1270,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: RUT7_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "RUT8",
@@ -1179,7 +1282,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: RUT8_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "RUT9",
@@ -1190,7 +1294,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: RUT9_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "RUT10",
@@ -1201,7 +1306,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: RUT10_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "RUT11",
@@ -1212,7 +1318,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: RUT11_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MDL1",
@@ -1223,7 +1330,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: MDL1_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MDL2",
@@ -1234,7 +1342,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: MDL2_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MDL3",
@@ -1245,7 +1354,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: MDL3_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "MDL4",
@@ -1256,7 +1366,8 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: MDL4_unlocked,
     type: "rare",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "CUL1",
@@ -1267,7 +1378,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: CUL1_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "CUL2",
@@ -1278,7 +1390,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: CUL2_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "CUL3",
@@ -1289,7 +1402,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: CUL3_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "CUL4",
@@ -1300,7 +1414,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: CUL4_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "CUL5",
@@ -1311,7 +1426,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: CUL5_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "CUL6",
@@ -1322,7 +1438,8 @@ export const badges = [{
     icon_locked: normal_badge_locked,
     icon_unlocked: CUL6_unlocked,
     type: "normal",
-    update: 0
+    update: 0,
+    updateIcon: null
   },
   {
     id: "CUL7",
@@ -1333,12 +1450,24 @@ export const badges = [{
     icon_locked: rare_badge_locked,
     icon_unlocked: CUL7_unlocked,
     type: "rare",
-    update: 0
-  }
+    update: 0,
+    updateIcon: null
+  },
+  {
+    id: "EV_CAR1",
+    group: "carnavales",
+    title: "Test",
+    description: "Test",
+    points: 0,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "",
+    type: "rare",
+    update: 1,
+    updateIcon: carnavales
+  },
 ]
 
-export const categories = [
-  {
+export const categories = [{
     title: "Deporte",
     category: "deporte",
     emoji: "react@emojify-1064",
@@ -1382,7 +1511,7 @@ export const categories = [
   },
   {
     title: "Juegos",
-    category: "juegos_de_mesa",
+    category: "juegos",
     emoji: "react@emojify-1101",
     color: "white",
     newCategory: false
@@ -1424,12 +1553,10 @@ export const categories = [
   }
 ]
 
-export const events = [
-  {
-    title: "Carnavales",
-    category: "carnavales",
-    emoji: "react@emojify-881",
-    color: "[#FF7F50]",
-    active: true
-  }
-]
+export const events = [{
+  title: "Carnavales",
+  category: "carnavales",
+  emoji: "react@emojify-1115",
+  color: "[#FF7F50]",
+  active: true
+}]

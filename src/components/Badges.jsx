@@ -78,7 +78,7 @@ const Badges = () => {
               {events
                 .filter((e) => e.active)
                 .map((e, index) => (
-                  <EventActiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>} color={e.color} newCategory={e.newCategory} />
+                  <EventActiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>} color={e.color} />
                 ))
               }
               <div className={`flex flex-wrap justify-center gap-6`}>
@@ -93,7 +93,6 @@ const Badges = () => {
                   .map((e, index) => (
                     <EventInactiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>}/>
                   ))
-
                 }
               </div>
             </div>

@@ -16,7 +16,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { signOut } from "firebase/auth"
 import Tippy from "@tippyjs/react"
 
-import Stats from "./Stats.jsx"
+import { Stats } from "./"
 
 const Profile = ({ logUser }) => {
   const navigate = useNavigate();
@@ -30,17 +30,17 @@ const Profile = ({ logUser }) => {
   const [dataSet, setDataSet] = useState(false)
 
   const [currentUserId, setCurrentUserId] = useState("")
-  const [currentUserEmail, setCurrentUserEmail] = useState("");
-  const [currentUserNickname, setCurrentUserNickname] = useState("");
-  const [currentUserProfilePic, setCurrentUserProfilePic] = useState("");
-  const [currentUserBadges, setCurrentUserBadges] = useState([]);
-  const [currentUserFavoriteBadges, setCurrentUserFavoriteBadges] = useState([]);
-  const [currentUserPoints, setCurrentUserPoints] = useState(0);
-  const [currentUserAdmin, setCurrentUserAdmin] = useState(false);
+  const [currentUserEmail, setCurrentUserEmail] = useState("")
+  const [currentUserNickname, setCurrentUserNickname] = useState("")
+  const [currentUserProfilePic, setCurrentUserProfilePic] = useState("")
+  const [currentUserBadges, setCurrentUserBadges] = useState([])
+  const [currentUserFavoriteBadges, setCurrentUserFavoriteBadges] = useState([])
+  const [currentUserPoints, setCurrentUserPoints] = useState(0)
+  const [currentUserAdmin, setCurrentUserAdmin] = useState(false)
 
   const [editMode, setEditMode] = useState(false)
   const [newNickname, setNewNickname] = useState("")
-  const [newProfilePicFile, setNewProfilePicFile] = useState();
+  const [newProfilePicFile, setNewProfilePicFile] = useState()
   const [newProfilePicFileCropped, setNewProfilePicFileCropped] = useState("");
 
   const [nicknameUpdated, setNicknameUpdated] = useState(false)
