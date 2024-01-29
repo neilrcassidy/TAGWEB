@@ -484,7 +484,7 @@ export const badges = [{
   {
     id: "DIS8",
     group: "discipulo",
-    title: "Discipulo de Rodicrack",
+    title: "Discipulo de Sergio",
     description: "Ve a Barcelona y sal de fiesta con Sergi.",
     points: 15,
     icon_locked: rare_badge_locked,
@@ -941,7 +941,7 @@ export const badges = [{
     id: "JDM5",
     group: "juegos",
     title: "Amigo/a",
-    description: "Gana 3 partidas del Quien es Quien.",
+    description: "Gana 3 partidas del AnatxoQuien.",
     points: 5,
     icon_locked: normal_badge_locked,
     icon_unlocked: JDM5_unlocked,
@@ -953,7 +953,7 @@ export const badges = [{
     id: "JDM6",
     group: "juegos",
     title: "Detective",
-    description: "Gana 5 partidas del Quien es Quien.",
+    description: "Gana 5 partidas del AnatxoQuien.",
     points: 5,
     icon_locked: normal_badge_locked,
     icon_unlocked: JDM6_unlocked,
@@ -965,7 +965,7 @@ export const badges = [{
     id: "JDM7",
     group: "juegos",
     title: "Oficial de aduanas",
-    description: "Gana 10 partidas del Quien es Quien.",
+    description: "Gana 10 partidas del AnatxoQuien.",
     points: 15,
     icon_locked: rare_badge_locked,
     icon_unlocked: JDM7_unlocked,
@@ -1276,7 +1276,7 @@ export const badges = [{
   {
     id: "RUT8",
     group: "rutas",
-    title: "¿Me das un pico?",
+    title: "¿Un piquito?",
     description: "Alcanza una cima",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -1456,30 +1456,82 @@ export const badges = [{
   {
     id: "EV_CAR1",
     group: "carnavales",
-    title: "Test",
-    description: "Test",
-    points: 0,
+    title: "Carnaval, carnavaaaaaal",
+    description: "Asiste a los carnavales de Villar.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "EV_CAR1_unlocked",
+    type: "normal",
+    update: "carnavales",
+    updateIcon: carnavales
+  },
+  {
+    id: "EV_CAR2",
+    group: "carnavales",
+    title: "Curas, astronautas y...",
+    description: "Ve disfrazado de la misma temática que al menos 2 miembros de ANTX.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "EV_CAR2_unlocked",
+    type: "normal",
+    update: "carnavales",
+    updateIcon: carnavales
+  },
+  {
+    id: "EV_CAR3",
+    group: "carnavales",
+    title: "Control de alcoholemia asegurado",
+    description: "Pon tu coche para carnavales.",
+    points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "",
+    icon_unlocked: "EV_CAR3_unlocked",
     type: "rare",
-    update: 1,
+    update: "carnavales",
+    updateIcon: carnavales
+  },
+  {
+    id: "EV_CAR4",
+    group: "carnavales",
+    title: "Yo nunca me he liado con un alien de toy story",
+    description: "Triunfa en carnavales de Villar.",
+    points: 20,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "EV_CAR4_unlocked",
+    type: "rare",
+    update: "carnavales",
+    updateIcon: carnavales
+  },
+  {
+    id: "EV_CAR5",
+    group: "carnavales",
+    title: "Carnaval te quiero",
+    description: "Aguanta carnavales de Villar hasta que acabe la fiesta... del todo.",
+    points: 25,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "EV_CAR5_unlocked",
+    type: "rare",
+    update: "carnavales",
     updateIcon: carnavales
   },
 ]
 
-export const categories = [{
-    title: "Deporte",
-    category: "deporte",
-    emoji: "react@emojify-1064",
-    color: "secondary",
-    newCategory: true
-  },
+// If you run into problems displaying the color of a new category for the first time
+// go to the BadgeCardGrid and manually input it into the className for the border and bg
+// this kind of like "pulls it in" officially from some other place into the project
+export const categories = [
   {
     title: "General",
     category: "general",
     emoji: "react@emojify-1293",
     color: "secondary",
     newCategory: false
+  },
+  {
+    title: "Deporte",
+    category: "deporte",
+    emoji: "react@emojify-1064",
+    color: "[#039942]",
+    newCategory: true
   },
   {
     title: "Mensual",
@@ -1558,5 +1610,6 @@ export const events = [{
   category: "carnavales",
   emoji: "react@emojify-1115",
   color: "[#FF7F50]",
-  active: true
+  eventTimeStart: new Date(2024, 1, 10, 12),
+  eventTimeEnd: new Date(2024, 1, 11, 12)
 }]

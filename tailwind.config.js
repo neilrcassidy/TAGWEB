@@ -10,6 +10,7 @@ export default {
         altSecondary: "#5ca848",
         dimWhite: "rgba(255, 255, 255, 0.7)",
         dimBlue: "rgba(9, 151, 124, 0.1)",
+        deporte: "[#039942]"
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
@@ -29,5 +30,8 @@ export default {
     },
   },
   plugins: [],
+  safelist: [
+    'deporte'
+  ]
 }
 

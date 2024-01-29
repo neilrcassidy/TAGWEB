@@ -11,13 +11,15 @@ import { activo } from "../assets/img/update_symbols/index.js"
 import Tippy from "@tippyjs/react"
 import 'tippy.js/dist/tippy.css';
 
-const EventActiveCardGrid = ({ userBadges, title, category, emoji, color }) => {
+const currentDate = new Date()
+
+const EventActiveCardGrid = ({ userBadges, title, category, emoji, color, eventTimeStart, eventTimeEnd }) => {
   return (
     <div id={"badges" + title} className={`flex flex-col rounded-lg border ${"border-" + color} max-w-[1470px] w-[95%]`}>
       <div id={"badges" + title + "Title"} className={`flex ${"bg-" + color} rounded-t-md ${color === "white" ? "text-black" : ""}`}>
         <div className={`flex flex-wrap m-auto my-2 ml-3 text-[20px] w-[100%] gap-2`}>
           <h3 className={``}>Evento: {title} {emoji}   </h3>
-          <img className={`ml-0 m-auto w-[100px]`} src={activo} />
+          {currentDate >= eventTimeStart && currentDate < eventTimeEnd ? <img className={`ml-0 m-auto w-[100px]`} src={activo}/> : ""}
         </div>
         <div className={`m-auto my-2 mr-3 text-[20px]`}>
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === category).length}/{badges.filter((badge) => badge.group === category).length}</h3>
@@ -27,7 +29,6 @@ const EventActiveCardGrid = ({ userBadges, title, category, emoji, color }) => {
         <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
           {badges
             .filter((badge) => badge.group === category)
-            .sort((badge1, badge2) => badge2.update - badge1.update)
             .map((badge, index) => (
               <Tippy content=
                 {<div className={`flex flex-row gap-4 m-2`}>
@@ -50,7 +51,7 @@ const EventActiveCardGrid = ({ userBadges, title, category, emoji, color }) => {
                   <div className={`${styles.flexCenter} w-[96px] h-[86px]`}>
                     <div className={`relative top-0 left-0`}>
                       <img className={`${styles.flexCenter} w-[72px] ${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked}></img>
-                      {badge.update === 1 ? <img className={`absolute top-[44px] left-[44px] w-[36px]`} src={badge.updateIcon}></img> : ""}
+                      <img className={`absolute top-[44px] left-[44px] w-[36px]`} src={badge.updateIcon} />
                     </div>                  </div>
                   <div className={`${styles.flexCenter} font-normal`}>
                     <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />

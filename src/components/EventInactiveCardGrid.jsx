@@ -10,7 +10,7 @@ import { antxpoint } from "../assets/img/index.js"
 import Tippy from "@tippyjs/react"
 import 'tippy.js/dist/tippy.css';
 
-const EventInactiveCardGrid = ({ userBadges, title, category, emoji, eventIcon }) => {
+const EventInactiveCardGrid = ({ userBadges, title, category, emoji, eventTimeStart, eventTimeEnd }) => {
   return (
     <div id={"badges"+title} className={`flex flex-col rounded-lg border border-gray-400 max-w-[350px] w-[95%]`}>
       <div id={"badges"+title+"Title"} className={`flex bg-gray-400 rounded-t-md text-white`}>
@@ -25,12 +25,12 @@ const EventInactiveCardGrid = ({ userBadges, title, category, emoji, eventIcon }
         <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
           {badges
             .filter((badge) => badge.group === category)
-            .sort((badge1, badge2) => badge2.update - badge1.update)
             .map((badge, index) => (
               <Tippy content=
                 {<div className={`flex flex-row gap-4 m-2`}>
                   <div className={`flex m-auto max-w-[128px] min-w-[128px]`}>
                     <img className={`${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked}></img>
+                    <img className={`absolute top-[80px] left-[80px] w-[58px]`} src={badge.updateIcon} />
                   </div>
                   <div className={`flex flex-col font-poppins text-left m-auto`}>
                     <div className={`font-bold text-[18px]`}>
@@ -44,6 +44,7 @@ const EventInactiveCardGrid = ({ userBadges, title, category, emoji, eventIcon }
                 <div id={badge.id} className={`flex flex-col`}>
                   <div className={`${styles.flexCenter} w-[96px] h-[86px]`}>
                     <img className={`${styles.flexCenter} w-[72px] ${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked}></img>
+                    <img className={`absolute top-[44px] left-[44px] w-[36px]`} src={badge.updateIcon} />
                   </div>
                   <div className={`${styles.flexCenter} font-normal`}>
                     <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
