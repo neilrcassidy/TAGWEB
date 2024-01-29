@@ -5,10 +5,10 @@ import { badges } from "../constants"
 import { antxpoint } from "../assets/img"
 import { nueva, update1 } from "../assets/img/update_symbols"
 
-const BadgeCardList = ({ userBadges, title, category, emoji, color, borderColor, bgColor, newCategory }) => {
+const EventInactiveCardList = ({ userBadges, title, category, emoji, color, borderColor, bgColor, newCategory }) => {
   return (
-    <div id={"badges" + title} className={`flex flex-col rounded-lg ${borderColor} border xs:w-[90%] w-[95%]`}>
-      <div id={"badges" + title + "Title"} className={`flex ${bgColor} rounded-t-md min-w-[90%] text-[24px] ${color === "white" ? "text-black" : ""}`}>
+    <div id={"badges" + title} className={`flex flex-col rounded-lg border-gray-400 border xs:w-[90%] w-[95%]`}>
+      <div id={"badges" + title + "Title"} className={`flex bg-gray-400 rounded-t-md min-w-[90%] text-[24px] ${color === "white" ? "text-black" : ""}`}>
         <div className={`flex flex-wrap m-auto my-2 ml-3 text-[20px] w-[100%] gap-2`}>
           <h3>{title} {emoji} </h3>
           {newCategory ? <img className={`ml-0 m-auto w-[100px]`} src={nueva} /> : ""}
@@ -23,7 +23,7 @@ const BadgeCardList = ({ userBadges, title, category, emoji, color, borderColor,
             .filter((badge) => badge.group === category)
             .sort((badge1, badge2) => badge2.update - badge1.update)
             .map((badge, index) => (
-              <div className={`flex w-full ${index === badges.filter((badge) => badge.group === category).length - 1 ? "" : "border " + borderColor + " border-t-transparent border-l-transparent border-r-transparent"}`}>
+              <div className={`flex w-full ${index === badges.filter((badge) => badge.group === category).length - 1 ? "" : "border border-transparent border-b-gray-400"}`}>
                 <div className={`flex w-full my-4 ml-2`}>
                   <div className={`flex ss:min-w-[96px] ss:w-[96px] min-w-[64px] w-[64px] m-auto mr-2 ss:ml-2 ml-0 `}>
                     <div className={`relative`}>
@@ -48,4 +48,4 @@ const BadgeCardList = ({ userBadges, title, category, emoji, color, borderColor,
   )
 }
 
-export default BadgeCardList
+export default EventInactiveCardList

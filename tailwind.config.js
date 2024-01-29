@@ -9,8 +9,7 @@ export default {
         secondary: "#7EC46D",
         altSecondary: "#5ca848",
         dimWhite: "rgba(255, 255, 255, 0.7)",
-        dimBlue: "rgba(9, 151, 124, 0.1)",
-        deporte: "[#039942]"
+        dimBlue: "rgba(9, 151, 124, 0.1)"
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
@@ -29,9 +28,6 @@ export default {
       xl: "1700px",
     },
   },
-  plugins: [],
-  safelist: [
-    'deporte'
-  ]
+  plugins: []
 }
 

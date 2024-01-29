@@ -11,10 +11,11 @@ import { nueva, update1 } from "../assets/img/update_symbols"
 import Tippy from "@tippyjs/react"
 import 'tippy.js/dist/tippy.css';
 
-const BadgeCardGrid = ({ userBadges, title, category, emoji, color, newCategory }) => {
+
+const BadgeCardGrid = ({ userBadges, title, category, emoji, color, borderColor, bgColor, newCategory }) => {
   return (
-    <div id={"badges"+title} className={`flex flex-col rounded-lg border ${"border-"+color} max-w-[350px] w-[95%]`}>
-      <div id={"badges"+title+"Title"} className={`flex ${"bg-"+color} rounded-t-md ${color === "white" ? "text-black" : ""}`}>
+    <div id={"badges"+title} className={`flex flex-col rounded-lg border ${borderColor} max-w-[350px] w-[95%]`}>
+      <div id={"badges"+title+"Title"} className={`flex ${bgColor} rounded-t-md ${color === "white" ? "text-black" : ""}`}>
         <div className={`flex flex-wrap m-auto my-2 ml-3 text-[20px] w-[100%] gap-2`}>
           <h3>{title} {emoji} </h3>
           {newCategory ? <img className={`ml-0 m-auto w-[100px]`} src={nueva}/> : ""}

@@ -8,8 +8,11 @@ import { badges } from "../constants"
 import { useEffect, useState } from "react"
 
 // Firebase Imports
-import { firestore } from "../config/firebase-config"
+import { auth, firestore } from "../config/firebase-config"
 import { collection, query, getDocs, getDoc, doc, updateDoc, arrayUnion, addDoc, Timestamp, increment } from "firebase/firestore"
+
+// Security
+import { useNavigate } from "react-router-dom"
 
 const Admin = () => {
   const [users, setUsers] = useState([])
@@ -21,6 +24,9 @@ const Admin = () => {
 
   const [newsTitle, setNewsTitle] = useState("")
   const [newsBody, setNewsBody] = useState("")
+
+  const navigate = useNavigate()
+  const navBadges = () => navigate("/badges")
 
   const addBadgeToUser = async () => {
     const userDoc = doc(firestore, "users", selectedUserId)
@@ -77,9 +83,22 @@ const Admin = () => {
     return docs
   }
 
+  const checkAdmin = async () => {
+    console.log("Admin!")
+    const currentUser = await getDoc(doc(firestore, "users", auth.currentUser.uid))
+
+    if (currentUser.data().admin === false) {
+      navBadges()
+    }
+  }
+
   useEffect(() => {
     fetchUsers()
       .then((users) => setUsers(users))
+
+    auth.onAuthStateChanged(function () {
+      checkAdmin()
+    })
   }, [])
 
   return (

@@ -15,7 +15,7 @@ import { auth, firestore } from "../config/firebase-config"
 import { doc, getDoc } from "firebase/firestore"
 
 // Component Imports
-import { Stats, BadgeCardGrid, BadgeCardList, EventActiveCardGrid, EventInactiveCardGrid } from "./"
+import { Stats, BadgeCardGrid, BadgeCardList, EventActiveCardGrid, EventInactiveCardGrid, EventActiveCardList, EventInactiveCardList } from "./"
 
 // Emoji imports
 import { Emoji } from "@crispengari/react-emojify"
@@ -67,11 +67,23 @@ const Badges = () => {
 
           {list ? (
             <div id="badgesCards" className={`flex flex-wrap justify-center gap-6 w-[97%]`}>
-              {categories
-                .map((category, index) => (
-                  <BadgeCardList userBadges={userBadges} title={category.title} category={category.category} emoji={<Emoji emojiId={category.emoji}/>} color={category.color} newCategory={category.newCategory} />
+              {events
+                .filter((e) => new Date() <= e.eventTimeEnd)
+                .map((e, index) => (
+                  <EventActiveCardList userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>} color={e.color} borderColor={e.borderColor} bgColor={e.bgColor} eventTimeStart={e.eventTimeStart} eventTimeEnd={e.eventTimeEnd}/>
                 ))
               }
+              {categories
+                .map((category, index) => (
+                  <BadgeCardList userBadges={userBadges} title={category.title} category={category.category} emoji={<Emoji emojiId={category.emoji}/>} color={category.color} borderColor={category.borderColor} bgColor={category.bgColor} newCategory={category.newCategory} />
+                ))
+              }
+              {events
+                  .filter((e) => new Date() > e.eventTimeEnd)
+                  .map((e, index) => (
+                    <EventInactiveCardList userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>} eventTimeStart={e.eventTimeStart} eventTimeEnd={e.eventTimeEnd}/>
+                  ))
+                }
             </div>
           ) : (
             <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-6 w-[97%]`}>
@@ -84,10 +96,9 @@ const Badges = () => {
               <div className={`flex flex-wrap justify-center gap-6`}>
                 {categories
                   .map((category, index) => (
-                    <BadgeCardGrid userBadges={userBadges} title={category.title} category={category.category} emoji={<Emoji emojiId={category.emoji}/>} color={category.color} newCategory={category.newCategory} />
+                    <BadgeCardGrid userBadges={userBadges} title={category.title} category={category.category} emoji={<Emoji emojiId={category.emoji}/>} color={category.color} borderColor={category.borderColor} bgColor={category.bgColor} newCategory={category.newCategory} />
                   ))
                 }
-
                 {events
                   .filter((e) => new Date() > e.eventTimeEnd)
                   .map((e, index) => (

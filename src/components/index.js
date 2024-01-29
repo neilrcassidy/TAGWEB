@@ -14,7 +14,9 @@ import Stats from "./Stats.jsx"
 import BadgeCardGrid from "./BadgeCardGrid.jsx"
 import BadgeCardList from "./BadgeCardList.jsx"
 import EventActiveCardGrid from "./EventActiveCardGrid.jsx"
+import EventActiveCardList from "./EventActiveCardList.jsx"
 import EventInactiveCardGrid from "./EventInactiveCardGrid.jsx"
+import EventInactiveCardList from "./EventInactiveCardList.jsx"
 
 export {
     Header,
@@ -33,5 +35,7 @@ export {
     BadgeCardGrid,
     BadgeCardList,
     EventActiveCardGrid,
-    EventInactiveCardGrid
+    EventActiveCardList,
+    EventInactiveCardGrid,
+    EventInactiveCardList
 }

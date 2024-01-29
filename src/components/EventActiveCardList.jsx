@@ -5,7 +5,7 @@ import { badges } from "../constants"
 import { antxpoint } from "../assets/img"
 import { nueva, update1 } from "../assets/img/update_symbols"
 
-const BadgeCardList = ({ userBadges, title, category, emoji, color, borderColor, bgColor, newCategory }) => {
+const EventActiveCardList = ({ userBadges, title, category, emoji, color, borderColor, bgColor, newCategory }) => {
   return (
     <div id={"badges" + title} className={`flex flex-col rounded-lg ${borderColor} border xs:w-[90%] w-[95%]`}>
       <div id={"badges" + title + "Title"} className={`flex ${bgColor} rounded-t-md min-w-[90%] text-[24px] ${color === "white" ? "text-black" : ""}`}>
@@ -48,4 +48,4 @@ const BadgeCardList = ({ userBadges, title, category, emoji, color, borderColor,
   )
 }
 
-export default BadgeCardList
+export default EventActiveCardList

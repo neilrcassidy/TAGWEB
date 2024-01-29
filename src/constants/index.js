@@ -102,7 +102,7 @@ export const badges = [{
     group: "general",
     title: "Creador/a",
     description: "Crea TAG. (Retroactivo)",
-    points: "0",
+    points: 0,
     icon_locked: rare_badge_locked,
     icon_unlocked: GEN1_unlocked,
     type: "rare",
@@ -114,7 +114,7 @@ export const badges = [{
     group: "general",
     title: "You're Pac, he's Pac, no Pac, none",
     description: "Gana una batalla de gallos.",
-    points: "5",
+    points: 5,
     icon_locked: normal_badge_locked,
     icon_unlocked: GEN2_unlocked,
     type: "normal",
@@ -126,7 +126,7 @@ export const badges = [{
     group: "general",
     title: "No tienes nada de que avergonzarte",
     description: "Bañarte desnudo/a.",
-    points: "10",
+    points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: GEN3_unlocked,
     type: "normal",
@@ -138,7 +138,7 @@ export const badges = [{
     group: "general",
     title: "Titiritero/a",
     description: "Completar un plan.",
-    points: "25",
+    points: 25,
     icon_locked: rare_badge_locked,
     icon_unlocked: GEN4_unlocked,
     type: "rare",
@@ -150,7 +150,7 @@ export const badges = [{
     group: "general",
     title: "Swiftie",
     description: "Ser swiftie. (Retroactivo)",
-    points: "0",
+    points: 0,
     icon_locked: rare_badge_locked,
     icon_unlocked: GEN5_unlocked,
     type: "rare",
@@ -162,7 +162,7 @@ export const badges = [{
     group: "general",
     title: "Ministro/a",
     description: "Proponer un plan no alcohólico y que se llene un coche como mínimo.",
-    points: "10",
+    points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: GEN6_unlocked,
     type: "normal",
@@ -174,7 +174,7 @@ export const badges = [{
     group: "general",
     title: "Filólogo/a",
     description: "Introducir una nueva palabra en ANTX.",
-    points: "5",
+    points: 5,
     icon_locked: normal_badge_locked,
     icon_unlocked: GEN7_unlocked,
     type: "normal",
@@ -186,7 +186,7 @@ export const badges = [{
     group: "general",
     title: "Real OG",
     description: "Ser real de Sway Dance Floors. (Retroactivo)",
-    points: "0",
+    points: 0,
     icon_locked: rare_badge_locked,
     icon_unlocked: GEN8_unlocked,
     type: "rare",
@@ -198,7 +198,7 @@ export const badges = [{
     group: "general",
     title: "Paparazzi",
     description: "Hacerse una foto con alguien de cierta relevancia.",
-    points: "20",
+    points: 20,
     icon_locked: rare_badge_locked,
     icon_unlocked: GEN9_unlocked,
     type: "rare",
@@ -210,7 +210,7 @@ export const badges = [{
     group: "general",
     title: "A mamar, gordo",
     description: "Tener el C1 de Valenciano. (Retroactivo)",
-    points: "0",
+    points: 0,
     icon_locked: rare_badge_locked,
     icon_unlocked: GEN10_unlocked,
     type: "rare",
@@ -220,12 +220,24 @@ export const badges = [{
   {
     id: "GEN11",
     group: "general",
-    title: "Test",
-    description: "test",
-    points: "0",
+    title: "Yo estuve allí...",
+    description: "Haber asistido a la presentación de THE ANATXO GAMES. (Retroactivo)",
+    points: 0,
     icon_locked: rare_badge_locked,
-    icon_unlocked: GEN1_unlocked,
+    icon_unlocked: "GEN11_unlocked",
     type: "rare",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "GEN12",
+    group: "general",
+    title: "Leto, opina de los guays",
+    description: "Haz un #AnatxoRespon.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "GEN12_unlocked",
+    type: "normal",
     update: 1,
     updateIcon: update1
   },
@@ -396,6 +408,18 @@ export const badges = [{
     type: "normal",
     update: 0,
     updateIcon: null
+  },
+  {
+    id: "MEN15",
+    group: "mensual",
+    title: "Un clanero más",
+    description: "Asiste a 6 mensuales seguidas.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "MEN15_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
   },
   {
     id: "DIS1",
@@ -758,6 +782,30 @@ export const badges = [{
     updateIcon: null
   },
   {
+    id: "FIE12",
+    group: "fiesta",
+    title: "Solo por Les Castizos",
+    description: "Ve a un festival.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "FIE12_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "FIE13",
+    group: "fiesta",
+    title: "Una noche legendaria",
+    description: "Ve de bar en bar por Lliria hasta que cierre el último del pueblo con gente de ANTX.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "FIE13_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
+  },
+  {
     id: "ALC1",
     group: "alcohol",
     title: "Panxaferro",
@@ -888,6 +936,18 @@ export const badges = [{
     type: "normal",
     update: 0,
     updateIcon: null
+  },
+  {
+    id: "ALC12",
+    group: "alcohol",
+    title: "Game. Over.",
+    description: "Coma etílico (No vayais a por esta aposta por favor).",
+    points: 20,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "ALC12_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
   },
   {
     id: "JDM1",
@@ -1046,6 +1106,114 @@ export const badges = [{
     updateIcon: null
   },
   {
+    id: "JDM14",
+    group: "juegos",
+    title: "Uno más entre los dioses",
+    description: "Crea un nuevo juego de mesa de ANTX.",
+    points: 25,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "JDM14_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "JDM15",
+    group: "juegos",
+    title: "It's me! Ismatthew!",
+    description: "Gana un campeonato de Mario Kart contra gente de ANTX.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "JDM15_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "JDM16",
+    group: "juegos",
+    title: "¿Vale tu amistad 10 puntos?",
+    description: "Gana una partida del Wii Party o Mario Party contra gente de ANTX.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "JDM16_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "JDM17",
+    group: "juegos",
+    title: "Chico/a del coro",
+    description: "Gana 3 partidas de Sing Star.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "JDM17_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "JDM18",
+    group: "juegos",
+    title: "Mariangeles",
+    description: "Gana 5 partidas de Sing Star.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "JDM18_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "JDM19",
+    group: "juegos",
+    title: "Ganador/a de OT",
+    description: "Gana 10 partidas de Sing Star.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "JDM19_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "JDM20",
+    group: "juegos",
+    title: "Fiebre de Sabado Noche",
+    description: "Gana 3 partidas de Just Dance.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "JDM20_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "JDM21",
+    group: "juegos",
+    title: "Casti",
+    description: "Gana 5 partidas de Just Dance.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "JDM21_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "JDM22",
+    group: "juegos",
+    title: "Destructor de Caderas",
+    description: "Gana 10 partidas de Just Dance.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "JDM22_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
+  },
+  {
     id: "COC1",
     group: "cochinas",
     title: "Celestino/a",
@@ -1152,6 +1320,54 @@ export const badges = [{
     type: "rare",
     update: 0,
     updateIcon: null
+  },
+  {
+    id: "COC10",
+    group: "cochinas",
+    title: "Año par",
+    description: "Liate con tu ex.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "COC10_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "COC11",
+    group: "cochinas",
+    title: "Ozil",
+    description: "Asiste a que algun colega se lie.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "COC11_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "COC12",
+    group: "cochinas",
+    title: "¿Sabes que Leto sabe mucho de cine?",
+    description: "Ensalzar a un colega mientras está con un/a tio/a.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "COC12_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "COC13",
+    group: "cochinas",
+    title: "Para vosotros jugadores",
+    description: "Presenta gente nueva a ANTX.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "COC13_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
   },
   {
     id: "VIA1",
@@ -1322,6 +1538,18 @@ export const badges = [{
     updateIcon: null
   },
   {
+    id: "RUT12",
+    group: "rutas",
+    title: "La única vez que MT lloró con razón",
+    description: "Escala el Puig Campana con gente de ANTX.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "RUT12_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
+  },
+  {
     id: "MDL1",
     group: "marines_de_lokiar",
     title: "Discipulo/a",
@@ -1368,6 +1596,18 @@ export const badges = [{
     type: "rare",
     update: 0,
     updateIcon: null
+  },
+  {
+    id: "MDL5",
+    group: "marines_de_lokiar",
+    title: "Olocau de Lokiar",
+    description: "No seremos capaces, no?",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "MDL5_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
   },
   {
     id: "CUL1",
@@ -1454,6 +1694,234 @@ export const badges = [{
     updateIcon: null
   },
   {
+    id: "CUL8",
+    group: "cultura",
+    title: "Estela",
+    description: "Ir a un concierto.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "CUL8_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "CUL9",
+    group: "cultura",
+    title: "Conciertos2",
+    description: "Ir a dos conciertos.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "CUL9_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "CUL10",
+    group: "cultura",
+    title: "Conciertos3",
+    description: "Ir a tres conciertos.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "CUL10_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "CUL11",
+    group: "cultura",
+    title: "Estimado Sr. Jones",
+    description: "Ir a un museo.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "CUL11_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "CUL12",
+    group: "cultura",
+    title: "I'm a man of wealth and taste",
+    description: "Ir a dos museos.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "CUL12_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "CUL13",
+    group: "cultura",
+    title: "DEBERÍA ESTAR EN UN MUSEO",
+    description: "Ir a tres museos.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "CUL13_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "CUL14",
+    group: "cultura",
+    title: "¿Tu eres de la Unió o del Clarín?",
+    description: "Ir a un concierto de música clásica.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "CUL14_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "CUL15",
+    group: "cultura",
+    title: "Tio",
+    description: "Ir al cine con gente de ANTX una vez.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "CUL15_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "CUL16",
+    group: "cultura",
+    title: "¿Más chapas de cine?",
+    description: "Ir al cine con gente de ANTX dos veces.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "CUL16_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "CUL17",
+    group: "cultura",
+    title: "¿ENSERIO?",
+    description: "Ir al cine con gente de ANTX tres veces.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "CUL17_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "DEP1",
+    group: "deporte",
+    title: "Hooligan",
+    description: "Asiste a un partido.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "DEP1_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "DEP2",
+    group: "deporte",
+    title: "Abonat al Llíria UD",
+    description: "Asiste a dos partidos.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "DEP2_unlocked",
+    type: "noral",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "DEP3",
+    group: "deporte",
+    title: "MJ",
+    description: "Asiste a tres partidos.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "DEP3_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "DEP4",
+    group: "deporte",
+    title: "Vaporeon",
+    description: "Ves hasta la boya en la playa.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "DEP4_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "DEP5",
+    group: "deporte",
+    title: "Oh capitán, mi capitán",
+    description: "Convoca y organiza una pachanga.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "DEP5_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "DEP6",
+    group: "deporte",
+    title: "No puedo tengo furbo",
+    description: "Participa en una pachanga.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "DEP6_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "DEP7",
+    group: "deporte",
+    title: "La banda del patio",
+    description: "Participa en dos pachangas.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "DEP7_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "DEP8",
+    group: "deporte",
+    title: "Oliver y Benji",
+    description: "Participa en tres pachangas.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "DEP8_unlocked",
+    type: "rare",
+    update: 1,
+    updateIcon: update1
+  },
+  {
+    id: "DEP9",
+    group: "deporte",
+    title: "Saps que Carles ha fet una mitja marató?",
+    description: "Apuntate a una carrera conjunta.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "DEP9_unlocked",
+    type: "normal",
+    update: 1,
+    updateIcon: update1
+  },
+  {
     id: "EV_CAR1",
     group: "carnavales",
     title: "Carnaval, carnavaaaaaal",
@@ -1515,29 +1983,31 @@ export const badges = [{
   },
 ]
 
-// If you run into problems displaying the color of a new category for the first time
-// go to the BadgeCardGrid and manually input it into the className for the border and bg
-// this kind of like "pulls it in" officially from some other place into the project
-export const categories = [
+export const categories = [{
+    title: "Deporte",
+    category: "deporte",
+    emoji: "react@emojify-1064",
+    color: "[#039942]",
+    borderColor: "border-[#039942]",
+    bgColor: "bg-[#039942]",
+    newCategory: true
+  },
   {
     title: "General",
     category: "general",
     emoji: "react@emojify-1293",
     color: "secondary",
+    borderColor: "border-secondary",
+    bgColor: "bg-secondary",
     newCategory: false
-  },
-  {
-    title: "Deporte",
-    category: "deporte",
-    emoji: "react@emojify-1064",
-    color: "[#039942]",
-    newCategory: true
   },
   {
     title: "Mensual",
     category: "mensual",
     emoji: "react@emojify-737",
     color: "[#0078AC]",
+    borderColor: "border-[#0078AC]",
+    bgColor: "bg-[#0078AC]",
     newCategory: false
   },
   {
@@ -1545,6 +2015,8 @@ export const categories = [
     category: "discipulo",
     emoji: "react@emojify-1161",
     color: "[#c7bc28]",
+    borderColor: "border-[#c7bc28]",
+    bgColor: "bg-[#c7bc28]",
     newCategory: false
   },
   {
@@ -1552,6 +2024,8 @@ export const categories = [
     category: "fiesta",
     emoji: "react@emojify-1044",
     color: "purple-500",
+    borderColor: "border-purple-500",
+    bgColor: "bg-purple-500",
     newCategory: false
   },
   {
@@ -1559,6 +2033,8 @@ export const categories = [
     category: "alcohol",
     emoji: "react@emojify-802",
     color: "[#7f1734]",
+    borderColor: "border-[#7f1734]",
+    bgColor: "bg-[#7f1734]",
     newCategory: false
   },
   {
@@ -1566,6 +2042,8 @@ export const categories = [
     category: "juegos",
     emoji: "react@emojify-1101",
     color: "white",
+    borderColor: "border-white",
+    bgColor: "bg-white",
     newCategory: false
   },
   {
@@ -1573,6 +2051,8 @@ export const categories = [
     category: "viajes",
     emoji: "react@emojify-946",
     color: "[#073590]",
+    borderColor: "border-[#073590]",
+    bgColor: "bg-[#073590]",
     newCategory: false
   },
   {
@@ -1580,6 +2060,8 @@ export const categories = [
     category: "cochinas",
     emoji: "react@emojify-62",
     color: "[#e03f3f]",
+    borderColor: "border-[#e03f3f]",
+    bgColor: "bg-[#e03f3f]",
     newCategory: false
   },
   {
@@ -1587,6 +2069,8 @@ export const categories = [
     category: "rutas",
     emoji: "react@emojify-873",
     color: "[#023020]",
+    borderColor: "border-[#023020]",
+    bgColor: "bg-[#023020]",
     newCategory: false
   },
   {
@@ -1594,6 +2078,8 @@ export const categories = [
     category: "marines_de_lokiar",
     emoji: "react@emojify-161",
     color: "[#FF7F50]",
+    borderColor: "border-[#FF7F50]",
+    bgColor: "bg-[#FF7F50]",
     newCategory: false
   },
   {
@@ -1601,6 +2087,8 @@ export const categories = [
     category: "cultura",
     emoji: "react@emojify-1218",
     color: "blue-300",
+    borderColor: "border-blue-300",
+    bgColor: "bg-blue-300",
     newCategory: false
   }
 ]
@@ -1610,6 +2098,9 @@ export const events = [{
   category: "carnavales",
   emoji: "react@emojify-1115",
   color: "[#FF7F50]",
+  borderColor: "border-[#FF7F50]",
+  bgColor: "bg-[#FF7F50]",
+  borderBColor: "border-b-[#FF7F50]",
   eventTimeStart: new Date(2024, 1, 10, 12),
   eventTimeEnd: new Date(2024, 1, 11, 12)
 }]
