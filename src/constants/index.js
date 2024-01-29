@@ -2129,7 +2129,7 @@ export const categories = [{
 ]
 
 export const events = [{
-  title: "Carnavales",
+  title: "Carnavales de Villar",
   category: "carnavales",
   emoji: "react@emojify-1115",
   color: "[#FF7F50]",
