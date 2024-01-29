@@ -13,16 +13,31 @@ import GEN7_unlocked from "./GEN7_unlocked.png"
 import GEN8_unlocked from "./GEN8_unlocked.png"
 import GEN9_unlocked from "./GEN9_unlocked.png"
 import GEN10_unlocked from "./GEN10_unlocked.png"
+import GEN11_unlocked from "./GEN11_unlocked.png"
+import GEN12_unlocked from "./GEN12_unlocked.png"
 
 import MEN1_unlocked from "./MEN1_unlocked.png"
 import MEN2_unlocked from "./MEN2_unlocked.png"
 import MEN3_unlocked from "./MEN3_unlocked.png"
+//import MEN4_unlocked from "./MEN4_unlocked.png"
+//import MEN5_unlocked from "./MEN5_unlocked.png"
+//import MEN6_unlocked from "./MEN6_unlocked.png"
+//import MEN7_unlocked from "./MEN7_unlocked.png"
+//import MEN8_unlocked from "./MEN8_unlocked.png"
+//import MEN9_unlocked from "./MEN9_unlocked.png"
+//import MEN10_unlocked from "./MEN10_unlocked.png"
+//import MEN11_unlocked from "./MEN11_unlocked.png"
+//import MEN12_unlocked from "./MEN12_unlocked.png"
+//import MEN13_unlocked from "./MEN13_unlocked.png"
+//import MEN14_unlocked from "./MEN14_unlocked.png"
+import MEN15_unlocked from "./MEN15_unlocked.png"
 
 import DIS1_unlocked from "./DIS1_unlocked.png"
 import DIS3_unlocked from "./DIS3_unlocked.png"
 import DIS4_unlocked from "./DIS4_unlocked.png"
 import DIS5_unlocked from "./DIS5_unlocked.png"
 import DIS6_unlocked from "./DIS6_unlocked.png"
+import DIS8_unlocked from "./DIS8_unlocked.png"
 import DIS9_unlocked from "./DIS9_unlocked.png"
 import DIS15_unlocked from "./DIS15_unlocked.png"
 
@@ -37,6 +52,8 @@ import FIE8_unlocked from "./FIE8_unlocked.png";
 import FIE9_unlocked from "./FIE9_unlocked.png";
 import FIE10_unlocked from "./FIE10_unlocked.png";
 import FIE11_unlocked from "./FIE11_unlocked.png";
+import FIE12_unlocked from "./FIE12_unlocked.png";
+import FIE13_unlocked from "./FIE13_unlocked.png";
 
 import ALC1_unlocked from "./ALC1_unlocked.png"
 import ALC2_unlocked from "./ALC2_unlocked.png"
@@ -49,6 +66,7 @@ import ALC8_unlocked from "./ALC8_unlocked.png"
 import ALC9_unlocked from "./ALC9_unlocked.png"
 import ALC10_unlocked from "./ALC10_unlocked.png"
 import ALC11_unlocked from "./ALC11_unlocked.png"
+import ALC12_unlocked from "./ALC12_unlocked.png"
 
 import JDM1_unlocked from "./JDM1_unlocked.png"
 import JDM2_unlocked from "./JDM2_unlocked.png"
@@ -63,6 +81,15 @@ import JDM10_unlocked from "./JDM10_unlocked.png"
 import JDM11_unlocked from "./JDM11_unlocked.png"
 import JDM12_unlocked from "./JDM12_unlocked.png"
 import JDM13_unlocked from "./JDM13_unlocked.png"
+import JDM14_unlocked from "./JDM14_unlocked.png"
+import JDM15_unlocked from "./JDM15_unlocked.png"
+import JDM16_unlocked from "./JDM16_unlocked.png"
+import JDM17_unlocked from "./JDM17_unlocked.png"
+//import JDM18_unlocked from "./JDM18_unlocked.png"
+import JDM19_unlocked from "./JDM19_unlocked.png"
+import JDM20_unlocked from "./JDM20_unlocked.png"
+//import JDM21_unlocked from "./JDM21_unlocked.png"
+import JDM22_unlocked from "./JDM22_unlocked.png"
 
 import COC1_unlocked from "./COC1_unlocked.png"
 import COC2_unlocked from "./COC2_unlocked.png"
@@ -73,6 +100,9 @@ import COC6_unlocked from "./COC6_unlocked.png"
 import COC7_unlocked from "./COC7_unlocked.png"
 import COC8_unlocked from "./COC8_unlocked.png"
 import COC9_unlocked from "./COC9_unlocked.png"
+//import COC10_unlocked from "./COC10_unlocked.png"
+import COC11_unlocked from "./COC11_unlocked.png"
+import COC12_unlocked from "./COC12_unlocked.png"
 
 import VIA1_unlocked from "./VIA1_unlocked.png"
 import VIA2_unlocked from "./VIA2_unlocked.png"
@@ -89,11 +119,13 @@ import RUT8_unlocked from "./RUT8_unlocked.png"
 import RUT9_unlocked from "./RUT9_unlocked.png"
 import RUT10_unlocked from "./RUT10_unlocked.png"
 import RUT11_unlocked from "./RUT11_unlocked.png"
+import RUT12_unlocked from "./RUT12_unlocked.png"
 
 import MDL1_unlocked from "./MDL1_unlocked.png"
 import MDL2_unlocked from "./MDL2_unlocked.png"
 import MDL3_unlocked from "./MDL3_unlocked.png"
 import MDL4_unlocked from "./MDL4_unlocked.png"
+import MDL5_unlocked from "./MDL5_unlocked.png"
 
 import CUL1_unlocked from "./CUL1_unlocked.png"
 import CUL2_unlocked from "./CUL2_unlocked.png"
@@ -102,6 +134,24 @@ import CUL4_unlocked from "./CUL4_unlocked.png"
 import CUL5_unlocked from "./CUL5_unlocked.png"
 import CUL6_unlocked from "./CUL6_unlocked.png"
 import CUL7_unlocked from "./CUL7_unlocked.png"
+import CUL8_unlocked from "./CUL8_unlocked.png"
+import CUL9_unlocked from "./CUL1_unlocked.png"
+import CUL10_unlocked from "./CUL10_unlocked.png"
+import CUL11_unlocked from "./CUL11_unlocked.png"
+import CUL12_unlocked from "./CUL12_unlocked.png"
+import CUL13_unlocked from "./CUL13_unlocked.png"
+import CUL14_unlocked from "./CUL14_unlocked.png"
+import CUL15_unlocked from "./CUL15_unlocked.png"
+
+import DEP1_unlocked from "./DEP1_unlocked.png"
+import DEP2_unlocked from "./DEP2_unlocked.png"
+import DEP3_unlocked from "./DEP3_unlocked.png"
+import DEP4_unlocked from "./DEP4_unlocked.png"
+import DEP5_unlocked from "./DEP5_unlocked.png"
+import DEP6_unlocked from "./DEP6_unlocked.png"
+import DEP7_unlocked from "./DEP7_unlocked.png"
+import DEP8_unlocked from "./DEP8_unlocked.png"
+import DEP9_unlocked from "./DEP9_unlocked.png"
 
 export {
     normal_badge_locked,
@@ -118,14 +168,18 @@ export {
     GEN8_unlocked,
     GEN9_unlocked,
     GEN10_unlocked,
+    GEN11_unlocked,
+    GEN12_unlocked,
     MEN1_unlocked,
     MEN2_unlocked,
     MEN3_unlocked,
+    MEN15_unlocked,
     DIS1_unlocked,
     DIS3_unlocked,
     DIS4_unlocked,
     DIS5_unlocked,
     DIS6_unlocked,
+    DIS8_unlocked,
     DIS9_unlocked,
     DIS15_unlocked,
     FIE1_unlocked,
@@ -139,6 +193,8 @@ export {
     FIE9_unlocked,
     FIE10_unlocked,
     FIE11_unlocked,
+    FIE12_unlocked,
+    FIE13_unlocked,
     ALC1_unlocked,
     ALC2_unlocked,
     ALC3_unlocked,
@@ -150,6 +206,7 @@ export {
     ALC9_unlocked,
     ALC10_unlocked,
     ALC11_unlocked,
+    ALC12_unlocked,
     JDM1_unlocked,
     JDM2_unlocked,
     JDM3_unlocked,
@@ -163,6 +220,13 @@ export {
     JDM11_unlocked,
     JDM12_unlocked,
     JDM13_unlocked,
+    JDM14_unlocked,
+    JDM15_unlocked,
+    JDM16_unlocked,
+    JDM17_unlocked,
+    JDM19_unlocked,
+    JDM20_unlocked,
+    JDM22_unlocked,
     COC1_unlocked,
     COC2_unlocked,
     COC3_unlocked,
@@ -172,6 +236,8 @@ export {
     COC7_unlocked,
     COC8_unlocked,
     COC9_unlocked,
+    COC11_unlocked,
+    COC12_unlocked,
     VIA1_unlocked,
     VIA2_unlocked,
     VIA3_unlocked,
@@ -186,15 +252,34 @@ export {
     RUT9_unlocked,
     RUT10_unlocked,
     RUT11_unlocked,
+    RUT12_unlocked,
     MDL1_unlocked,
     MDL2_unlocked,
     MDL3_unlocked,
     MDL4_unlocked,
+    MDL5_unlocked,
     CUL1_unlocked,
     CUL2_unlocked,
     CUL3_unlocked,
     CUL4_unlocked,
     CUL5_unlocked,
     CUL6_unlocked,
-    CUL7_unlocked
+    CUL7_unlocked,
+    CUL8_unlocked,
+    CUL9_unlocked,
+    CUL10_unlocked,
+    CUL11_unlocked,
+    CUL12_unlocked,
+    CUL13_unlocked,
+    CUL14_unlocked,
+    CUL15_unlocked,
+    DEP1_unlocked,
+    DEP2_unlocked,
+    DEP3_unlocked,
+    DEP4_unlocked,
+    DEP5_unlocked,
+    DEP6_unlocked,
+    DEP7_unlocked,
+    DEP8_unlocked,
+    DEP9_unlocked
 }

@@ -11,14 +11,18 @@ import {
   GEN8_unlocked,
   GEN9_unlocked,
   GEN10_unlocked,
+  GEN11_unlocked,
+  GEN12_unlocked,
   MEN1_unlocked,
   MEN2_unlocked,
   MEN3_unlocked,
+  MEN15_unlocked,
   DIS1_unlocked,
   DIS3_unlocked,
   DIS4_unlocked,
   DIS5_unlocked,
   DIS6_unlocked,
+  DIS8_unlocked,
   DIS9_unlocked,
   DIS15_unlocked,
   FIE1_unlocked,
@@ -32,6 +36,8 @@ import {
   FIE9_unlocked,
   FIE10_unlocked,
   FIE11_unlocked,
+  FIE12_unlocked,
+  FIE13_unlocked,
   ALC1_unlocked,
   ALC2_unlocked,
   ALC3_unlocked,
@@ -43,6 +49,7 @@ import {
   ALC9_unlocked,
   ALC10_unlocked,
   ALC11_unlocked,
+  ALC12_unlocked,
   JDM1_unlocked,
   JDM2_unlocked,
   JDM3_unlocked,
@@ -56,6 +63,13 @@ import {
   JDM11_unlocked,
   JDM12_unlocked,
   JDM13_unlocked,
+  JDM14_unlocked,
+  JDM15_unlocked,
+  JDM16_unlocked,
+  JDM17_unlocked,
+  JDM19_unlocked,
+  JDM20_unlocked,
+  JDM22_unlocked,
   COC1_unlocked,
   COC2_unlocked,
   COC3_unlocked,
@@ -65,6 +79,8 @@ import {
   COC7_unlocked,
   COC8_unlocked,
   COC9_unlocked,
+  COC11_unlocked,
+  COC12_unlocked,
   VIA1_unlocked,
   VIA2_unlocked,
   VIA3_unlocked,
@@ -79,17 +95,36 @@ import {
   RUT9_unlocked,
   RUT10_unlocked,
   RUT11_unlocked,
+  RUT12_unlocked,
   MDL1_unlocked,
   MDL2_unlocked,
   MDL3_unlocked,
   MDL4_unlocked,
+  MDL5_unlocked,
   CUL1_unlocked,
   CUL2_unlocked,
   CUL3_unlocked,
   CUL4_unlocked,
   CUL5_unlocked,
   CUL6_unlocked,
-  CUL7_unlocked
+  CUL7_unlocked,
+  CUL8_unlocked,
+  CUL9_unlocked,
+  CUL10_unlocked,
+  CUL11_unlocked,
+  CUL12_unlocked,
+  CUL13_unlocked,
+  CUL14_unlocked,
+  CUL15_unlocked,
+  DEP1_unlocked,
+  DEP2_unlocked,
+  DEP3_unlocked,
+  DEP4_unlocked,
+  DEP5_unlocked,
+  DEP6_unlocked,
+  DEP7_unlocked,
+  DEP8_unlocked,
+  DEP9_unlocked
 } from "../assets/img/badge_logos"
 
 import {
@@ -224,7 +259,7 @@ export const badges = [{
     description: "Haber asistido a la presentación de THE ANATXO GAMES. (Retroactivo)",
     points: 0,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "GEN11_unlocked",
+    icon_unlocked: GEN11_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
@@ -236,7 +271,7 @@ export const badges = [{
     description: "Haz un #AnatxoRespon.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "GEN12_unlocked",
+    icon_unlocked: GEN12_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -416,7 +451,7 @@ export const badges = [{
     description: "Asiste a 6 mensuales seguidas.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "MEN15_unlocked",
+    icon_unlocked: MEN15_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
@@ -512,7 +547,7 @@ export const badges = [{
     description: "Ve a Barcelona y sal de fiesta con Sergi.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "DIS8_unlocked",
+    icon_unlocked: DIS8_unlocked,
     type: "rare",
     update: 0,
     updateIcon: null
@@ -788,7 +823,7 @@ export const badges = [{
     description: "Ve a un festival.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "FIE12_unlocked",
+    icon_unlocked: FIE12_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -800,7 +835,7 @@ export const badges = [{
     description: "Ve de bar en bar por Lliria hasta que cierre el último del pueblo con gente de ANTX.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "FIE13_unlocked",
+    icon_unlocked: FIE13_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
@@ -944,7 +979,7 @@ export const badges = [{
     description: "Coma etílico (No vayais a por esta aposta por favor).",
     points: 20,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "ALC12_unlocked",
+    icon_unlocked: ALC12_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
@@ -1112,7 +1147,7 @@ export const badges = [{
     description: "Crea un nuevo juego de mesa de ANTX.",
     points: 25,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "JDM14_unlocked",
+    icon_unlocked: JDM14_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
@@ -1124,7 +1159,7 @@ export const badges = [{
     description: "Gana un campeonato de Mario Kart contra gente de ANTX.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "JDM15_unlocked",
+    icon_unlocked: JDM15_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1136,7 +1171,7 @@ export const badges = [{
     description: "Gana una partida del Wii Party o Mario Party contra gente de ANTX.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "JDM16_unlocked",
+    icon_unlocked: JDM16_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1148,7 +1183,7 @@ export const badges = [{
     description: "Gana 3 partidas de Sing Star.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "JDM17_unlocked",
+    icon_unlocked: JDM17_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1172,7 +1207,7 @@ export const badges = [{
     description: "Gana 10 partidas de Sing Star.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "JDM19_unlocked",
+    icon_unlocked: JDM19_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
@@ -1184,7 +1219,7 @@ export const badges = [{
     description: "Gana 3 partidas de Just Dance.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "JDM20_unlocked",
+    icon_unlocked: JDM20_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1208,7 +1243,7 @@ export const badges = [{
     description: "Gana 10 partidas de Just Dance.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "JDM22_unlocked",
+    icon_unlocked: JDM22_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
@@ -1340,7 +1375,7 @@ export const badges = [{
     description: "Asiste a que algun colega se lie.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "COC11_unlocked",
+    icon_unlocked: COC11_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1352,7 +1387,7 @@ export const badges = [{
     description: "Ensalzar a un colega mientras está con un/a tio/a.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "COC12_unlocked",
+    icon_unlocked: COC12_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1544,7 +1579,7 @@ export const badges = [{
     description: "Escala el Puig Campana con gente de ANTX.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "RUT12_unlocked",
+    icon_unlocked: RUT12_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
@@ -1604,7 +1639,7 @@ export const badges = [{
     description: "No seremos capaces, no?",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "MDL5_unlocked",
+    icon_unlocked: MDL5_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
@@ -1700,7 +1735,7 @@ export const badges = [{
     description: "Ir a un concierto.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "CUL8_unlocked",
+    icon_unlocked: CUL8_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1712,7 +1747,7 @@ export const badges = [{
     description: "Ir a dos conciertos.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "CUL9_unlocked",
+    icon_unlocked: CUL9_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1724,7 +1759,7 @@ export const badges = [{
     description: "Ir a tres conciertos.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "CUL10_unlocked",
+    icon_unlocked: CUL10_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1736,7 +1771,7 @@ export const badges = [{
     description: "Ir a un museo.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "CUL11_unlocked",
+    icon_unlocked: CUL11_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1748,7 +1783,7 @@ export const badges = [{
     description: "Ir a dos museos.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "CUL12_unlocked",
+    icon_unlocked: CUL12_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1760,7 +1795,7 @@ export const badges = [{
     description: "Ir a tres museos.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "CUL13_unlocked",
+    icon_unlocked: CUL13_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
@@ -1772,7 +1807,7 @@ export const badges = [{
     description: "Ir a un concierto de música clásica.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "CUL14_unlocked",
+    icon_unlocked: CUL14_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1784,7 +1819,7 @@ export const badges = [{
     description: "Ir al cine con gente de ANTX una vez.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "CUL15_unlocked",
+    icon_unlocked: CUL15_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1820,7 +1855,7 @@ export const badges = [{
     description: "Asiste a un partido.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "DEP1_unlocked",
+    icon_unlocked: DEP1_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1832,7 +1867,7 @@ export const badges = [{
     description: "Asiste a dos partidos.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "DEP2_unlocked",
+    icon_unlocked: DEP2_unlocked,
     type: "noral",
     update: 1,
     updateIcon: update1
@@ -1844,7 +1879,7 @@ export const badges = [{
     description: "Asiste a tres partidos.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "DEP3_unlocked",
+    icon_unlocked: DEP3_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
@@ -1856,7 +1891,7 @@ export const badges = [{
     description: "Ves hasta la boya en la playa.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "DEP4_unlocked",
+    icon_unlocked: DEP4_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
@@ -1868,7 +1903,7 @@ export const badges = [{
     description: "Convoca y organiza una pachanga.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "DEP5_unlocked",
+    icon_unlocked: DEP5_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1880,7 +1915,7 @@ export const badges = [{
     description: "Participa en una pachanga.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "DEP6_unlocked",
+    icon_unlocked: DEP6_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1892,7 +1927,7 @@ export const badges = [{
     description: "Participa en dos pachangas.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "DEP7_unlocked",
+    icon_unlocked: DEP7_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1904,7 +1939,7 @@ export const badges = [{
     description: "Participa en tres pachangas.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "DEP8_unlocked",
+    icon_unlocked: DEP8_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
@@ -1916,7 +1951,7 @@ export const badges = [{
     description: "Apuntate a una carrera conjunta.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "DEP9_unlocked",
+    icon_unlocked: DEP9_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -2104,3 +2139,20 @@ export const events = [{
   eventTimeStart: new Date(2024, 1, 10, 12),
   eventTimeEnd: new Date(2024, 1, 11, 12)
 }]
+
+/* Color codes 
+General: #7EC46D
+Mensual: #0078AC
+Discipulo: #c7bc28
+Fiesta: #A855F7
+Alcohol: #7f1734
+Juegos: #FFFFFF
+Viajes: #073590
+Cochinadas: #e03f3f
+Rutas: #023020
+Marines: #FF7F50
+Cultura: #93C5FD
+Deporte: #039942
+
+Carnavales: #FF7F50
+*/
