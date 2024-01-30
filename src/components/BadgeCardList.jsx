@@ -28,7 +28,7 @@ const BadgeCardList = ({ userBadges, title, category, emoji, color, borderColor,
                   <div className={`flex ss:min-w-[96px] ss:w-[96px] min-w-[64px] w-[64px] m-auto mr-2 ss:ml-2 ml-0 `}>
                     <div className={`relative`}>
                       <img className={`${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={userBadges.includes(badge.id) ? badge.icon_unlocked : badge.icon_locked}></img>
-                      {badge.update !== 0 ? <img className={`absolute top-[62px] left-[62px] w-[40px]`} src={badge.updateIcon}></img> : ""}
+                      {badge.update !== 0 ? <img className={`absolute ss:top-[62px] ss:left-[62px] ss:w-[42px] top-[40px] left-[40px] w-[30px]`} src={badge.updateIcon}></img> : ""}
                     </div>
                   </div>
                   <div className={`flex flex-col m-auto mx-2 smmd:max-w-[70%] sm:max-w-[65%] ss:max-w-[60%] xs:max-w-[55%] xxs:max-w-[50%] xxxs:max-w-[45%] max-w-[40%]`}>
