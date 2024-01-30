@@ -90,7 +90,7 @@ const Badges = () => {
               {events
                 .filter((e) => new Date() <= e.eventTimeEnd)
                 .map((e, index) => (
-                  <EventActiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>} color={e.color} eventTimeStart={e.eventTimeStart} eventTimeEnd={e.eventTimeEnd}/>
+                  <EventActiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>} color={e.color} borderColor={e.borderColor} bgColor={e.bgColor} eventTimeStart={e.eventTimeStart} eventTimeEnd={e.eventTimeEnd}/>
                 ))
               }
               <div className={`flex flex-wrap justify-center gap-6`}>
@@ -102,7 +102,7 @@ const Badges = () => {
                 {events
                   .filter((e) => new Date() > e.eventTimeEnd)
                   .map((e, index) => (
-                    <EventInactiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>} eventTimeStart={e.eventTimeStart} eventTimeEnd={e.eventTimeEnd}/>
+                    <EventInactiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>}/>
                   ))
                 }
               </div>

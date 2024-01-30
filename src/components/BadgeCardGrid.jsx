@@ -5,7 +5,7 @@ import "../index.css"
 import styles from "../style.js"
 import { badges } from "../constants"
 import { antxpoint } from "../assets/img"
-import { nueva, update1 } from "../assets/img/update_symbols"
+import { nueva } from "../assets/img/update_symbols"
 
 // Tippy imports
 import Tippy from "@tippyjs/react"

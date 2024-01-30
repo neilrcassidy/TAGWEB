@@ -3,7 +3,7 @@
 /* eslint-disable react/prop-types */
 import { badges } from "../constants"
 import { antxpoint } from "../assets/img"
-import { nueva, update1 } from "../assets/img/update_symbols"
+import { nueva } from "../assets/img/update_symbols"
 
 const BadgeCardList = ({ userBadges, title, category, emoji, color, borderColor, bgColor, newCategory }) => {
   return (

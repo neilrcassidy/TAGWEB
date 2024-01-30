@@ -5,13 +5,12 @@ import { badges } from "../constants"
 import { antxpoint } from "../assets/img"
 import { nueva, update1 } from "../assets/img/update_symbols"
 
-const EventInactiveCardList = ({ userBadges, title, category, emoji, color, borderColor, bgColor, newCategory }) => {
+const EventInactiveCardList = ({ userBadges, title, category, emoji }) => {
   return (
     <div id={"badges" + title} className={`flex flex-col rounded-lg border-gray-400 border xs:w-[90%] w-[95%]`}>
-      <div id={"badges" + title + "Title"} className={`flex bg-gray-400 rounded-t-md min-w-[90%] text-[24px] ${color === "white" ? "text-black" : ""}`}>
+      <div id={"badges" + title + "Title"} className={`flex bg-gray-400 rounded-t-md min-w-[90%] text-[24px]`}>
         <div className={`flex flex-wrap m-auto my-2 ml-3 text-[20px] w-[100%] gap-2`}>
-          <h3>{title} {emoji} </h3>
-          {newCategory ? <img className={`ml-0 m-auto w-[100px]`} src={nueva} /> : ""}
+          <h3>Evento: {title} {emoji} </h3>
         </div>
         <div className={`m-auto my-2 mr-3`}>
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === category).length}/{badges.filter((badge) => badge.group === category).length}</h3>

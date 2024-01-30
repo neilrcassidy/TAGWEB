@@ -2135,7 +2135,6 @@ export const events = [{
   color: "[#FF7F50]",
   borderColor: "border-[#FF7F50]",
   bgColor: "bg-[#FF7F50]",
-  borderBColor: "border-b-[#FF7F50]",
   eventTimeStart: new Date(2024, 1, 10, 12),
   eventTimeEnd: new Date(2024, 1, 11, 12)
 }]

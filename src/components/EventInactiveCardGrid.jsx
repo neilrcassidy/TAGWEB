@@ -10,7 +10,7 @@ import { antxpoint } from "../assets/img/index.js"
 import Tippy from "@tippyjs/react"
 import 'tippy.js/dist/tippy.css';
 
-const EventInactiveCardGrid = ({ userBadges, title, category, emoji, eventTimeStart, eventTimeEnd }) => {
+const EventInactiveCardGrid = ({ userBadges, title, category, emoji }) => {
   return (
     <div id={"badges"+title} className={`flex flex-col rounded-lg border border-gray-400 max-w-[350px] w-[95%]`}>
       <div id={"badges"+title+"Title"} className={`flex bg-gray-400 rounded-t-md text-white`}>
