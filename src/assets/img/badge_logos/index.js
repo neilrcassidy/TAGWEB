@@ -19,7 +19,7 @@ import GEN12_unlocked from "./GEN12_unlocked.png"
 import MEN1_unlocked from "./MEN1_unlocked.png"
 import MEN2_unlocked from "./MEN2_unlocked.png"
 import MEN3_unlocked from "./MEN3_unlocked.png"
-//import MEN4_unlocked from "./MEN4_unlocked.png"
+import MEN4_unlocked from "./MEN4_unlocked.png"
 //import MEN5_unlocked from "./MEN5_unlocked.png"
 //import MEN6_unlocked from "./MEN6_unlocked.png"
 //import MEN7_unlocked from "./MEN7_unlocked.png"
@@ -173,6 +173,7 @@ export {
     MEN1_unlocked,
     MEN2_unlocked,
     MEN3_unlocked,
+    MEN4_unlocked,
     MEN15_unlocked,
     DIS1_unlocked,
     DIS3_unlocked,

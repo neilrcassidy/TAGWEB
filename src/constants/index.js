@@ -16,6 +16,7 @@ import {
   MEN1_unlocked,
   MEN2_unlocked,
   MEN3_unlocked,
+  MEN4_unlocked,
   MEN15_unlocked,
   DIS1_unlocked,
   DIS3_unlocked,
@@ -319,7 +320,7 @@ export const badges = [{
     description: "Asiste a la mensual de febrero.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "MEN4_unlocked",
+    icon_unlocked: MEN4_unlocked,
     type: "normal",
     update: 0,
     updateIcon: null
