@@ -85,10 +85,10 @@ import JDM14_unlocked from "./JDM14_unlocked.png"
 import JDM15_unlocked from "./JDM15_unlocked.png"
 import JDM16_unlocked from "./JDM16_unlocked.png"
 import JDM17_unlocked from "./JDM17_unlocked.png"
-//import JDM18_unlocked from "./JDM18_unlocked.png"
+import JDM18_unlocked from "./JDM18_unlocked.png"
 import JDM19_unlocked from "./JDM19_unlocked.png"
 import JDM20_unlocked from "./JDM20_unlocked.png"
-//import JDM21_unlocked from "./JDM21_unlocked.png"
+import JDM21_unlocked from "./JDM21_unlocked.png"
 import JDM22_unlocked from "./JDM22_unlocked.png"
 
 import COC1_unlocked from "./COC1_unlocked.png"
@@ -100,9 +100,10 @@ import COC6_unlocked from "./COC6_unlocked.png"
 import COC7_unlocked from "./COC7_unlocked.png"
 import COC8_unlocked from "./COC8_unlocked.png"
 import COC9_unlocked from "./COC9_unlocked.png"
-//import COC10_unlocked from "./COC10_unlocked.png"
+import COC10_unlocked from "./COC10_unlocked.png"
 import COC11_unlocked from "./COC11_unlocked.png"
 import COC12_unlocked from "./COC12_unlocked.png"
+import COC13_unlocked from "./COC13_unlocked.png"
 
 import VIA1_unlocked from "./VIA1_unlocked.png"
 import VIA2_unlocked from "./VIA2_unlocked.png"
@@ -148,7 +149,7 @@ import DEP2_unlocked from "./DEP2_unlocked.png"
 import DEP3_unlocked from "./DEP3_unlocked.png"
 import DEP4_unlocked from "./DEP4_unlocked.png"
 import DEP5_unlocked from "./DEP5_unlocked.png"
-import DEP6_unlocked from "./DEP6_unlocked.png"
+import DEP6_unlocked from "./DEP6.2_unlocked.png"
 import DEP7_unlocked from "./DEP7_unlocked.png"
 import DEP8_unlocked from "./DEP8_unlocked.png"
 import DEP9_unlocked from "./DEP9_unlocked.png"
@@ -225,8 +226,10 @@ export {
     JDM15_unlocked,
     JDM16_unlocked,
     JDM17_unlocked,
+    JDM18_unlocked,
     JDM19_unlocked,
     JDM20_unlocked,
+    JDM21_unlocked,
     JDM22_unlocked,
     COC1_unlocked,
     COC2_unlocked,
@@ -237,8 +240,10 @@ export {
     COC7_unlocked,
     COC8_unlocked,
     COC9_unlocked,
+    COC10_unlocked,
     COC11_unlocked,
     COC12_unlocked,
+    COC13_unlocked,
     VIA1_unlocked,
     VIA2_unlocked,
     VIA3_unlocked,
