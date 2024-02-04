@@ -513,7 +513,7 @@ export const badges = [{
     id: "DIS5",
     group: "discipulo",
     title: "Discipulo de Leto",
-    description: "Ve al cine a solas. Simple.",
+    description: "Ve al cine o a la filmoteca a solas. Simple.",
     points: 15,
     icon_locked: rare_badge_locked,
     icon_unlocked: DIS5_unlocked,

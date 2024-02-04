@@ -450,53 +450,59 @@ const Profile = ({ logUser }) => {
                   </div>
                 </div>
                 {currentUserFavoriteBadges.length !== 0 ? (
-                    <div className={`${styles.flexCenter} m-auto`}>
-                      <div className={`${styles.flexCenter} m-4`}>
-                        <div id="favBadges" className={`flex flex-col rounded-lg border-secondary border`}>
-                          <div id="favBadgesTitle" className={`flex bg-secondary rounded-t-md`}>
-                            <div className={`flex my-2 ml-2 pr-2`}>
-                              <h3>Favoritas</h3>
-                            </div>
+                  <div className={`${styles.flexCenter} m-auto`}>
+                    <div className={`${styles.flexCenter} m-4`}>
+                      <div id="favBadges" className={`flex flex-col rounded-lg border-secondary border`}>
+                        <div id="favBadgesTitle" className={`flex bg-secondary rounded-t-md`}>
+                          <div className={`flex my-2 ml-2 pr-2`}>
+                            <h3>Favoritas</h3>
                           </div>
-                          <div id="favBadgesGrid" className={`mx-1 my-4`}>
-                            <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
-                              {badges
-                                .filter((badge) => currentUserFavoriteBadges.includes(badge.id))
-                                .sort((a, b) => currentUserFavoriteBadges.indexOf(a.id) - currentUserFavoriteBadges.indexOf(b.id))
-                                .map((badge, index) => (
-                                  <Tippy content=
-                                    {<div className={`flex flex-row gap-4 m-2`}>
-                                      <div className={`flex m-auto max-w-[128px] min-w-[128px]`}>
+                        </div>
+                        <div id="favBadgesGrid" className={`mx-1 my-4`}>
+                          <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
+                            {badges
+                              .filter((badge) => currentUserFavoriteBadges.includes(badge.id))
+                              .sort((a, b) => currentUserFavoriteBadges.indexOf(a.id) - currentUserFavoriteBadges.indexOf(b.id))
+                              .map((badge, index) => (
+                                <Tippy content=
+                                  {<div className={`flex flex-row gap-4 m-2`}>
+                                    <div className={`flex m-auto max-w-[128px] min-w-[128px]`}>
+                                      <div className={`relative top-0 left-0`}>
                                         <img className={`${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={badge.icon_unlocked}></img>
-                                      </div>
-                                      <div className={`flex flex-col font-poppins text-left m-auto`}>
-                                        <div className={`font-bold text-[18px]`}>
-                                          {badge.title}
-                                        </div>
-                                        <div className={`text-[16px] text-left`}>
-                                          {badge.description}
-                                        </div>
-                                      </div>
-                                    </div>}>
-                                    <div id={badge.id} className={`flex flex-col w-[96px]`}>
-                                      <div className={`${styles.flexCenter} mb-2`}>
-                                        <img className={`${styles.flexCenter} w-[72px] ${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={badge.icon_unlocked}></img>
-                                      </div>
-                                      <div className={`${styles.flexCenter} font-normal`}>
-                                        <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                                        <p>{badge.points}</p>
+                                        {badge.update !== 0 ? <img className={`absolute top-[80px] left-[80px] w-[58px]`} src={badge.updateIcon}></img> : ""}
                                       </div>
                                     </div>
-                                  </Tippy>
-                                ))}
-                            </div>
-                          </div >
-                        </div>
+                                    <div className={`flex flex-col font-poppins text-left m-auto`}>
+                                      <div className={`font-bold text-[18px]`}>
+                                        {badge.title}
+                                      </div>
+                                      <div className={`text-[16px] text-left`}>
+                                        {badge.description}
+                                      </div>
+                                    </div>
+                                  </div>}>
+                                  <div id={badge.id} className={`flex flex-col w-[96px]`}>
+                                    <div className={`${styles.flexCenter} mb-2`}>
+                                      <div className={`relative top-0 left-0`}>
+                                        <img className={`${styles.flexCenter} w-[72px] ${badge.type === "rare" ? "glow-rare-badges" : ""}`} src={badge.icon_unlocked}></img>
+                                        {badge.update !== 0 ? <img className={`absolute top-[44px] left-[44px] w-[36px]`} src={badge.updateIcon}></img> : ""}
+                                      </div>
+                                    </div>
+                                    <div className={`${styles.flexCenter} font-normal`}>
+                                      <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
+                                      <p>{badge.points}</p>
+                                    </div>
+                                  </div>
+                                </Tippy>
+                              ))}
+                          </div>
+                        </div >
                       </div>
                     </div>
-                  ) : (
-                    <div></div>
-                  )}
+                  </div>
+                ) : (
+                  <div></div>
+                )}
                 <div className={`${styles.flexCenter} mb-4`}>
                   <button className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`} type="button"
                     onClick={(logout)}>
