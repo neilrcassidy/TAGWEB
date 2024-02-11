@@ -154,6 +154,12 @@ import DEP7_unlocked from "./DEP7_unlocked.png"
 import DEP8_unlocked from "./DEP8_unlocked.png"
 import DEP9_unlocked from "./DEP9_unlocked.png"
 
+import EV_CAR1_unlocked from "./EV_CAR1_unlocked.png"
+import EV_CAR2_unlocked from "./EV_CAR2_unlocked.png"
+import EV_CAR3_unlocked from "./EV_CAR3_unlocked.png"
+import EV_CAR4_unlocked from "./EV_CAR4_unlocked.png"
+import EV_CAR5_unlocked from "./EV_CAR5_unlocked.png"
+
 export {
     normal_badge_locked,
     rare_badge_locked,
@@ -287,5 +293,10 @@ export {
     DEP6_unlocked,
     DEP7_unlocked,
     DEP8_unlocked,
-    DEP9_unlocked
+    DEP9_unlocked,
+    EV_CAR1_unlocked,
+    EV_CAR2_unlocked,
+    EV_CAR3_unlocked,
+    EV_CAR4_unlocked,
+    EV_CAR5_unlocked
 }

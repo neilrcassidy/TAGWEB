@@ -129,7 +129,12 @@ import {
   DEP6_unlocked,
   DEP7_unlocked,
   DEP8_unlocked,
-  DEP9_unlocked
+  DEP9_unlocked,
+  EV_CAR1_unlocked,
+  EV_CAR2_unlocked,
+  EV_CAR3_unlocked,
+  EV_CAR4_unlocked,
+  EV_CAR5_unlocked
 } from "../assets/img/badge_logos"
 
 import {
@@ -1968,7 +1973,7 @@ export const badges = [{
     description: "Asiste a los carnavales de Villar.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "EV_CAR1_unlocked",
+    icon_unlocked: EV_CAR1_unlocked,
     type: "normal",
     update: "carnavales",
     updateIcon: carnavales
@@ -1980,7 +1985,7 @@ export const badges = [{
     description: "Ve disfrazado de la misma temática que al menos 2 miembros de ANTX.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "EV_CAR2_unlocked",
+    icon_unlocked: EV_CAR2_unlocked,
     type: "normal",
     update: "carnavales",
     updateIcon: carnavales
@@ -1992,7 +1997,7 @@ export const badges = [{
     description: "Pon tu coche para carnavales.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "EV_CAR3_unlocked",
+    icon_unlocked: EV_CAR3_unlocked,
     type: "rare",
     update: "carnavales",
     updateIcon: carnavales
@@ -2004,7 +2009,7 @@ export const badges = [{
     description: "Triunfa en carnavales de Villar.",
     points: 20,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "EV_CAR4_unlocked",
+    icon_unlocked: EV_CAR4_unlocked,
     type: "rare",
     update: "carnavales",
     updateIcon: carnavales
@@ -2016,7 +2021,7 @@ export const badges = [{
     description: "Aguanta carnavales de Villar hasta que acabe la fiesta... del todo.",
     points: 25,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "EV_CAR5_unlocked",
+    icon_unlocked: EV_CAR5_unlocked,
     type: "rare",
     update: "carnavales",
     updateIcon: carnavales
