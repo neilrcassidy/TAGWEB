@@ -136,13 +136,15 @@ import CUL5_unlocked from "./CUL5_unlocked.png"
 import CUL6_unlocked from "./CUL6_unlocked.png"
 import CUL7_unlocked from "./CUL7_unlocked.png"
 import CUL8_unlocked from "./CUL8_unlocked.png"
-import CUL9_unlocked from "./CUL1_unlocked.png"
+import CUL9_unlocked from "./CUL9_unlocked.png"
 import CUL10_unlocked from "./CUL10_unlocked.png"
 import CUL11_unlocked from "./CUL11_unlocked.png"
 import CUL12_unlocked from "./CUL12_unlocked.png"
 import CUL13_unlocked from "./CUL13_unlocked.png"
 import CUL14_unlocked from "./CUL14_unlocked.png"
 import CUL15_unlocked from "./CUL15_unlocked.png"
+import CUL16_unlocked from "./CUL16_unlocked.png"
+import CUL17_unlocked from "./CUL17_unlocked.png"
 
 import DEP1_unlocked from "./DEP1_unlocked.png"
 import DEP2_unlocked from "./DEP2_unlocked.png"
@@ -285,6 +287,8 @@ export {
     CUL13_unlocked,
     CUL14_unlocked,
     CUL15_unlocked,
+    CUL16_unlocked,
+    CUL17_unlocked,
     DEP1_unlocked,
     DEP2_unlocked,
     DEP3_unlocked,

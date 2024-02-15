@@ -121,6 +121,8 @@ import {
   CUL13_unlocked,
   CUL14_unlocked,
   CUL15_unlocked,
+  CUL16_unlocked,
+  CUL17_unlocked,
   DEP1_unlocked,
   DEP2_unlocked,
   DEP3_unlocked,
@@ -1841,7 +1843,7 @@ export const badges = [{
     description: "Ir al cine con gente de ANTX dos veces.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "CUL16_unlocked",
+    icon_unlocked: CUL16_unlocked,
     type: "normal",
     update: 1,
     updateIcon: update1
@@ -1853,7 +1855,7 @@ export const badges = [{
     description: "Ir al cine con gente de ANTX tres veces.",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "CUL17_unlocked",
+    icon_unlocked: CUL17_unlocked,
     type: "rare",
     update: 1,
     updateIcon: update1
