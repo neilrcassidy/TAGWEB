@@ -38,8 +38,8 @@ const EventActiveCardGrid = ({ userBadges, title, category, emoji, color, border
                       <img className={`absolute top-[80px] left-[80px] w-[58px]`} src={badge.updateIcon} />
                     </div>
                   </div>
-                  <div className={`flex flex-col font-poppins text-left m-auto`}>
-                    <div className={`font-bold text-[18px]`}>
+                  <div className={`flex flex-col font-poppins text-left m-auto w-[100%]`}>
+                    <div className={`font-bold text-[18px] titleWordBreak`}>
                       {badge.title}
                     </div>
                     <div className={`text-[16px] text-left`}>
@@ -47,6 +47,7 @@ const EventActiveCardGrid = ({ userBadges, title, category, emoji, color, border
                     </div>
                   </div>
                 </div>}>
+
                 <div id={badge.id} className={`flex flex-col`}>
                   <div className={`${styles.flexCenter} w-[96px] h-[86px]`}>
                     <div className={`relative top-0 left-0`}>

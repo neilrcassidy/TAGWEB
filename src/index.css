@@ -112,3 +112,7 @@ body{
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.titleWordBreak {
+  word-break: break-word;
+}

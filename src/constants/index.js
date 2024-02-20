@@ -136,12 +136,23 @@ import {
   EV_CAR2_unlocked,
   EV_CAR3_unlocked,
   EV_CAR4_unlocked,
-  EV_CAR5_unlocked
+  EV_CAR5_unlocked,
+  EV_FAL1_unlocked,
+  EV_FAL2_unlocked,
+  EV_FAL3_unlocked,
+  EV_FAL4_unlocked,
+  EV_FAL8_unlocked,
+  EV_FAL9_unlocked,
+  EV_FAL10_unlocked,
+  EV_FAL11_unlocked,
+  EV_FAL12_unlocked,
+  EV_FAL16_unlocked
 } from "../assets/img/badge_logos"
 
 import {
   update1,
-  carnavales
+  carnavales,
+  fallas
 } from "../assets/img/update_symbols"
 
 export const badges = [{
@@ -2028,6 +2039,198 @@ export const badges = [{
     update: "carnavales",
     updateIcon: carnavales
   },
+  {
+    id: "EV_FAL1",
+    group: "fallas",
+    title: "JA ESTEM EN FALLES",
+    description: "Ir a la crida.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: EV_FAL1_unlocked,
+    type: "rare",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL2",
+    group: "fallas",
+    title: "Secanetista",
+    description: "Ir a la falla de Ann.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_FAL2_unlocked,
+    type: "normal",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL3",
+    group: "fallas",
+    title: "Extramurista",
+    description: "Ir a la falla de Mimy.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_FAL3_unlocked,
+    type: "normal",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL4",
+    group: "fallas",
+    title: "Liga de casales no alineados",
+    description: "Ir de fiesta a un casal que no sea de Ann, Mimy o Carla y Belén.",
+    points: 15,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_FAL4_unlocked,
+    type: "normal",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL5",
+    group: "fallas",
+    title: "Pum",
+    description: "Ir a una mascletá.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "EV_FAL5_unlocked",
+    type: "normal",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL6",
+    group: "fallas",
+    title: "Puuum ",
+    description: "Ir a dos mascletás.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "EV_FAL6_unlocked",
+    type: "normal",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL7",
+    group: "fallas",
+    title: "PUUPUUUPUUPUUPUUUUM",
+    description: "Ir a tres mascletás.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "EV_FAL7_unlocked",
+    type: "normal",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL8",
+    group: "fallas",
+    title: "Carlos, Guille y los demás ",
+    description: "Ir con los amigos de QM7.",
+    points: 20,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: EV_FAL8_unlocked,
+    type: "rare",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL9",
+    group: "fallas",
+    title: "Falla de colesterol ",
+    description: "Tomar unos churros con chocolate.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_FAL9_unlocked,
+    type: "normal",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL10",
+    group: "fallas",
+    title: "Despertà-tor",
+    description: "Tirar un petardo tocho tochísimo.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_FAL10_unlocked,
+    type: "normal",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL11",
+    group: "fallas",
+    title: "Cheperudeta Enjoyer",
+    description: "Ir a la ofrenda.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_FAL11_unlocked,
+    type: "normal",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL12",
+    group: "fallas",
+    title: "Un navajazo bajo la luz dels castells",
+    description: "Ir a la nit del foc.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: EV_FAL12_unlocked,
+    type: "rare",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL13",
+    group: "fallas",
+    title: "Tio que rollo",
+    description: "Haz foto a 5 fallas distintas.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "EV_FAL13_unlocked",
+    type: "normal",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL14",
+    group: "fallas",
+    title: "No et fan mal els peus? ",
+    description: "Haz foto a 10 fallas distintas.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "EV_FAL14_unlocked",
+    type: "normal",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL15",
+    group: "fallas",
+    title: "VULL TORNAR A CASA",
+    description: "Haz foto a 15 fallas distintas.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "EV_FAL15_unlocked",
+    type: "normal",
+    update: "fallas",
+    updateIcon: fallas
+  },
+  {
+    id: "EV_FAL16",
+    group: "fallas",
+    title: "Feel the caloret",
+    description: "Ver quemar una falla.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: EV_FAL16_unlocked,
+    type: "rare",
+    update: "fallas",
+    updateIcon: fallas
+  }
 ]
 
 export const categories = [{
@@ -2149,6 +2352,16 @@ export const events = [{
   bgColor: "bg-[#FF7F50]",
   eventTimeStart: new Date(2024, 1, 10, 12),
   eventTimeEnd: new Date(2024, 1, 11, 12)
+},
+{
+  title: "Fallas",
+  category: "fallas",
+  emoji: "react@emojify-1034",
+  color: "[#880808]",
+  borderColor: "border-[#880808]",
+  bgColor: "bg-[#880808]",
+  eventTimeStart: new Date(2024, 1, 25, 18),
+  eventTimeEnd: new Date(2024, 2, 20, 12)
 }]
 
 /* Color codes 
@@ -2166,4 +2379,5 @@ Cultura: #93C5FD
 Deporte: #039942
 
 Carnavales: #FF7F50
+Fallas: #880808
 */

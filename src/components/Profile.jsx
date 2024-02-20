@@ -473,7 +473,7 @@ const Profile = ({ logUser }) => {
                                       </div>
                                     </div>
                                     <div className={`flex flex-col font-poppins text-left m-auto`}>
-                                      <div className={`font-bold text-[18px]`}>
+                                      <div className={`font-bold text-[18px] titleWordBreak`}>
                                         {badge.title}
                                       </div>
                                       <div className={`text-[16px] text-left`}>
