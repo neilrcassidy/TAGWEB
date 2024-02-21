@@ -141,11 +141,17 @@ import {
   EV_FAL2_unlocked,
   EV_FAL3_unlocked,
   EV_FAL4_unlocked,
+  EV_FAL5_unlocked,
+  EV_FAL6_unlocked,
+  EV_FAL7_unlocked,
   EV_FAL8_unlocked,
   EV_FAL9_unlocked,
   EV_FAL10_unlocked,
   EV_FAL11_unlocked,
   EV_FAL12_unlocked,
+  EV_FAL13_unlocked,
+  EV_FAL14_unlocked,
+  EV_FAL15_unlocked,
   EV_FAL16_unlocked
 } from "../assets/img/badge_logos"
 
@@ -2094,7 +2100,7 @@ export const badges = [{
     description: "Ir a una mascletá.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "EV_FAL5_unlocked",
+    icon_unlocked: EV_FAL5_unlocked,
     type: "normal",
     update: "fallas",
     updateIcon: fallas
@@ -2106,7 +2112,7 @@ export const badges = [{
     description: "Ir a dos mascletás.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "EV_FAL6_unlocked",
+    icon_unlocked: EV_FAL6_unlocked,
     type: "normal",
     update: "fallas",
     updateIcon: fallas
@@ -2118,7 +2124,7 @@ export const badges = [{
     description: "Ir a tres mascletás.",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "EV_FAL7_unlocked",
+    icon_unlocked: EV_FAL7_unlocked,
     type: "normal",
     update: "fallas",
     updateIcon: fallas
@@ -2190,7 +2196,7 @@ export const badges = [{
     description: "Haz fotos a 5 fallas distintas.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "EV_FAL13_unlocked",
+    icon_unlocked: EV_FAL13_unlocked,
     type: "normal",
     update: "fallas",
     updateIcon: fallas
@@ -2202,7 +2208,7 @@ export const badges = [{
     description: "Haz fotos a 10 fallas distintas.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "EV_FAL14_unlocked",
+    icon_unlocked: EV_FAL14_unlocked,
     type: "normal",
     update: "fallas",
     updateIcon: fallas
@@ -2214,7 +2220,7 @@ export const badges = [{
     description: "Haz fotos a 15 fallas distintas.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "EV_FAL15_unlocked",
+    icon_unlocked: EV_FAL15_unlocked,
     type: "normal",
     update: "fallas",
     updateIcon: fallas

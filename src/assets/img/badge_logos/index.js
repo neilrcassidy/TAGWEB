@@ -166,17 +166,17 @@ import EV_FAL1_unlocked from "./EV_FAL1_unlocked.png"
 import EV_FAL2_unlocked from "./EV_FAL2_unlocked.png"
 import EV_FAL3_unlocked from "./EV_FAL3_unlocked.png"
 import EV_FAL4_unlocked from "./EV_FAL4_unlocked.png"
-//import EV_FAL5_unlocked from "./EV_FAL5_unlocked.png"
-//import EV_FAL6_unlocked from "./EV_FAL6_unlocked.png"
-//import EV_FAL7_unlocked from "./EV_FAL7_unlocked.png"
+import EV_FAL5_unlocked from "./EV_FAL5_unlocked.png"
+import EV_FAL6_unlocked from "./EV_FAL6_unlocked.png"
+import EV_FAL7_unlocked from "./EV_FAL7_unlocked.png"
 import EV_FAL8_unlocked from "./EV_FAL8_unlocked.png"
 import EV_FAL9_unlocked from "./EV_FAL9_unlocked.png"
 import EV_FAL10_unlocked from "./EV_FAL10_unlocked.png"
 import EV_FAL11_unlocked from "./EV_FAL11_unlocked.png"
 import EV_FAL12_unlocked from "./EV_FAL12_unlocked.png"
-//import EV_FAL13_unlocked from "./EV_FAL13_unlocked.png"
-//import EV_FAL14_unlocked from "./EV_FAL14_unlocked.png"
-//import EV_FAL15_unlocked from "./EV_FAL15_unlocked.png"
+import EV_FAL13_unlocked from "./EV_FAL13_unlocked.png"
+import EV_FAL14_unlocked from "./EV_FAL14_unlocked.png"
+import EV_FAL15_unlocked from "./EV_FAL15_unlocked.png"
 import EV_FAL16_unlocked from "./EV_FAL16_unlocked.png"
 
 export {
@@ -324,10 +324,16 @@ export {
     EV_FAL2_unlocked,
     EV_FAL3_unlocked,
     EV_FAL4_unlocked,
+    EV_FAL5_unlocked,
+    EV_FAL6_unlocked,
+    EV_FAL7_unlocked,
     EV_FAL8_unlocked,
     EV_FAL9_unlocked,
     EV_FAL10_unlocked,
     EV_FAL11_unlocked,
     EV_FAL12_unlocked,
+    EV_FAL13_unlocked,
+    EV_FAL14_unlocked,
+    EV_FAL15_unlocked,
     EV_FAL16_unlocked
 }
