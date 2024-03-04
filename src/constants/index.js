@@ -2145,7 +2145,7 @@ export const badges = [{
     id: "EV_FAL9",
     group: "fallas",
     title: "Falla de colesterol ",
-    description: "Tomar unos churros con chocolate.",
+    description: "Comprar y comer unos churros con chocolate.",
     points: 5,
     icon_locked: normal_badge_locked,
     icon_unlocked: EV_FAL9_unlocked,
