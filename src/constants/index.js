@@ -525,7 +525,7 @@ export const badges = [{
     id: "DIS4",
     group: "discipulo",
     title: "Discipulo de Piudeferro",
-    description: "Desaparece en una fiesta y baila con un/a desconocido/a.",
+    description: "Baila con un/a desconocido/a de fiesta.",
     points: 15,
     icon_locked: rare_badge_locked,
     icon_unlocked: DIS4_unlocked,
