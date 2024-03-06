@@ -39,6 +39,8 @@ import DIS5_unlocked from "./DIS5_unlocked.png"
 import DIS6_unlocked from "./DIS6_unlocked.png"
 import DIS8_unlocked from "./DIS8_unlocked.png"
 import DIS9_unlocked from "./DIS9_unlocked.png"
+import DIS11_unlocked from "./DIS11_unlocked.png"
+import DIS13_unlocked from "./DIS13_unlocked.png"
 import DIS15_unlocked from "./DIS15_unlocked.png"
 
 import FIE1_unlocked from "./FIE1_unlocked.png";
@@ -208,6 +210,8 @@ export {
     DIS6_unlocked,
     DIS8_unlocked,
     DIS9_unlocked,
+    DIS11_unlocked,
+    DIS13_unlocked,
     DIS15_unlocked,
     FIE1_unlocked,
     FIE2_unlocked,
