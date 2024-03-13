@@ -33,6 +33,7 @@ import MEN4_unlocked from "./MEN4_unlocked.png"
 import MEN15_unlocked from "./MEN15_unlocked.png"
 
 import DIS1_unlocked from "./DIS1_unlocked.png"
+import DIS2_unlocked from "./DIS2_unlocked.png"
 import DIS3_unlocked from "./DIS3_unlocked.png"
 import DIS4_unlocked from "./DIS4_unlocked.png"
 import DIS5_unlocked from "./DIS5_unlocked.png"
@@ -204,6 +205,7 @@ export {
     MEN4_unlocked,
     MEN15_unlocked,
     DIS1_unlocked,
+    DIS2_unlocked,
     DIS3_unlocked,
     DIS4_unlocked,
     DIS5_unlocked,
