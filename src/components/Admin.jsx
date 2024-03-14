@@ -140,9 +140,13 @@ const Admin = () => {
                   }
                 }}>
                 <option value="noUser">Select a user...</option>
-                {users.map((user, index) => {
+                {users.filter((doc) => !doc.data().hidden).map((user, index) => {
                   const text = user.data().nickname + " (" + user.data().email + ")";
                   return (<option value={user.data().id}>{text}</option>)
+                })}
+                {users.filter((doc) => doc.data().hidden).map((user, index) => {
+                  const text = user.data().nickname + " (" + user.data().email + ")";
+                  return (<option disabled value={user.data().id}>{text}</option>)
                 })}
               </select>
             </div>

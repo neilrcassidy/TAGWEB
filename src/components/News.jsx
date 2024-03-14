@@ -19,7 +19,22 @@ const News = () => {
   const [news, setNews] = useState([])
   const [newsSet, setNewsSet] = useState(false)
 
-  const fetchAll = async () => {
+  const [users, setUsers] = useState([])
+  const [usersSet, setUsersSet] = useState(false)
+
+  const [filter, setFilter] = useState("")
+  const [filteredNews, setFilteredNews] = useState([])
+
+  const fetchUsers = async () => {
+    const querySnapshot = await getDocs(query(collection(firestore, "users"), orderBy('points', 'desc')))
+    let docs = [];
+    querySnapshot.docs.map((doc) => {
+      docs.push(doc.data())
+    })
+    return docs
+  }
+
+  const fetchNews = async () => {
     const querySnapshot = await getDocs(query(collection(firestore, "news"), orderBy('date', 'desc')))
     let docs = [];
     querySnapshot.docs.map((doc) => {
@@ -28,18 +43,60 @@ const News = () => {
     return docs
   }
 
+  const handleFilter = (e) => {
+    setFilter(e.target.value)
+  }
+
   useEffect(() => {
-    fetchAll()
-      .then((docs) => setNews(docs))
+    fetchNews()
+      .then((docs) => {
+        setFilteredNews(docs)
+        setNews(docs)
+      })
       .then(() => setNewsSet(true))
+
+    fetchUsers()
+      .then((docs) => setUsers(docs))
+      .then(() => setUsersSet(true))
+    
+    console.log("useEffect1")
   }, [])
+  
+  useEffect(() => {
+    if(filter !== ""){
+      const filteredNews = news.filter((newsEntry) => newsEntry.data().userAssociated === filter)
+      setFilteredNews(filteredNews)
+      console.log("filtered")
+    } else {
+      setFilteredNews(news)
+      console.log("not filtered")
+    }
+
+    console.log("useEffect2")
+  }, [filter])
 
   return (
     <>
-      {newsSet ? (
-        <div id="newsPage" className={`flex ${styles.flexCenter}`}>
+      {!newsSet && !usersSet ? (
+        <div id="newsPage" className={`flex flex-col ${styles.flexCenter}`}>
+          <div className={`text-white text-[18px] font-poppins w-[90%] mt-4 gap-8`}>
+            <div className={`flex flex-row gap-2 justify-end`}>
+              <div className={`pt-1`}>Filtrar: </div>
+              <div>
+                <select id="participant" className="border border-secondary text-white bg-primary rounded-lg p-1"
+                  onChange={(e) => handleFilter(e)}>
+                  <option value="">Sin filtro</option>
+                  <option value="1">Sin filtro</option>
+                  {users.filter((doc) => !doc.hidden).map((user, index) => {
+                    const text = user.nickname
+                    return (<option value={user.id}>{text}</option>)
+                  })}
+                </select>
+              </div>
+            </div>
+          </div>
           <div id="newsCard" className={`flex flex-col text-white font-poppins font-bold ${styles.flexCenter} w-[90%] my-4 rounded-lg border-secondary border`}>
-            {news.map((newsEntry, index) => (
+            {filteredNews.map((newsEntry, index) => (
               <div id={newsEntry.id} className={`flex w-full gap-4 ${index === news.length - 1 ? "" : "border border-transparent border-b-secondary"}`}>
                 <div id="newsEntry" className={`flex mx-2 my-3 gap-4`}>
                   <div id="iconNewsEntry" className={`ss:min-w-[96px] ss:w-[96px] xs:min-w-[80px] xs:w-[80px] min-w-[64px] w-[64px] my-auto cursor-pointer`}>
