@@ -17,6 +17,7 @@ import {
   MEN2_unlocked,
   MEN3_unlocked,
   MEN4_unlocked,
+  MEN5_unlocked,
   MEN15_unlocked,
   DIS1_unlocked,
   DIS2_unlocked,
@@ -26,6 +27,7 @@ import {
   DIS6_unlocked,
   DIS8_unlocked,
   DIS9_unlocked,
+  DIS10_unlocked,
   DIS11_unlocked,
   DIS13_unlocked,
   DIS15_unlocked,
@@ -54,6 +56,7 @@ import {
   ALC10_unlocked,
   ALC11_unlocked,
   ALC12_unlocked,
+  ALC13_unlocked,
   JDM1_unlocked,
   JDM2_unlocked,
   JDM3_unlocked,
@@ -76,6 +79,9 @@ import {
   JDM20_unlocked,
   JDM21_unlocked,
   JDM22_unlocked,
+  JDM23_unlocked,
+  JDM24_unlocked,
+  JDM25_unlocked,
   COC1_unlocked,
   COC2_unlocked,
   COC3_unlocked,
@@ -92,6 +98,12 @@ import {
   VIA1_unlocked,
   VIA2_unlocked,
   VIA3_unlocked,
+  VIA4_unlocked,
+  VIA5_unlocked,
+  VIA6_unlocked,
+  VIA7_unlocked,
+  VIA8_unlocked,
+  VIA9_unlocked,
   RUT1_unlocked,
   RUT2_unlocked,
   RUT3_unlocked,
@@ -135,6 +147,21 @@ import {
   DEP7_unlocked,
   DEP8_unlocked,
   DEP9_unlocked,
+  DEP10_unlocked,
+  DEP11_unlocked,
+  DEP12_unlocked,
+  DEP13_unlocked,
+  DEP14_unlocked,
+  DEP15_unlocked,
+  DEP16_unlocked,
+  DEP17_unlocked,
+  LEC1_unlocked,
+  LEC2_unlocked,
+  LEC3_unlocked,
+  LEC4_unlocked,
+  LEC5_unlocked,
+  LEC6_unlocked,
+  LEC7_unlocked,
   EV_CAR1_unlocked,
   EV_CAR2_unlocked,
   EV_CAR3_unlocked,
@@ -160,6 +187,9 @@ import {
 
 import {
   update1,
+  update2,
+  //update3,
+  //update4,
   carnavales,
   fallas
 } from "../assets/img/update_symbols"
@@ -363,7 +393,7 @@ export const badges = [{
     description: "Asiste a la mensual de marzo.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "MEN5_unlocked",
+    icon_unlocked: MEN5_unlocked,
     type: "normal",
     update: 0,
     updateIcon: null
@@ -600,10 +630,10 @@ export const badges = [{
     id: "DIS10",
     group: "discipulo",
     title: "Discipulo de Visión",
-    description: "???",
+    description: "Hazte el ciego de fiesta. (Palo y gafas incluidas)",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "DIS10_unlocked",
+    icon_unlocked: DIS10_unlocked,
     type: "rare",
     update: 0,
     updateIcon: null
@@ -1017,6 +1047,18 @@ export const badges = [{
     updateIcon: update1
   },
   {
+    id: "ALC13",
+    group: "alcohol",
+    title: "Alcohólico",
+    description: "Bebe 200 cervezas.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: ALC13_unlocked,
+    type: "rare",
+    update: 2,
+    updateIcon: update2
+  },
+  {
     id: "JDM1",
     group: "juegos",
     title: "El señor de los Jueguillos",
@@ -1281,6 +1323,42 @@ export const badges = [{
     updateIcon: update1
   },
   {
+    id: "JDM23",
+    group: "juegos",
+    title: "Fotógrafo",
+    description: "Gana 3 partidas de Photo Roulette contra 3 personas de ANTX.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: JDM23_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "JDM24",
+    group: "juegos",
+    title: "Espía",
+    description: "Gana 5 partidas de Photo Roulette contra 3 personas de ANTX.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: JDM24_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "JDM25",
+    group: "juegos",
+    title: "Bro me miras el tlf?",
+    description: "Gana 10 partidas de Photo Roulette contra 3 personas de ANTX.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: JDM25_unlocked,
+    type: "rare",
+    update: 2,
+    updateIcon: update2
+  },
+  {
     id: "COC1",
     group: "cochinas",
     title: "Celestino/a",
@@ -1471,6 +1549,78 @@ export const badges = [{
     type: "rare",
     update: 0,
     updateIcon: null
+  },
+  {
+    id: "VIA4",
+    group: "viajes",
+    title: "Sugar Daddy",
+    description: "Paga una compra de más de 20 euros en un viaje con gente de ANTX.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: VIA4_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "VIA5",
+    group: "viajes",
+    title: "Casti no cuenta",
+    description: "Visita un castillo de viaje.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: VIA5_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "VIA6",
+    group: "viajes",
+    title: "Prohibido vomitar en iglesias",
+    description: "Visita una iglesia de viaje.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: VIA6_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "VIA7",
+    group: "viajes",
+    title: "20 minutes Sergi adventure",
+    description: "Visita y realiza una actividad en otra comunidad autonoma.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: VIA7_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "VIA8",
+    group: "viajes",
+    title: "Sicue",
+    description: "Visita y realiza una actividad en otras 2 comunidades autonomas.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: VIA8_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "VIA9",
+    group: "viajes",
+    title: "Uandelas",
+    description: "Visita y realiza una actividad en otras 3 comunidades autonomas.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: VIA9_unlocked,
+    type: "rare",
+    update: 2,
+    updateIcon: update2
   },
   {
     id: "RUT1",
@@ -1989,6 +2139,294 @@ export const badges = [{
     updateIcon: update1
   },
   {
+    id: "DEP10",
+    group: "deporte",
+    title: "Barras barras",
+    description: "Ir un día a hacer barras.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: DEP10_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "DEP11",
+    group: "deporte",
+    title: "Pensalas",
+    description: "Ir 3 días a hacer barras.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: DEP11_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "DEP12",
+    group: "deporte",
+    title: "Frases cantadas por un MC",
+    description: "Ir 5 días a hacer barras.",
+    points: 15,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: DEP12_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "DEP13",
+    group: "deporte",
+    title: "Maestro de la Fuerza",
+    description: "Haz 5 dominadas seguidas.",
+    points: 15,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: DEP13_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "DEP14",
+    group: "deporte",
+    title: "Maestro del Equilibrio",
+    description: "Haz 10 fondos seguidos.",
+    points: 15,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: DEP14_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "DEP15",
+    group: "deporte",
+    title: "Maestro del Impulso",
+    description: "Haz 20 flexiones seguidas.",
+    points: 15,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: DEP15_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "DEP16",
+    group: "deporte",
+    title: "Maestro de Corridas",
+    description: "Ir a correr todos los días durante una semana, o durante un mes entero mínimo tres dies a la semana.",
+    points: 20,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: DEP16_unlocked,
+    type: "rare",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "DEP17",
+    group: "deporte",
+    title: "Nadie habla sobre el Club de la lucha",
+    description: "Asistix a una pelea de boxeo legal... o ilegal.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: DEP17_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC1",
+    group: "lectura",
+    title: "El club de los poetas muertos ",
+    description: "Asiste a todos los clubes de lectura",
+    points: 25,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: LEC1_unlocked,
+    type: "rare",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC2",
+    group: "lectura",
+    title: "Una mentirosa más ",
+    description: "Asiste a 5 clubes de lectura seguidos",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: LEC2_unlocked,
+    type: "rare",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC3",
+    group: "lectura",
+    title: "Rata de biblioteca",
+    description: "Ir 5 veces a la biblioteca.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: LEC3_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC4",
+    group: "lectura",
+    title: "Opositor",
+    description: "Ir 10 veces a la biblioteca.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: LEC4_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC5",
+    group: "lectura",
+    title: "Dios del conocimiento",
+    description: "Ir 15 veces a la biblioteca.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: LEC5_unlocked,
+    type: "rare",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC6",
+    group: "lectura",
+    title: "El terror de los inmaterialistas",
+    description: "Ir a alguna feria del libro.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: LEC6_unlocked,
+    type: "rare",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC7",
+    group: "lectura",
+    title: "Marzo: Romance",
+    description: "Asiste al club de lectura de marzo.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: LEC7_unlocked,
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC8",
+    group: "lectura",
+    title: "Abril: ???",
+    description: "Asiste al club de lectura de abril.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "LEC8_unlocked",
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC9",
+    group: "lectura",
+    title: "Mayo: ???",
+    description: "Asiste al club de lectura de mayo.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "LEC9_unlocked",
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC10",
+    group: "lectura",
+    title: "Junio: ???",
+    description: "Asiste al club de lectura de junio.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "LEC10_unlocked",
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC11",
+    group: "lectura",
+    title: "Julio: ???",
+    description: "Asiste al club de lectura de julio.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "LEC11_unlocked",
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC12",
+    group: "lectura",
+    title: "Agosto: ???",
+    description: "Asiste al club de lectura de agosto.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "LEC12_unlocked",
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC13",
+    group: "lectura",
+    title: "Septiembre: ???",
+    description: "Asiste al club de lectura de septiembre.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "LEC13_unlocked",
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC14",
+    group: "lectura",
+    title: "Octubre: ???",
+    description: "Asiste al club de lectura de octubre.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "LEC14_unlocked",
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC15",
+    group: "lectura",
+    title: "Noviembre: ???",
+    description: "Asiste al club de lectura de noviembre.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "LEC15_unlocked",
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
+    id: "LEC16",
+    group: "lectura",
+    title: "Diciembre: ???",
+    description: "Asiste al club de lectura de diciembre.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "LEC16_unlocked",
+    type: "normal",
+    update: 2,
+    updateIcon: update2
+  },
+  {
     id: "EV_CAR1",
     group: "carnavales",
     title: "Carnaval, carnavaaaaaal",
@@ -2111,7 +2549,7 @@ export const badges = [{
   {
     id: "EV_FAL6",
     group: "fallas",
-    title: "Puuum ",
+    title: "Puuum",
     description: "Ir a dos mascletás.",
     points: 10,
     icon_locked: normal_badge_locked,
@@ -2243,12 +2681,12 @@ export const badges = [{
 ]
 
 export const categories = [{
-    title: "Deporte",
-    category: "deporte",
-    emoji: "react@emojify-1064",
-    color: "[#039942]",
-    borderColor: "border-[#039942]",
-    bgColor: "bg-[#039942]",
+    title: "Lectura",
+    category: "lectura",
+    emoji: "react@emojify-72",
+    color: "[#c19770]",
+    borderColor: "border-[#c19770]",
+    bgColor: "bg-[#c19770]",
     newCategory: true
   },
   {
@@ -2276,6 +2714,15 @@ export const categories = [{
     color: "[#c7bc28]",
     borderColor: "border-[#c7bc28]",
     bgColor: "bg-[#c7bc28]",
+    newCategory: false
+  },
+  {
+    title: "Deporte",
+    category: "deporte",
+    emoji: "react@emojify-1064",
+    color: "[#039942]",
+    borderColor: "border-[#039942]",
+    bgColor: "bg-[#039942]",
     newCategory: false
   },
   {
@@ -2353,7 +2800,7 @@ export const categories = [{
 ]
 
 export const events = [{
-  title: "Carnavales de Villar",
+  title: "Carnavales",
   category: "carnavales",
   emoji: "react@emojify-1115",
   color: "[#FF7F50]",
@@ -2386,6 +2833,7 @@ Rutas: #023020
 Marines: #FF7F50
 Cultura: #93C5FD
 Deporte: #039942
+Lectura: #c19770
 
 Carnavales: #FF7F50
 Fallas: #880808

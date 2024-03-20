@@ -26,7 +26,7 @@ const News = () => {
   const [filteredNews, setFilteredNews] = useState([])
 
   const fetchUsers = async () => {
-    const querySnapshot = await getDocs(query(collection(firestore, "users"), orderBy('points', 'desc')))
+    const querySnapshot = await getDocs(query(collection(firestore, "users"), orderBy('nickname')))
     let docs = [];
     querySnapshot.docs.map((doc) => {
       docs.push(doc.data())
@@ -58,8 +58,6 @@ const News = () => {
     fetchUsers()
       .then((docs) => setUsers(docs))
       .then(() => setUsersSet(true))
-    
-    console.log("useEffect1")
   }, [])
   
   useEffect(() => {
@@ -71,23 +69,20 @@ const News = () => {
       setFilteredNews(news)
       console.log("not filtered")
     }
-
-    console.log("useEffect2")
   }, [filter])
 
   return (
     <>
-      {!newsSet && !usersSet ? (
+      {newsSet && usersSet ? (
         <div id="newsPage" className={`flex flex-col ${styles.flexCenter}`}>
           <div className={`text-white text-[18px] font-poppins w-[90%] mt-4 gap-8`}>
             <div className={`flex flex-row gap-2 justify-end`}>
               <div className={`pt-1`}>Filtrar: </div>
               <div>
-                <select id="participant" className="border border-secondary text-white bg-primary rounded-lg p-1"
+                <select id="participant" className="border border-secondary text-white bg-primary rounded-lg p-1 focus:border-secondary"
                   onChange={(e) => handleFilter(e)}>
                   <option value="">Sin filtro</option>
-                  <option value="1">Sin filtro</option>
-                  {users.filter((doc) => !doc.hidden).map((user, index) => {
+                  {users.map((user, index) => {
                     const text = user.nickname
                     return (<option value={user.id}>{text}</option>)
                   })}
@@ -110,6 +105,11 @@ const News = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className={`text-white text-[18px] font-poppins w-[90%] mb-4 gap-8`}>
+            <div className={`flex flex-row gap-2 justify-center`}>
+              <div className={`pt-1`}>Cantidad: {filteredNews.length}</div>
+            </div>
           </div>
         </div>
       ) : (
