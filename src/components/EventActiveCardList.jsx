@@ -15,7 +15,7 @@ const EventActiveCardList = ({ userBadges, title, category, emoji, color, border
           <h3>Evento: {title} {emoji} </h3>
           {currentDate >= eventTimeStart && currentDate < eventTimeEnd ? <img className={`ml-0 m-auto w-[100px]`} src={activo}/> : ""}
         </div>
-        <div className={`m-auto my-2 mr-3`}>
+        <div className={`m-auto my-2 mr-3 text-[20px]`}>
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === category).length}/{badges.filter((badge) => badge.group === category).length}</h3>
         </div>
       </div>

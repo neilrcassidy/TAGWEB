@@ -13,7 +13,7 @@ const BadgeCardList = ({ userBadges, title, category, emoji, color, borderColor,
           <h3>{title} {emoji} </h3>
           {newCategory ? <img className={`ml-0 m-auto w-[100px]`} src={nueva} /> : ""}
         </div>
-        <div className={`m-auto my-2 mr-3`}>
+        <div className={`m-auto my-2 mr-3 text-[20px]`}>
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === category).length}/{badges.filter((badge) => badge.group === category).length}</h3>
         </div>
       </div>

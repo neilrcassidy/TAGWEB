@@ -12,7 +12,7 @@ const EventInactiveCardList = ({ userBadges, title, category, emoji }) => {
         <div className={`flex flex-wrap m-auto my-2 ml-3 text-[20px] w-[100%] gap-2`}>
           <h3>Evento: {title} {emoji} </h3>
         </div>
-        <div className={`m-auto my-2 mr-3`}>
+        <div className={`m-auto my-2 mr-3 text-[20px]`}>
           <h3>{badges.filter((badge) => userBadges.includes(badge.id) && badge.group === category).length}/{badges.filter((badge) => badge.group === category).length}</h3>
         </div>
       </div>
