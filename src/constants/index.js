@@ -2237,8 +2237,8 @@ export const badges = [{
   {
     id: "LEC1",
     group: "lectura",
-    title: "El club de los poetas muertos ",
-    description: "Asiste a todos los clubes de lectura",
+    title: "El club de los poetas muertos",
+    description: "Asiste a todos los clubes de lectura.",
     points: 25,
     icon_locked: rare_badge_locked,
     icon_unlocked: LEC1_unlocked,
@@ -2249,8 +2249,8 @@ export const badges = [{
   {
     id: "LEC2",
     group: "lectura",
-    title: "Una mentirosa más ",
-    description: "Asiste a 5 clubes de lectura seguidos",
+    title: "Una mentirosa más",
+    description: "Asiste a 5 clubes de lectura seguidos.",
     points: 15,
     icon_locked: rare_badge_locked,
     icon_unlocked: LEC2_unlocked,
