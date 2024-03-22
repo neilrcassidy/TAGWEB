@@ -78,7 +78,8 @@ const NewAccount = ({ isUserLogged }) => {
       nickname: nickname,
       points: 0,
       profilePic: profilePicUrl,
-      hidden: false
+      hidden: false,
+      god: false
     })
   }
 

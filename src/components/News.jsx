@@ -82,10 +82,12 @@ const News = () => {
                 <select id="participant" className="border border-secondary text-white bg-primary rounded-lg p-1 focus:border-secondary"
                   onChange={(e) => handleFilter(e)}>
                   <option value="">Sin filtro</option>
-                  {users.map((user, index) => {
-                    const text = user.nickname
-                    return (<option value={user.id}>{text}</option>)
-                  })}
+                  {users.filter((user) => user.god === false)
+                    .map((user, index) => {
+                      const text = user.nickname
+                      return (<option value={user.id}>{text}</option>)
+                    })
+                  }
                 </select>
               </div>
             </div>
