@@ -1230,7 +1230,7 @@ export const badges = [{
     id: "JDM15",
     group: "juegos",
     title: "It's me! Ismatthew!",
-    description: "Gana un campeonato de Mario Kart contra gente de ANTX.",
+    description: "Gana un campeonato de Mario Kart contra gente de ANTX. (Un torneo es un Grand Prix de 4 personas)",
     points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: JDM15_unlocked,
@@ -2321,7 +2321,7 @@ export const badges = [{
   {
     id: "LEC8",
     group: "lectura",
-    title: "Abril: ???",
+    title: "Abril: Fantasía",
     description: "Asiste al club de lectura de abril.",
     points: 5,
     icon_locked: normal_badge_locked,
