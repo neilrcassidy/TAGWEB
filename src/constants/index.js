@@ -182,7 +182,17 @@ import {
   EV_FAL13_unlocked,
   EV_FAL14_unlocked,
   EV_FAL15_unlocked,
-  EV_FAL16_unlocked
+  EV_FAL16_unlocked,
+  EV_SANVI1_unlocked,
+  EV_SANVI2_unlocked,
+  EV_SANVI3_unlocked,
+  EV_SANVI4_unlocked,
+  EV_SANVI5_unlocked,
+  EV_SANVI6_unlocked,
+  EV_SANVI7_unlocked,
+  EV_SANVI8_unlocked,
+  EV_SANVI9_unlocked,
+  EV_SANVI10_unlocked
 } from "../assets/img/badge_logos"
 
 import {
@@ -191,7 +201,8 @@ import {
   //update3,
   //update4,
   carnavales,
-  fallas
+  fallas,
+  sanvi
 } from "../assets/img/update_symbols"
 
 export const badges = [{
@@ -2677,6 +2688,126 @@ export const badges = [{
     type: "rare",
     update: "fallas",
     updateIcon: fallas
+  },
+  {
+    id: "EV_SANVI1",
+    group: "sanvi",
+    title: "El millor día del any",
+    description: "Asiste a las paellas de San Vicente.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_SANVI1_unlocked,
+    type: "normal",
+    update: "sanvi",
+    updateIcon: sanvi
+  },
+  {
+    id: "EV_SANVI2",
+    group: "sanvi",
+    title: "BOICOT A 72",
+    description: "Lleva la camiseta de ANTX el dia de las paellas.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_SANVI2_unlocked,
+    type: "normal",
+    update: "sanvi",
+    updateIcon: sanvi
+  },
+  {
+    id: "EV_SANVI3",
+    group: "sanvi",
+    title: "Carmen \"Carmy\" Berzatto",
+    description: "Haz una de las paellas.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: EV_SANVI3_unlocked,
+    type: "rare",
+    update: "sanvi",
+    updateIcon: sanvi
+  },
+  {
+    id: "EV_SANVI4",
+    group: "sanvi",
+    title: "Sergi no va a tener esta ni de coña",
+    description: "Ayuda al cocinero o a los cocineros. (Los cocineros decidirán quien ha ayudado de verdad)",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_SANVI4_unlocked,
+    type: "normal",
+    update: "sanvi",
+    updateIcon: sanvi
+  },
+  {
+    id: "EV_SANVI5",
+    group: "sanvi",
+    title: "I paell?",
+    description: "Prueba de otras 3 paellas",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_SANVI5_unlocked,
+    type: "normal",
+    update: "sanvi",
+    updateIcon: sanvi
+  },
+  {
+    id: "EV_SANVI6",
+    group: "sanvi",
+    title: "L'aigua de la vida",
+    description: "Prueba de otras 3 sangrías, aguas de valencia, fairys, etc",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_SANVI6_unlocked,
+    type: "normal",
+    update: "sanvi",
+    updateIcon: sanvi
+  },
+  {
+    id: "EV_SANVI7",
+    group: "sanvi",
+    title: "Leto no va a tener esta ni de coña",
+    description: "Participa en lavar las paellas.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: EV_SANVI7_unlocked,
+    type: "rare",
+    update: "sanvi",
+    updateIcon: sanvi
+  },
+  {
+    id: "EV_SANVI8",
+    group: "sanvi",
+    title: "Real hasta la muerte oiste baby brrrrrrrrr",
+    description: "Asiste a la cena post-paellas.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_SANVI8_unlocked,
+    type: "normal",
+    update: "sanvi",
+    updateIcon: sanvi
+  },
+  {
+    id: "EV_SANVI9",
+    group: "sanvi",
+    title: "SANT VICENT, SANT VICENT, SANT VICENT!",
+    description: "Asiste al almuerzo en el parque San Vicente, el dia de San Vicente.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_SANVI9_unlocked,
+    type: "normal",
+    update: "sanvi",
+    updateIcon: sanvi
+  },
+  {
+    id: "EV_SANVI10",
+    group: "sanvi",
+    title: "Pasteleria de Marivi Enjoyer",
+    description: "Compra el almuerzo en la pasteleria de Marivi.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_SANVI10_unlocked,
+    type: "normal",
+    update: "sanvi",
+    updateIcon: sanvi
   }
 ]
 
@@ -2818,7 +2949,18 @@ export const events = [{
   bgColor: "bg-[#880808]",
   eventTimeStart: new Date(2024, 1, 25, 18),
   eventTimeEnd: new Date(2024, 2, 20, 6)
-}]
+},
+{
+  title: "Paelles de Sant Vicent",
+  category: "sanvi",
+  emoji: "react@emojify-747",
+  color: "[#348a38]",
+  borderColor: "border-[#348a38]",
+  bgColor: "bg-[#348a38]",
+  eventTimeStart: new Date(2024, 3, 7, 6),
+  eventTimeEnd: new Date(2024, 3, 8, 18)
+},
+]
 
 /* Color codes 
 General: #7EC46D
@@ -2837,4 +2979,5 @@ Lectura: #c19770
 
 Carnavales: #FF7F50
 Fallas: #880808
+Paellas de San Vicente: #348a38
 */

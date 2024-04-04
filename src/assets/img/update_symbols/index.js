@@ -7,6 +7,7 @@ import update4 from "./update4.png"
 
 import carnavales from "./carnavales.png"
 import fallas from "./fallas.png"
+import sanvi from "./sanvi.png"
 
 export {
     nueva,
@@ -16,5 +17,6 @@ export {
     update3,
     update4,
     carnavales,
-    fallas
+    fallas,
+    sanvi
 }

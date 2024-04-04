@@ -212,6 +212,17 @@ import EV_FAL14_unlocked from "./EV_FAL14_unlocked.png"
 import EV_FAL15_unlocked from "./EV_FAL15_unlocked.png"
 import EV_FAL16_unlocked from "./EV_FAL16_unlocked.png"
 
+import EV_SANVI1_unlocked from "./EV_SANVI1_unlocked.png"
+import EV_SANVI2_unlocked from "./EV_SANVI2_unlocked.png"
+import EV_SANVI3_unlocked from "./EV_SANVI3_unlocked.png"
+import EV_SANVI4_unlocked from "./EV_SANVI4_unlocked.png"
+import EV_SANVI5_unlocked from "./EV_SANVI5_unlocked.png"
+import EV_SANVI6_unlocked from "./EV_SANVI6_unlocked.png"
+import EV_SANVI7_unlocked from "./EV_SANVI7_unlocked.png"
+import EV_SANVI8_unlocked from "./EV_SANVI8_unlocked.png"
+import EV_SANVI9_unlocked from "./EV_SANVI9_unlocked.png"
+import EV_SANVI10_unlocked from "./EV_SANVI10_unlocked.png"
+
 export {
     normal_badge_locked,
     rare_badge_locked,
@@ -398,5 +409,15 @@ export {
     EV_FAL13_unlocked,
     EV_FAL14_unlocked,
     EV_FAL15_unlocked,
-    EV_FAL16_unlocked
+    EV_FAL16_unlocked,
+    EV_SANVI1_unlocked,
+    EV_SANVI2_unlocked,
+    EV_SANVI3_unlocked,
+    EV_SANVI4_unlocked,
+    EV_SANVI5_unlocked,
+    EV_SANVI6_unlocked,
+    EV_SANVI7_unlocked,
+    EV_SANVI8_unlocked,
+    EV_SANVI9_unlocked,
+    EV_SANVI10_unlocked
 }
