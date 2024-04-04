@@ -2753,7 +2753,7 @@ export const badges = [{
     id: "EV_SANVI6",
     group: "sanvi",
     title: "L'aigua de la vida",
-    description: "Prueba de otras 3 sangrías, aguas de valencia, fairys, etc",
+    description: "Prueba el alcohol de otros 3 grupos.",
     points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: EV_SANVI6_unlocked,
