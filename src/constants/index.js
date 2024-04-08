@@ -2061,7 +2061,7 @@ export const badges = [{
     points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: DEP2_unlocked,
-    type: "noral",
+    type: "normal",
     update: 1,
     updateIcon: update1
   },
