@@ -163,6 +163,7 @@ import {
   LEC5_unlocked,
   LEC6_unlocked,
   LEC7_unlocked,
+  LEC8_unlocked,
   EV_CAR1_unlocked,
   EV_CAR2_unlocked,
   EV_CAR3_unlocked,
@@ -2337,7 +2338,7 @@ export const badges = [{
     description: "Asiste al club de lectura de abril.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "LEC8_unlocked",
+    icon_unlocked: LEC8_unlocked,
     type: "normal",
     update: 2,
     updateIcon: update2
