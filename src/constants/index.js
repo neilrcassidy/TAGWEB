@@ -165,6 +165,7 @@ import {
   LEC6_unlocked,
   LEC7_unlocked,
   LEC8_unlocked,
+  LEC9_unlocked,
   EV_CAR1_unlocked,
   EV_CAR2_unlocked,
   EV_CAR3_unlocked,
@@ -2347,11 +2348,11 @@ export const badges = [{
   {
     id: "LEC9",
     group: "lectura",
-    title: "Mayo: ???",
+    title: "Mayo",
     description: "Asiste al club de lectura de mayo.",
     points: 5,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "LEC9_unlocked",
+    icon_unlocked: LEC9_unlocked,
     type: "normal",
     update: 2,
     updateIcon: update2
