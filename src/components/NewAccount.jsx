@@ -72,10 +72,10 @@ const NewAccount = ({ isUserLogged }) => {
     await setDoc(doc(firestore, "users", auth.currentUser.uid), {
       admin: false,
       badges: [],
-      email: email,
+      email: email.trim(),
       favoriteBadges: [],
       id: id,
-      nickname: nickname,
+      nickname: nickname.trim(),
       points: 0,
       profilePic: profilePicUrl,
       hidden: false,
@@ -84,7 +84,6 @@ const NewAccount = ({ isUserLogged }) => {
   }
 
   const createNewsEntry = async (nickname, id, profilePicUrl) => {
-    const d = new Date()
     await addDoc(collection(firestore, "news"), {
       title: "¡Bienvenido/a " + nickname + "!",
       body: "¡" + nickname + " ha empezado a jugar!",
