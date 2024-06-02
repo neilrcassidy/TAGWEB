@@ -3,7 +3,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
 import styles from "../style"
-import { badges } from "../constants"
+import { badges, categories, events } from "../constants"
 
 // React imports
 import { useEffect, useState } from "react"
@@ -162,10 +162,28 @@ const Admin = () => {
                   }
                 }}>
                 <option value="noBadge">Select a badge...</option>
-                {badges.map((badge, index) => {
-                  const text = badge.id + ". " + badge.title + " (" + badge.points + " points)";
-                  return (<option value={badge.id}>{text}</option>)
+                {categories.map((category, index) => {
+                  return (
+                    <optgroup label={category.title}>
+                      {badges.filter((badge) => badge.group === category.category)
+                        .map((badge, index) => {
+                          const text = badge.id + ". " + badge.title + " (" + badge.points + " points)";
+                          return (<option value={badge.id}>{text}</option>)
+                        })}
+                    </optgroup>
+                  )
                 })}
+                {events.map((event, index) => {
+                    return (
+                      <optgroup label={event.title}>
+                        {badges.filter((badge) => badge.group === event.category)
+                        .map((badge, index) => {
+                          const text = badge.id + ". " + badge.title + " (" + badge.points + " points)";
+                          return (<option value={badge.id}>{text}</option>)
+                        })}
+                      </optgroup>
+                    )
+                  })}
               </select>
             </div>
             {/*<div className={`flex flex-row ${styles.flexCenter}`}>

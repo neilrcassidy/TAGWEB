@@ -273,7 +273,7 @@ export const badges = [{
     id: "GEN6",
     group: "general",
     title: "Ministro/a",
-    description: "Proponer un plan no alcohólico y que se llene un coche como mínimo.",
+    description: "Proponer un plan no alcohólico y que se llene un coche como mínimo. (Organizar una ruta o una pachanga no cuenta.)",
     points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: GEN6_unlocked,
@@ -380,7 +380,7 @@ export const badges = [{
   {
     id: "MEN3",
     group: "mensual",
-    title: "Enero",
+    title: "Mensual: Enero",
     description: "Asiste a la mensual de enero.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -392,7 +392,7 @@ export const badges = [{
   {
     id: "MEN4",
     group: "mensual",
-    title: "Febrero",
+    title: "Mensual: Febrero",
     description: "Asiste a la mensual de febrero.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -404,7 +404,7 @@ export const badges = [{
   {
     id: "MEN5",
     group: "mensual",
-    title: "Marzo",
+    title: "Mensual: Marzo",
     description: "Asiste a la mensual de marzo.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -416,7 +416,7 @@ export const badges = [{
   {
     id: "MEN6",
     group: "mensual",
-    title: "Abril",
+    title: "Mensual: Abril",
     description: "Asiste a la mensual de abril.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -428,7 +428,7 @@ export const badges = [{
   {
     id: "MEN7",
     group: "mensual",
-    title: "Mayo",
+    title: "Mensual: Mayo",
     description: "Asiste a la mensual de mayo.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -440,7 +440,7 @@ export const badges = [{
   {
     id: "MEN8",
     group: "mensual",
-    title: "Junio",
+    title: "Mensual: Junio",
     description: "Asiste a la mensual de junio.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -452,7 +452,7 @@ export const badges = [{
   {
     id: "MEN9",
     group: "mensual",
-    title: "Julio",
+    title: "Mensual: Julio",
     description: "Asiste a la mensual de julio.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -464,7 +464,7 @@ export const badges = [{
   {
     id: "MEN10",
     group: "mensual",
-    title: "Agosto",
+    title: "Mensual: Agosto",
     description: "Asiste a la mensual de agosto.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -476,7 +476,7 @@ export const badges = [{
   {
     id: "MEN11",
     group: "mensual",
-    title: "Septiembre",
+    title: "Mensual: Septiembre",
     description: "Asiste a la mensual de septiembre.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -488,7 +488,7 @@ export const badges = [{
   {
     id: "MEN12",
     group: "mensual",
-    title: "Octubre",
+    title: "Mensual: Octubre",
     description: "Asiste a la mensual de octubre.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -500,7 +500,7 @@ export const badges = [{
   {
     id: "MEN13",
     group: "mensual",
-    title: "Noviembre",
+    title: "Mensual: Noviembre",
     description: "Asiste a la mensual de noviembre.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -512,7 +512,7 @@ export const badges = [{
   {
     id: "MEN14",
     group: "mensual",
-    title: "Diciembre",
+    title: "Mensual: Diciembre",
     description: "Asiste a la mensual de diciembre.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -2324,7 +2324,7 @@ export const badges = [{
   {
     id: "LEC7",
     group: "lectura",
-    title: "Marzo: Romance",
+    title: "Lectura: Marzo",
     description: "Asiste al club de lectura de marzo.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -2336,7 +2336,7 @@ export const badges = [{
   {
     id: "LEC8",
     group: "lectura",
-    title: "Abril: Fantasía",
+    title: "Lectura: Abril",
     description: "Asiste al club de lectura de abril.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -2348,7 +2348,7 @@ export const badges = [{
   {
     id: "LEC9",
     group: "lectura",
-    title: "Mayo",
+    title: "Lectura: Mayo",
     description: "Asiste al club de lectura de mayo.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -2360,7 +2360,7 @@ export const badges = [{
   {
     id: "LEC10",
     group: "lectura",
-    title: "Junio: ???",
+    title: "Lectura: Junio",
     description: "Asiste al club de lectura de junio.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -2372,7 +2372,7 @@ export const badges = [{
   {
     id: "LEC11",
     group: "lectura",
-    title: "Julio: ???",
+    title: "Lectura: Julio",
     description: "Asiste al club de lectura de julio.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -2384,7 +2384,7 @@ export const badges = [{
   {
     id: "LEC12",
     group: "lectura",
-    title: "Agosto: ???",
+    title: "Lectura: Agosto",
     description: "Asiste al club de lectura de agosto.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -2396,7 +2396,7 @@ export const badges = [{
   {
     id: "LEC13",
     group: "lectura",
-    title: "Septiembre: ???",
+    title: "Lectura: Septiembre",
     description: "Asiste al club de lectura de septiembre.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -2408,7 +2408,7 @@ export const badges = [{
   {
     id: "LEC14",
     group: "lectura",
-    title: "Octubre: ???",
+    title: "Lectura: Octubre",
     description: "Asiste al club de lectura de octubre.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -2420,7 +2420,7 @@ export const badges = [{
   {
     id: "LEC15",
     group: "lectura",
-    title: "Noviembre: ???",
+    title: "Lectura: Noviembre",
     description: "Asiste al club de lectura de noviembre.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -2432,7 +2432,7 @@ export const badges = [{
   {
     id: "LEC16",
     group: "lectura",
-    title: "Diciembre: ???",
+    title: "Lectura: Diciembre",
     description: "Asiste al club de lectura de diciembre.",
     points: 5,
     icon_locked: normal_badge_locked,
