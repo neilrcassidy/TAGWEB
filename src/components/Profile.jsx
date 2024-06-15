@@ -61,6 +61,11 @@ const Profile = ({ logUser }) => {
   const [badge3, setBadge3] = useState();
   const [badge4, setBadge4] = useState();
   const [badge5, setBadge5] = useState();
+  const [badge6, setBadge6] = useState();
+  const [badge7, setBadge7] = useState();
+  const [badge8, setBadge8] = useState();
+  const [badge9, setBadge9] = useState();
+  const [badge10, setBadge10] = useState();
 
   const checkAuthState = async () => {
     auth.onAuthStateChanged(async function (user) {
@@ -148,6 +153,26 @@ const Profile = ({ logUser }) => {
       selectedFavoriteBadges.push(badge5);
     }
 
+    if (badge6 !== undefined && badge6 !== "0") {
+      selectedFavoriteBadges.push(badge6);
+    }
+
+    if (badge7 !== undefined && badge7 !== "0") {
+      selectedFavoriteBadges.push(badge7);
+    }
+
+    if (badge8 !== undefined && badge8 !== "0") {
+      selectedFavoriteBadges.push(badge8);
+    }
+
+    if (badge9 !== undefined && badge9 !== "0") {
+      selectedFavoriteBadges.push(badge9);
+    }
+
+    if (badge10 !== undefined && badge10 !== "0") {
+      selectedFavoriteBadges.push(badge10);
+    }
+
     selectedFavoriteBadges = selectedFavoriteBadges.filter(
       (value, index) => selectedFavoriteBadges.indexOf(value) === index
     );
@@ -219,12 +244,10 @@ const Profile = ({ logUser }) => {
       {dataSet ? (
         <div
           id="profilePage"
-          className={`flex flex-col text-white font-poppins ${styles.flexCenter} pb-4`}
-        >
+          className={`flex flex-col text-white font-poppins ${styles.flexCenter} pb-4`}>
           <div
             id="profileCard"
-            className={`flex flex-col rounded-lg border-secondary border w-[90%] mt-4 font-bold`}
-          >
+            className={`flex flex-col rounded-lg border-secondary border w-[90%] mt-4 font-bold`}>
             <div id="profileTitle" className={`flex bg-secondary rounded-t-md`}>
               <div className={`flex w-[100%] my-4`}>
                 <div className={`m-auto my-1 ml-4 text-[24px]`}>
@@ -232,28 +255,22 @@ const Profile = ({ logUser }) => {
                 </div>
                 <div className={`flex m-auto mr-4`}>
                   {editMode ? (
-                    <button
-                      className="border border-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-black py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    <button className="border border-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-black py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                       type="button"
-                      onClick={() => setEditMode(false)}
-                    >
+                      onClick={() => setEditMode(false)}>
                       Cancelar
                     </button>
                   ) : (
                     <div className={`flex gap-2`}>
-                      <button
-                        className="border border-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-black py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      <button className="border border-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-black py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         type="button"
-                        onClick={() => setEditMode(true)}
-                      >
+                        onClick={() => setEditMode(true)}>
                         Editar
                       </button>
                       {currentUserAdmin ? (
-                        <button
-                          className="border border-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-black py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        <button className="border border-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-black py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                           type="button"
-                          onClick={navAdmin}
-                        >
+                          onClick={navAdmin}>
                           Admin
                         </button>
                       ) : (
@@ -291,8 +308,7 @@ const Profile = ({ logUser }) => {
                       <div></div>
                     )}
                     <div className={`flex text-[18px]`}>
-                      <input
-                        className="text-black text-[16px] p-2"
+                      <input className="text-black text-[16px] p-2"
                         id="nickname"
                         type="text"
                         placeholder={currentUserNickname}
@@ -302,13 +318,11 @@ const Profile = ({ logUser }) => {
                       />
                     </div>
                     <div className={`flex`}>
-                      <button
-                        className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
+                      <button className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
                         type="button"
                         onClick={() =>
                           updateNickname().then(() => setNicknameUpdated(true))
-                        }
-                      >
+                        }>
                         Actualizar
                       </button>
                     </div>
@@ -325,8 +339,7 @@ const Profile = ({ logUser }) => {
                       <div></div>
                     )}
                     <div className={`flex flex-col`}>
-                      <input
-                        id="imageInput"
+                      <input id="imageInput"
                         className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline max-w-[256px]"
                         type="file"
                         accept="image/*"
@@ -335,8 +348,7 @@ const Profile = ({ logUser }) => {
                         }}
                       />
                       {newProfilePicFileCropped ? (
-                        <img
-                          id="imagePreview"
+                        <img id="imagePreview"
                           src={URL.createObjectURL(newProfilePicFileCropped)}
                           className={`max-w-[256px] mt-4 border-0 rounded-full ${styles.flexCenter}`}
                         />
@@ -345,15 +357,13 @@ const Profile = ({ logUser }) => {
                       )}
                     </div>
                     <div className={`flex`}>
-                      <button
-                        className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
+                      <button className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
                         type="button"
                         onClick={() =>
                           updateProfilePic().then(() =>
                             setProfilePicUpdated(true)
                           )
-                        }
-                      >
+                        }>
                         Actualizar
                       </button>
                     </div>
@@ -365,40 +375,31 @@ const Profile = ({ logUser }) => {
                     {favoriteBadgesUpdated ? (
                       <div className={`flex text-[12px] text-secondary`}>
                         <h2>
-                          Chapas favoritas actualizada! Recarga la página.
+                          Chapas favoritas actualizadas! Recarga la página.
                         </h2>
                       </div>
                     ) : (
                       <div></div>
                     )}
                     <div className={`flex flex-wrap gap-4`}>
-                      <div className={`flex flex-col`}>
+                      <div id="f_badge1" className={`flex flex-col`}>
                         <div className={`flex text-[14px]`}>
-                          <h2>Logro 1:</h2>
+                          <h2>Chapa 1:</h2>
                         </div>
                         <select
                           className={`text-black font-normal w-[95%]`}
                           onChange={(e) => {
                             setBadge1(e.target.value);
-                          }}
-                        >
+                          }}>
                           <option value="0">...</option>
                           {categories.map((category, index) => {
                             return (
                               <optgroup label={category.title}>
                                 {badges
-                                  .filter(
-                                    (badge) => badge.group === category.category && currentUserBadges.includes(badge.id)
-                                  )
+                                  .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text =
-                                      badge.title +
-                                      " (" +
-                                      badge.points +
-                                      " points)";
-                                    return (
-                                      <option value={badge.id}>{text}</option>
-                                    );
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
                             );
@@ -407,51 +408,34 @@ const Profile = ({ logUser }) => {
                             return (
                               <optgroup label={event.title}>
                                 {badges
-                                  .filter(
-                                    (badge) => badge.group === event.category && currentUserBadges.includes(badge.id)
-                                  )
+                                  .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text =
-                                      badge.title +
-                                      " (" +
-                                      badge.points +
-                                      " points)";
-                                    return (
-                                      <option value={badge.id}>{text}</option>
-                                    );
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
                             );
                           })}
                         </select>
                       </div>
-                      <div className={`flex flex-col`}>
+                      <div id="f_badge2" className={`flex flex-col`}>
                         <div className={`flex text-[14px]`}>
-                          <h2>Logro 2:</h2>
+                          <h2>Chapa 2:</h2>
                         </div>
                         <select
                           className={`text-black font-normal w-[95%]`}
                           onChange={(e) => {
                             setBadge2(e.target.value);
-                          }}
-                        >
+                          }}>
                           <option value="0">...</option>
                           {categories.map((category, index) => {
                             return (
                               <optgroup label={category.title}>
                                 {badges
-                                  .filter(
-                                    (badge) => badge.group === category.category && currentUserBadges.includes(badge.id)
-                                  )
+                                  .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text =
-                                      badge.title +
-                                      " (" +
-                                      badge.points +
-                                      " points)";
-                                    return (
-                                      <option value={badge.id}>{text}</option>
-                                    );
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
                             );
@@ -460,51 +444,34 @@ const Profile = ({ logUser }) => {
                             return (
                               <optgroup label={event.title}>
                                 {badges
-                                  .filter(
-                                    (badge) => badge.group === event.category && currentUserBadges.includes(badge.id)
-                                  )
+                                  .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text =
-                                      badge.title +
-                                      " (" +
-                                      badge.points +
-                                      " points)";
-                                    return (
-                                      <option value={badge.id}>{text}</option>
-                                    );
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
                             );
                           })}
                         </select>
                       </div>
-                      <div className={`flex flex-col`}>
+                      <div id="f_badge3" className={`flex flex-col`}>
                         <div className={`flex text-[14px]`}>
-                          <h2>Logro 3:</h2>
+                          <h2>Chapa 3:</h2>
                         </div>
                         <select
                           className={`text-black font-normal w-[95%]`}
                           onChange={(e) => {
                             setBadge3(e.target.value);
-                          }}
-                        >
+                          }}>
                           <option value="0">...</option>
                           {categories.map((category, index) => {
                             return (
                               <optgroup label={category.title}>
                                 {badges
-                                  .filter(
-                                    (badge) => badge.group === category.category && currentUserBadges.includes(badge.id)
-                                  )
+                                  .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text =
-                                      badge.title +
-                                      " (" +
-                                      badge.points +
-                                      " points)";
-                                    return (
-                                      <option value={badge.id}>{text}</option>
-                                    );
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
                             );
@@ -513,51 +480,34 @@ const Profile = ({ logUser }) => {
                             return (
                               <optgroup label={event.title}>
                                 {badges
-                                  .filter(
-                                    (badge) => (badge.group === event.category) && currentUserBadges.includes(badge.id)
-                                  )
+                                  .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text =
-                                      badge.title +
-                                      " (" +
-                                      badge.points +
-                                      " points)";
-                                    return (
-                                      <option value={badge.id}>{text}</option>
-                                    );
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
                             );
                           })}
                         </select>
                       </div>
-                      <div className={`flex flex-col`}>
+                      <div id="f_badge4" className={`flex flex-col`}>
                         <div className={`flex text-[14px]`}>
-                          <h2>Logro 4:</h2>
+                          <h2>Chapa 4:</h2>
                         </div>
                         <select
                           className={`text-black font-normal w-[95%]`}
                           onChange={(e) => {
                             setBadge4(e.target.value);
-                          }}
-                        >
+                          }}>
                           <option value="0">...</option>
                           {categories.map((category, index) => {
                             return (
                               <optgroup label={category.title}>
                                 {badges
-                                  .filter(
-                                    (badge) => badge.group === category.category && currentUserBadges.includes(badge.id)
-                                  )
+                                  .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text =
-                                      badge.title +
-                                      " (" +
-                                      badge.points +
-                                      " points)";
-                                    return (
-                                      <option value={badge.id}>{text}</option>
-                                    );
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
                             );
@@ -566,51 +516,34 @@ const Profile = ({ logUser }) => {
                             return (
                               <optgroup label={event.title}>
                                 {badges
-                                  .filter(
-                                    (badge) => (badge.group === event.category) && currentUserBadges.includes(badge.id)
-                                  )
+                                  .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text =
-                                      badge.title +
-                                      " (" +
-                                      badge.points +
-                                      " points)";
-                                    return (
-                                      <option value={badge.id}>{text}</option>
-                                    );
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
                             );
                           })}
                         </select>
                       </div>
-                      <div className={`flex flex-col`}>
+                      <div id="f_badge5" className={`flex flex-col`}>
                         <div className={`flex text-[14px]`}>
-                          <h2>Logro 5:</h2>
+                          <h2>Chapa 5:</h2>
                         </div>
                         <select
                           className={`text-black font-normal w-[95%]`}
                           onChange={(e) => {
                             setBadge5(e.target.value);
-                          }}
-                        >
+                          }}>
                           <option value="0">...</option>
                           {categories.map((category, index) => {
                             return (
                               <optgroup label={category.title}>
                                 {badges
-                                  .filter(
-                                    (badge) => badge.group === category.category && currentUserBadges.includes(badge.id)
-                                  )
+                                  .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text =
-                                      badge.title +
-                                      " (" +
-                                      badge.points +
-                                      " points)";
-                                    return (
-                                      <option value={badge.id}>{text}</option>
-                                    );
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
                             );
@@ -619,18 +552,190 @@ const Profile = ({ logUser }) => {
                             return (
                               <optgroup label={event.title}>
                                 {badges
-                                  .filter(
-                                    (badge) => (badge.group === event.category) && currentUserBadges.includes(badge.id)
-                                  )
+                                  .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text =
-                                      badge.title +
-                                      " (" +
-                                      badge.points +
-                                      " points)";
-                                    return (
-                                      <option value={badge.id}>{text}</option>
-                                    );
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
+                                  })}
+                              </optgroup>
+                            );
+                          })}
+                        </select>
+                      </div>
+                      <div id="f_badge6" className={`flex flex-col`}>
+                        <div className={`flex text-[14px]`}>
+                          <h2>Chapa 6:</h2>
+                        </div>
+                        <select
+                          className={`text-black font-normal w-[95%]`}
+                          onChange={(e) => {
+                            setBadge6(e.target.value);
+                          }}>
+                          <option value="0">...</option>
+                          {categories.map((category, index) => {
+                            return (
+                              <optgroup label={category.title}>
+                                {badges
+                                  .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
+                                  .map((badge, index) => {
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
+                                  })}
+                              </optgroup>
+                            );
+                          })}
+                          {events.map((event, index) => {
+                            return (
+                              <optgroup label={event.title}>
+                                {badges
+                                  .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
+                                  .map((badge, index) => {
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
+                                  })}
+                              </optgroup>
+                            );
+                          })}
+                        </select>
+                      </div>
+                      <div id="f_badge7" className={`flex flex-col`}>
+                        <div className={`flex text-[14px]`}>
+                          <h2>Chapa 7:</h2>
+                        </div>
+                        <select
+                          className={`text-black font-normal w-[95%]`}
+                          onChange={(e) => {
+                            setBadge7(e.target.value);
+                          }}>
+                          <option value="0">...</option>
+                          {categories.map((category, index) => {
+                            return (
+                              <optgroup label={category.title}>
+                                {badges
+                                  .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
+                                  .map((badge, index) => {
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
+                                  })}
+                              </optgroup>
+                            );
+                          })}
+                          {events.map((event, index) => {
+                            return (
+                              <optgroup label={event.title}>
+                                {badges
+                                  .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
+                                  .map((badge, index) => {
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
+                                  })}
+                              </optgroup>
+                            );
+                          })}
+                        </select>
+                      </div>
+                      <div id="f_badge8" className={`flex flex-col`}>
+                        <div className={`flex text-[14px]`}>
+                          <h2>Chapa 8:</h2>
+                        </div>
+                        <select
+                          className={`text-black font-normal w-[95%]`}
+                          onChange={(e) => {
+                            setBadge8(e.target.value);
+                          }}>
+                          <option value="0">...</option>
+                          {categories.map((category, index) => {
+                            return (
+                              <optgroup label={category.title}>
+                                {badges
+                                  .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
+                                  .map((badge, index) => {
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
+                                  })}
+                              </optgroup>
+                            );
+                          })}
+                          {events.map((event, index) => {
+                            return (
+                              <optgroup label={event.title}>
+                                {badges
+                                  .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
+                                  .map((badge, index) => {
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
+                                  })}
+                              </optgroup>
+                            );
+                          })}
+                        </select>
+                      </div>
+                      <div id="f_badge9" className={`flex flex-col`}>
+                        <div className={`flex text-[14px]`}>
+                          <h2>Chapa 9:</h2>
+                        </div>
+                        <select
+                          className={`text-black font-normal w-[95%]`}
+                          onChange={(e) => {
+                            setBadge9(e.target.value);
+                          }}>
+                          <option value="0">...</option>
+                          {categories.map((category, index) => {
+                            return (
+                              <optgroup label={category.title}>
+                                {badges
+                                  .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
+                                  .map((badge, index) => {
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
+                                  })}
+                              </optgroup>
+                            );
+                          })}
+                          {events.map((event, index) => {
+                            return (
+                              <optgroup label={event.title}>
+                                {badges
+                                  .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
+                                  .map((badge, index) => {
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
+                                  })}
+                              </optgroup>
+                            );
+                          })}
+                        </select>
+                      </div>
+                      <div id="f_badge10" className={`flex flex-col`}>
+                        <div className={`flex text-[14px]`}>
+                          <h2>Chapa 10:</h2>
+                        </div>
+                        <select
+                          className={`text-black font-normal w-[95%]`}
+                          onChange={(e) => {
+                            setBadge10(e.target.value);
+                          }}>
+                          <option value="0">...</option>
+                          {categories.map((category, index) => {
+                            return (
+                              <optgroup label={category.title}>
+                                {badges
+                                  .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
+                                  .map((badge, index) => {
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
+                                  })}
+                              </optgroup>
+                            );
+                          })}
+                          {events.map((event, index) => {
+                            return (
+                              <optgroup label={event.title}>
+                                {badges
+                                  .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
+                                  .map((badge, index) => {
+                                    const text = badge.title + " (" + badge.points + " points)";
+                                    return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
                             );
@@ -642,12 +747,7 @@ const Profile = ({ logUser }) => {
                       <button
                         className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
                         type="button"
-                        onClick={() =>
-                          updateFavoriteBadges().then(() =>
-                            setFavoriteBadgesUpdated(true)
-                          )
-                        }
-                      >
+                        onClick={() => updateFavoriteBadges().then(() => setFavoriteBadgesUpdated(true))}>
                         Actualizar
                       </button>
                     </div>
@@ -664,34 +764,28 @@ const Profile = ({ logUser }) => {
                           <img
                             id="profilePic"
                             className={`w-[192px] border-0 rounded-full`}
-                            src={currentUserProfilePic}
-                          />
+                            src={currentUserProfilePic} />
                         ) : (
                           <img
                             id="profilePic"
                             className={`w-[192px] border-0 rounded-full`}
-                            src={defaultProfile}
-                          />
+                            src={defaultProfile} />
                         )}
                       </div>
                       <div className={`m-auto flex flex-col`}>
                         <div
-                          className={`text-[24px] font-semibold sPoints:text-left text-center`}
-                        >
+                          className={`text-[24px] font-semibold sPoints:text-left text-center`}>
                           <h2>{currentUserNickname}</h2>
                         </div>
                         <div
-                          className={`text-gray-400 ss:text-[16px] text-[12px] text-justify font-normal`}
-                        >
+                          className={`text-gray-400 ss:text-[16px] text-[12px] text-justify font-normal`}>
                           <p>{"(" + currentUserEmail + ")"}</p>
                         </div>
                         <div
-                          className={`flex font-normal sPoints:justify-start justify-center mt-1`}
-                        >
+                          className={`flex font-normal sPoints:justify-start justify-center mt-1`}>
                           <img
                             src={antxpoint}
-                            className={`w-[24px] mr-1 m-auto ml-0`}
-                          />
+                            className={`w-[24px] mr-1 m-auto ml-0`} />
                           <p className={`text-[24px]`}>{currentUserPoints}</p>
                         </div>
                       </div>
@@ -705,107 +799,76 @@ const Profile = ({ logUser }) => {
                 {currentUserFavoriteBadges.length !== 0 ? (
                   <div className={`${styles.flexCenter} m-auto`}>
                     <div className={`${styles.flexCenter} m-4`}>
-                      <div
-                        id="favBadges"
-                        className={`flex flex-col rounded-lg border-secondary border`}
-                      >
-                        <div
-                          id="favBadgesTitle"
-                          className={`flex bg-secondary rounded-t-md`}
-                        >
+                      <div id="favBadges" className={`flex flex-col rounded-lg border-secondary border`}>
+                        <div id="favBadgesTitle" className={`flex bg-secondary rounded-t-md`}>
                           <div className={`flex my-2 ml-2 pr-2`}>
                             <h3>Favoritas</h3>
                           </div>
                         </div>
                         <div id="favBadgesGrid" className={`mx-1 my-4`}>
-                          <div
-                            className={`flex flex-wrap ${styles.flexCenter} gap-3`}
-                          >
+                          <div className={`flex flex-wrap ${styles.flexCenter} gap-3`}>
                             {badges
-                              .filter((badge) =>
-                                currentUserFavoriteBadges.includes(badge.id)
-                              )
-                              .sort(
-                                (a, b) =>
-                                  currentUserFavoriteBadges.indexOf(a.id) -
-                                  currentUserFavoriteBadges.indexOf(b.id)
-                              )
+                              .filter((badge) => currentUserFavoriteBadges.includes(badge.id))
+                              .sort((a, b) => currentUserFavoriteBadges.indexOf(a.id) - currentUserFavoriteBadges.indexOf(b.id))
                               .map((badge, index) => (
-                                <Tippy
-                                  content={
-                                    <div className={`flex flex-row gap-4 m-2`}>
-                                      <div
-                                        className={`flex m-auto max-w-[128px] min-w-[128px]`}
-                                      >
-                                        <div
-                                          className={`relative top-0 left-0`}
-                                        >
-                                          <img
-                                            className={`${
-                                              badge.type === "rare"
-                                                ? "glow-rare-badges"
-                                                : ""
-                                            }`}
-                                            src={badge.icon_unlocked}
-                                          ></img>
-                                          {badge.update !== 0 ? (
-                                            <img
-                                              className={`absolute top-[80px] left-[80px] w-[58px]`}
-                                              src={badge.updateIcon}
-                                            ></img>
-                                          ) : (
-                                            ""
-                                          )}
-                                        </div>
-                                      </div>
-                                      <div
-                                        className={`flex flex-col font-poppins text-left m-auto`}
-                                      >
-                                        <div
-                                          className={`font-bold text-[18px] titleWordBreak`}
-                                        >
-                                          {badge.title}
-                                        </div>
-                                        <div
-                                          className={`text-[16px] text-left`}
-                                        >
-                                          {badge.description}
-                                        </div>
-                                      </div>
-                                    </div>
-                                  }
-                                >
-                                  <div
-                                    id={badge.id}
-                                    className={`flex flex-col w-[96px]`}
-                                  >
+                                <Tippy content={
+                                  <div className={`flex flex-row gap-4 m-2`}>
                                     <div
-                                      className={`${styles.flexCenter} mb-2`}
-                                    >
-                                      <div className={`relative top-0 left-0`}>
+                                      className={`flex m-auto max-w-[128px] min-w-[128px]`}>
+                                      <div
+                                        className={`relative top-0 left-0`}>
                                         <img
-                                          className={`${
-                                            styles.flexCenter
-                                          } w-[72px] ${
-                                            badge.type === "rare"
-                                              ? "glow-rare-badges"
-                                              : ""
-                                          }`}
-                                          src={badge.icon_unlocked}
-                                        ></img>
+                                          className={`${badge.type === "rare"
+                                            ? "glow-rare-badges"
+                                            : ""
+                                            }`}
+                                          src={badge.icon_unlocked}></img>
                                         {badge.update !== 0 ? (
                                           <img
-                                            className={`absolute top-[44px] left-[44px] w-[36px]`}
-                                            src={badge.updateIcon}
-                                          ></img>
+                                            className={`absolute top-[80px] left-[80px] w-[58px]`}
+                                            src={badge.updateIcon}></img>
                                         ) : (
                                           ""
                                         )}
                                       </div>
                                     </div>
                                     <div
-                                      className={`${styles.flexCenter} font-normal`}
-                                    >
+                                      className={`flex flex-col font-poppins text-left m-auto`}>
+                                      <div
+                                        className={`font-bold text-[18px] titleWordBreak`}>
+                                        {badge.title}
+                                      </div>
+                                      <div
+                                        className={`text-[16px] text-left`}>
+                                        {badge.description}
+                                      </div>
+                                    </div>
+                                  </div>
+                                }>
+                                  <div
+                                    id={badge.id}
+                                    className={`flex flex-col w-[96px]`}>
+                                    <div
+                                      className={`${styles.flexCenter} mb-2`}>
+                                      <div className={`relative top-0 left-0`}>
+                                        <img
+                                          className={`${styles.flexCenter
+                                            } w-[72px] ${badge.type === "rare"
+                                              ? "glow-rare-badges"
+                                              : ""
+                                            }`}
+                                          src={badge.icon_unlocked}></img>
+                                        {badge.update !== 0 ? (
+                                          <img
+                                            className={`absolute top-[44px] left-[44px] w-[36px]`}
+                                            src={badge.updateIcon}></img>
+                                        ) : (
+                                          ""
+                                        )}
+                                      </div>
+                                    </div>
+                                    <div
+                                      className={`${styles.flexCenter} font-normal`}>
                                       <img
                                         src={antxpoint}
                                         className={`w-[18px] mr-1 m-auto ml-0`}
@@ -827,8 +890,7 @@ const Profile = ({ logUser }) => {
                   <button
                     className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
                     type="button"
-                    onClick={logout}
-                  >
+                    onClick={logout}>
                     Cerrar Sesion
                   </button>
                 </div>

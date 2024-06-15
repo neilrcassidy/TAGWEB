@@ -1,0 +1,8 @@
+{
+  "parser": "flow",
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSameLine": true,
+  "singleAttributePerLine": false,
+  "arrowParens": "always"
+}
