@@ -3015,7 +3015,7 @@ export const badges = [
   {
     id: "EV_VER10",
     group: "verano",
-    title: "POLLAS, POLLAS POR TODAS PARTES",
+    title: "BONUS: POLLAS, POLLAS POR TODAS PARTES",
     description: "Ve a una playa nudista.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -3224,8 +3224,7 @@ export const badges = [
     id: "EV_VER27",
     group: "verano",
     title: "Benaguacilero/a",
-    description:
-      "Asiste a algún discomóvil o alguna orquesta en las fiestas de Benaguasil.",
+    description: "Asiste a algún discomóvil o alguna orquesta en las fiestas de Benaguasil.",
     points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: "EV_VER27_unlocked",
@@ -3237,8 +3236,7 @@ export const badges = [
     id: "EV_VER28",
     group: "verano",
     title: "Marinense",
-    description:
-      "Asiste a algún discomóvil o alguna orquesta en las fiestas de Marines.",
+    description: "Asiste a algún discomóvil o alguna orquesta en las fiestas de Marines.",
     points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: "EV_VER28_unlocked",
