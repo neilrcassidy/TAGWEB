@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
@@ -63,7 +64,7 @@ const News = () => {
 
   useEffect(() => {
     if (filter !== "") {
-      if (filter.substring(0, 6) === "BADGE_"){
+      if (filter.substring(0, 6) === "BADGE_") {
         const filterSubstr = '"' + filter.substring(6) + '"'
         const filteredNews = news.filter((newsEntry) => (newsEntry.data().body).includes(filterSubstr))
         setFilteredNews(filteredNews)
@@ -103,12 +104,12 @@ const News = () => {
                       <optgroup label={category.title}>
                         {badges.filter((badge) => badge.group === category.category)
                           .map((badge, index) => {
-                          let text = badge.title
-                          if(text.length > 22){
-                            text = text.substring(0, 22).trimEnd()+"..."
-                          }
-                          return (<option value={"BADGE_"+badge.title}>{text}</option>)
-                        })}
+                            let text = badge.title
+                            if (text.length > 22) {
+                              text = text.substring(0, 22).trimEnd() + "..."
+                            }
+                            return (<option value={"BADGE_" + badge.title}>{text}</option>)
+                          })}
                       </optgroup>
                     )
                   })}
@@ -117,12 +118,12 @@ const News = () => {
                       <optgroup label={event.title}>
                         {badges.filter((badge) => badge.group === event.category)
                           .map((badge, index) => {
-                          let text = badge.title
-                          if(text.length > 21){
-                            text = text.substring(0, 21).trimEnd()+"..."
-                          }
-                          return (<option value={"BADGE_"+badge.title}>{text}</option>)
-                        })}
+                            let text = badge.title
+                            if (text.length > 21) {
+                              text = text.substring(0, 21).trimEnd() + "..."
+                            }
+                            return (<option value={"BADGE_" + badge.title}>{text}</option>)
+                          })}
                       </optgroup>
                     )
                   })}

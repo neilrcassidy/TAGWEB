@@ -8,6 +8,7 @@ import update4 from "./update4.png"
 import carnavales from "./carnavales.png"
 import fallas from "./fallas.png"
 import sanvi from "./sanvi.png"
+import verano from "./verano.png"
 
 export {
     nueva,
@@ -18,5 +19,6 @@ export {
     update4,
     carnavales,
     fallas,
-    sanvi
+    sanvi,
+    verano
 }
