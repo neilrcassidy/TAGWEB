@@ -230,12 +230,12 @@ import EV_SANVI10_unlocked from "./EV_SANVI10_unlocked.png";
 import EV_VER3_unlocked from "./EV_VER3_unlocked.png";
 import EV_VER4_unlocked from "./EV_VER4_unlocked.png";
 import EV_VER5_unlocked from "./EV_VER5_unlocked.png"
-// import EV_VER6_unlocked from "./EV_VER6_unlocked.png"
-// import EV_VER7_unlocked from "./EV_VER7_unlocked.png"
-// import EV_VER8_unlocked from "./EV_VER8_unlocked.png"
-// import EV_VER9_unlocked from "./EV_VER9_unlocked.png"
-// import EV_VER10_unlocked from "./EV_VER10_unlocked.png"
-// import EV_VER11_unlocked from "./EV_VER11_unlocked.png"
+import EV_VER6_unlocked from "./EV_VER6_unlocked.png"
+import EV_VER7_unlocked from "./EV_VER7_unlocked.png"
+import EV_VER8_unlocked from "./EV_VER8_unlocked.png"
+import EV_VER9_unlocked from "./EV_VER9_unlocked.png"
+import EV_VER10_unlocked from "./EV_VER10_unlocked.png"
+import EV_VER11_unlocked from "./EV_VER11_unlocked.png"
 import EV_VER12_unlocked from "./EV_VER12_unlocked.png";
 // import EV_VER13_unlocked from "./EV_VER13_unlocked.png"
 // import EV_VER14_unlocked from "./EV_VER14_unlocked.png"
@@ -481,12 +481,12 @@ export {
   EV_VER3_unlocked,
   EV_VER4_unlocked,
   EV_VER5_unlocked,
-  // EV_VER6_unlocked,
-  // EV_VER7_unlocked,
-  // EV_VER8_unlocked,
-  // EV_VER9_unlocked,
-  // EV_VER10_unlocked,
-  // EV_VER11_unlocked,
+  EV_VER6_unlocked,
+  EV_VER7_unlocked,
+  EV_VER8_unlocked,
+  EV_VER9_unlocked,
+  EV_VER10_unlocked,
+  EV_VER11_unlocked,
   EV_VER12_unlocked,
   // EV_VER13_unlocked,
   // EV_VER14_unlocked,
