@@ -141,14 +141,28 @@ const Admin = () => {
                   }
                 }}>
                 <option value="noUser">Select a user...</option>
-                {users.filter((doc) => !doc.data().hidden).map((user, index) => {
-                  const text = user.data().nickname + " (" + user.data().email + ")";
-                  return (<option value={user.data().id}>{text}</option>)
-                })}
-                {users.filter((doc) => doc.data().hidden).map((user, index) => {
-                  const text = user.data().nickname + " (" + user.data().email + ")";
-                  return (<option disabled value={user.data().id}>{text}</option>)
-                })}
+                {users.filter((doc) => !doc.data().hidden)
+                  .sort((user1, user2) => {
+                    if(user1.data().points > user2.data().points) return -1
+                    if(user1.data().points < user2.data().points) return 1
+                    return 0
+                  })
+                  .map((user, index) => {
+                    const text = user.data().nickname + " (" + user.data().email + ")";
+                    return (<option value={user.data().id}>{text}</option>)
+                  }
+                )}
+                {users.filter((doc) => doc.data().hidden)
+                  .sort((user1, user2) => {
+                    if(user1.data().points > user2.data().points) return -1
+                    if(user1.data().points < user2.data().points) return 1
+                    return 0
+                  })
+                  .map((user, index) => {
+                    const text = user.data().nickname + " (" + user.data().email + ")";
+                    return (<option disabled value={user.data().id}>{text}</option>)
+                  }
+                )}
               </select>
             </div>
             <div className={`flex flex-col mx-4 mt-2 mb-4`}>
