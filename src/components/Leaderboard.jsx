@@ -19,6 +19,9 @@ const Leaderboard = () => {
   const [users, setUsers] = useState([])
   const [usersSet, setUsersSet] = useState(false)
 
+  let position = 1
+  let displayedPostion = position + "."
+
   const fetchUsers = async () => {
     const querySnapshot = await getDocs(query(collection(firestore, "users"), orderBy('points', 'desc')))
     let docs = [];
@@ -63,11 +66,21 @@ const Leaderboard = () => {
             </div>
           </div>
           <div id="leaderboardCard" className={`flex flex-col text-white font-poppins font-bold ${styles.flexCenter} sm:w-[60%] ss:w-[70%] xs:w-[80%] w-[90%] my-4 rounded-lg border-secondary border`}>
-            {users.map((user, index) => (
-              <div className={`flex w-full border border-transparent ${index === users.length - 1 ? "border-b-transparent" : "border-b-secondary"}`}>
+            {users.map((user, index) => {
+
+              if(users[index-1]){
+                if(users[index-1].points === user.points){
+                  displayedPostion = "-"
+                } else {
+                  position++
+                  displayedPostion = position + "."
+                }
+              }
+              
+              return (<div className={`flex w-full border border-transparent ${index === users.length - 1 ? "border-b-transparent" : "border-b-secondary"}`}>
                 <div id="leadearboardEntry" className={`flex my-3 w-full`}>
                   <div id="posLeaderboardEntry" className={`m-auto ml-4 mr-0`}>
-                    <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px] ss:min-w-[40px] min-w-[30px] font-normal`}>{index + 1}.</p>
+                    <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px] ss:min-w-[40px] min-w-[30px] font-medium`}>{displayedPostion}</p>
                   </div>
                   <div id="iconLeaderboardEntry" className={`ss:min-w-[64px] ss:w-[64px] min-w-[48px] w-[48px] m-auto mr-2 ss:ml-2 ml-0 `}>
                     <img src={user.profilePic} className={`border-0 rounded-full cursor-pointer`} onClick={() => navVisitUser(user.id)} />
@@ -75,13 +88,13 @@ const Leaderboard = () => {
                   <div id="textLeaderboardEntry" className={`m-auto mx-1`}>
                     <p className={`ss:text-[20px] xs:text-[18px] xxs:text-[16px] text-[14px] cursor-pointer`} onClick={() => navVisitUser(user.id)}>{user.nickname}</p>
                   </div>
-                  <div id="textLeaderboardEntry" className={`flex flex-row m-auto mr-3 gap-2`}>
+                  <div id="pointsLeaderboardEntry" className={`flex flex-row m-auto mr-3 gap-2`}>
                     <img src={antxpoint} className={`w-[20px] m-auto`} />
                     <p className={`text-[20px] font-normal`}>{user.points}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)
+            })}
           </div>
         </div>
       ) : (

@@ -93,6 +93,7 @@ const News = () => {
                   <option value="">Sin filtro</option>
                   <optgroup label="Por usuario">
                     {users.filter((user) => user.god === false)
+                      .sort((user1, user2) => user1.nickname.localeCompare(user2.nickname))
                       .map((user, index) => {
                         const text = user.nickname
                         return (<option value={user.id}>{text}</option>)
