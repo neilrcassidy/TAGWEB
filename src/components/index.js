@@ -11,6 +11,7 @@ import Profile from "./Profile.jsx"
 import Admin from "./Admin.jsx"
 import Visit from "./Visit.jsx"
 import Stats from "./Stats.jsx"
+import Countdown from "./Countdown.jsx"
 import BadgeCardGrid from "./BadgeCardGrid.jsx"
 import BadgeCardList from "./BadgeCardList.jsx"
 import EventActiveCardGrid from "./EventActiveCardGrid.jsx"
@@ -32,6 +33,7 @@ export {
     Admin,
     Visit,
     Stats,
+    Countdown,
     BadgeCardGrid,
     BadgeCardList,
     EventActiveCardGrid,

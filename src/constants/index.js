@@ -3660,6 +3660,8 @@ export const events = [
   },
 ];
 
+export const end = new Date(2025, months.JANUARY, 7)
+
 /* Color codes 
 General: #7EC46D
 Mensual: #0078AC
