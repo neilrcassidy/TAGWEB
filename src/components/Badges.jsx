@@ -15,7 +15,7 @@ import { auth, firestore } from "../config/firebase-config"
 import { doc, getDoc } from "firebase/firestore"
 
 // Component Imports
-import { Stats, BadgeCardGrid, BadgeCardList, EventActiveCardGrid, EventInactiveCardGrid, EventActiveCardList, EventInactiveCardList } from "./"
+import { Stats, Countdown, BadgeCardGrid, BadgeCardList, EventActiveCardGrid, EventInactiveCardGrid, EventActiveCardList, EventInactiveCardList } from "./"
 
 // Emoji imports
 import { Emoji } from "@crispengari/react-emojify"
@@ -52,6 +52,8 @@ const Badges = () => {
       {badgesSet ? (
         <div id="badgesPage" className={`flex flex-col ${styles.flexCenter} min-w-[90%] pb-8 text-white font-poppins font-bold`}>
           
+          <Countdown />
+
           <Stats userBadges={userBadges} />
 
           <div className="inline-flex my-4 border border-secondary rounded-lg">

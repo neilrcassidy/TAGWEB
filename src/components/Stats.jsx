@@ -9,7 +9,7 @@ import { badges } from "../constants"
 
 const Stats = ({ userBadges }) => {
   return (
-    <div id="stats" className={`flex xs:flex-row flex-col ss:text-[48px] text-[32px] font-normal xs:gap-12 gap-2 my-4`}>
+    <div id="stats" className={`flex xs:flex-row flex-col ss:text-[48px] text-[32px] font-normal xs:gap-12 gap-2 `}>
       <div id="total" className={`${styles.flexCenter} flex-col`}>
         <div className={`ss:text-[36px] text-[24px]`}>Total</div>
         <div>{userBadges.length}</div>
