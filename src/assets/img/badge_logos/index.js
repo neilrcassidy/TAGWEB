@@ -190,6 +190,7 @@ import LEC6_unlocked from "./LEC6_unlocked.png";
 import LEC7_unlocked from "./LEC7_unlocked.png";
 import LEC8_unlocked from "./LEC8_unlocked.png";
 import LEC9_unlocked from "./LEC9_unlocked.png";
+import LEC10_unlocked from "./LEC10_unlocked.png"
 
 import EV_CAR1_unlocked from "./EV_CAR1_unlocked.png";
 import EV_CAR2_unlocked from "./EV_CAR2_unlocked.png";
@@ -445,6 +446,7 @@ export {
   LEC7_unlocked,
   LEC8_unlocked,
   LEC9_unlocked,
+  LEC10_unlocked,
   EV_CAR1_unlocked,
   EV_CAR2_unlocked,
   EV_CAR3_unlocked,
