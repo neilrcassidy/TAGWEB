@@ -3151,7 +3151,7 @@ export const badges = [
     group: "verano",
     title: "Felicidad pura",
     description:
-      "Haz lo típico de tarde de playa o piscina, duchar y salir a cenar.",
+      "Haz lo típico de tarde de playa o piscina, duchar y salir a cenar. (REQUISITO: El plan tiene que ser con la(s) misma(s) persona(s).)",
     points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: EV_VER21_unlocked,
@@ -3451,7 +3451,7 @@ export const badges = [
     id: "EV_VER45",
     group: "verano",
     title: "BONUS: Dominguero/a veraniego/a",
-    description: "Ve de ruta... en verano.",
+    description: "Ve de ruta con alguien de ANTX... en verano.",
     points: 5,
     icon_locked: normal_badge_locked,
     icon_unlocked: EV_VER45_unlocked,
