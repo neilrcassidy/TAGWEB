@@ -849,7 +849,7 @@ export const badges = [
     id: "FIE1",
     group: "fiesta",
     title: "Anfitrión/a",
-    description: "Pon casa para cena y lo que surja.",
+    description: "Pon casa para comida/cena y lo que surja.",
     points: 15,
     icon_locked: normal_badge_locked,
     icon_unlocked: FIE1_unlocked,
