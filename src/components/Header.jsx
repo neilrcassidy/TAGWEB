@@ -27,7 +27,6 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
         setCurrentUserNickname(currentUserInfo.data().nickname)
         setCurrentUserProfilePic(currentUserInfo.data().profilePic)
         setCurrentUserPoints(currentUserInfo.data().points)
-        console.log("No infinite loop in Header")
       } else {
         setCurrentUserNickname("")
         setCurrentUserProfilePic("")
