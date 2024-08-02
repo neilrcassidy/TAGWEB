@@ -14,7 +14,15 @@ import { useNavigate, useParams } from "react-router-dom"
 import { auth, firestore } from "../config/firebase-config"
 import { doc, getDoc } from "firebase/firestore"
 
-import Stats from "./Stats.jsx"
+// Component Imports
+import { BadgeCardGrid, EventActiveCardGrid, EventInactiveCardGrid, Stats } from "./"
+
+// Constant imports
+import { categories, events } from "../constants"
+
+// Emoji imports
+import { Emoji } from "@crispengari/react-emojify"
+
 import Tippy from "@tippyjs/react"
 
 const Visit = () => {
@@ -29,6 +37,8 @@ const Visit = () => {
   const [userFavoriteBadges, setUserFavoriteBadges] = useState([]);
   const [userPoints, setUserPoints] = useState(0);
 
+  const [currentUserAdmin, setCurrentUserAdmin] = useState(false);
+
   const getAndSetUser = async () => {
     const userInfo = await getDoc(doc(firestore, "users", id))
     setUserNickname(userInfo.data().nickname)
@@ -39,6 +49,15 @@ const Visit = () => {
     setDataSet(true)
   }
 
+  const getCurrentUserAdmin = async () => {
+    const currentUserInfo = await getDoc(doc(firestore, "users", auth.currentUser.uid))
+    handleSetCurrentUserAdmin(currentUserInfo.data().admin)
+  }
+
+  const handleSetCurrentUserAdmin = (admin) => {
+    setCurrentUserAdmin(admin)
+  }
+
   useEffect(() => {
     if (auth.currentUser.uid === id) {
       navProfile()
@@ -46,6 +65,7 @@ const Visit = () => {
 
     if (!dataSet) {
       getAndSetUser()
+      getCurrentUserAdmin()
     }
   }, [dataSet])
 
@@ -53,7 +73,7 @@ const Visit = () => {
     <>
       {dataSet ? (
         <div id="profilePage" className={`flex flex-col text-white font-poppins ${styles.flexCenter}`}>
-          <div id="profileCard" className={`flex flex-col rounded-lg border-secondary border w-[90%] mt-4 font-bold`}>
+          <div id="profileCard" className={`flex flex-col rounded-lg border-secondary border w-[90%] my-4 font-bold`}>
             <div id="profileTitle" className={`flex bg-secondary rounded-t-md`}>
               <div className={`flex w-[100%] my-4`}>
                 <div className={`m-auto my-1 ml-4 text-[24px]`}>
@@ -61,7 +81,7 @@ const Visit = () => {
                 </div>
               </div>
             </div>
-            <div id="profileContent" className={`flex flex-col my-2`}>
+            <div id="profileContent" className={`flex flex-col mt-2 pb-4`}>
               <div className={`flex flex-wrap`}>
                 <div className={`flex m-auto gap-4`}>
                   <div className={`flex flex-wrap my-4 mx-16 gap-4`}>
@@ -91,8 +111,8 @@ const Visit = () => {
 
               </div>
               {userFavoriteBadges.length !== 0 ? (
-                <div className={`${styles.flexCenter} m-auto`}>
-                  <div className={`${styles.flexCenter} m-4`}>
+                <div className={`${styles.flexCenter} m-auto mt-4`}>
+                  <div className={`${styles.flexCenter} mt-4 mx-4`}>
                     <div id="badgesGeneral" className={`flex flex-col rounded-lg border-secondary border`}>
                       <div id="badgesGeneralTitle" className={`flex bg-secondary rounded-t-md`}>
                         <div className={`flex my-2 ml-2 pr-2`}>
@@ -143,8 +163,39 @@ const Visit = () => {
               ) : (
                 <div></div>
               )}
-            </div>
 
+              {currentUserAdmin ? (
+                <>
+                  <div id="line" className="bg-secondary h-[1px] mt-6"></div>
+                  <div className={`flex justify-center my-6`}>
+                    <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-6 w-[98%]`}>
+                      {events
+                        .filter((e) => new Date() <= e.eventTimeEnd)
+                        .map((e, index) => (
+                          <EventActiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji} />} color={e.color} borderColor={e.borderColor} bgColor={e.bgColor} eventTimeStart={e.eventTimeStart} eventTimeEnd={e.eventTimeEnd} />
+                        ))
+                      }
+                      <div className={`flex flex-wrap justify-center gap-6`}>
+                        {categories
+                          .map((category, index) => (
+                            <BadgeCardGrid userBadges={userBadges} title={category.title} category={category.category} emoji={<Emoji emojiId={category.emoji} />} color={category.color} borderColor={category.borderColor} bgColor={category.bgColor} newCategory={category.newCategory} />
+                          ))
+                        }
+                        {events
+                          .filter((e) => new Date() > e.eventTimeEnd)
+                          .map((e, index) => (
+                            <EventInactiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji} />} />
+                          ))
+                        }
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <div></div>
+              )}
+
+            </div>
           </div>
         </div>
       ) : (
