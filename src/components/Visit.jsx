@@ -12,10 +12,14 @@ import { useNavigate, useParams } from "react-router-dom"
 
 // Firebase imports
 import { auth, firestore } from "../config/firebase-config"
-import { doc, getDoc } from "firebase/firestore"
+import { collection, query, getDocs, getDoc, doc, updateDoc, arrayUnion, addDoc, Timestamp, increment } from "firebase/firestore"
+
+// FontAwesome imports
+import { faBorderAll, faList } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 // Component Imports
-import { BadgeCardGrid, EventActiveCardGrid, EventInactiveCardGrid, Stats } from "./"
+import { Stats, BadgeCardGrid, BadgeCardList, EventActiveCardGrid, EventInactiveCardGrid, EventActiveCardList, EventInactiveCardList } from "./"
 
 // Constant imports
 import { categories, events } from "../constants"
@@ -27,7 +31,6 @@ import Tippy from "@tippyjs/react"
 
 const Visit = () => {
   const navigate = useNavigate();
-  const navProfile = () => navigate("/profile")
 
   let { id } = useParams();
   const [dataSet, setDataSet] = useState(false)
@@ -38,6 +41,11 @@ const Visit = () => {
   const [userPoints, setUserPoints] = useState(0);
 
   const [currentUserAdmin, setCurrentUserAdmin] = useState(false);
+  const [list, setList] = useState(false)
+
+  const [selectedBadgeId, setSelectedBadgeId] = useState()
+  const [userHasBadge, setUserHasBadge] = useState(false)
+  const [badgeAdded, setBadgeAdded] = useState(false)
 
   const getAndSetUser = async () => {
     const userInfo = await getDoc(doc(firestore, "users", id))
@@ -58,14 +66,62 @@ const Visit = () => {
     setCurrentUserAdmin(admin)
   }
 
-  useEffect(() => {
-    if (auth.currentUser.uid === id) {
-      navProfile()
-    }
+  const addBadgeToUser = async () => {
+    const userDoc = doc(firestore, "users", id)
+    const user = await getDoc(userDoc)
+    const badge = badges.find((badge) => {
+      return badge.id === selectedBadgeId
+    })
 
+    if (user.exists()) {
+      const userBadges = user.data().badges
+      const userHasBadge = userBadges.includes(selectedBadgeId)
+      if (userHasBadge) {
+        setUserHasBadge(true)
+      } else {
+        updateUserDoc(userDoc, badge)
+          .then(() => createNewsEntryForBadges(user, badge).then(() => setBadgeAdded(true)))
+      }
+    }
+   console.log(id)
+  }
+
+  const updateUserDoc = async (userDoc, badge) => {
+    await updateDoc(userDoc, {
+      badges: arrayUnion(selectedBadgeId),
+      points: increment(Number(badge.points))
+    })
+  }
+
+  const createNewsEntryForBadges = async (user, badge) => {
+    await addDoc(collection(firestore, "news"), {
+      title: "¡Enhorabuena " + user.data().nickname + "!",
+      body: user.data().nickname + " ha conseguido la chapa \"" + badge.title + "\" que vale " + badge.points + " ANTX Coins.",
+      image: user.data().profilePic,
+      date: Timestamp.now(),
+      userAssociated: user.data().id
+    })
+  }
+
+  const navProfile = async () =>  {
+    if(auth.currentUser.uid === id) {
+      navigate("/profile")
+    }
+  }
+
+  useEffect(() => {
+    auth.onAuthStateChanged(() => {
+      getCurrentUserAdmin()
+        .then(() => {
+          navProfile()
+        })
+    })
+
+  }, [])
+
+  useEffect(() => {
     if (!dataSet) {
       getAndSetUser()
-      getCurrentUserAdmin()
     }
   }, [dataSet])
 
@@ -167,28 +223,128 @@ const Visit = () => {
               {currentUserAdmin ? (
                 <>
                   <div id="line" className="bg-secondary h-[1px] mt-6"></div>
-                  <div className={`flex justify-center my-6`}>
-                    <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-6 w-[98%]`}>
-                      {events
-                        .filter((e) => new Date() <= e.eventTimeEnd)
-                        .map((e, index) => (
-                          <EventActiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji} />} color={e.color} borderColor={e.borderColor} bgColor={e.bgColor} eventTimeStart={e.eventTimeStart} eventTimeEnd={e.eventTimeEnd} />
-                        ))
-                      }
-                      <div className={`flex flex-wrap justify-center gap-6`}>
+
+                  <div className={`flex flex-col mt-4`}>
+                    <div className={`flex ml-4 text-[32px]`}>
+                      <h2>Give badge to {userNickname}</h2>
+                    </div>
+                    {userHasBadge ? (
+                      <div className={`flex ml-4 text-[24px] ${styles.flexCenter} my-4 text-[#e03f3f]`}>
+                        <p>This user already has this badge.</p>
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
+
+                    {badgeAdded ? (
+                      <div className={`flex ml-4 text-[24px] ${styles.flexCenter} my-4 text-secondary`}>
+                        <p>Badge added to user.</p>
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
+                    <div className={`flex flex-col mx-4 mt-2 mb-4`}>
+                      <p>Select Badge:</p>
+                      <select name="selectBadge" className={`text-black`}
+                        onChange={(e) => {
+                          setUserHasBadge(false)
+                          setBadgeAdded(false)
+                          if (e.target.value !== "noBadge") {
+                            setSelectedBadgeId(e.target.value)
+                          }
+                        }}>
+                        <option value="noBadge">Select a badge...</option>
+                        {categories.map((category, index) => {
+                          return (
+                            <optgroup label={category.title}>
+                              {badges.filter((badge) => badge.group === category.category)
+                                .map((badge, index) => {
+                                  const text = badge.id + ". " + badge.title + " (" + badge.points + " points)";
+                                  return (<option value={badge.id}>{text}</option>)
+                                })}
+                            </optgroup>
+                          )
+                        })}
+                        {events.map((event, index) => {
+                          return (
+                            <optgroup label={event.title}>
+                              {badges.filter((badge) => badge.group === event.category)
+                                .map((badge, index) => {
+                                  const text = badge.id + ". " + badge.title + " (" + badge.points + " points)";
+                                  return (<option value={badge.id}>{text}</option>)
+                                })}
+                            </optgroup>
+                          )
+                        })}
+                      </select>
+                    </div>
+                    <div className={`flex flex-row ${styles.flexCenter}`}>
+                      <button className="border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
+                        onClick={addBadgeToUser}>
+                        Add
+                      </button>
+                    </div>
+                  </div>
+
+                  <div id="line" className="bg-secondary h-[1px] mt-6"></div>
+
+                  <div className={`flex justify-center`}>
+                    <div className="inline-flex my-4 border border-secondary rounded-lg w-min">
+                      <button onClick={() => setList(false)} className={`flex flex-row ${list ? "" : "bg-secondary"} hover:bg-altSecondary py-2 px-4 rounded-l gap-2`}>
+                        <p>Grid</p>
+                        <FontAwesomeIcon icon={faBorderAll} className={`m-auto`} />
+                      </button>
+                      <button onClick={() => setList(true)} className={`flex flex-row ${list ? "bg-secondary" : ""} hover:bg-altSecondary py-2 px-4 rounded-r gap-2`}>
+                        <p>List</p>
+                        <FontAwesomeIcon icon={faList} className={`m-auto`} />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className={`flex justify-center mb-6`}>
+                    {list ? (
+                      <div id="badgesCards" className={`flex flex-wrap justify-center gap-6 w-[97%]`}>
+                        {events
+                          .filter((e) => new Date() <= e.eventTimeEnd)
+                          .map((e, index) => (
+                            <EventActiveCardList userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji} />} color={e.color} borderColor={e.borderColor} bgColor={e.bgColor} eventTimeStart={e.eventTimeStart} eventTimeEnd={e.eventTimeEnd} />
+                          ))
+                        }
                         {categories
                           .map((category, index) => (
-                            <BadgeCardGrid userBadges={userBadges} title={category.title} category={category.category} emoji={<Emoji emojiId={category.emoji} />} color={category.color} borderColor={category.borderColor} bgColor={category.bgColor} newCategory={category.newCategory} />
+                            <BadgeCardList userBadges={userBadges} title={category.title} category={category.category} emoji={<Emoji emojiId={category.emoji} />} color={category.color} borderColor={category.borderColor} bgColor={category.bgColor} newCategory={category.newCategory} />
                           ))
                         }
                         {events
                           .filter((e) => new Date() > e.eventTimeEnd)
                           .map((e, index) => (
-                            <EventInactiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji} />} />
+                            <EventInactiveCardList userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji} />} eventTimeStart={e.eventTimeStart} eventTimeEnd={e.eventTimeEnd} />
                           ))
                         }
                       </div>
-                    </div>
+                    ) : (
+                      <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-6 w-[97%]`}>
+                        {events
+                          .filter((e) => new Date() <= e.eventTimeEnd)
+                          .map((e, index) => (
+                            <EventActiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji} />} color={e.color} borderColor={e.borderColor} bgColor={e.bgColor} eventTimeStart={e.eventTimeStart} eventTimeEnd={e.eventTimeEnd} />
+                          ))
+                        }
+                        <div className={`flex flex-wrap justify-center gap-6`}>
+                          {categories
+                            .map((category, index) => (
+                              <BadgeCardGrid userBadges={userBadges} title={category.title} category={category.category} emoji={<Emoji emojiId={category.emoji} />} color={category.color} borderColor={category.borderColor} bgColor={category.bgColor} newCategory={category.newCategory} />
+                            ))
+                          }
+                          {events
+                            .filter((e) => new Date() > e.eventTimeEnd)
+                            .map((e, index) => (
+                              <EventInactiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji} />} />
+                            ))
+                          }
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </>
               ) : (

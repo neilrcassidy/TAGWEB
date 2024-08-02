@@ -85,7 +85,6 @@ const Admin = () => {
   }
 
   const checkAdmin = async () => {
-    console.log("Admin!")
     const currentUser = await getDoc(doc(firestore, "users", auth.currentUser.uid))
 
     if (currentUser.data().admin === false) {

@@ -27,9 +27,7 @@ const MobileMenu = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
         setCurrentUserProfilePic(currentUserInfo.data().profilePic)
         setCurrentUserBadges(currentUserInfo.data().badges)
         setCurrentUserPoints(currentUserInfo.data().points)
-        console.log("No infinite loop in MobileMenu")
       } else {
-        console.log("userloggedout")
         setCurrentUserEmail("")
         setCurrentUserNickname("")
         setCurrentUserProfilePic("")

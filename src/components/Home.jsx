@@ -47,15 +47,12 @@ const Home = ({ logUser }) => {
       if (password.length >= 8) {
         firebaseRegisterUser()
           .then(navCuentaNueva)
-          .then(() => console.log("New User Registered!"))
           .catch(() => setEmailNotInUse(false))
       } else {
-        console.log("Password not long enough.")
         setPasswordLongEnough(false);
       }
 
     } else {
-      console.log("Passwords don't match.")
       setPasswordsMatch(false);
     }
   }
