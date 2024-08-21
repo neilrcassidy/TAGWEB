@@ -225,6 +225,22 @@ import EV_SANVI8_unlocked from "./EV_SANVI8_unlocked.png";
 import EV_SANVI9_unlocked from "./EV_SANVI9_unlocked.png";
 import EV_SANVI10_unlocked from "./EV_SANVI10_unlocked.png";
 
+import EV_PUR1_unlocked from "./EV_PUR1_unlocked.png"
+import EV_PUR2_unlocked from "./EV_PUR2_unlocked.png"
+import EV_PUR3_unlocked from "./EV_PUR3_unlocked.png"
+import EV_PUR4_unlocked from "./EV_PUR4_unlocked.png"
+import EV_PUR5_unlocked from "./EV_PUR5_unlocked.png"
+import EV_PUR6_unlocked from "./EV_PUR6_unlocked.png"
+import EV_PUR7_unlocked from "./EV_PUR7_unlocked.png"
+
+import EV_REM1_unlocked from "./EV_REM1_unlocked.png"
+import EV_REM2_unlocked from "./EV_REM2_unlocked.png"
+import EV_REM3_unlocked from "./EV_REM3_unlocked.png"
+import EV_REM4_unlocked from "./EV_REM4_unlocked.png"
+import EV_REM5_unlocked from "./EV_REM5_unlocked.png"
+import EV_REM6_unlocked from "./EV_REM6_unlocked.png"
+import EV_REM7_unlocked from "./EV_REM7_unlocked.png"
+
 import EV_VER1_unlocked from "./EV_VER1_unlocked.png"
 import EV_VER2_unlocked from "./EV_VER2_unlocked.png"
 import EV_VER3_unlocked from "./EV_VER3_unlocked.png";
@@ -485,6 +501,20 @@ export {
   EV_SANVI8_unlocked,
   EV_SANVI9_unlocked,
   EV_SANVI10_unlocked,
+  EV_PUR1_unlocked,
+  EV_PUR2_unlocked,
+  EV_PUR3_unlocked,
+  EV_PUR4_unlocked,
+  EV_PUR5_unlocked,
+  EV_PUR6_unlocked,
+  EV_PUR7_unlocked,
+  EV_REM1_unlocked,
+  EV_REM2_unlocked,
+  EV_REM3_unlocked,
+  EV_REM4_unlocked,
+  EV_REM5_unlocked,
+  EV_REM6_unlocked,
+  EV_REM7_unlocked,
   EV_VER1_unlocked,
   EV_VER2_unlocked,
   EV_VER3_unlocked,
