@@ -287,6 +287,8 @@ import {
   verano,
 } from "../assets/img/update_symbols"
 
+import { Emoji } from "@crispengari/react-emojify"
+
 const months = {
   JANUARY: 0,
   FEBRUARY: 1,
@@ -3616,6 +3618,7 @@ export const badges = [
     id: "EV_PUR8",
     group: "purisima",
     title: "Puríssima: La cabra",
+    titleSpecial: <>Puríssima: La cabra <Emoji emojiId='react@emojify-571'/></>,
     description: "Compra el ticket de las paellas. (Retroactiva)",
     points: 15,
     icon_locked: rare_badge_locked,
