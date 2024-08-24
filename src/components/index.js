@@ -18,8 +18,10 @@ import EventActiveCardGrid from "./EventActiveCardGrid.jsx"
 import EventActiveCardList from "./EventActiveCardList.jsx"
 import EventInactiveCardGrid from "./EventInactiveCardGrid.jsx"
 import EventInactiveCardList from "./EventInactiveCardList.jsx"
+import HackText72 from "./HackText72.jsx"
 
 export {
+    HackText72,
     Header,
     Page,
     Home,

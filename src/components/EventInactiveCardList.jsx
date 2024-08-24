@@ -20,7 +20,6 @@ const EventInactiveCardList = ({ userBadges, title, category, emoji }) => {
         <div className={`flex flex-col`}>
           {badges
             .filter((badge) => badge.group === category)
-            .sort((badge1, badge2) => badge2.update - badge1.update)
             .map((badge, index) => (
               <div className={`flex w-full ${index === badges.filter((badge) => badge.group === category).length - 1 ? "" : "border border-transparent border-b-gray-400"}`}>
                 <div className={`flex w-full my-4 ml-2`}>
@@ -31,7 +30,7 @@ const EventInactiveCardList = ({ userBadges, title, category, emoji }) => {
                     </div>
                   </div>
                   <div className={`flex flex-col m-auto mx-2 smmd:max-w-[70%] sm:max-w-[65%] ss:max-w-[60%] xs:max-w-[55%] xxs:max-w-[50%] xxxs:max-w-[45%] max-w-[40%]`}>
-                    <p className={`ss:text-[24px] xs:text-[22px] xxs:text-[20px] text-[18px] titleWordBreak`}>{badge.title}</p>
+                    <p className={`ss:text-[24px] xs:text-[22px] xxs:text-[20px] text-[18px] titleWordBreak`}>{badge.titleSpecial ? badge.titleSpecial : badge.title}</p>
                     <p className={`ss:text-[18px] xs:text-[16px] xxs:text-[14px] text-[12px] break-words text-justify font-normal`}>{badge.description}</p>
                   </div>
                   <div className={`flex flex-row m-auto mr-3 gap-2`}>

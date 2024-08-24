@@ -4,7 +4,7 @@
 /* eslint-disable react/prop-types */
 import { defaultProfile, antxpoint } from "../assets/img"
 import styles from "../style"
-import { badges } from "../constants/index.js"
+import { badges } from "../constants"
 
 // React imports
 import { useEffect, useState } from "react"

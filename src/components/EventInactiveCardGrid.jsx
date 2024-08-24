@@ -3,8 +3,8 @@
 /* eslint-disable react/prop-types */
 import "../index.css"
 import styles from "../style.js"
-import { badges } from "../constants/index.js"
-import { antxpoint } from "../assets/img/index.js"
+import { badges } from "../constants"
+import { antxpoint } from "../assets/img"
 
 // Tippy imports
 import Tippy from "@tippyjs/react"
@@ -36,7 +36,7 @@ const EventInactiveCardGrid = ({ userBadges, title, category, emoji }) => {
                   </div>
                   <div className={`flex flex-col font-poppins text-left m-auto`}>
                     <div className={`font-bold text-[18px] titleWordBreak`}>
-                      {badge.title}
+                      {badge.titleSpecial ? badge.titleSpecial : badge.title}
                     </div>
                     <div className={`text-[16px] text-left`}>
                       {badge.description}

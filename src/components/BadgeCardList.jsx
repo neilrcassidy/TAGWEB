@@ -32,7 +32,7 @@ const BadgeCardList = ({ userBadges, title, category, emoji, color, borderColor,
                     </div>
                   </div>
                   <div className={`flex flex-col m-auto mx-2 smmd:max-w-[70%] sm:max-w-[65%] ss:max-w-[60%] xs:max-w-[55%] xxs:max-w-[50%] xxxs:max-w-[45%] max-w-[40%]`}>
-                    <p className={`ss:text-[24px] xs:text-[22px] xxs:text-[20px] text-[18px]`}>{badge.title}</p>
+                    <p className={`ss:text-[24px] xs:text-[22px] xxs:text-[20px] text-[18px]`}>{badge.titleSpecial ? badge.titleSpecial : badge.title}</p>
                     <p className={`ss:text-[18px] xs:text-[16px] xxs:text-[14px] text-[12px] break-words text-justify font-normal`}>{badge.description}</p>
                   </div>
                   <div className={`flex flex-row m-auto mr-3 gap-2`}>
