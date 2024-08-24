@@ -3628,7 +3628,7 @@ export const badges = [
     id: "EV_PUR9",
     group: "purisima",
     title: "Puríssima: Siempre los mismos",
-    description: "Ayuda con la compra para las paellas.",
+    description: "Ayuda con la compra de las paellas.",
     points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: "EV_PUR9_unlocked",
