@@ -136,13 +136,13 @@ body{
 .layers::before {
   top: 10px;
   left: 15px;
-  color: #e0287d;
+  color: #a7170e;
 }
 
 .layers::after {
   top: 5px;
   left: -10px;
-  color: #1bc7fb;
+  color: #b3bc79;
 }
 
 .single-path {
@@ -488,7 +488,7 @@ body{
 }
 
 .opacity {
-  animation: opacity 5s step-end infinite;
+  animation: opacity 7s step-end infinite;
 }
 
 @keyframes opacity {
@@ -527,13 +527,13 @@ body{
 }
 
 .font {
-  animation: font 5s step-end infinite;
+  animation: font 8s step-end infinite;
 }
 
 @keyframes font {
   0% {
     font-weight: 100;
-    color: #e0287d;
+    color: #a7170e;
     filter: blur(3px);
   }
 
@@ -545,7 +545,7 @@ body{
 
   50% {
     font-weight: 300;
-    color: #1bc7fb;
+    color: #b3bc79;
     filter: blur(2px);
   }
 
@@ -557,7 +557,7 @@ body{
 
   90% {
     font-weight: 500;
-    color: #e0287d;
+    color: #a7170e;
     filter: blur(6px);
   }
 }

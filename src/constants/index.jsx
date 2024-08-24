@@ -219,13 +219,13 @@ import {
   EV_PUR5_unlocked,
   EV_PUR6_unlocked,
   EV_PUR7_unlocked,
-  EV_REM1_unlocked,
-  EV_REM2_unlocked,
-  EV_REM3_unlocked,
-  EV_REM4_unlocked,
-  EV_REM5_unlocked,
-  EV_REM6_unlocked,
-  EV_REM7_unlocked,
+  //EV_REM1_unlocked,
+  //EV_REM2_unlocked,
+  //EV_REM3_unlocked,
+  //EV_REM4_unlocked,
+  //EV_REM5_unlocked,
+  //EV_REM6_unlocked,
+  //EV_REM7_unlocked,
   EV_VER1_unlocked,
   EV_VER2_unlocked,
   EV_VER3_unlocked,
@@ -3543,7 +3543,7 @@ export const badges = [
     group: "purisima",
     title: "Purísima: BOICOT A 72",
     titleSpecial: <>Purísima: BOICOT A <span className="hero glitch layers" data-text="72">72</span></>,
-    description: "Lleva la camiseta de ANTX el dia de las paellas.",
+    description: "Lleva la camiseta de ANTX la noche de las paellas.",
     points: 10,
     icon_locked: normal_badge_locked,
     icon_unlocked: EV_PUR2_unlocked,
@@ -3555,7 +3555,7 @@ export const badges = [
     id: "EV_PUR3",
     group: "purisima",
     title: 'Purísima: Carmen "Carmy" Berzatto',
-    description: "Haz una de las paellas.",
+    description: "Haz la paella.",
     points: 15,
     icon_locked: rare_badge_locked,
     icon_unlocked: EV_PUR3_unlocked,
@@ -3604,7 +3604,7 @@ export const badges = [
     id: "EV_PUR7",
     group: "purisima",
     title: "Purísima: Leto no va a tener esta ni de coña",
-    description: "Participa en lavar la(s) paella(s).",
+    description: "Participa en lavar la paella despues de cenar.",
     points: 15,
     icon_locked: rare_badge_locked,
     icon_unlocked: EV_PUR7_unlocked,
@@ -3612,6 +3612,67 @@ export const badges = [
     update: "paellas",
     updateIcon: sanvi,
   },
+  {
+    id: "EV_PUR8",
+    group: "purisima",
+    title: "Purísima: La cabra",
+    description: "Compra el ticket de las paellas. (Retroactiva)",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "EV_PUR8_unlocked",
+    type: "rare",
+    update: "paellas",
+    updateIcon: sanvi
+  },
+  {
+    id: "EV_PUR9",
+    group: "purisima",
+    title: "Purísima: Siempre los mismos",
+    description: "Ayuda con la compra para las paellas.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "EV_PUR9_unlocked",
+    type: "normal",
+    update: "paellas",
+    updateIcon: sanvi
+  },
+  {
+    id: "EV_PUR10",
+    group: "purisima",
+    title: "Purísima: TLC Paellas",
+    description: "Aporta mesas, sillas, etc. a las paellas.",
+    points: 15,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "EV_PUR10_unlocked",
+    type: "normal",
+    update: "paellas",
+    updateIcon: sanvi
+  },
+  {
+    id: "EV_PUR11",
+    group: "purisima",
+    title: "Purísima: Entonces, casa de Leto o casa de Visión?",
+    description: "Ayuda a guardar los trastos en casa de alguien despues de cenar. (Llevar solamente TUS cosas a TU casa no cuenta)",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: "EV_PUR11_unlocked",
+    type: "normal",
+    update: "paellas",
+    updateIcon: sanvi
+  },
+  {
+    id: "EV_PUR12",
+    group: "purisima",
+    title: "Purísima: Aquí todo es diversión, hasta que salga el sol",
+    description: "Aguanta sin pisar tu casa ni una casa ajena durante un largo periodo de tiempo, hasta que salga el sol. (Es decir, si estás en una casa es para guardar trastos, ir al baño, etc.)",
+    points: 20,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: "EV_PUR12_unlocked",
+    type: "rare",
+    update: "paellas",
+    updateIcon: sanvi
+  }
+  /*
   {
     id: "EV_REM1",
     group: "remei",
@@ -3699,6 +3760,7 @@ export const badges = [
     update: "paellas",
     updateIcon: sanvi,
   },
+  */
 ];
 
 export const categories = [
@@ -3862,6 +3924,7 @@ export const events = [
     eventTimeStart: new Date(2024, months.AUGUST, 30, 17),
     eventTimeEnd: new Date(2024, months.AUGUST, 31, 12),
   },
+  /*
   {
     title: "Paelles del Remei",
     category: "remei",
@@ -3872,6 +3935,7 @@ export const events = [
     eventTimeStart: new Date(2024, months.SEPTEMBER, 5, 17),
     eventTimeEnd: new Date(2024, months.SEPTEMBER, 6, 12),
   },
+  */
   {
     title: "Verano",
     category: "verano",
