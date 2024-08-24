@@ -3528,8 +3528,8 @@ export const badges = [
   {
     id: "EV_PUR1",
     group: "purisima",
-    title: "Purísima: La millor nit del any",
-    titleSpecial: <p>Purísima: <s>El millor día</s> La millor nit del any</p>,
+    title: "Puríssima: La millor nit del any",
+    titleSpecial: <p>Puríssima: <s>El millor día</s> La millor nit del any</p>,
     description: "Asiste a las paellas de la Purísima.",
     points: 5,
     icon_locked: normal_badge_locked,
@@ -3541,8 +3541,8 @@ export const badges = [
   {
     id: "EV_PUR2",
     group: "purisima",
-    title: "Purísima: BOICOT A 72",
-    titleSpecial: <>Purísima: BOICOT A <span className="hero glitch layers" data-text="72">72</span></>,
+    title: "Puríssima: BOICOT A 72",
+    titleSpecial: <>Puríssima: BOICOT A <span className="hero glitch layers" data-text="72">72</span></>,
     description: "Lleva la camiseta de ANTX la noche de las paellas.",
     points: 10,
     icon_locked: normal_badge_locked,
@@ -3554,7 +3554,7 @@ export const badges = [
   {
     id: "EV_PUR3",
     group: "purisima",
-    title: 'Purísima: Carmen "Carmy" Berzatto',
+    title: 'Puríssima: Carmen "Carmy" Berzatto',
     description: "Haz la paella.",
     points: 15,
     icon_locked: rare_badge_locked,
@@ -3566,7 +3566,7 @@ export const badges = [
   {
     id: "EV_PUR4",
     group: "purisima",
-    title: "Purísima: Sergi no va a tener esta ni de coña",
+    title: "Puríssima: Sergi no va a tener esta ni de coña",
     description:
       "Ayuda al cocinero o a los cocineros. (Los cocineros decidirán quien ha ayudado de verdad)",
     points: 10,
@@ -3579,7 +3579,7 @@ export const badges = [
   {
     id: "EV_PUR5",
     group: "purisima",
-    title: "Purísima: I paell?",
+    title: "Puríssima: I paell?",
     description: "Prueba de otras 3 paellas",
     points: 10,
     icon_locked: normal_badge_locked,
@@ -3591,7 +3591,7 @@ export const badges = [
   {
     id: "EV_PUR6",
     group: "purisima",
-    title: "Purísima: L'aigua de la vida",
+    title: "Puríssima: L'aigua de la vida",
     description: "Prueba el alcohol de otros 3 grupos.",
     points: 10,
     icon_locked: normal_badge_locked,
@@ -3603,7 +3603,7 @@ export const badges = [
   {
     id: "EV_PUR7",
     group: "purisima",
-    title: "Purísima: Leto no va a tener esta ni de coña",
+    title: "Puríssima: Leto no va a tener esta ni de coña",
     description: "Participa en lavar la paella despues de cenar.",
     points: 15,
     icon_locked: rare_badge_locked,
@@ -3615,7 +3615,7 @@ export const badges = [
   {
     id: "EV_PUR8",
     group: "purisima",
-    title: "Purísima: La cabra",
+    title: "Puríssima: La cabra",
     description: "Compra el ticket de las paellas. (Retroactiva)",
     points: 15,
     icon_locked: rare_badge_locked,
@@ -3627,7 +3627,7 @@ export const badges = [
   {
     id: "EV_PUR9",
     group: "purisima",
-    title: "Purísima: Siempre los mismos",
+    title: "Puríssima: Siempre los mismos",
     description: "Ayuda con la compra para las paellas.",
     points: 10,
     icon_locked: normal_badge_locked,
@@ -3639,7 +3639,7 @@ export const badges = [
   {
     id: "EV_PUR10",
     group: "purisima",
-    title: "Purísima: TLC Paellas",
+    title: "Puríssima: TLC Paellas",
     description: "Aporta mesas, sillas, etc. a las paellas.",
     points: 15,
     icon_locked: normal_badge_locked,
@@ -3651,7 +3651,7 @@ export const badges = [
   {
     id: "EV_PUR11",
     group: "purisima",
-    title: "Purísima: Entonces, casa de Leto o casa de Visión?",
+    title: "Puríssima: Entonces, casa de Leto o casa de Visión?",
     description: "Ayuda a guardar los trastos en casa de alguien despues de cenar. (Llevar solamente TUS cosas a TU casa no cuenta)",
     points: 10,
     icon_locked: normal_badge_locked,
@@ -3663,7 +3663,7 @@ export const badges = [
   {
     id: "EV_PUR12",
     group: "purisima",
-    title: "Purísima: Aquí todo es diversión, hasta que salga el sol",
+    title: "Puríssima: Aquí todo es diversión, hasta que salga el sol",
     description: "Aguanta sin pisar tu casa ni una casa ajena durante un largo periodo de tiempo, hasta que salga el sol. (Es decir, si estás en una casa es para guardar trastos, ir al baño, etc.)",
     points: 20,
     icon_locked: rare_badge_locked,
@@ -3915,7 +3915,7 @@ export const events = [
     eventTimeEnd: new Date(2024, months.APRIL, 8, 18),
   },
   {
-    title: "Paelles de la Purísima",
+    title: "Paelles de la Puríssima",
     category: "purisima",
     emoji: "react@emojify-747",
     color: "[#194189]",
