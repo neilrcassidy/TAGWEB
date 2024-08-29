@@ -219,6 +219,11 @@ import {
   EV_PUR5_unlocked,
   EV_PUR6_unlocked,
   EV_PUR7_unlocked,
+  EV_PUR8_unlocked,
+  EV_PUR9_unlocked,
+  EV_PUR10_unlocked,
+  EV_PUR11_unlocked,
+  EV_PUR12_unlocked,
   //EV_REM1_unlocked,
   //EV_REM2_unlocked,
   //EV_REM3_unlocked,
@@ -3622,7 +3627,7 @@ export const badges = [
     description: "Compra el ticket de las paellas. (Retroactiva)",
     points: 15,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "EV_PUR8_unlocked",
+    icon_unlocked: EV_PUR8_unlocked,
     type: "rare",
     update: "paellas",
     updateIcon: sanvi
@@ -3634,7 +3639,7 @@ export const badges = [
     description: "Ayuda con la compra de las paellas. (Retroactiva)",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "EV_PUR9_unlocked",
+    icon_unlocked: EV_PUR9_unlocked,
     type: "normal",
     update: "paellas",
     updateIcon: sanvi
@@ -3646,7 +3651,7 @@ export const badges = [
     description: "Aporta mesas, sillas, etc. a las paellas.",
     points: 15,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "EV_PUR10_unlocked",
+    icon_unlocked: EV_PUR10_unlocked,
     type: "normal",
     update: "paellas",
     updateIcon: sanvi
@@ -3658,7 +3663,7 @@ export const badges = [
     description: "Ayuda a guardar los trastos en casa de alguien despues de cenar. (Llevar solamente TUS cosas a TU casa no cuenta)",
     points: 10,
     icon_locked: normal_badge_locked,
-    icon_unlocked: "EV_PUR11_unlocked",
+    icon_unlocked: EV_PUR11_unlocked,
     type: "normal",
     update: "paellas",
     updateIcon: sanvi
@@ -3670,7 +3675,7 @@ export const badges = [
     description: "Aguanta sin pisar tu casa ni una casa ajena durante un largo periodo de tiempo, hasta que salga el sol. (Es decir, si estás en una casa es para guardar trastos, ir al baño, etc.)",
     points: 20,
     icon_locked: rare_badge_locked,
-    icon_unlocked: "EV_PUR12_unlocked",
+    icon_unlocked: EV_PUR12_unlocked,
     type: "rare",
     update: "paellas",
     updateIcon: sanvi

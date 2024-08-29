@@ -232,6 +232,11 @@ import EV_PUR4_unlocked from "./EV_PUR4_unlocked.png"
 import EV_PUR5_unlocked from "./EV_PUR5_unlocked.png"
 import EV_PUR6_unlocked from "./EV_PUR6_unlocked.png"
 import EV_PUR7_unlocked from "./EV_PUR7_unlocked.png"
+import EV_PUR8_unlocked from "./EV_PUR8_unlocked.png"
+import EV_PUR9_unlocked from "./EV_PUR9_unlocked.png"
+import EV_PUR10_unlocked from "./EV_PUR10_unlocked.png"
+import EV_PUR11_unlocked from "./EV_PUR11_unlocked.png"
+import EV_PUR12_unlocked from "./EV_PUR12_unlocked.png"
 
 import EV_REM1_unlocked from "./EV_REM1_unlocked.png"
 import EV_REM2_unlocked from "./EV_REM2_unlocked.png"
@@ -508,6 +513,11 @@ export {
   EV_PUR5_unlocked,
   EV_PUR6_unlocked,
   EV_PUR7_unlocked,
+  EV_PUR8_unlocked,
+  EV_PUR9_unlocked,
+  EV_PUR10_unlocked,
+  EV_PUR11_unlocked,
+  EV_PUR12_unlocked,
   EV_REM1_unlocked,
   EV_REM2_unlocked,
   EV_REM3_unlocked,
