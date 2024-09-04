@@ -25,7 +25,7 @@ import MEN6_unlocked from "./MEN6_unlocked.png";
 import MEN7_unlocked from "./MEN7_unlocked.png";
 import MEN8_unlocked from "./MEN8_unlocked.png"
 import MEN9_unlocked from "./MEN9_unlocked.png"
-//import MEN10_unlocked from "./MEN10_unlocked.png"
+import MEN10_unlocked from "./MEN10_unlocked.png"
 //import MEN11_unlocked from "./MEN11_unlocked.png"
 //import MEN12_unlocked from "./MEN12_unlocked.png"
 //import MEN13_unlocked from "./MEN13_unlocked.png"
@@ -190,6 +190,7 @@ import LEC8_unlocked from "./LEC8_unlocked.png";
 import LEC9_unlocked from "./LEC9_unlocked.png";
 import LEC10_unlocked from "./LEC10_unlocked.png"
 import LEC11_unlocked from "./LEC11_unlocked.png"
+import LEC12_unlocked from "./LEC12_unlocked.png"
 
 import EV_CAR1_unlocked from "./EV_CAR1_unlocked.png";
 import EV_CAR2_unlocked from "./EV_CAR2_unlocked.png";
@@ -245,6 +246,7 @@ import EV_REM4_unlocked from "./EV_REM4_unlocked.png"
 import EV_REM5_unlocked from "./EV_REM5_unlocked.png"
 import EV_REM6_unlocked from "./EV_REM6_unlocked.png"
 import EV_REM7_unlocked from "./EV_REM7_unlocked.png"
+import EV_REM8_unlocked from "./EV_REM8_unlocked.png"
 
 import EV_VER1_unlocked from "./EV_VER1_unlocked.png"
 import EV_VER2_unlocked from "./EV_VER2_unlocked.png"
@@ -321,7 +323,7 @@ export {
   MEN7_unlocked,
   MEN8_unlocked,
   MEN9_unlocked,
-  //MEN10_unlocked,
+  MEN10_unlocked,
   //MEN11_unlocked,
   //MEN12_unlocked,
   //MEN13_unlocked,
@@ -475,6 +477,7 @@ export {
   LEC9_unlocked,
   LEC10_unlocked,
   LEC11_unlocked,
+  LEC12_unlocked,
   EV_CAR1_unlocked,
   EV_CAR2_unlocked,
   EV_CAR3_unlocked,
@@ -525,6 +528,7 @@ export {
   EV_REM5_unlocked,
   EV_REM6_unlocked,
   EV_REM7_unlocked,
+  EV_REM8_unlocked,
   EV_VER1_unlocked,
   EV_VER2_unlocked,
   EV_VER3_unlocked,
