@@ -3774,7 +3774,7 @@ export const badges = [
     id: "EV_REM8",
     group: "remei",
     title: "Until the end.",
-    titleSpecial: <>{new Date() < new Date(2024, months.SEPTEMBER, 7, 2) ? "???" : "Until the end."}</>,
+    titleSpecial: <>{new Date() < new Date(2024, months.SEPTEMBER, 7, 6) ? "???" : "Until the end."}</>,
     description: <>{new Date() < new Date(2024, months.SEPTEMBER, 7, 6) ? "???" : "Quédate con nuestra querida amiga María Teresa Moya Fernández hasta que se tenga que ir (ya sea a su casa, al aeropuerto o a liarse con un francés)."}</>,
     points: 0,
     icon_locked: rare_badge_locked,
