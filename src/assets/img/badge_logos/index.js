@@ -26,7 +26,7 @@ import MEN7_unlocked from "./MEN7_unlocked.png";
 import MEN8_unlocked from "./MEN8_unlocked.png"
 import MEN9_unlocked from "./MEN9_unlocked.png"
 import MEN10_unlocked from "./MEN10_unlocked.png"
-//import MEN11_unlocked from "./MEN11_unlocked.png"
+import MEN11_unlocked from "./MEN11_unlocked.png"
 //import MEN12_unlocked from "./MEN12_unlocked.png"
 //import MEN13_unlocked from "./MEN13_unlocked.png"
 //import MEN14_unlocked from "./MEN14_unlocked.png"
@@ -324,7 +324,7 @@ export {
   MEN8_unlocked,
   MEN9_unlocked,
   MEN10_unlocked,
-  //MEN11_unlocked,
+  MEN11_unlocked,
   //MEN12_unlocked,
   //MEN13_unlocked,
   //MEN14_unlocked,
