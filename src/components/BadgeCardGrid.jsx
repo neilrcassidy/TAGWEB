@@ -6,6 +6,7 @@ import styles from "../style.js"
 import { badges } from "../constants"
 import { antxpoint } from "../assets/img"
 import { nueva } from "../assets/img/update_symbols"
+import { HackText72 } from "./"
 
 // Tippy imports
 import Tippy from "@tippyjs/react"
@@ -56,7 +57,7 @@ const BadgeCardGrid = ({ userBadges, title, category, emoji, color, borderColor,
                   </div>
                   <div className={`${styles.flexCenter} font-normal`}>
                     <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                    <p>{badge.points}</p>
+                    <p><HackText72 /></p>
                   </div>
                 </div>
               </Tippy>

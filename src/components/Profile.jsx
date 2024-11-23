@@ -398,7 +398,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -410,7 +410,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -434,7 +434,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -446,7 +446,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -470,7 +470,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -482,7 +482,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -506,7 +506,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -518,7 +518,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -542,7 +542,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -554,7 +554,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -578,7 +578,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -590,7 +590,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -614,7 +614,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -626,7 +626,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -650,7 +650,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -662,7 +662,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -686,7 +686,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -698,7 +698,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -722,7 +722,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === category.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -734,7 +734,7 @@ const Profile = ({ logUser }) => {
                                 {badges
                                   .filter((badge) => badge.group === event.category && currentUserBadges.includes(badge.id))
                                   .map((badge, index) => {
-                                    const text = badge.title + " (" + badge.points + " points)";
+                                    const text = badge.title + " (72 points)";
                                     return (<option value={badge.id}>{text}</option>);
                                   })}
                               </optgroup>
@@ -786,7 +786,7 @@ const Profile = ({ logUser }) => {
                           <img
                             src={antxpoint}
                             className={`w-[24px] mr-1 m-auto ml-0`} />
-                          <p className={`text-[24px]`}>{currentUserPoints}</p>
+                          <p className={`text-[24px]`}>72</p>
                         </div>
                       </div>
                     </div>
@@ -873,7 +873,7 @@ const Profile = ({ logUser }) => {
                                         src={antxpoint}
                                         className={`w-[18px] mr-1 m-auto ml-0`}
                                       />
-                                      <p>{badge.points}</p>
+                                      <p>72</p>
                                     </div>
                                   </div>
                                 </Tippy>
@@ -888,7 +888,7 @@ const Profile = ({ logUser }) => {
                 )}
                 <div className={`${styles.flexCenter} mb-4`}>
                   <button
-                    className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
+                    className={`${styles.flexCenter} border border-secondary hover:bg-secondary  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
                     type="button"
                     onClick={logout}>
                     Cerrar Sesion
