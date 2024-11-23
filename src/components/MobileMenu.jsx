@@ -40,7 +40,7 @@ const MobileMenu = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
   return (
     <div className={`flex flex-row font-poppins text-white fixed h-[100%] w-[100%] z-50 ${isMobileMenuToggled ? "flex" : "hidden"}`}>
       <div className="bg-primary bg-opacity-80 ss:w-[60%] xs:w-[50%] xxs:w-[40%] xxxs:w-[35%] w-[20%] h-[100%]" onClick={() => toggleMenu((prev) => !prev)}></div>
-      <div className="flex-col flex bg-header ss:w-[40%] xs:w-[50%] xxs:w-[60%] xxxs:w-[65%] w-[80%] h-[100%]">
+      <div className="flex-col flex bg-secondary ss:w-[40%] xs:w-[50%] xxs:w-[60%] xxxs:w-[65%] w-[80%] h-[100%]">
         {isUserLogged ? (
           <Link to="/profile">
             <div className={`flex h-[100px] bg-altSecondary`} onClick={() => toggleMenu((prev) => !prev)}>
