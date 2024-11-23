@@ -318,7 +318,7 @@ const Profile = ({ logUser }) => {
                       />
                     </div>
                     <div className={`flex`}>
-                      <button className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
+                      <button className={`${styles.flexCenter} border border-secondary hover:bg-secondary font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
                         type="button"
                         onClick={() =>
                           updateNickname().then(() => setNicknameUpdated(true))
@@ -357,7 +357,7 @@ const Profile = ({ logUser }) => {
                       )}
                     </div>
                     <div className={`flex`}>
-                      <button className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
+                      <button className={`${styles.flexCenter} border border-secondary hover:bg-secondary  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
                         type="button"
                         onClick={() =>
                           updateProfilePic().then(() =>
@@ -745,7 +745,7 @@ const Profile = ({ logUser }) => {
                     </div>
                     <div className={`flex`}>
                       <button
-                        className={`${styles.flexCenter} border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
+                        className={`${styles.flexCenter} border border-secondary hover:bg-secondary  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
                         type="button"
                         onClick={() => updateFavoriteBadges().then(() => setFavoriteBadgesUpdated(true))}>
                         Actualizar

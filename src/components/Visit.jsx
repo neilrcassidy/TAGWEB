@@ -279,7 +279,7 @@ const Visit = () => {
                       </select>
                     </div>
                     <div className={`flex flex-row ${styles.flexCenter}`}>
-                      <button className="border border-[#7EC46D] hover:bg-[#7EC46D]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
+                      <button className="border border-secondary hover:bg-secondary  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
                         onClick={addBadgeToUser}>
                         Add
                       </button>
