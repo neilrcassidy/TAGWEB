@@ -89,7 +89,7 @@ const Home = ({ logUser }) => {
         </div>
 
         <div className={`${styles.flexCenter} m-auto mx-0 ${registerLogin ? "hidden" : "flex"}`}>
-          <div className={`${styles.flexCenter} border ${correctEmailPassword ? "border-[#7EC46D]" : "border-[#e03f3f]"} rounded-lg flex-col`}>
+          <div className={`${styles.flexCenter} border ${correctEmailPassword ? "border-secondary" : "border-[#e03f3f]"} rounded-lg flex-col`}>
             <div className={`flex font-poppins text-white text-[30px] text-center p-6 pb-0`}>
               <h3>Iniciar Sesión</h3>
             </div>
@@ -124,7 +124,7 @@ const Home = ({ logUser }) => {
                     }} />
                 </div>
                 <div className={`flex ${styles.flexCenter} p-3`}>
-                  <button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
+                  <button className="border border-secondary hover:bg-secondary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
                     onClick={(login)}>
                     Iniciar Sesión
                   </button>
@@ -151,7 +151,7 @@ const Home = ({ logUser }) => {
         </div>
 
         <div className={`${styles.flexCenter} m-auto mx-0 ${registerLogin ? "flex" : "hidden"}`}>
-          <div className={`${styles.flexCenter} border ${passwordsMatch && passwordLongEnough && emailNotInUse ? "border-[#7EC46D]" : "border-[#e03f3f]"} rounded-lg flex-col`}>
+          <div className={`${styles.flexCenter} border ${passwordsMatch && passwordLongEnough && emailNotInUse ? "border-secondary" : "border-[#e03f3f]"} rounded-lg flex-col`}>
             <div className={`flex font-poppins text-white text-[30px] text-center p-6 pb-0`}>
               <h3>Registrar</h3>
             </div>
@@ -208,7 +208,7 @@ const Home = ({ logUser }) => {
                     }} />
                 </div>
                 <div className={`flex ${styles.flexCenter} p-3`}>
-                  <button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
+                  <button className="border border-secondary hover:bg-secondary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
                     onClick={(register)}>
                     Registrar
                   </button>
@@ -229,7 +229,7 @@ const Home = ({ logUser }) => {
         </div>
       </div>
 
-      {/*<button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
+      {/*<button className="border border-secondary hover:bg-secondary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
         onClick={(cerrarSesion)}>
         Cerrar Sesion
       </button>*/}
