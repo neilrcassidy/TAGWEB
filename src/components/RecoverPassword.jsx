@@ -30,7 +30,7 @@ const RecoverPassword = () => {
     return (
         <div id="recoverPassword">
             <div className={`${styles.flexCenter} mt-16`}>
-                <div className={`${styles.flexCenter} border ${emailExists ? "border-[#7EC46D]" : "border-[#e03f3f]"} rounded-lg flex-col`}>
+                <div className={`${styles.flexCenter} border ${emailExists ? "border-secondary" : "border-[#e03f3f]"} rounded-lg flex-col`}>
                     <div className={`flex font-poppins text-white text-[30px] text-center p-6 pb-0`}>
                         <h3>Reestablecer Contraseña</h3>
                     </div>
@@ -54,7 +54,7 @@ const RecoverPassword = () => {
                                     }} />
                             </div>
                             <div className={`flex ${styles.flexCenter} p-3`}>
-                                <button className="border border-[#7EC46D] hover:bg-[#7EC46D] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
+                                <button className="border border-secondary hover:bg-secondary text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button"
                                     onClick={send}>
                                     Reestablecer Contraseña
                                 </button>
