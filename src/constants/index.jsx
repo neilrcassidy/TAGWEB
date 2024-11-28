@@ -268,10 +268,6 @@ import {
   EV_VER34_unlocked,
   EV_VER35_unlocked,
   EV_VER36_unlocked,
-  //EV_VER37_unlocked,
-  //EV_VER38_unlocked,
-  //EV_VER39_unlocked,
-  //EV_VER40_unlocked,
   EV_VER41_unlocked,
   EV_VER42_unlocked,
   EV_VER43_unlocked,
@@ -280,6 +276,25 @@ import {
   EV_VER46_unlocked,
   EV_VER47_unlocked,
   EV_VER48_unlocked,
+  EV_NAV1_unlocked,
+  EV_NAV2_unlocked,
+  EV_NAV3_unlocked,
+  EV_NAV4_unlocked,
+  EV_NAV5_unlocked,
+  EV_NAV6_unlocked,
+  EV_NAV7_unlocked,
+  EV_NAV8_unlocked,
+  EV_NAV9_unlocked,
+  EV_NAV10_unlocked,
+  EV_NAV11_unlocked,
+  EV_NAV12_unlocked,
+  EV_NAV13_unlocked,
+  EV_NAV14_unlocked,
+  EV_NAV15_unlocked,
+  EV_NAV16_unlocked,
+  EV_NAV17_unlocked,
+  EV_NAV18_unlocked,
+  EV_NAV19_unlocked,
 } from "../assets/img/badge_logos"
 
 import {
@@ -291,7 +306,8 @@ import {
   fallas,
   sanvi,
   verano,
-  cry
+  cry,
+  navidad
 } from "../assets/img/update_symbols"
 
 import { Emoji } from "@crispengari/react-emojify"
@@ -3386,56 +3402,6 @@ export const badges = [
     update: "verano",
     updateIcon: verano,
   },
-  /*
-  {
-    id: "EV_VER37",
-    group: "verano",
-    title: "ANTXOlimpiadas: Oro",
-    description: "Gana las ANTXOlimpiadas.",
-    points: 20,
-    icon_locked: rare_badge_locked,
-    icon_unlocked: EV_VER37_unlocked,
-    type: "rare",
-    update: "verano",
-    updateIcon: verano,
-  },
-  {
-    id: "EV_VER38",
-    group: "verano",
-    title: "ANTXOlimpiadas: Plata",
-    description: "Acaba 2º en las ANTXOlimpiadas.",
-    points: 10,
-    icon_locked: normal_badge_locked,
-    icon_unlocked: EV_VER38_unlocked,
-    type: "normal",
-    update: "verano",
-    updateIcon: verano,
-  },
-  {
-    id: "EV_VER39",
-    group: "verano",
-    title: "ANTXOlimpiadas: Bronce",
-    description: "Acaba 3º en las ANTXOlimpiadas.",
-    points: 5,
-    icon_locked: normal_badge_locked,
-    icon_unlocked: EV_VER39_unlocked,
-    type: "normal",
-    update: "verano",
-    updateIcon: verano,
-  },
-  {
-    id: "EV_VER40",
-    group: "verano",
-    title: "ANTXOlimpiadas: Al menos lo has intentado",
-    description: "Participa en las ANTXOlimpiadas.",
-    points: 5,
-    icon_locked: normal_badge_locked,
-    icon_unlocked: EV_VER40_unlocked,
-    type: "normal",
-    update: "verano",
-    updateIcon: verano,
-  },
-  */
   {
     id: "EV_VER41",
     group: "verano",
@@ -3625,7 +3591,7 @@ export const badges = [
     id: "EV_PUR8",
     group: "purisima",
     title: "Puríssima: La cabra",
-    titleSpecial: <>Puríssima: La cabra <Emoji emojiId='react@emojify-571'/></>,
+    titleSpecial: <>Puríssima: La cabra <Emoji emojiId='react@emojify-571' /></>,
     description: "Compra el ticket de las paellas. (Retroactiva)",
     points: 15,
     icon_locked: rare_badge_locked,
@@ -3737,7 +3703,7 @@ export const badges = [
     id: "EV_REM5",
     group: "remei",
     title: "Remei: La cabra",
-    titleSpecial: <>Remei: La cabra <Emoji emojiId='react@emojify-571'/></>,
+    titleSpecial: <>Remei: La cabra <Emoji emojiId='react@emojify-571' /></>,
     description: "Compra el ticket de las paellas. (Retroactiva)",
     points: 15,
     icon_locked: rare_badge_locked,
@@ -3783,6 +3749,234 @@ export const badges = [
     update: "paellas",
     updateIcon: cry
   },
+  {
+    id: "EV_NAV1",
+    group: "navidad",
+    title: "With you, under the mistletoe",
+    description: "Besa a alguien debajo de una rama de muérdago.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV1_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV2",
+    group: "navidad",
+    title: "València il·luminada",
+    description: "Ve a ver las luces de navidad en la plaza del ayuntamiento de Valencia.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV2_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV3",
+    group: "navidad",
+    title: "Nadals a Vila-real",
+    description: "Ve a ver las luces de navidad en cualquier otra ciudad del mundo.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV3_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV4",
+    group: "navidad",
+    title: "Mestalla és un bazar",
+    description: "Visita un mercadito de navidad.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV4_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV5",
+    group: "navidad",
+    title: "A pasar la navidad con muletas",
+    description: "Patina sobre hielo.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: EV_NAV5_unlocked,
+    type: "rare",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV6",
+    group: "navidad",
+    title: "SNOWBALL FIGHT!",
+    description: "Lanza una bola de nieve a alguien.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV6_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV7",
+    group: "navidad",
+    title: "Ale, por ir primero",
+    description: "Lanza una bola de nieve a Carles. (No puedes lanzar una a ti mismo, Carles.)",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV7_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV8",
+    group: "navidad",
+    title: "Disciplinado/a",
+    description: "Compra un calendario de adviento normal, es decir, de chocolate y come un trozo al dia como se debe de hacer. (Efectivamente, quiero fotos.)",
+    points: 25,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: EV_NAV8_unlocked,
+    type: "rare",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV19",
+    group: "navidad",
+    title: "Con más regalo', ma', que Santa Claus",
+    description: "Consigue una foto con Papá Noel.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV19_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV9",
+    group: "navidad",
+    title: "The Real",
+    description: "Asiste a Jardines de Tabarca en nochebuena con gente de ANTX.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV9_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV10",
+    group: "navidad",
+    title: "JAJA, Neil nació el dia de los inocentes",
+    description: "Gasta una broma a alguien el Día de los Inocentes. (La victima de la broma decidirá si mereceis la chapa o no.)",
+    points: 20,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: EV_NAV10_unlocked,
+    type: "rare",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV11",
+    group: "navidad",
+    title: "The Realest",
+    description: "Pasa nochevieja con gente de ANTX en Chelva.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV11_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV12",
+    group: "navidad",
+    title: "Neil will be watching",
+    description: "Comete las 12 uvas sin atragantarte.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV12_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV13",
+    group: "navidad",
+    title: "Red velvet",
+    description: "Lleva ropa interior de color rojo en nochevieja.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV13_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV14",
+    group: "navidad",
+    title: "Misterio ANATXiano",
+    description: "Participa en el amigo invisible de ANTX.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV14_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV15",
+    group: "navidad",
+    title: "Una noche legendaria: Parte II",
+    description: "Queda con gente de ANTX despues de cenar en la noche de reyes... y quedate hasta que todos vayamos a casa.",
+    points: 15,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV15_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV16",
+    group: "navidad",
+    title: "Rey del dulce",
+    description: "Consigue el rey en tu primer trozo de un roscón.",
+    points: 15,
+    icon_locked: rare_badge_locked,
+    icon_unlocked: EV_NAV16_unlocked,
+    type: "rare",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV17",
+    group: "navidad",
+    title: "¡Jódete, mamón! 🤣🫵",
+    description: "Consigue nada en tu primer trozo de un roscón.",
+    points: 10,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV17_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  },
+  {
+    id: "EV_NAV18",
+    group: "navidad",
+    title: "A pagar tont",
+    description: "Consigue el haba en tu primer trozo de un roscón.",
+    points: 5,
+    icon_locked: normal_badge_locked,
+    icon_unlocked: EV_NAV18_unlocked,
+    type: "normal",
+    update: "navidad",
+    updateIcon: navidad
+  }
 ];
 
 export const categories = [
@@ -3966,6 +4160,16 @@ export const events = [
     eventTimeStart: new Date(2024, months.JUNE, 21, 0),
     eventTimeEnd: new Date(2024, months.SEPTEMBER, 23, 0),
   },
+  {
+    title: "Navidad y Nochevieja",
+    category: "navidad",
+    emoji: "react@emojify-1038",
+    color: "[#880808]",
+    borderColor: "border-[#880808]",
+    bgColor: "bg-[#880808]",
+    eventTimeStart: new Date(2024, months.DECEMBER, 1, 0),
+    eventTimeEnd: new Date(2025, months.JANUARY, 7, 0)
+  }
 ];
 
 export const end = new Date(2025, months.JANUARY, 7)
@@ -3991,4 +4195,5 @@ Paellas de San Vicente: #348a38
 Verano: #FF7F50
 Paelles purisima: #194189
 Paelles remei: #fa1314
+Navidad y Nochevieja: #880808
 */

@@ -9,8 +9,8 @@ import carnavales from "./carnavales.png"
 import fallas from "./fallas.png"
 import sanvi from "./sanvi.png"
 import verano from "./verano.png"
-
 import cry from "./cry.png"
+import navidad from "./navidad.png"
 
 export {
     nueva,
@@ -23,5 +23,6 @@ export {
     fallas,
     sanvi,
     verano,
-    cry
+    cry,
+    navidad
 }

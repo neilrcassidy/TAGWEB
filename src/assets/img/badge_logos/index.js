@@ -297,6 +297,26 @@ import EV_VER46_unlocked from "./EV_VER46_unlocked.png";
 import EV_VER47_unlocked from "./EV_VER47_unlocked.png";
 import EV_VER48_unlocked from "./EV_VER48_unlocked.png";
 
+import EV_NAV1_unlocked from "./EV_NAV1_unlocked.png"
+import EV_NAV2_unlocked from "./EV_NAV2_unlocked.png"
+import EV_NAV3_unlocked from "./EV_NAV3_unlocked.png";
+import EV_NAV4_unlocked from "./EV_NAV4_unlocked.png";
+import EV_NAV5_unlocked from "./EV_NAV5_unlocked.png"
+import EV_NAV6_unlocked from "./EV_NAV6_unlocked.png"
+import EV_NAV7_unlocked from "./EV_NAV7_unlocked.png"
+import EV_NAV8_unlocked from "./EV_NAV8_unlocked.png"
+import EV_NAV9_unlocked from "./EV_NAV9_unlocked.png"
+import EV_NAV10_unlocked from "./EV_NAV10_unlocked.png"
+import EV_NAV11_unlocked from "./EV_NAV11_unlocked.gif"
+import EV_NAV12_unlocked from "./EV_NAV12_unlocked.png"
+import EV_NAV13_unlocked from "./EV_NAV13_unlocked.png"
+import EV_NAV14_unlocked from "./EV_NAV14_unlocked.png"
+import EV_NAV15_unlocked from "./EV_NAV15_unlocked.png"
+import EV_NAV16_unlocked from "./EV_NAV16_unlocked.png"
+import EV_NAV17_unlocked from "./EV_NAV17_unlocked.png"
+import EV_NAV18_unlocked from "./EV_NAV18_unlocked.png"
+import EV_NAV19_unlocked from "./EV_NAV19_unlocked.png"
+
 export {
   normal_badge_locked,
   rare_badge_locked,
@@ -576,5 +596,24 @@ export {
   EV_VER45_unlocked,
   EV_VER46_unlocked,
   EV_VER47_unlocked,
-  EV_VER48_unlocked,
+  EV_VER48_unlocked, 
+  EV_NAV1_unlocked,
+  EV_NAV2_unlocked,
+  EV_NAV3_unlocked,
+  EV_NAV4_unlocked,
+  EV_NAV5_unlocked,
+  EV_NAV6_unlocked,
+  EV_NAV7_unlocked,
+  EV_NAV8_unlocked,
+  EV_NAV9_unlocked,
+  EV_NAV10_unlocked,
+  EV_NAV11_unlocked,
+  EV_NAV12_unlocked,
+  EV_NAV13_unlocked,
+  EV_NAV14_unlocked,
+  EV_NAV15_unlocked,
+  EV_NAV16_unlocked,
+  EV_NAV17_unlocked,
+  EV_NAV18_unlocked,
+  EV_NAV19_unlocked
 };
