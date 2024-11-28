@@ -53,7 +53,7 @@ const MobileMenu = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
                     <p>{currentUserNickname}</p>
                     <div className={`flex my-auto`}>
                       <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`}/>
-                      <p className={`my-auto`}>{currentUserPoints}</p>
+                      <p className={`my-auto`}>72</p>
                     </div>
                   </div>
                 </div>
