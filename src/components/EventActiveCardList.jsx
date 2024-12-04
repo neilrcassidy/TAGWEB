@@ -5,8 +5,6 @@ import { badges } from "../constants"
 import { antxpoint } from "../assets/img"
 import { activo } from "../assets/img/update_symbols"
 
-import { HackText72 } from "./"
-
 const currentDate = new Date()
 
 const EventActiveCardList = ({ userBadges, title, category, emoji, color, borderColor, bgColor, eventTimeStart, eventTimeEnd }) => {
@@ -40,7 +38,7 @@ const EventActiveCardList = ({ userBadges, title, category, emoji, color, border
                   </div>
                   <div className={`flex flex-row m-auto mr-3 gap-2`}>
                     <img src={antxpoint} className={`sm:text-[24px] w-[20px] m-auto`} />
-                    <p className={`sm:text-[24px] ss:text-[20px] xs:text-[18px] text-[16px] font-normal`}><HackText72 /></p>
+                    <p className={`sm:text-[24px] ss:text-[20px] xs:text-[18px] text-[16px] font-normal`}>{badge.points}</p>
                   </div>
                 </div>
               </div>

@@ -4,8 +4,6 @@
 import { podium1, podium2, podium3, antxpoint } from "../assets/img"
 import styles from "../style"
 
-import { HackText72 } from "./"
-
 // React imports
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
@@ -25,9 +23,9 @@ const Leaderboard = () => {
   let displayedPostion = position + "."
 
   const fetchUsers = async () => {
-    const querySnapshot = await getDocs(query(collection(firestore, "users"), orderBy('is72', 'desc'), orderBy('points', 'asc')))
+    const querySnapshot = await getDocs(query(collection(firestore, "users"), orderBy('points', 'desc')))
     let docs = [];
-    querySnapshot.docs.filter((doc) => !doc.data().god)
+    querySnapshot.docs.filter((doc) => !doc.data().hidden)
       .map((doc) => {
         docs.push(doc.data())
       })
@@ -92,7 +90,7 @@ const Leaderboard = () => {
                   </div>
                   <div id="pointsLeaderboardEntry" className={`flex flex-row m-auto mr-3 gap-2`}>
                     <img src={antxpoint} className={`w-[20px] m-auto`} />
-                    <p className={`text-[20px] font-normal`}><HackText72 /></p>
+                    <p className={`text-[20px] font-normal`}>{user.points}</p>
                   </div>
                 </div>
               </div>)

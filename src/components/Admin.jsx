@@ -68,7 +68,7 @@ const Admin = () => {
   const createNewsEntryForBadges = async (user, badge) => {
     await addDoc(collection(firestore, "news"), {
       title: "¡Enhorabuena " + user.data().nickname + "!",
-      body: user.data().nickname + " ha conseguido la chapa \"" + badge.title + "\" que vale -- 72 Coins.",
+      body: user.data().nickname + " ha conseguido la chapa \"" + badge.title + "\" que vale " + badge.points + " ANTX Coins.",
       image: user.data().profilePic,
       date: Timestamp.now(),
       userAssociated: user.data().id

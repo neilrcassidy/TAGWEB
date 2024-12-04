@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { headerTitle, menu, close, defaultProfile, antxpoint, header72 } from "../assets/img"
+import { headerTitle, menu, close, defaultProfile, antxpoint } from "../assets/img"
 
 // React imports
 import { Link } from "react-router-dom"
@@ -11,8 +11,6 @@ import { auth, firestore } from "../config/firebase-config"
 import { doc, getDoc } from "firebase/firestore"
 
 import { useNavigate } from "react-router-dom"
-
-import { HackText72 } from "./"
 
 const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
   const navigate = useNavigate();
@@ -40,9 +38,9 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
   return (
     <div className={`flex w-[100%] h-[100px] bg-secondary`}>
       <div className={`flex m-auto xs:ml-12 ml-6 font-poppins gap-1`}>
-        <img src={header72} className="h-auto xs:w-[110px] w-[80px]" onClick={() => navBadges()}/>
+        <img src={headerTitle} className="h-auto xs:w-[110px] w-[80px]" onClick={() => navBadges()}/>
         <div className={`flex`}>
-          <p className={`flex items-end`}>v1.72</p>
+          <p className={`flex items-end`}>v1.2.5</p>
         </div>
       </div>
 
@@ -77,7 +75,7 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
                     <p>{currentUserNickname}</p>
                     <div className={`flex`}>
                       <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`}/>
-                      <p>72</p>
+                      <p>{currentUserPoints}</p>
                     </div>
                   </div>
                 </div>

@@ -154,7 +154,7 @@ const Visit = () => {
                       </div>
                       <div className={`flex font-normal sPoints:justify-start justify-center mt-1`}>
                         <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                        <p>72</p>
+                        <p>{userPoints}</p>
                       </div>
                     </div>
                   </div>
@@ -206,7 +206,7 @@ const Visit = () => {
                                   </div>
                                   <div className={`${styles.flexCenter} font-normal`}>
                                     <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                                    <p>72</p>
+                                    <p>{badge.points}</p>
                                   </div>
                                 </div>
                               </Tippy>

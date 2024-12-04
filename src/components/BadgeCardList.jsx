@@ -4,7 +4,6 @@
 import { badges } from "../constants"
 import { antxpoint } from "../assets/img"
 import { nueva } from "../assets/img/update_symbols"
-import { HackText72 } from "./"
 
 const BadgeCardList = ({ userBadges, title, category, emoji, color, borderColor, bgColor, newCategory }) => {
   return (
@@ -38,7 +37,7 @@ const BadgeCardList = ({ userBadges, title, category, emoji, color, borderColor,
                   </div>
                   <div className={`flex flex-row m-auto mr-3 gap-2`}>
                     <img src={antxpoint} className={`sm:text-[24px] w-[20px] m-auto`} />
-                    <p className={`sm:text-[24px] ss:text-[20px] xs:text-[18px] text-[16px] font-normal`}><HackText72 /></p>
+                    <p className={`sm:text-[24px] ss:text-[20px] xs:text-[18px] text-[16px] font-normal`}>{badge.points}</p>
                   </div>
                 </div>
               </div>
