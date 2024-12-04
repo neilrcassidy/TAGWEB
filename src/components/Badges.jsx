@@ -59,7 +59,7 @@ const Badges = () => {
           <Stats userBadges={userBadges} />
 
           <div className="relative mt-8">
-            <img id="snowtop" src={snowtop} className="absolute -top-[6px] rounded-t-[30px]"/>
+            <img id="snowtop" src={snowtop} className="absolute -top-[5px] rounded-t-[30px]"/>
             <div className="inline-flex border border-secondary rounded-lg">
               <button onClick={() => setList(false)} className={`flex flex-row ${list ? "" : "bg-secondary"} hover:bg-altSecondary py-2 px-4 rounded-l gap-2`}>
                 <p>Grid</p>

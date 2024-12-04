@@ -8,7 +8,7 @@ const EventInactiveCardList = ({ userBadges, title, category, emoji }) => {
   return (
     <div id={"badges" + title} className={`flex flex-col rounded-lg border-gray-400 border xs:w-[90%] w-[95%]`}>
       <div className="relative">
-        <img id="snowtop" src={snowtop} className="absolute -top-[14px] rounded-t-[30px] max-h-[20px] w-[100%]" />
+        <img id="snowtop" src={snowtop} className="absolute -top-[13px] rounded-t-[30px] max-h-[20px] w-[100%]" />
         <div id={"badges" + title + "Title"} className={`flex bg-gray-400 rounded-t-md min-w-[90%] text-[24px]`}>
           <div className={`flex flex-wrap m-auto my-2 ml-3 text-[20px] w-[100%] gap-2`}>
             <h3>Evento: {title} {emoji} </h3>

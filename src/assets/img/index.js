@@ -8,7 +8,7 @@ import podium2 from "./podium2.png"
 import podium3 from "./podium3.png"
 import antxpoint from "./antx_point.png"
 import santahat from "./santahat.png"
-import snowtop from "./snowtop.png"
+import snowtop from "./snowtop2.png"
 
 export {
     headerTitle,

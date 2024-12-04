@@ -14,7 +14,7 @@ const EventInactiveCardGrid = ({ userBadges, title, category, emoji }) => {
   return (
     <div id={"badges" + title} className={`flex flex-col rounded-lg border border-gray-400 max-w-[350px] w-[95%]`}>
       <div className="relative">
-        <img id="snowtop" src={snowtop} className="absolute -top-4 rounded-t-[30px]" />
+        <img id="snowtop" src={snowtop} className="absolute -top-3 rounded-t-[30px]" />
         <div id={"badges" + title + "Title"} className={`flex bg-gray-400 rounded-t-md text-white`}>
           <div className={`m-auto my-2 ml-3 text-[20px]`}>
             <h3>Evento: {title} {emoji}</h3>

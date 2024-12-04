@@ -11,7 +11,7 @@ const EventActiveCardList = ({ userBadges, title, category, emoji, color, border
   return (
     <div id={"badges" + title} className={`flex flex-col rounded-lg ${borderColor} border xs:w-[90%] w-[95%]`}>
       <div className="relative">
-        <img id="snowtop" src={snowtop} className="absolute -top-5 rounded-t-full h-[25px] w-[100%]" />
+        <img id="snowtop" src={snowtop} className="absolute -top-4 rounded-t-full h-[25px] w-[100%]" />
         <div id={"badges" + title + "Title"} className={`flex ${bgColor} rounded-t-md min-w-[90%] text-[24px] ${color === "white" ? "text-black" : ""}`}>
           <div className={`flex flex-wrap m-auto my-2 ml-3 text-[20px] w-[100%] gap-2`}>
             <h3>Evento: {title} {emoji} </h3>
