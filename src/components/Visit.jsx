@@ -206,7 +206,7 @@ const Visit = () => {
                                   </div>
                                   <div className={`${styles.flexCenter} font-normal`}>
                                     <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                                    <p>{badge.points}</p>
+                                    <p>ᵃ</p>
                                   </div>
                                 </div>
                               </Tippy>

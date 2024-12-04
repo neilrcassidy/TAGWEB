@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-children-prop */
-import { Page, Home, Badges, News, Leaderboard, RecoverPassword, NewAccount, Profile, Admin, Visit } from "./components"
+import { Page, Home, Badges, News, Leaderboard, RecoverPassword, NewAccount, Profile, Admin, Visit, SnowBackground } from "./components"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { auth } from "./config/firebase-config"
