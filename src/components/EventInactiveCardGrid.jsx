@@ -5,7 +5,6 @@ import "../index.css"
 import styles from "../style.js"
 import { badges } from "../constants"
 import { antxpoint } from "../assets/img"
-import { HackText72 } from "./"
 
 // Tippy imports
 import Tippy from "@tippyjs/react"
@@ -53,7 +52,7 @@ const EventInactiveCardGrid = ({ userBadges, title, category, emoji }) => {
                   </div>
                   <div className={`${styles.flexCenter} font-normal`}>
                     <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                    <p><HackText72 /></p>
+                    <p>{badge.points}</p>
                   </div>
                 </div>
               </Tippy>

@@ -145,16 +145,14 @@ const News = () => {
                     <p className={`smmd:text-[24px] sm:text-[22px] xs:text-[20px] xxs:text-[18px] text-[14px]`}>{newsEntry.data().title}</p>
                     <p className={`text-gray-400 ss:text-[16px] xs:text-[14px] text-[12px] text-justify font-normal`}>{((newsEntry.data().date).toDate()).toLocaleDateString('en-GB')}</p>
                     <p className={`text-gray-200 smmd:text-[20px] sm:text-[18px] ss:text-[16px] xs:text-[14px] text-[12px] text-justify font-normal`}>
-                      {/*(newsEntry.data().body).includes('72') ?
+                      {
+                      (newsEntry.data().body).includes('72') ?
                         <>
                           {newsEntry.data().body.substring(0, newsEntry.data().body.indexOf('72'))}
                           <HackText72 />
                           {newsEntry.data().body.substring(newsEntry.data().body.indexOf('72')+2)}
                         </>
-                      : newsEntry.data().body*/
-                      newsEntry.data().body.charAt(newsEntry.data().body.length-14) == ' ' ?
-                        newsEntry.data().body.replace(newsEntry.data().body.substring(newsEntry.data().body.length-14, newsEntry.data().body.length-12), " 72")
-                      : newsEntry.data().body.replace(newsEntry.data().body.substring(newsEntry.data().body.length-14, newsEntry.data().body.length-12), "72")
+                      : newsEntry.data().body
                       }
                     </p>
                   </div>
