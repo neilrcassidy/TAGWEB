@@ -23,6 +23,8 @@ import { Emoji } from "@crispengari/react-emojify"
 // Constant imports
 import { categories, events } from "../constants"
 
+import { snowtop } from "../assets/img"
+
 const Badges = () => {
   // This useState determines wether to display the badges as a grid (false) or a list (true)
   const [list, setList] = useState(false)
@@ -56,23 +58,27 @@ const Badges = () => {
 
           <Stats userBadges={userBadges} />
 
-          <div className="inline-flex my-4 border border-secondary rounded-lg">
-            <button onClick={() => setList(false)} className={`flex flex-row ${list ? "" : "bg-secondary"} hover:bg-altSecondary py-2 px-4 rounded-l gap-2`}>
-              <p>Grid</p>
-              <FontAwesomeIcon icon={faBorderAll} className={`m-auto`} />
-            </button>
-            <button onClick={() => setList(true)} className={`flex flex-row ${list ? "bg-secondary" : ""} hover:bg-altSecondary py-2 px-4 rounded-r gap-2`}>
-              <p>List</p>
-              <FontAwesomeIcon icon={faList} className={`m-auto`} />
-            </button>
+          <div className="relative mt-8">
+            <img id="snowtop" src={snowtop} className="absolute -top-[5px] rounded-t-[30px]"/>
+            <div className="inline-flex border border-secondary rounded-lg">
+              <button onClick={() => setList(false)} className={`flex flex-row ${list ? "" : "bg-secondary"} hover:bg-altSecondary py-2 px-4 rounded-l gap-2`}>
+                <p>Grid</p>
+                <FontAwesomeIcon icon={faBorderAll} className={`m-auto`} />
+              </button>
+              <button onClick={() => setList(true)} className={`flex flex-row ${list ? "bg-secondary" : ""} hover:bg-altSecondary py-2 px-4 rounded-r gap-2`}>
+                <p>List</p>
+                <FontAwesomeIcon icon={faList} className={`m-auto`} />
+              </button>
+            </div>
           </div>
+          
 
           {list ? (
-            <div id="badgesCards" className={`flex flex-wrap justify-center gap-6 w-[97%]`}>
+            <div id="badgesCards" className={`flex flex-wrap justify-center gap-10 w-[97%] mt-8`}>
               {events
                 .filter((e) => new Date() <= e.eventTimeEnd)
                 .map((e, index) => (
-                  <EventActiveCardList userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>} color={e.color} borderColor={e.borderColor} bgColor={e.bgColor} eventTimeStart={e.eventTimeStart} eventTimeEnd={e.eventTimeEnd}/>
+                    <EventActiveCardList userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>} color={e.color} borderColor={e.borderColor} bgColor={e.bgColor} eventTimeStart={e.eventTimeStart} eventTimeEnd={e.eventTimeEnd}/>
                 ))
               }
               {categories
@@ -88,14 +94,14 @@ const Badges = () => {
                 }
             </div>
           ) : (
-            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-6 w-[97%]`}>
+            <div id="badgesCards" className={`flex flex-wrap text-white font-poppins font-bold justify-center gap-10 w-[97%] mt-8`}>
               {events
                 .filter((e) => new Date() <= e.eventTimeEnd)
                 .map((e, index) => (
                   <EventActiveCardGrid userBadges={userBadges} title={e.title} category={e.category} emoji={<Emoji emojiId={e.emoji}/>} color={e.color} borderColor={e.borderColor} bgColor={e.bgColor} eventTimeStart={e.eventTimeStart} eventTimeEnd={e.eventTimeEnd}/>
                 ))
               }
-              <div className={`flex flex-wrap justify-center gap-6`}>
+              <div className={`flex flex-wrap justify-center gap-8`}>
                 {categories
                   .map((category, index) => (
                     <BadgeCardGrid userBadges={userBadges} title={category.title} category={category.category} emoji={<Emoji emojiId={category.emoji}/>} color={category.color} borderColor={category.borderColor} bgColor={category.bgColor} newCategory={category.newCategory} />

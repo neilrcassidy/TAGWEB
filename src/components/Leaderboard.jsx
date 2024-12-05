@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
-import { podium1, podium2, podium3, antxpoint } from "../assets/img"
+import { podium1, podium2, podium3, antxpoint, santahat } from "../assets/img"
 import styles from "../style"
 
 // React imports
@@ -22,6 +23,13 @@ const Leaderboard = () => {
   let position = 1
   let displayedPostion = position + "."
 
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i >= 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
   const fetchUsers = async () => {
     const querySnapshot = await getDocs(query(collection(firestore, "users"), orderBy('points', 'desc')))
     let docs = [];
@@ -29,6 +37,7 @@ const Leaderboard = () => {
       .map((doc) => {
         docs.push(doc.data())
       })
+    shuffleArray(docs)
     return docs
   }
 
@@ -44,7 +53,7 @@ const Leaderboard = () => {
         <div id="leaderboardPage" className={`flex flex-col ${styles.flexCenter}`}>
           <div id="podium" className={`flex justify-center items-end xs:gap-4 gap-2 md:max-w-[40%] smmd:max-w-[45%] sm:max-w-[50%] ss:max-w-[60%] xs:max-w-[70%] max-w-[80%] my-8 text-white font-poppins font-bold`}>
             <div id="podium2" className={`w-[25%]`}>
-              <div className={`cursor-pointer`} onClick={() => navVisitUser(users[1].id)}>
+              <div className={`cursor-pointer`} onClick={() => navVisitUser(users[1].id)}>  
                 <img src={users[1].profilePic} className={`mx-auto max-w-[80%] border-0 rounded-full`} />
                 <p className={`my-1 ss:text-[16px] xs:text-[14px] xxs:text-[12px] text-[10px] ${styles.flexCenter} max-w-[100%] break-all text-center my-2`}>{users[1].nickname}</p>
               </div>
@@ -90,7 +99,7 @@ const Leaderboard = () => {
                   </div>
                   <div id="pointsLeaderboardEntry" className={`flex flex-row m-auto mr-3 gap-2`}>
                     <img src={antxpoint} className={`w-[20px] m-auto`} />
-                    <p className={`text-[20px] font-normal`}>{user.points}</p>
+                    <p className={`text-[20px] font-normal`}>ᵃ</p>
                   </div>
                 </div>
               </div>)

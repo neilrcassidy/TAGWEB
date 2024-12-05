@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
-import { Header, MobileMenu } from "."
+import { Header, MobileMenu, SnowBackground } from "."
 
 // React imports
 import { Outlet } from "react-router-dom"
@@ -29,6 +29,7 @@ const Page = ({ isUserLogged }) => {
     <div id="Page">
       <Header isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged}/>
       <MobileMenu isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged} />
+      <SnowBackground />
       <Outlet />
     </div>
   )
