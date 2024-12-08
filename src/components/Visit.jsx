@@ -154,7 +154,7 @@ const Visit = () => {
                       </div>
                       <div className={`flex font-normal sPoints:justify-start justify-center mt-1`}>
                         <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                        <p>{userPoints}</p>
+                        <p>ᵃ</p>
                       </div>
                     </div>
                   </div>
