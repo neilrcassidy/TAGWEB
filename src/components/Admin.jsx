@@ -147,7 +147,7 @@ const Admin = () => {
                     return 0
                   })
                   .map((user, index) => {
-                    const text = user.data().nickname + " (" + user.data().email + ")";
+                    const text = user.data().nickname + " (" + user.data().points + ")";
                     return (<option value={user.data().id}>{text}</option>)
                   }
                 )}
