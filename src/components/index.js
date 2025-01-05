@@ -20,6 +20,7 @@ import EventInactiveCardGrid from "./EventInactiveCardGrid.jsx"
 import EventInactiveCardList from "./EventInactiveCardList.jsx"
 import HackText72 from "./HackText72.jsx"
 import SnowBackground from "./SnowBackground.jsx"
+import EndScreen from "./EndScreen.jsx"
 
 export {
     HackText72,
@@ -43,5 +44,6 @@ export {
     EventActiveCardList,
     EventInactiveCardGrid,
     EventInactiveCardList,
-    SnowBackground
+    SnowBackground,
+    EndScreen
 }

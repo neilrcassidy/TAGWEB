@@ -9,6 +9,7 @@ import podium3 from "./podium3.png"
 import antxpoint from "./antx_point.png"
 import santahat from "./santahat.png"
 import snowtop from "./snowtop2.png"
+import tagEnd from "./tag_end3.png"
 
 export {
     headerTitle,
@@ -21,5 +22,6 @@ export {
     podium3,
     antxpoint,
     santahat,
-    snowtop
+    snowtop,
+    tagEnd
 }

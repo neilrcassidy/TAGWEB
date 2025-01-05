@@ -11,6 +11,13 @@ body {
   background-color: #181818;
 }
 
+.endscreen{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #181818;
+}
+
 .font-poppins {
   font-family: 'Poppins';
 }
