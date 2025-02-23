@@ -42,7 +42,7 @@ const News = () => {
     const querySnapshot = await getDocs(query(collection(firestore, "news"), orderBy('date', 'desc')))
     let docs = [];
     querySnapshot.docs.map((doc) => {
-      //docs.push(doc)
+      docs.push(doc)
     })
     return docs
   }
@@ -157,7 +157,7 @@ const News = () => {
           </div>
           <div className={`text-white text-[18px] font-poppins w-[90%] mb-4 gap-8`}>
             <div className={`flex flex-row gap-2 justify-center`}>
-              <div className={`pt-1`}>Cantidad: ᵃ</div>
+              <div className={`pt-1`}>Cantidad: {filteredNews.length}</div>
             </div>
           </div>
         </div>
