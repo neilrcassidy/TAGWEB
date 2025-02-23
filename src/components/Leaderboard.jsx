@@ -37,7 +37,7 @@ const Leaderboard = () => {
       .map((doc) => {
         docs.push(doc.data())
       })
-    shuffleArray(docs)
+    //shuffleArray(docs)
     return docs
   }
 
@@ -99,7 +99,7 @@ const Leaderboard = () => {
                   </div>
                   <div id="pointsLeaderboardEntry" className={`flex flex-row m-auto mr-3 gap-2`}>
                     <img src={antxpoint} className={`w-[20px] m-auto`} />
-                    <p className={`text-[20px] font-normal`}>ᵃ</p>
+                    <p className={`text-[20px] font-normal`}>{user.points}</p>
                   </div>
                 </div>
               </div>)

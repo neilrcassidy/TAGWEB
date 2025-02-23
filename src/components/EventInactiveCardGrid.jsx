@@ -14,7 +14,6 @@ const EventInactiveCardGrid = ({ userBadges, title, category, emoji }) => {
   return (
     <div id={"badges" + title} className={`flex flex-col rounded-lg border border-gray-400 max-w-[350px] w-[95%]`}>
       <div className="relative">
-        <img id="snowtop" src={snowtop} className="absolute -top-3 rounded-t-[30px]" />
         <div id={"badges" + title + "Title"} className={`flex bg-gray-400 rounded-t-md text-white`}>
           <div className={`m-auto my-2 ml-3 text-[20px]`}>
             <h3>Evento: {title} {emoji}</h3>
@@ -54,7 +53,7 @@ const EventInactiveCardGrid = ({ userBadges, title, category, emoji }) => {
                     </div>
                     <div className={`${styles.flexCenter} font-normal`}>
                       <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                      <p>ᵃ</p>
+                      <p>{badge.points}</p>
                     </div>
                   </div>
                 </Tippy>

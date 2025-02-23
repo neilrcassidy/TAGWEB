@@ -29,7 +29,6 @@ const Page = ({ isUserLogged }) => {
     <div id="Page">
       <Header isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged}/>
       <MobileMenu isMobileMenuToggled={isMobileMenuToggled} toggleMenu={toggleMenu} isUserLogged={isUserLogged} />
-      <SnowBackground />
       <Outlet />
     </div>
   )

@@ -9,7 +9,6 @@ const BadgeCardList = ({ userBadges, title, category, emoji, color, borderColor,
   return (
     <div id={"badges" + title} className={`flex flex-col rounded-lg ${borderColor} border xs:w-[90%] w-[95%]`}>
       <div className="relative">
-        <img id="snowtop" src={snowtop} className="absolute -top-[13px] rounded-t-[30px] max-h-[20px] w-[100%]" />
         <div>
           <div id={"badges" + title + "Title"} className={`flex ${bgColor} rounded-t-md min-w-[90%] text-[24px] ${color === "white" ? "text-black" : ""}`}>
             <div className={`flex flex-wrap m-auto my-2 ml-3 text-[20px] w-[100%] gap-2`}>
@@ -40,7 +39,7 @@ const BadgeCardList = ({ userBadges, title, category, emoji, color, borderColor,
                       </div>
                       <div className={`flex flex-row m-auto mr-3 gap-2`}>
                         <img src={antxpoint} className={`sm:text-[24px] w-[20px] m-auto`} />
-                        <p className={`sm:text-[24px] ss:text-[20px] xs:text-[18px] text-[16px] font-normal`}>ᵃ</p>
+                        <p className={`sm:text-[24px] ss:text-[20px] xs:text-[18px] text-[16px] font-normal`}>{badge.points}</p>
                       </div>
                     </div>
                   </div>

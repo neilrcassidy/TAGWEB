@@ -64,7 +64,6 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
             <div className={`flex h-[80px] bg-altSecondary m-auto rounded-2xl`}>
               <div className={`flex flex-row m-auto mx-4`}>
                 <div className={`m-auto mr-4 relative`}>
-                  <img src={santahat} className="h-[45px] absolute scale-x-[-1] left-7 -top-[24px] rotate-[26deg]"/>
                   {currentUserProfilePic !== "" ? (
                     <img src={currentUserProfilePic} className="h-[60px] border-0 rounded-full" />
                   ) : (
@@ -76,7 +75,7 @@ const Header = ({ isMobileMenuToggled, toggleMenu, isUserLogged }) => {
                     <p>{currentUserNickname}</p>
                     <div className={`flex`}>
                       <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`}/>
-                      <p>ᵃ</p>
+                      <p>{currentUserPoints}</p>
                     </div>
                   </div>
                 </div>

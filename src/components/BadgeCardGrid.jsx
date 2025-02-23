@@ -16,7 +16,6 @@ const BadgeCardGrid = ({ userBadges, title, category, emoji, color, borderColor,
   return (
     <div id={"badges" + title} className={`flex flex-col rounded-lg border ${borderColor} max-w-[350px] w-[95%]`}>
       <div className="relative">
-        <img id="snowtop" src={snowtop} className="absolute -top-3 rounded-t-[30px]" />
         <div id={"badges" + title + "Title"} className={`flex ${bgColor} rounded-t-md ${color === "white" ? "text-black" : ""}`}>
           <div className={`flex flex-wrap m-auto my-2 ml-3 text-[20px] w-[100%] gap-2`}>
             <h3>{title} {emoji} </h3>
@@ -58,7 +57,7 @@ const BadgeCardGrid = ({ userBadges, title, category, emoji, color, borderColor,
                     </div>
                     <div className={`${styles.flexCenter} font-normal`}>
                       <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                      <p>ᵃ</p>
+                      <p>{badge.points}</p>
                     </div>
                   </div>
                 </Tippy>

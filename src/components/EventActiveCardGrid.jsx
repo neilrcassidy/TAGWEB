@@ -17,7 +17,6 @@ const EventActiveCardGrid = ({ userBadges, title, category, emoji, color, border
   return (
     <div id={"badges" + title} className={`flex flex-col rounded-lg border ${borderColor} max-w-[1470px] w-[95%]`}>
       <div className="relative">
-        <img id="snowtop" src={snowtop} className="absolute -top-4 rounded-t-full h-[25px] w-[100%]" />
         <div id={"badges" + title + "Title"} className={`flex ${bgColor} rounded-t-md ${color === "white" ? "text-black" : ""}`}>
           <div className={`flex flex-wrap m-auto my-2 ml-3 text-[20px] w-[100%] gap-2`}>
             <h3>Evento: {title} {emoji}   </h3>
@@ -59,7 +58,7 @@ const EventActiveCardGrid = ({ userBadges, title, category, emoji, color, border
                     </div>
                     <div className={`${styles.flexCenter} font-normal`}>
                       <img src={antxpoint} className={`w-[18px] mr-1 m-auto ml-0`} />
-                      <p>ᵃ</p>
+                      <p>{badge.points}</p>
                     </div>
                   </div>
                 </Tippy>

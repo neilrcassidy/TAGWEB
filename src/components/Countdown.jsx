@@ -45,7 +45,6 @@ const Countdown = () => {
   return (
     <div className="border mt-6 mb-4 mx-6 rounded-lg ss:rounded-lg ss:rounded-t-2xl border-secondary">
       <div className="relative">
-        <img id="snowtop" src={snowtop} className="absolute -top-8 rounded-t-[30px]" />
         <div id="countdown" className={`flex flex-wrap gap-y-2 ss:gap-x-8 gap-x-4 ${styles.flexCenter} font-normal my-4 mx-6 text-center`}>
           <div id="line1" className={`flex flex-row ss:gap-x-10 gap-x-4`}>
             <div id="months">
